@@ -5,7 +5,7 @@ Title: "Sponsor Identifier Code System"
 Description: "A means of identifing the sponsor who generated the identifiers used in the protocol.
 This needs discussion and should probably be some external code system, IDMP, and EPI will have guidance to follow."
 * #SPON-1 "Acme Pharma" "Acme Pharmaceuticals (UK) Ltd"
-* #SPON-2 "Exotic Int" "Exotic Pharmaceuticals International Inc."
+* #SPON-2 "Exotic Int" "Exotoc Pharmaceuticals International Inc."
 
 ValueSet: SponsorIdentifier_VS
 Title: "Sponsor Identifier Value Set"
