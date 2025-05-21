@@ -46,7 +46,7 @@ Description: "Profile of ResearchStudy for M11 CeSHarP - particularly provides c
 Extension:  ProtocolVersion
 Parent: Extension
 Id: protocol-version
-Title: "Protocol Aversion for M11 CeSHarP"
+Title: "Protocol Additions for M11 CeSHarP"
 Description: "Additions to ResearchStudy to support M11 CeSHarP
 ![Lego-bricks 64x58](Lego-bricks 64x58.png)
 
