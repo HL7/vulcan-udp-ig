@@ -14,7 +14,7 @@ Parent: Composition
 Id:  research-study-narratives
 Title:  "Research Study Narratives"
 Description:    "Additional narrative elements associated with a research study."
-* section.code from M11SectionCodesVS (preferred)
+* section.code from m11-section-codes-vs (preferred)
 
 ValueSet: M11SectionCodesVS
 Id: m11-section-codes-vs

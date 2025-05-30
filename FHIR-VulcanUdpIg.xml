@@ -5,6 +5,8 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
+<artifact id="PlanDefinition/Exoticillin-Protocol-01" key="PlanDefinition-Exoticillin-Protocol-01" name="Exoticillin Protocol 01"/>
+<artifact id="ResearchStudy/H2Q-MC-LZZT-ResearchStudy" key="ResearchStudy-H2Q-MC-LZZT-ResearchStudy" name="H2Q-MC-LZZT Research Study with version"/>
 <artifact id="ValueSet/m11-section-codes-vs" key="ValueSet-m11-section-codes-vs" name="M11 Section Codes Value Set"/>
 <artifact id="StructureDefinition/narrative-elements" key="StructureDefinition-narrative-elements" name="Narrative Elements"/>
 <artifact id="StructureDefinition/cesharp-researchstudy" key="StructureDefinition-cesharp-researchstudy" name="Profile of ResearchStudy for M11 CeSHarP"/>
@@ -12,9 +14,12 @@
 <artifact id="CodeSystem/amendment-original-cs" key="CodeSystem-amendment-original-cs" name="Protocol Amendment Code System"/>
 <artifact id="ValueSet/protocol-amendment-vs" key="ValueSet-protocol-amendment-vs" name="Protocol Amendment Value Set"/>
 <artifact id="StructureDefinition/study-amendment" key="StructureDefinition-study-amendment" name="Protocol Amendment for M11 CeSHarP"/>
+<artifact id="ResearchStudy/ResearchStudy-Protocol" key="ResearchStudy-ResearchStudy-Protocol" name="Research Study - protocol"/>
 <artifact id="StructureDefinition/research-study-narratives" key="StructureDefinition-research-study-narratives" name="Research Study Narratives"/>
 <artifact id="CodeSystem/sponsor-identifier-cs" key="CodeSystem-sponsor-identifier-cs" name="Sponsor Identifier Code System"/>
 <artifact id="ValueSet/sponsor-identifier-vs" key="ValueSet-sponsor-identifier-vs" name="Sponsor Identifier Value Set"/>
+<artifact id="ActivityDefinition/H2Q-MC-LZZT-Visit-Date" key="ActivityDefinition-H2Q-MC-LZZT-Visit-Date" name="Visit Date"/>
+<artifact id="PlanDefinition/Exoticillin-Visit-1" key="PlanDefinition-Exoticillin-Visit-1" name="Visit-1"/>
 <artifact id="Bundle/h1" key="Bundle-h1" name="null (Bundle)"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
