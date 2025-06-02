@@ -22,11 +22,11 @@ These links are published mappings between the different standards developed as 
 
 | Link | Target | Source | Description |
 | -------------- | -------------- | -------------- | -------------- |
-| [CTIS Mapping](https://github.com/cdisc-org/DDF-RA/blob/main/Documents/Mappings/ctis_mapping.xlsx) | USDM | CTIS | |
-| [SDTM Mapping](https://github.com/cdisc-org/DDF-RA/blob/main/Documents/Mappings/sdtm_mapping.xlsx) | USDM | SDTM | |
-| [ClinicalTrials.gov Mapping](https://github.com/cdisc-org/DDF-RA/blob/main/Documents/Mappings/ct-gov_mapping.xlsx) | USDM | ClinicalTrials.gov | |
-| [Common Protocol Template Mapping](https://github.com/cdisc-org/DDF-RA/blob/main/Documents/Mappings/cpt_mapping.xlsx) | USDM | Transcelerate Common Protocol Template | |
-| [M11 Mapping](https://github.com/cdisc-org/DDF-RA/blob/main/Documents/Mappings/m11_mapping.xlsx) | USDM | M11 | |
+| [CTIS Mapping](https://github.com/cdisc-org/DDF-RA/blob/main/Documents/Mappings/ctis_mapping.xlsx) | USDM | CTIS | CDISC Mapping from USDM to EMA CTIS |
+| [SDTM Mapping](https://github.com/cdisc-org/DDF-RA/blob/main/Documents/Mappings/sdtm_mapping.xlsx) | USDM | SDTM | CDISC Mapping from USDM to CDISC SDTM Model |
+| [ClinicalTrials.gov Mapping](https://github.com/cdisc-org/DDF-RA/blob/main/Documents/Mappings/ct-gov_mapping.xlsx) | USDM | ClinicalTrials.gov | CDISC Mapping from USDM to NCI ClinicalTrials.gov schema |
+| [Common Protocol Template Mapping](https://github.com/cdisc-org/DDF-RA/blob/main/Documents/Mappings/cpt_mapping.xlsx) | USDM | Common Protocol Template | CDISC Mapping from USDM to Transcelerate Common Protocol Template (CPT) |
+| [M11 Mapping](https://github.com/cdisc-org/DDF-RA/blob/main/Documents/Mappings/m11_mapping.xlsx) | USDM | M11 | CDISC Mapping from USDM to ICH M11 Technical Specification |
 
 #### Technical Links
 
