@@ -32,4 +32,4 @@ These links are published mappings between the different standards developed as 
 
 | Link              | Description              |
 | ----------------- | ------------------------ |
-| [CDISC USDM Data Model](https://github.com/cdisc-org/DDF-RA) | |
+| [CDISC USDM Data Model](https://github.com/cdisc-org/DDF-RA) | Reference implementation for the CDISC/Transcelerate DDF Reference Architecture (home of the USDM model) |
