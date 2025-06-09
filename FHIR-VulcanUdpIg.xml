@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/yyyyMmm/udp-ig.html" ciUrl="http://hl7.org/fhir/ig/HL7/udp-ig" defaultVersion="0.1.0" defaultWorkgroup="" url="http://hl7.org/fhir/uv/vulcan-udp-ig">
-<version code="current" url="http://hl7.org/fhir/ig/HL7/udp-ig"/>
-<version code="0.1.0" url="http://hl7.org/fhir/yyyyMmm/udp-ig.html"/>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="" defaultVersion="current" defaultWorkgroup="" url="http://hl7.org/fhir/uv/VulcanUdpIg">
+<version code="current" url=""/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
+<artifact id="Composition/IGBJ-Narrative-2.1" key="Composition-IGBJ-Narrative-2.1" name="IGBJ Protocol Narrative 2.1"/>
+<artifact id="Composition/IGBJ-Narrative-5.1" key="Composition-IGBJ-Narrative-5.1" name="IGBJ Protocol Narrative 5.1"/>
+<artifact id="ResearchStudy/IGBJ-ResearchStudy" key="ResearchStudy-IGBJ-ResearchStudy" name="IGBJ Research Study with narrative"/>
 <artifact id="ValueSet/m11-section-codes-vs" key="ValueSet-m11-section-codes-vs" name="M11 Section Codes Value Set"/>
+<artifact id="StructureDefinition/m11-research-study-narratives" key="StructureDefinition-m11-research-study-narratives" name="M11 Specific Research Study Narratives"/>
 <artifact id="StructureDefinition/narrative-elements" key="StructureDefinition-narrative-elements" name="Narrative Elements"/>
-<artifact id="StructureDefinition/cesharp-researchstudy" key="StructureDefinition-cesharp-researchstudy" name="Profile of ResearchStudy for M11 CeSHarP"/>
-<artifact id="StructureDefinition/protocol-version" key="StructureDefinition-protocol-version" name="Protocol Additions for M11 CeSHarP"/>
-<artifact id="CodeSystem/amendment-original-cs" key="CodeSystem-amendment-original-cs" name="Protocol Amendment Code System"/>
-<artifact id="ValueSet/protocol-amendment-vs" key="ValueSet-protocol-amendment-vs" name="Protocol Amendment Value Set"/>
-<artifact id="StructureDefinition/study-amendment" key="StructureDefinition-study-amendment" name="Protocol Amendment for M11 CeSHarP"/>
 <artifact id="StructureDefinition/research-study-narratives" key="StructureDefinition-research-study-narratives" name="Research Study Narratives"/>
-<artifact id="CodeSystem/sponsor-identifier-cs" key="CodeSystem-sponsor-identifier-cs" name="Sponsor Identifier Code System"/>
-<artifact id="ValueSet/sponsor-identifier-vs" key="ValueSet-sponsor-identifier-vs" name="Sponsor Identifier Value Set"/>
 <artifact id="Bundle/h1" key="Bundle-h1" name="null (Bundle)"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>

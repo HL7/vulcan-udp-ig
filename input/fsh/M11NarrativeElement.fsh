@@ -1,6 +1,5 @@
-Alias: NCIT = http://terminology.hl7.org/NamingSystem/v3-nciThesaurus
-Alias: UDP  = http://hl7.org/fhir/uv/vulcan-udp-ig/Terminology
-
+//--------------------------------------------------------------------------------------
+//
 Extension: NarrativeElements
 Id: narrative-elements
 Title: "Narrative Elements"
@@ -8,175 +7,52 @@ Description: "Narrative content for the ResearchStudy."
 Context: ResearchStudy
 * value[x] only Reference
 * valueReference only Reference(research-study-narratives)
+* valueReference. ^short = "Pointer to the narrative content for the protocol"
 
+//--------------------------------------------------------------------------------------
+//
 Profile: ResearchStudyNarratives
 Parent: Composition
 Id:  research-study-narratives
 Title:  "Research Study Narratives"
-Description:    "Additional narrative elements associated with a research study."
-* section.code from M11SectionCodesVS (preferred)
+Description:    """Narrative elements associated with a research study.<br>
+<br>
+Use this profile when the ordering of the narrative sections is not intended to comply with the ICH M11 CeSHarP template
+otherwise use the M11ResearchStudyNarratives profile.
 
-ValueSet: M11SectionCodesVS
-Id: m11-section-codes-vs
-Title: "M11 Section Codes Value Set"
-Description: "Codes representing sections of M11.
-The codes are an interim mock up until the proper set is available from ICH."
-* UDP#a0000    "M11 Template Headings"
-* UDP#a0001    "1 PROTOCOL SUMMARY"
-* UDP#a0002    "1.1 Protocol Synopsis"
-* UDP#a0003    "1.1.1 Primary and Secondary Objectives and Estimands"
-* UDP#a0004    "1.1.2 Overall Design"
-* UDP#a0005    "1.2 Trial Schema"
-* UDP#a0006    "1.3 Schedule of Activities"
-* UDP#a0007    "2 INTRODUCTION"
-* UDP#a0008    "2.1 Purpose of Trial"
-* UDP#a0009    "2.2 Assessment of Risks and Benefits"
-* UDP#a0010    "2.2.1 Risk Summary and Mitigation Strategy"
-* UDP#a0011    "2.2.2 Benefit Summary"
-* UDP#a0012    "2.2.3 Overall Benefit-Risk Assessment"
-* UDP#a0013    "3 TRIAL OBJECTIVES AND ASSOCIATED ESTIMANDS"
-* UDP#a0014    "3.1 Primary Objective(s) and Associated Estimand(s)"
-* UDP#a0015    "3.1.1 Primary Objective #"
-* UDP#a0016    "3.2 Secondary Objective(s) and Associated Estimand(s)"
-* UDP#a0017    "3.2.1 Secondary Objective #"
-* UDP#a0018    "3.3 Exploratory Objective(s)"
-* UDP#a0019    "3.3.1 Exploratory Objective #"
-* UDP#a0020    "4 TRIAL DESIGN"
-* UDP#a0021    "4.1 Description of Trial Design"
-* UDP#a0022    "4.1.1 Stakeholder Input into Design"
-* UDP#a0023    "4.2 Rationale for Trial Design"
-* UDP#a0024    "4.2.1 Rationale for Estimand(s)"
-* UDP#a0025    "4.2.2 Rationale for Intervention Model"
-* UDP#a0026    "4.2.3 Rationale for Control Type"
-* UDP#a0027    "4.2.4 Rationale for Trial Duration"
-* UDP#a0029    "4.2.5 Rationale for Adaptive or Novel Trial Design"
-* UDP#a0030    "4.2.6 Rationale for Interim Analysis"
-* UDP#a0031    "4.2.7 Rationale for Other Trial Design Aspects"
-* UDP#a0032    "4.3 Trial Stopping Rules"
-* UDP#a0033    "4.4 Start of Trial and End of Trial"
-* UDP#a0034    "4.5 Access to Trial Intervention After End of Trial"
-* UDP#a0035    "5 TRIAL POPULATION"
-* UDP#a0036    "5.1 Description of Trial Population and Rationale"
-* UDP#a0037    "5.2 Inclusion Criteria"
-* UDP#a0038    "5.3 Exclusion Criteria"
-* UDP#a0039    "5.4 Contraception"
-* UDP#a0040    "5.4.1 Definitions Related to Childbearing Potential"
-* UDP#a0041    "5.4.2 Contraception Requirements"
-* UDP#a0042    "5.5 Lifestyle Restrictions"
-* UDP#a0043    "5.5.1 Meals and Dietary Restrictions"
-* UDP#a0044    "5.5.2 Caffeine, Alcohol, Tobacco, and Other Restrictions"
-* UDP#a0045    "5.5.3 Physical Activity Restrictions"
-* UDP#a0046    "5.5.4 Other Activity Restrictions"
-* UDP#a0047    "5.6 Screen Failure and Rescreening"
-* UDP#a0048    "6 TRIAL INTERVENTION AND CONCOMITANT THERAPY"
-* UDP#a0049    "6.1 Description of Investigational Trial Intervention"
-* UDP#a0050    "6.2 Rationale for Investigational Trial Intervention Dose and Regimen"
-* UDP#a0051    "6.3 Investigational Trial Intervention Administration"
-* UDP#a0052    "6.4 Investigational Trial Intervention Dose Modification"
-* UDP#a0053    "6.5 Management of Investigational Trial Intervention Overdose"
-* UDP#a0054    "6.6 Preparation, Storage, Handling and Accountability of Investigational Trial Intervention"
-* UDP#a0055    "6.6.1 Preparation of Investigational Trial Intervention"
-* UDP#a0056    "6.6.2 Storage and Handling of Investigational Trial Intervention"
-* UDP#a0057    "6.6.3 Accountability of Investigational Trial Intervention"
-* UDP#a0058    "6.7 Investigational Trial Intervention Assignment, Randomisation and Blinding"
-* UDP#a0059    "6.7.1 Participant Assignment to Investigational Trial Intervention"
-* UDP#a0060    "6.7.2 Randomisation"
-* UDP#a0061    "6.7.3 Measures to Maintain Blinding"
-* UDP#a0062    "6.7.4 Emergency Unblinding at the Site"
-* UDP#a0063    "6.8 Investigational Trial Intervention Adherence"
-* UDP#a0064    "6.9 Description of Noninvestigational Trial Intervention"
-* UDP#a0065    "6.9.1 Background Trial Intervention"
-* UDP#a0066    "6.9.2 Rescue Therapy"
-* UDP#a0067    "6.9.3 Other Noninvestigational Trial Intervention"
-* UDP#a0068    "6.10 Concomitant Therapy"
-* UDP#a0069    "6.10.1 Prohibited Concomitant Therapy"
-* UDP#a0070    "6.10.2 Permitted Concomitant Therapy"
-* UDP#a0071    "7 PARTICIPANT DISCONTINUATION OF TRIAL INTERVENTION AND DISCONTINUATION OR WITHDRAWAL FROM TRIAL"
-* UDP#a0072    "7.1 Discontinuation of Trial Intervention for Individual Participants"
-* UDP#a0073    "7.1.1 Permanent Discontinuation of Trial Intervention"
-* UDP#a0074    "7.1.2 Temporary Discontinuation of Trial Intervention"
-* UDP#a0075    "7.1.3 Rechallenge"
-* UDP#a0076    "7.2 Participant Discontinuation or Withdrawal from the Trial"
-* UDP#a0077    "7.3 Lost to Follow-Up"
-* UDP#a0078    "8 TRIAL ASSESSMENTS AND PROCEDURES"
-* UDP#a0079    "8.1 Trial Assessments and Procedures Considerations"
-* UDP#a0080    "8.2 Screening/Baseline Assessments and Procedures"
-* UDP#a0081    "8.3 Efficacy Assessments and Procedures"
-* UDP#a0082    "8.4 Safety Assessments and Procedures"
-* UDP#a0083    "8.4.1 Physical Examination"
-* UDP#a0084    "8.4.2 Vital Signs"
-* UDP#a0085    "8.4.3 Electrocardiograms"
-* UDP#a0086    "8.4.4 Clinical Laboratory Assessments"
-* UDP#a0087    "8.4.5 Pregnancy Testing"
-* UDP#a0088    "8.4.6 Suicidal Ideation and Behaviour Risk Monitoring"
-* UDP#a0089    "8.5 Pharmacokinetics"
-* UDP#a0090    "8.6 Biomarkers"
-* UDP#a0091    "8.6.1 Genetics and Pharmacogenomics"
-* UDP#a0092    "8.6.2 Pharmacodynamic Biomarkers"
-* UDP#a0093    "8.6.3 Other Biomarkers"
-* UDP#a0094    "8.7 Immunogenicity Assessments"
-* UDP#a0095    "8.8 Medical Resource Utilisation and Health Economics"
-* UDP#a0096    "9 ADVERSE EVENTS, SERIOUS ADVERSE EVENTS, PRODUCT COMPLAINTS, PREGNANCY AND POSTPARTUM INFORMATION, AND SPECIAL SAFETY SITUATIONS"
-* UDP#a0097    "9.1 Definitions"
-* UDP#a0098    "9.1.1 Definitions of Adverse Events"
-* UDP#a0099    "9.1.2 Definitions of Serious Adverse Events"
-* UDP#a0100    "9.1.3 Definitions of Product Complaints"
-* UDP#a0101    "9.1.3.1 Definitions of Medical Device Product Complaints"
-* UDP#a0102    "9.2 Timing and Procedures for Collection and Reporting"
-* UDP#a0103    "9.2.1 Timing"
-* UDP#a0104    "9.2.2 Collection Procedures"
-* UDP#a0105    "9.2.3 Reporting"
-* UDP#a0106    "9.2.3.1 Regulatory Reporting Requirements"
-* UDP#a0107    "9.2.4 Adverse Events of Special Interest"
-* UDP#a0108    "9.2.5 Disease-related Events or Outcomes Not Qualifying as AEs or SAEs"
-* UDP#a0109    "9.3 Pregnancy and Postpartum Information"
-* UDP#a0110    "9.3.1 Participants Who Become Pregnant During the Trial"
-* UDP#a0111    "9.3.2 Participants Whose Partners Become Pregnant During the Trial"
-* UDP#a0112    "9.4 Special Safety Situations"
-* UDP#a0113    "10 STATISTICAL CONSIDERATIONS"
-* UDP#a0114    "10.1 General Considerations"
-* UDP#a0115    "10.2 Analysis Sets"
-* UDP#a0116    "10.3 Analyses of Demographics and Other Baseline Variables"
-* UDP#a0117    "10.4 Analyses Associated with the Primary Objective(s)"
-* UDP#a0118    "10.4.1 Primary Objective #"
-* UDP#a0119    "10.4.1.1 Statistical Analysis Method"
-* UDP#a0120    "10.4.1.2 Handling of Data in Relation to Primary Estimand(s)"
-* UDP#a0121    "10.4.1.3 Handling of Missing Data in Relation to Primary Estimand(s)"
-* UDP#a0122    "10.4.1.4 Sensitivity Analysis"
-* UDP#a0123    "10.4.1.5 Supplementary Analysis"
-* UDP#a0124    "10.5 Analyses Associated with the Secondary Objective(s)"
-* UDP#a0125    "10.5.1 Secondary Objective #"
-* UDP#a0126    "10.5.1.1 Statistical Analysis Method"
-* UDP#a0127    "10.5.1.2 Handling of Data in Relation to Secondary Estimand(s)"
-* UDP#a0128    "10.5.1.3 Handling of Missing Data in Relation to Secondary Estimand(s)"
-* UDP#a0129    "10.5.1.4 Sensitivity Analysis"
-* UDP#a0130    "10.5.1.5 Supplementary Analysis"
-* UDP#a0131    "10.6 Analysis Associated with the Exploratory Objective(s)"
-* UDP#a0132    "10.7 Safety Analyses"
-* UDP#a0133    "10.8 Other Analyses"
-* UDP#a0134    "10.9 Interim Analyses"
-* UDP#a0135    "10.10 Multiplicity Adjustments"
-* UDP#a0136    "10.11 Sample Size Determination"
-* UDP#a0137    "11 TRIAL OVERSIGHT AND OTHER GENERAL CONSIDERATIONS"
-* UDP#a0138    "11.1 Regulatory and Ethical Considerations"
-* UDP#a0139    "11.2 Trial Oversight"
-* UDP#a0140    "11.2.1 Investigator Responsibilities"
-* UDP#a0141    "11.2.2 Sponsor Responsibilities"
-* UDP#a0142    "11.3 Informed Consent Process"
-* UDP#a0143    "11.3.1 Informed Consent for Rescreening"
-* UDP#a0144    "11.3.2 Informed Consent for Use of Remaining Samples in Exploratory Research"
-* UDP#a0145    "11.4 Committees"
-* UDP#a0146    "11.5 Insurance and Indemnity"
-* UDP#a0147    "11.6 Risk-Based Quality Management"
-* UDP#a0149    "11.7 Data Governance"
-* UDP#a0150    "11.8 Data Protection"
-* UDP#a0151    "11.9 Source Data"
-* UDP#a0152    "11.10 Protocol Deviations"
-* UDP#a0153    "11.11 Early Site Closure"
-* UDP#a0154    "11.12 Data Dissemination"
-* UDP#a0155    "12 APPENDIX: SUPPORTING DETAILS"
-* UDP#a0156    "12.1 Clinical Laboratory Tests"
-* UDP#a0157    "12.2 Country/Region-Specific Differences"
-* UDP#a0158    "12.3 Prior Protocol Amendment(s)"
-* UDP#a0159    "13 APPENDIX: GLOSSARY OF TERMS AND ABBREVIATIONS"
-* UDP#a0160    "14 APPENDIX: REFERENCES"
+For narrative that is not arranged according to the M11 template create a value set to use in place
+of the  M11SectionCodesVS.<br>
+
+<br><span style='color: red;'>**///TODO**</span>Provide pointers to construction of a non M11 value set 
+"""
+* subject. ^short = "Reference to the protocol that the narrative refers to" 
+* subject. ^comment = "This reference provides a rapid means of relating a specific narrative instnace to
+the protocol to which it belongs." 
+* section.code from M11SectionCodesVS (example)
+* section.code. ^short = "Identifies the section of the narrative according to the selected coding system"
+* section.code. ^definition = "A code from a value set that identifies the narrative section.  The value set is description
+constructed from one or more code systems that define the required structure"
+* type. ^comment  = "**///TODO** give guidance on code to use"
+* date.  ^comment = "**///TODO** give guidance on interpretation of this"
+* author only Reference(Organization)
+* title. ^comment = "**///TODO** give guidance of forming the title"
+
+//--------------------------------------------------------------------------------------
+//
+Profile: M11ResearchStudyNarratives
+Parent: ResearchStudyNarratives
+Id:  m11-research-study-narratives
+Title:  "M11 Specific Research Study Narratives"
+Description:    """Further constraint of ResearchStudyNarratives profile to force use of M11 heading.<br>
+
+The ICH M11 CeSHarP template for a study protocol specifies the headings to be used to organise protocol content.
+For a FHIR representation of the protocol to be compliant with this template each of the narrative sections must 
+be organised using these headings. Only if there is material that does not properly belong under one of the M11 
+headings can additional codes be created.<br>
+
+<br><span style='color: red;'>**///TODO**</span> Add example of creating custom code/section 
+"""
+* section.code from M11SectionCodesVS (extensible)
+* section.code. ^short = "Constrained to M11 codes"
+* section.code. ^comment = "Have to use M11 codes but can add for additional sections beyond M11 specification."
+* section.code. ^binding.description = "The value set can only be extended if narrative content falls outside any identified M11 section." 
