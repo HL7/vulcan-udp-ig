@@ -1,4 +1,5 @@
 {
-  "http://terminology.hl7.org/ValueSet/v3-Confidentiality|2.0.0" : null,
+  "https://fevir.net/resources/ValueSet/179431" : null,
+  "https://fevir.net/resources/CodeSystem/179423|null" : null,
   "http://hl7.org/fhir/uv/vulcan-udp-ig/Terminology|null" : null
 }
