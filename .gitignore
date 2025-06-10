@@ -29,3 +29,4 @@ Thumbs.db
 ################
 *.bak
 
+_build.new.bat
