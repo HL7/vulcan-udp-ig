@@ -18,3 +18,4 @@ The following links provide important context for parties looking to make use of
 | Link              | Description              |
 | ----------------- | ------------------------ |
 | [CDISC USDM Data Model](https://github.com/cdisc-org/DDF-RA) | |
+| [HL7 Vulcan Schedule of Activities Implementation Guide](https://hl7.org/fhir/uv/vulcan-schedule/) | HL7 Vulcan Schedule of Activities Implementation Guide |
