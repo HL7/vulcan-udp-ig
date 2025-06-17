@@ -56,3 +56,4 @@ headings can additional codes be created.<br>
 * section.code. ^short = "Constrained to M11 codes"
 * section.code. ^comment = "Have to use M11 codes but can add for additional sections beyond M11 specification."
 * section.code. ^binding.description = "The value set can only be extended if narrative content falls outside any identified M11 section." 
+
