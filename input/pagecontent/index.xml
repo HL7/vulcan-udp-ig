@@ -26,7 +26,7 @@
   </p>
   <ul>
     <li>This home page which sets out basic introduction and background </li>
-    <li>The following sections under Guidance that provide detail explanation and guidance: 
+    <li>The following sections under <a href="Guidance.html">Guidance</a> that provide detail explanation and guidance: 
       <ul>
       <li><a href="useCases.html">Use Cases and Work Flows</a> - describes intended uses of a digital
       protocol that follows this specification. </li>
