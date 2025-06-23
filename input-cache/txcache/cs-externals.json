@@ -1,10 +1,16 @@
 {
-  "http://hl7.org/fhir/uv/vulcan-udp-ig/Terminology" : null,
-  "http://unstats.un.org/unsd/methods/m49/m49.htm|null" : null,
   "http://snomed.info/sct|null" : null,
   "http://hl7.org/fhir/uv/vulcan-udp-ig/Terminology|null" : null,
-  "http://www.cdisc.org/ns/odm/v1.3#" : null,
   "http://www.cdisc.org/ns/odm/v1.3/FormDef#" : null,
-  "http://www.cdisc.org/ns/odm/v1.3#|null" : null,
-  "https://clinicaltrials.gov/show/" : null
+  "https://clinicaltrials.gov/show/" : null,
+  "http://hl7.org/fhir/research-study-phase|null" : null,
+  "https://fevir.net/resources/CodeSystem/179423" : null,
+  "http://spor.ema.europa.eu/v1/example-reason|null" : null,
+  "http://spor.ema.europa.eu/v1/example-reason" : null,
+  "http://hl7.org/fhir/uv/vulcan-udp-ig/Terminology" : null,
+  "http://unstats.un.org/unsd/methods/m49/m49.htm|null" : null,
+  "http://hl7.org/fhir/research-study-phase" : null,
+  "https://fevir.net/resources/CodeSystem/179423|null" : null,
+  "http://www.cdisc.org/ns/odm/v1.3#" : null,
+  "http://www.cdisc.org/ns/odm/v1.3#|null" : null
 }

@@ -1,15 +1,23 @@
-<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
   <!-- The spaces between the open and close "a" tag are mandatory.  (Cuz HTML renderers are dumb...) -->
   <a name="intro"> </a>
   <h3>Introduction</h3>
-  <p><code>input/pagecontent/index.xml</code></p>
-	<p>
+  <p>
+    <code>input/pagecontent/index.xml</code>
+  </p>
+  <p>
+    <b>This guide is not complete - most of the discursive sections have only placeholders while the
+      technical content is being developed</b>
+  </p>
+  <p>
     What is this IG about (in non-expert friendly terms).
   </p>
-	<a name="technical"> </a>
-	<h3>Technical Overview</h3>
-	<p>
-    Additional detail/context setting for those who have significant background in the domain.  (Try to make as understandable as you can, but
+  <a name="technical"> </a>
+  <h3>Technical Overview</h3>
+  <p>
+    Additional detail/context setting for those who have significant background in the domain. (Try
+    to make as understandable as you can, but
     set important context).
   </p>
   <a name="walkthrough"> </a>
@@ -17,17 +25,22 @@
     The main sections of this IG are:
   </p>
   <ul>
-    <li>
-      <a href="useCases.html">Use Cases and Work Flows</a> - describes intended uses of a digital protocol that follows this specification. 
+    <li>This home page which sets out basic introduction and background </li>
+    <li>The following sections under <a href="Guidance.html">Guidance</a> that provide detail explanation and guidance: 
+      <ul>
+      <li><a href="useCases.html">Use Cases and Work Flows</a> - describes intended uses of a digital
+      protocol that follows this specification. </li>
+      <li><a href="infoModels.html">Information Models</a> - The structure of Protocol information
+      seen from different viewpoints </li>
+      <li><a href="mappings.html">Mappings</a> - Guidance converting the sections of a protocol into
+      FHIR </li>
+      </ul>
     </li>
-    <li>
-      <a href="infoModels.html">Information Models</a> - The structure of Protocol information seen from different viewpoints
-    </li>
-    <li>
-      <a href="mappings.html">Mappings</a> - Guidance converting the sections of a protocol into FHIR
-    </li>
-    <li>
-      <a href="downloads.html">Downloads</a> - Allows downloading a copy of this implementation guide and other useful information
-    </li>
+  <li><a href="artifacts.html">Artifacts</a> - The technical components (Profiles, Extensions, Value
+    Sets etc) of the Implementation Guide </li>
+  <!--    <li>
+      <a href="downloads.html">Downloads</a> - Allows downloading a copy of this implementation guide and
+    other useful information
+    </li> -->
   </ul>
 </div>

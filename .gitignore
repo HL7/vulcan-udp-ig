@@ -1,14 +1,21 @@
 # Temporary folders #
 #####################
+classnotes
+Error notes
+input-cache
+package
 temp
 template
 output
 fsh-generated
+ebm
 
 # Don't commit this because it's so large #
 ###########################################
-/input-cache/org.hl7.fhir.publisher.jar
-/input-cache/publisher.jar
+#/classnotes
+#/input-cache/org.hl7.fhir.publisher.jar
+#/input-cache/publisher.jar
+#/Error notes
 
 # Windows generated files #
 ###########################
@@ -23,6 +30,4 @@ Thumbs.db
 ################
 *.bak
 
-input-cache/schemas/
-
-translations/
+_build.new.bat

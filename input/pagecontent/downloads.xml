@@ -2,8 +2,14 @@
 {% assign excludexml = site.data.info.excludexml | downcase | slice: 0 %}
 {% assign excludejson = site.data.info.excludejson | downcase | slice: 0 %}
 {% assign excludettl = site.data.info.excludettl | downcase | slice: 0 %}
+
+<p>Link to the relevant <a target="_blank" href="{{site.data.fhir.path}}index.html">FHIR Spec <img src="external.png"
+  style="text-align: baseline"/></a>
+</p>
 	<p>
     Download the entire implementation guide <a href="full-ig.zip">here</a>
+	</p><p>
+	Download mapping spreadsheet <a href="Mappings/M11 to FHIR Mapping 01.xlsx">here</a>
 	</p>
 	<table>
 		<tbody>

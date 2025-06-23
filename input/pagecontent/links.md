@@ -33,3 +33,4 @@ These links are published mappings between the different standards developed as 
 | Link              | Description              |
 | ----------------- | ------------------------ |
 | [CDISC USDM Data Model](https://github.com/cdisc-org/DDF-RA) | Reference implementation for the CDISC/Transcelerate DDF Reference Architecture (home of the USDM model) |
+| [HL7 Vulcan Schedule of Activities Implementation Guide](https://hl7.org/fhir/uv/vulcan-schedule/) | HL7 Vulcan Schedule of Activities Implementation Guide |

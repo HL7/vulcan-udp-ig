@@ -6,11 +6,14 @@
 <artifactPageExtension value="-mappings"/>
 <artifact id="Composition/IGBJ-Narrative-2.1" key="Composition-IGBJ-Narrative-2.1" name="IGBJ Protocol Narrative 2.1"/>
 <artifact id="Composition/IGBJ-Narrative-5.1" key="Composition-IGBJ-Narrative-5.1" name="IGBJ Protocol Narrative 5.1"/>
+<artifact id="Composition/IGBJ-Narrative-9" key="Composition-IGBJ-Narrative-9" name="IGBJ Protocol Narrative 9"/>
 <artifact id="ResearchStudy/IGBJ-ResearchStudy" key="ResearchStudy-IGBJ-ResearchStudy" name="IGBJ Research Study with narrative"/>
 <artifact id="ValueSet/m11-section-codes-vs" key="ValueSet-m11-section-codes-vs" name="M11 Section Codes Value Set"/>
 <artifact id="StructureDefinition/m11-research-study-narratives" key="StructureDefinition-m11-research-study-narratives" name="M11 Specific Research Study Narratives"/>
 <artifact id="StructureDefinition/narrative-elements" key="StructureDefinition-narrative-elements" name="Narrative Elements"/>
 <artifact id="StructureDefinition/research-study-narratives" key="StructureDefinition-research-study-narratives" name="Research Study Narratives"/>
+<artifact id="StructureDefinition/research-study-sae-reporting-method" key="StructureDefinition-research-study-sae-reporting-method" name="ResearchStudySaeReportingMethod"/>
+<artifact id="StructureDefinition/research-study-study-amendment" key="StructureDefinition-research-study-study-amendment" name="ResearchStudyStudyAmendment"/>
 <artifact id="Bundle/h1" key="Bundle-h1" name="null (Bundle)"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
