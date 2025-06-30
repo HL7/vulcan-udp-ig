@@ -7,9 +7,10 @@ id: hl7.fhir.uv.VulcanUdpIg
 #canonical: https://github.com/HL7/hl7.vulcan-udp-ig
 #cannonical: HL7.fhir.uv.VulcanUdpIg
 #canonical: http://hl7.org/fhir/uv/vulcan-udp-ig
-canonical: http://hl7.org/fhir/uv/VulcanUdpIg
+#canonical: http://hl7.org/fhir/uv/VulcanUdpIg
+canonical: http://hl7.org/fhir/uv/pharmaceutical-research-protocol
 #canonical: https://hl7.org/fhir/6.0.0-ballot3/VulcanUdpIg
-name: VulcanUdpIg
+name: pharmaceutical-research-protocol
 title: Vulcan UDP IG
 # description: Example Implementation Guide for getting started with SUSHI
 status: draft # draft | active | retired | unknown
