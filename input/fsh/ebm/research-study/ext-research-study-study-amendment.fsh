@@ -25,12 +25,16 @@ Description: "Amendment to a study protocol. This is originally from EBM."
 * extension[rationale].value[x] only string
   * ^short = "Rationale"
   * ^definition = "Rationale."
-* extension[substantialImpactSafety].value[x] only boolean
+  
+* extension[substantialImpactSafety].value[x] only Coding
+* extension[substantialImpactSafety].value[x] from $YesNoUnknownVS (required)
   * ^short = "Substantial impact on safety"
   * ^definition = "Substantial impact on safety."
+
 * extension[substantialImpactSafetyComment].value[x] only string
   * ^short = "Comment on substantial impact on safety"
   * ^definition = "Comment on substantial impact on safety."
+
 * extension[substantialImpactReliability].value[x] only boolean
   * ^short = "Substantial impact on reliability"
   * ^definition = "Substantial impact on reliability."
@@ -38,5 +42,6 @@ Description: "Amendment to a study protocol. This is originally from EBM."
   * ^short = "Comment on substantial impact on reliability"
   * ^definition = "Comment on substantial impact on reliability."
 * extension[primaryReason].value[x] only CodeableConcept
+* extension[primaryReason].value[x] from $study-amendment-reason-vs (extensible)
   * ^short = "Reason for amendment, e.g. Safety"
   * ^definition = "Reason for amendment, e.g. Safety."

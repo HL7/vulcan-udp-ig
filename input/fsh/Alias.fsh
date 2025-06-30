@@ -1,6 +1,8 @@
 Alias: SCT = http://snomed.info/sct
-Alias: NCIT = http://terminology.hl7.org/NamingSystem/v3-nciThesaurus
+//Alias: NCIT = http://terminology.hl7.org/NamingSystem/v3-nciThesaurus
+Alias: $NCIT = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
 Alias: UDP  = http://hl7.org/fhir/uv/vulcan-udp-ig/Terminology
+Alias: $CNEW = http://hl7Vulcan.org/Pending
 
 //-----------------------------------------------------------------------------
 // From EBM
