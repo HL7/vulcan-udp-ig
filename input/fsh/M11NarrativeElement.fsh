@@ -11,6 +11,26 @@ Context: ResearchStudy
 
 //--------------------------------------------------------------------------------------
 //
+Extension: NarrativeElements2
+Id: narrative-elements2
+Title: "Narrative Elements"
+Description: "Narrative content for the ResearchStudy."
+Context: ResearchStudy
+* value[x] 0..0
+* extension contains 
+  part 0..1 and 
+  narrative 0..1
+
+* extension[part].value[x] only code
+* extension[part].value[x] from M11SectionCodesVS (required)
+* extension[part].value[x]. ^short = "Identifies the subject of the narrative"
+
+//* extension[narrative].value[x] only Reference
+* extension[narrative].valueReference only Reference(research-study-narratives)
+* extension[narrative].valueReference. ^short = "Pointer to the narrative content for the protocol"
+ 
+//--------------------------------------------------------------------------------------
+//
 Profile: ResearchStudyNarratives
 Parent: Composition
 Id:  research-study-narratives

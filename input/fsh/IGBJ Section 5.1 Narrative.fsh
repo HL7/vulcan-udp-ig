@@ -7,7 +7,7 @@ Description: "5.1	Description of Trial Population and Rationale"
 * type = UDP#b001 "Protocol narrative"
 * subject = Reference(IGBJ-ResearchStudy)
 * date = "2025-06-03T12:46:00Z"
-* author = Reference(acmeinc) // Reference to Organization: Marketing Authorization Holder
+* author = Reference(Organization/org-EliLilly) // Reference to Organization: Marketing Authorization Holder
 * title = "IGBJ Protocol Narrative 5.1"
 * section[0]
   * title = "5.1	Description of Trial Population and Rationale"
