@@ -7,7 +7,7 @@ Description: "9	ADVERSE EVENTS, SERIOUS ADVERSE EVENTS, PRODUCT COMPLAINTS, PREG
 * type = UDP#b001 "Protocol narrative"
 * subject = Reference(IGBJ-ResearchStudy)
 * date = "2025-06-03T12:46:00Z"
-* author = Reference(acmeinc) // Reference to Organization: Marketing Authorization Holder
+* author = Reference(Organization/org-EliLilly) // Reference to Organization: Marketing Authorization Holder
 * title = "IGBJ Protocol Narrative 9"
 * section[0]
   * title = "9	ADVERSE EVENTS, SERIOUS ADVERSE EVENTS, PRODUCT COMPLAINTS, PREGNANCY AND POSTPARTUM INFORMATION"

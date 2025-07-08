@@ -1,0 +1,237 @@
+<ResearchStudy xmlns="http://hl7.org/fhir">
+  <id value="IGBJ-ResearchStudy"/>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ResearchStudy IGBJ-ResearchStudy</b></p><a name="IGBJ-ResearchStudy"> </a><a name="hcIGBJ-ResearchStudy"> </a><p><b>Narrative Elements</b>: <a href="Composition-IGBJ-Narrative-2.1.html">Composition IGBJ Protocol Narrative 2.1</a></p><p><b>Narrative Elements</b>: <a href="Composition-IGBJ-Narrative-5.1.html">Composition IGBJ Protocol Narrative 5.1</a></p><p><b>Narrative Elements</b>: <a href="Composition-IGBJ-Narrative-9.html">Composition IGBJ Protocol Narrative 9</a></p><blockquote><p><b>Narrative Elements</b></p><ul><li>part: C132349</li></ul></blockquote><blockquote><p><b>Narrative Elements</b></p><ul><li>narrative: <a href="Composition-IGBJ-Narrative-1.3.html">Composition IGBJ Protocol Narrative 1.3</a></li></ul></blockquote><blockquote><p><b>ResearchStudyStudyAmendment</b></p><blockquote><p><b>url</b></p>scope</blockquote><p><b>value</b>: C217026</p><blockquote><p><b>url</b></p><a href="http://hl7.org/fhir/R5/valueset-country.html">Country ValueSet</a></blockquote><p><b>value</b>: DE</p><blockquote><p><b>url</b></p><a href="http://hl7.org/fhir/R5/valueset-country.html">Country ValueSet</a></blockquote><p><b>value</b>: GB</p><blockquote><p><b>url</b></p>region</blockquote><blockquote><p><b>url</b></p>site</blockquote><p><b>value</b>: <code>https://example.org/site-identifier</code>/sss</p><blockquote><p><b>url</b></p>approvalDate</blockquote><p><b>value</b>: 2017-12-05</p><blockquote><p><b>url</b></p>signature</blockquote><p><b>value</b>: No display for Signature  (sigFormat: xml&quot;application/fhir+xml&quot;; data: PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPEVudmVsb3BlIHhtbG5zPSJ1cm46ZW52ZWxvcGUiPgogIDxTaWduYXR1cmUgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkveG1sZHNpZyMiPgogICAgPFNpZ25lZEluZm8+CiAgICAgIDxDYW5vbmljYWxpemF0aW9uTWV0aG9kIAogICAgICAgICAgIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvVFIvMjAwMS9SRUMteG1sLWMxNG4tCjIwMDEwMzE1I1dpdGhDb21tZW50cyIvPgogICAgICA8U2lnbmF0dXJlTWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS8KeG1sZHNpZyNkc2Etc2hhMSIvPgogICAgICA8UmVmZXJlbmNlIFVSST0iIj4KICAgICAgICA8VHJhbnNmb3Jtcz4KICAgICAgICAgIDxUcmFuc2Zvcm0gQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwLzA5Lwp4bWxkc2lnI2VudmVsb3BlZC1zaWduYXR1cmUiLz4KICAgICAgICA8L1RyYW5zZm9ybXM+CiAgICAgICAgPERpZ2VzdE1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkvCnhtbGRzaWcjc2hhMSIvPgogICAgICAgIDxEaWdlc3RWYWx1ZT51b29xYldZYTVWQ3FjSkNidXltQktxbTE3dlk9PC9EaWdlc3RWYWx1ZT4KICAgICAgPC9SZWZlcmVuY2U+CiAgICA8L1NpZ25lZEluZm8+CjxTaWduYXR1cmVWYWx1ZT4KS2VkSnVUb2I1Z3R2WXg5cU0zazNnbTdrYkxCd1ZiRVFSbDI2UzJ0bVhqcU5ORDdNUkd0b2V3PT0KICAgIDwvU2lnbmF0dXJlVmFsdWU+CiAgICA8S2V5SW5mbz4KICAgICAgPEtleVZhbHVlPgogICAgICAgIDxEU0FLZXlWYWx1ZT4KICAgICAgICAgIDxQPgovS2FDem80U3lyb203OHozRVE1U2JiQjRzRjdleTgwZXRLSUk4NjRXRjY0QjgxdVJwSDV0OWpRVHhlCkV1MEltYnpSTXF6VkRaa1ZHOXhEN25OMWt1Rnc9PQogICAgICAgICAgPC9QPgogICAgICAgICAgPFE+bGk3ZHpEYWN1bzY3Smc3bXRxRW0yVFJ1T01VPTwvUT4KICAgICAgICAgIDxHPlo0UnhzbnFjOUU3cEdrbkZGSDJ4cWFyeVJQQmFRMDFraHBNZExSUW5HNTQxQXd0eC8KWFBhRjVCcHN5NHBOV01PSENCaU5VME5vZ3BzUVc1UXZubE1wQT09CiAgICAgICAgICA8L0c+CiAgICAgICAgICA8WT5xVjM4SXFyV0pHMFYvCm1aUXZSVmkxT0h3OVpqODRuREM0ak84UDBheGkxZ2I2ZCs0NzV5aE1qU2MvCkJySVZDNThXM3lkYmtLK1JpNE9LYmFSWmxZZVJBPT0KICAgICAgICAgPC9ZPgogICAgICAgIDwvRFNBS2V5VmFsdWU+CiAgICAgIDwvS2V5VmFsdWU+CiAgICA8L0tleUluZm8+CiAgPC9TaWduYXR1cmU+CjwvRW52ZWxvcGU+IA==)</p><blockquote><p><b>url</b></p>signatureURL</blockquote><p><b>value</b>: https://somelocation</p><blockquote><p><b>url</b></p>signatureMethod</blockquote><p><b>value</b>: electronic and wet ink copy</p><p><b>scope</b>: C41065</p><p><b>number</b>: 234</p><blockquote><p><b>url</b></p><a href="StructureDefinition-ResearchStudyStudyAmendmentScopeImpact.html">ResearchStudyStudyAmendmentScopeImpact</a></blockquote><p><b>scope</b>: C68846</p><p><b>number</b>: 983</p><blockquote><p><b>url</b></p><a href="StructureDefinition-ResearchStudyStudyAmendmentScopeImpact.html">ResearchStudyStudyAmendmentScopeImpact</a></blockquote><blockquote><p><b>url</b></p>primaryReason</blockquote><p><b>value</b>: <span title="Codes:{http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl C218490}">Regulatory Agency Request To Amend</span></p><blockquote><p><b>url</b></p>secondaryReason</blockquote><p><b>value</b>: <span title="Codes:{http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl C218494}">Manufacturing Change</span></p><blockquote><p><b>url</b></p><a href="http://hl7.org/fhir/R5/codesystem-example-summary.html">summary</a></blockquote><p><b>value</b>: Regulator required manufacturing chanage.</p><blockquote><p><b>url</b></p>substantialImpactSafety</blockquote><p><b>value</b>: C49488</p><blockquote><p><b>url</b></p>substantialImpactSafetyComment</blockquote><p><b>value</b>: Specifically implemented to decrease safety risks.</p><blockquote><p><b>url</b></p>substantialImpactReliability</blockquote><p><b>value</b>: C17998</p><blockquote><p><b>url</b></p>substantialImpactReliabilityComment</blockquote><p><b>value</b>: ccc</p><p><b>detail</b>: amendment one</p><p><b>rationale</b>: clarification</p><p><b>section</b>: <span title="Codes:{http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl C218515}">1.1 Protocol Synopsis</span></p><blockquote><p><b>url</b></p><a href="StructureDefinition-protocol-amendment-detail.html">ResearchStudyStudyAmendmentDetails</a></blockquote><p><b>detail</b>: amendment two</p><p><b>rationale</b>: exclude regular drinkers</p><p><b>section</b>: <span title="Codes:{http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl C218550}">5.3 Exclusion Criteria</span></p><blockquote><p><b>url</b></p><a href="StructureDefinition-protocol-amendment-detail.html">ResearchStudyStudyAmendmentDetails</a></blockquote><blockquote><p><b>url</b></p>rationale</blockquote><p><b>value</b>: Updates to address safety concern &amp; align with product guidelines.</p><blockquote><p><b>url</b></p>description</blockquote><p><b>value</b>: Protocol I8R-JE-IGBJ A Phase 3 Study of Nasal Glucagon (LY900018) Compared to Intramuscular Glucagon for Treatment of Insulin-induced Hypoglycemia in Japanese Patients with Diabetes Mellitus has been amended. The new protocol is indicated by Amendment (a) and will be used to conduct the study in place of any preceding version of the protocol. The overall changes and rationale for the changes made to this protocol are as follows: • An exclusion criterion for patients with retinopathy or maculopathy was added due to the potential risk of fundal hemorrhage induced by hypoglycemia. • The GlucaGen reconstitution volume was changed from 1.0 mL to 1.1 mL in accordance with instructions in the Summary of Product Characteristics (2015).</p></blockquote><blockquote><p><b>M11ResearchStudy</b></p><ul><li>confidentialityStatement: All data is confidential</li></ul></blockquote><p><b>identifier</b>: Regulatory Agency Identifier/NCT03421379 (use: official, ), Sponsor Identifier/I8R-JE-IGBJ (use: usual, ), Amendment Identifier/I8R-JE-IGBJ(a) (use: usual, )</p><p><b>version</b>: (a)</p><p><b>title</b>: A Phase 3 Study of Nasal Glucagon (LY900018) Compared to Intramuscular Glucagon for Treatment of Insulin-induced Hypoglycemia in Japanese Patients with Diabetes Mellitus </p><h3>Labels</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Value</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://hl7.org/fhir/title-type short-title}">Short title</span></td><td>A Phase 3 Study of Nasal Glucagon (LY900018) Compared to Intramuscular Glucagon for Treatment of Insulin-induced Hypoglycemia in Japanese Patients with Diabetes Mellitus</td></tr></table><p><b>date</b>: 2017-12-05</p><p><b>status</b>: Draft</p><p><b>phase</b>: <span title="Codes:{http://hl7.org/fhir/research-study-phase phase-3}">Phase 3</span></p><h3>Focus</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Reference</b></td></tr><tr><td style="display: none">*</td><td><a href="MedicinalProductDefinition-IGBJ-MedicinalProduct.html">MedicinalProductDefinition: identifier = Sponsor Investigational Product Code: LY900018</a></td></tr></table><p><b>condition</b>: <span title="Codes:{http://snomed.info/sct xxx}">Insulin-induced Hypoglycemia</span></p></div>
+  </text>
+  <extension
+             url="http://hl7.org/fhir/uv/pharmaceutical-research-protocol/StructureDefinition/narrative-elements">
+    <valueReference>🔗 
+      <reference value="Composition/IGBJ-Narrative-2.1"/>
+    </valueReference>
+  </extension>
+  <extension
+             url="http://hl7.org/fhir/uv/pharmaceutical-research-protocol/StructureDefinition/narrative-elements">
+    <valueReference>🔗 
+      <reference value="Composition/IGBJ-Narrative-5.1"/>
+    </valueReference>
+  </extension>
+  <extension
+             url="http://hl7.org/fhir/uv/pharmaceutical-research-protocol/StructureDefinition/narrative-elements">
+    <valueReference>🔗 
+      <reference value="Composition/IGBJ-Narrative-9"/>
+    </valueReference>
+  </extension>
+  <extension
+             url="http://hl7.org/fhir/uv/pharmaceutical-research-protocol/StructureDefinition/narrative-elements2">
+    <extension url="part">
+      <valueCode value="C132349"/>
+    </extension>
+  </extension>
+  <extension
+             url="http://hl7.org/fhir/uv/pharmaceutical-research-protocol/StructureDefinition/narrative-elements2">
+    <extension url="narrative">
+      <valueReference>🔗 
+        <reference value="Composition/IGBJ-Narrative-1.3"/>
+      </valueReference>
+    </extension>
+  </extension>
+  <extension
+             url="http://hl7.org/fhir/uv/pharmaceutical-research-protocol/StructureDefinition/protocol-amendment">
+    <extension url="scope">
+      <valueCode value="C217026"/>
+    </extension>
+    <extension url="country">
+      <valueCode value="DE"/>
+    </extension>
+    <extension url="country">
+      <valueCode value="GB"/>
+    </extension>
+    <extension url="region"/>
+    <extension url="site">
+      <valueIdentifier>
+        <system value="https://example.org/site-identifier"/>
+        <value value="sss"/>
+      </valueIdentifier>
+    </extension>
+    <extension url="approvalDate">
+      <valueDate value="2017-12-05"/>
+    </extension>
+    <extension url="signature">
+      <valueSignature>
+        <sigFormat value="xml&quot;application/fhir+xml&quot;"/>
+        <data
+              value="PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPEVudmVsb3BlIHhtbG5zPSJ1cm46ZW52ZWxvcGUiPgogIDxTaWduYXR1cmUgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkveG1sZHNpZyMiPgogICAgPFNpZ25lZEluZm8+CiAgICAgIDxDYW5vbmljYWxpemF0aW9uTWV0aG9kIAogICAgICAgICAgIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvVFIvMjAwMS9SRUMteG1sLWMxNG4tCjIwMDEwMzE1I1dpdGhDb21tZW50cyIvPgogICAgICA8U2lnbmF0dXJlTWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS8KeG1sZHNpZyNkc2Etc2hhMSIvPgogICAgICA8UmVmZXJlbmNlIFVSST0iIj4KICAgICAgICA8VHJhbnNmb3Jtcz4KICAgICAgICAgIDxUcmFuc2Zvcm0gQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwLzA5Lwp4bWxkc2lnI2VudmVsb3BlZC1zaWduYXR1cmUiLz4KICAgICAgICA8L1RyYW5zZm9ybXM+CiAgICAgICAgPERpZ2VzdE1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkvCnhtbGRzaWcjc2hhMSIvPgogICAgICAgIDxEaWdlc3RWYWx1ZT51b29xYldZYTVWQ3FjSkNidXltQktxbTE3dlk9PC9EaWdlc3RWYWx1ZT4KICAgICAgPC9SZWZlcmVuY2U+CiAgICA8L1NpZ25lZEluZm8+CjxTaWduYXR1cmVWYWx1ZT4KS2VkSnVUb2I1Z3R2WXg5cU0zazNnbTdrYkxCd1ZiRVFSbDI2UzJ0bVhqcU5ORDdNUkd0b2V3PT0KICAgIDwvU2lnbmF0dXJlVmFsdWU+CiAgICA8S2V5SW5mbz4KICAgICAgPEtleVZhbHVlPgogICAgICAgIDxEU0FLZXlWYWx1ZT4KICAgICAgICAgIDxQPgovS2FDem80U3lyb203OHozRVE1U2JiQjRzRjdleTgwZXRLSUk4NjRXRjY0QjgxdVJwSDV0OWpRVHhlCkV1MEltYnpSTXF6VkRaa1ZHOXhEN25OMWt1Rnc9PQogICAgICAgICAgPC9QPgogICAgICAgICAgPFE+bGk3ZHpEYWN1bzY3Smc3bXRxRW0yVFJ1T01VPTwvUT4KICAgICAgICAgIDxHPlo0UnhzbnFjOUU3cEdrbkZGSDJ4cWFyeVJQQmFRMDFraHBNZExSUW5HNTQxQXd0eC8KWFBhRjVCcHN5NHBOV01PSENCaU5VME5vZ3BzUVc1UXZubE1wQT09CiAgICAgICAgICA8L0c+CiAgICAgICAgICA8WT5xVjM4SXFyV0pHMFYvCm1aUXZSVmkxT0h3OVpqODRuREM0ak84UDBheGkxZ2I2ZCs0NzV5aE1qU2MvCkJySVZDNThXM3lkYmtLK1JpNE9LYmFSWmxZZVJBPT0KICAgICAgICAgPC9ZPgogICAgICAgIDwvRFNBS2V5VmFsdWU+CiAgICAgIDwvS2V5VmFsdWU+CiAgICA8L0tleUluZm8+CiAgPC9TaWduYXR1cmU+CjwvRW52ZWxvcGU+IA=="/>
+      </valueSignature>
+    </extension>
+    <extension url="signatureURL">
+      <valueString value="https://somelocation"/>
+    </extension>
+    <extension url="signatureMethod">
+      <valueString value="electronic and wet ink copy"/>
+    </extension>
+    <extension
+               url="http://hl7.org/fhir/uv/pharmaceutical-research-protocol/StructureDefinition/ResearchStudyStudyAmendmentScopeImpact">
+      <extension url="scope">
+        <valueCode value="C41065"/>
+      </extension>
+      <extension url="number">
+        <valuePositiveInt value="234"/>
+      </extension>
+    </extension>
+    <extension
+               url="http://hl7.org/fhir/uv/pharmaceutical-research-protocol/StructureDefinition/ResearchStudyStudyAmendmentScopeImpact">
+      <extension url="scope">
+        <valueCode value="C68846"/>
+      </extension>
+      <extension url="number">
+        <valuePositiveInt value="983"/>
+      </extension>
+    </extension>
+    <extension url="primaryReason">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"/>
+          <code value="C218490"/>
+          <display value="Regulatory Agency Request To Amend"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="secondaryReason">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"/>
+          <code value="C218494"/>
+          <display value="Manufacturing Change"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="summary">
+      <valueString value="Regulator required manufacturing chanage."/>
+    </extension>
+    <extension url="substantialImpactSafety">
+      <valueCode value="C49488"/>
+    </extension>
+    <extension url="substantialImpactSafetyComment">
+      <valueString
+                   value="Specifically implemented to decrease safety risks."/>
+    </extension>
+    <extension url="substantialImpactReliability">
+      <valueCode value="C17998"/>
+    </extension>
+    <extension url="substantialImpactReliabilityComment">
+      <valueString value="ccc"/>
+    </extension>
+    <extension
+               url="http://hl7.org/fhir/uv/pharmaceutical-research-protocol/StructureDefinition/protocol-amendment-detail">
+      <extension url="detail">
+        <valueString value="amendment one"/>
+      </extension>
+      <extension url="rationale">
+        <valueString value="clarification"/>
+      </extension>
+      <extension url="section">
+        <valueCodeableConcept>
+          <coding>
+            <system
+                    value="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"/>
+            <code value="C218515"/>
+            <display value="1.1 Protocol Synopsis"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+    </extension>
+    <extension
+               url="http://hl7.org/fhir/uv/pharmaceutical-research-protocol/StructureDefinition/protocol-amendment-detail">
+      <extension url="detail">
+        <valueString value="amendment two"/>
+      </extension>
+      <extension url="rationale">
+        <valueString value="exclude regular drinkers"/>
+      </extension>
+      <extension url="section">
+        <valueCodeableConcept>
+          <coding>
+            <system
+                    value="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"/>
+            <code value="C218550"/>
+            <display value="5.3 Exclusion Criteria"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+    </extension>
+    <extension url="rationale">
+      <valueString
+                   value="Updates to address safety concern &amp; align with product guidelines."/>
+    </extension>
+    <extension url="description">
+      <valueString
+                   value="Protocol I8R-JE-IGBJ A Phase 3 Study of Nasal Glucagon (LY900018) Compared to Intramuscular Glucagon for Treatment of Insulin-induced Hypoglycemia in Japanese Patients with Diabetes Mellitus has been amended. The new protocol is indicated by Amendment (a) and will be used to conduct the study in place of any preceding version of the protocol. The overall changes and rationale for the changes made to this protocol are as follows: • An exclusion criterion for patients with retinopathy or maculopathy was added due to the potential risk of fundal hemorrhage induced by hypoglycemia. • The GlucaGen reconstitution volume was changed from 1.0 mL to 1.1 mL in accordance with instructions in the Summary of Product Characteristics (2015)."/>
+    </extension>
+  </extension>
+  <extension
+             url="http://hl7.org/fhir/uv/pharmaceutical-research-protocol/StructureDefinition/m11-research-study">
+    <extension url="confidentialityStatement">
+      <valueString value="All data is confidential"/>
+    </extension>
+  </extension>
+  <identifier>
+    <use value="official"/>
+    <type>
+      <text value="Regulatory Agency Identifier"/>
+    </type>
+    <system value="https://example.org/regulatory-agency-identifier"/>
+    <value value="NCT03421379"/>
+  </identifier>
+  <identifier>
+    <use value="usual"/>
+    <type>
+      <text value="Sponsor Identifier"/>
+    </type>
+    <system value="https://example.org/sponsor-identifier"/>
+    <value value="I8R-JE-IGBJ"/>
+  </identifier>
+  <identifier>
+    <use value="usual"/>
+    <type>
+      <text value="Amendment Identifier"/>
+    </type>
+    <system value="https://example.org/amendment-identifier"/>
+    <value value="I8R-JE-IGBJ(a)"/>
+  </identifier>
+  <version value="(a)"/>
+  <title
+         value="A Phase 3 Study of Nasal Glucagon (LY900018) Compared to Intramuscular Glucagon for Treatment of Insulin-induced Hypoglycemia in Japanese Patients with Diabetes Mellitus "/>
+  <label>
+    <type>
+      <coding>
+        <system value="http://hl7.org/fhir/title-type"/>
+        <code value="short-title"/>
+        <display value="Short title"/>
+      </coding>
+    </type>
+    <value
+           value="A Phase 3 Study of Nasal Glucagon (LY900018) Compared to Intramuscular Glucagon for Treatment of Insulin-induced Hypoglycemia in Japanese Patients with Diabetes Mellitus"/>
+  </label>
+  <date value="2017-12-05"/>
+  <status value="draft"/>
+  <phase>
+    <coding>
+      <system value="http://hl7.org/fhir/research-study-phase"/>
+      <code value="phase-3"/>
+      <display value="Phase 3"/>
+    </coding>
+  </phase>
+  <focus>
+    <reference>🔗 
+      <reference value="MedicinalProductDefinition/IGBJ-MedicinalProduct"/>
+    </reference>
+  </focus>
+  <condition>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="xxx"/>
+      <display value="Insulin-induced Hypoglycemia"/>
+    </coding>
+  </condition>
+</ResearchStudy>
