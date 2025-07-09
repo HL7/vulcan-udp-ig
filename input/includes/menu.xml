@@ -1,10 +1,39 @@
+<!-- 
+ Home
+
+Background
+
+Bundles
+
+Changes
+
+Downloads
+
+Info Models
+
+Links
+
+Mappings
+
+Protocol Preparation
+
+Use by Audience
+
+Use Cases
+
+--------
+
+* credits
+
+-->
+
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li>
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">IG Home<b class="caret">
       </b>
     </a>
     <ul class="dropdown-menu">
-            <li>
+      <li>
         <a href="index.html">Home</a>
       </li>
       <li>
@@ -12,10 +41,10 @@
       </li>
       <li>
         <a href="use-by-audience.html">Use by Audience</a>
-      </li>      
-      </ul>
+      </li>
+    </ul>
   </li>
-<!--  <li>
+  <!--  <li>
     <a href="toc.html">Table of Contents</a>
   </li>-->
   <li class="dropdown">
@@ -23,28 +52,29 @@
       </b>
     </a>
     <ul class="dropdown-menu">
-            <li>
-        <a href="background.html">Background</a>
-      </li>
-      <li>
-        <a href="use-by-audience.html">Use by Audience</a>
-      </li>   
-      <li>
-        <a href="Guidance.html">Guidance</a>
-      </li>
       <li>
         <a href="useCases.html">Use Cases and Workflow</a>
       </li>
+      <li>
+        <a href="protocol-preparation.html">Protocol Preparation</a>
+      </li>
+
       <li>
         <a href="infoModels.html">Information Models</a>
       </li>
       <li>
         <a href="mappings.html">Mappings</a>
       </li>
+      <li>
+        <a href="bundles.html">Bundles</a>
+      </li>
     </ul>
   </li>
   <li>
     <a href="artifacts.html">Artifact Index</a>
+  </li>
+  <li>
+    <a href="links.html">Links</a>
   </li>
   <li>
     <a href="downloads.html">Downloads</a>
