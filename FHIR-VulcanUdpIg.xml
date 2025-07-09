@@ -35,7 +35,9 @@
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
+<page key="background" name="Background"/>
 <page key="bestPractice" name="Best Practice"/>
+<page key="Bundles" name="Bundles"/>
 <page key="changes" name="Changes"/>
 <page key="conformance" name="Conformance"/>
 <page key="credits" name="Credits"/>
@@ -46,7 +48,9 @@
 <page key="links" name="Links"/>
 <page key="maintenance" name="Maintenance"/>
 <page key="mappings" name="Mappings"/>
+<page key="protocol-preparation" name="Protocol Preparation"/>
 <page key="support" name="Support"/>
 <page key="toc" name="Table of Contents"/>
 <page key="useCases" name="Use Cases"/>
+<page key="use-by-audience" name="Use by Audience"/>
 </specification>

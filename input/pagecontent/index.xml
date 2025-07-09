@@ -6,24 +6,80 @@
   <p>
     <code>input/pagecontent/index.xml</code>
   </p>
+
   <p>
     <b>This guide is not complete - most of the discursive sections have only placeholders while the
       technical content is being developed</b>
   </p>
-  <p>
-    What is this IG about (in non-expert friendly terms).
-  </p>
-  <a name="technical"> </a>
+    <a name="overview"> </a>
   <h3>Technical Overview</h3>
+  <p>Additional detail/context setting for those who have significant background in the domain. (Try
+    to make as understandable as you can, but set important context).</p>
+  <p>The main sections of this IG are:</p>
+  <p>This home page which sets out basic introduction and background</p>
+  <p>The following sections under Guidance that provide detail explanation and guidance:</p>
+  <ul>
+    <li>Use Cases and Work Flows - describes intended uses of a digital protocol that follows this
+      specification.</li>
+    <li>Information Models - The structure of Protocol information seen from different viewpoints</li>
+    <li>Mappings - Guidance converting the sections of a protocol into FHIR</li>
+
+  </ul>
+  <p>Artifacts - The technical components (Profiles, Extensions, Value Sets etc) of the
+    Implementation Guide</p>
+
+      <a name="objectives"> </a>
+  <h3>Core Objectives </h3>
+  <p>The Vulcan HL7 FHIR Accelerator aims to bridge research and clinical care through use of FHIR,
+    strategically connecting collaborators to maximize expertise and efforts. The Vulcan Utilizing
+    the Digital Protocol (UDP) project enhances the integration of clinical and translational
+    research with clinical care by enabling digital protocol exchange through FHIR, supporting
+    Vulcan's mission to connect these domains and research integration into care.</p>
+  <p>This Implementation Guide (IG) allows for FHIR-based exchange of digital clinical trial
+    protocols aligned to ICH M11 (Clinical electronic Structured Harmonized Protocols, or CeSHarP)
+    in a manner compatible across clinical research stakeholders. The specific initial use case
+    address within is exchange between sponsors and regulators, while building foundations for, and
+    avoiding blockers to, additional use cases that benefit the multiple stakeholders who utilize
+    protocol information</p>
+  <h3>Scope</h3>
+  <p>The Vulcan UDP project supports Vulcan's mission to connect clinical and translational research
+    to clinical care by enabling digital protocol exchange through FHIR. The main goal of this FHIR
+    Implementation Guide is to concentrate on near-term achievable use cases to ensure immediate
+    impact and feasibility, while building foundations for, and avoiding blockers to, long-term
+    cross-stakeholder compatibility across many additional use cases. Governance requirements
+    include retaining alignment with ICH M11 and compatible standards of CDISC USDM and Controlled
+    Terminology as well as related uses of FHIR such as those in the <a
+      href='https://hl7.org/fhir/uv/ebm/history.html'>Evidence Based Medicine </a> (EBM)
+    Implementation Guide. </p>
   <p>
-    Additional detail/context setting for those who have significant background in the domain. (Try
-    to make as understandable as you can, but
-    set important context).
+    <strong>In Scope</strong>
   </p>
-  <a name="walkthrough"> </a>
+  <p>The initial use case focuses on <strong>sponsor-to-regulator exchange of protocols which align
+    to ICH M11</strong>, leveraging and enabling compatibility with related standards where
+    possible, and building cross-organization relationships to enable future governance. </p>
   <p>
-    The main sections of this IG are:
+    <strong>Out of scope</strong>
   </p>
+  <p>While out of scope for this version of the Implementation Guide, the future aim is to develop a
+    use case roadmap, considering the broad spectrum of potential use cases of digital protocols and
+    seeking opportunities to establish foundational connections. (See also the Use Cases &amp;
+    Workflows section). </p>
+  <p>Detailed governance processes are also out of scope for this version but will be addressed in
+    future iterations. Successful governance will require active participation in HL7 processes to
+    ensure long-term alignment with related efforts such as EBM, and with other organizations, such
+    as ICH M11, CDISC, and TransCelerate.</p>
+
+
+<h3>Structure of this Implementation Guide</h3>
+<p>This FHIR Implementation Guide is organized across the following tabs:</p>
+<p>-     <strong>Home</strong>: Provides an orientation outlining objectives, background, and scope</p>
+<p>-     <strong>Guidance:</strong> Describes how the technical work was approached and why certain decisions were made</p>
+<p>-     <strong>Use Cases &amp; Workflows:</strong> Provides a view to use cases covered in this Implementation Guide as well as those others are working on and future potential use cases across stakeholders </p>
+<p>-     <strong>Implementation Best Practice:</strong> Provides considerations for how to leverage this Implementation Guide</p>
+<p>There is also a comprehensive <strong>Table of Contents</strong> to aid navigation across all content. </p>
+
+</div>
+=======
   <ul>
     <li>This home page which sets out basic introduction and background </li>
     <li>The following sections under <a href="guidance.html">Guidance</a> that provide detail explanation and guidance: 

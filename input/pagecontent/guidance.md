@@ -4,7 +4,7 @@
 
 This section provides more detailed background and guidance on the use that can be made of a digital protocol in FHIR and the mechanics of translating your existing protocol into FHIR.
 
-# 1    Context and Core Objectives
+#### Context and Core Objectives
 
 Having the protocol for a clinical study in digital format is an enabling step for a wide range of transformations to processes for authoring, approving, executing and reporting studies. Some examples are shown in Figure 1: Potential developments enabled by a Digital Protocol.
 
@@ -14,11 +14,11 @@ Having the protocol for a clinical study in digital format is an enabling step f
 
 This Implementation Guide gives general guidance on the creation in FHIR format of a digital representation of a protocol for a clinical study. It shows how the placement of data items within the FHIR format is derived from the USDM data model and also shows how the sections of the M11 CeSHarP specification are represented within the FHIR structures.
 
-## 1.1   Background
+##### Background
 
 There are three original sets of work that have been brought together to develop this IG. 
 
-### 1.1.1   ICH HARMONISED GUIDELINE - CLINICAL ELECTRONIC STRUCTURED HARMONISED PROTOCOL (CeSHarP)
+###### ICH HARMONISED GUIDELINE - CLINICAL ELECTRONIC STRUCTURED HARMONISED PROTOCOL (CeSHarP)
 
 The purpose of this new harmonised guideline is to introduce the clinical protocol template and the technical specification to ensure that protocols are prepared in a consistent fashion and provided in a harmonised data exchange format acceptable to the regulatory authorities. The ICH M11 Clinical Electronic Structured Harmonised Protocol Template provides comprehensive clinical protocol organization with standardised content with both required and optional components. The Technical Specification (TS) that are acceptable to all regulatory authorities of the ICH regions presents the conformance, cardinality, and other technical attributes that enable the interoperable electronic exchange of protocol content with a view to develop an open, non-proprietary standard to enable electronic exchange of clinical protocol information. [Ref](https://www.ema.europa.eu/en/ich-m11-guideline-clinical-study-protocol-template-technical-specifications-scientific-guideline)
 
