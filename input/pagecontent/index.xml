@@ -79,3 +79,24 @@
 <p>There is also a comprehensive <strong>Table of Contents</strong> to aid navigation across all content. </p>
 
 </div>
+=======
+  <ul>
+    <li>This home page which sets out basic introduction and background </li>
+    <li>The following sections under <a href="guidance.html">Guidance</a> that provide detail explanation and guidance: 
+      <ul>
+      <li><a href="useCases.html">Use Cases and Work Flows</a> - describes intended uses of a digital
+      protocol that follows this specification. </li>
+      <li><a href="infoModels.html">Information Models</a> - The structure of Protocol information
+      seen from different viewpoints </li>
+      <li><a href="mappings.html">Mappings</a> - Guidance converting the sections of a protocol into
+      FHIR </li>
+      </ul>
+    </li>
+  <li><a href="artifacts.html">Artifacts</a> - The technical components (Profiles, Extensions, Value
+    Sets etc) of the Implementation Guide </li>
+  <!--    <li>
+      <a href="downloads.html">Downloads</a> - Allows downloading a copy of this implementation guide and
+    other useful information
+    </li> -->
+  </ul>
+</div>
