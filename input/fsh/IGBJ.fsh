@@ -44,11 +44,13 @@ on the server by following this link https://vhewer.com/display-product?url=http
 * focus = Reference(IGBJ-MedicinalProduct) // TODO: Create substance
 * condition[0] = SCT#xxx "Insulin-induced Hypoglycemia" // TODOD: Find Snomed code here
 
+//* extension[NarrativeElements2][+].extension[part].valueCode = $NCIT#C132349 "Schedule of Activities"
+//* extension[NarrativeElements2][+].extension[narrative].valueReference = Reference(IGBJ-Narrative-1.3)
+* extension[NarrativeElements][+].valueReference = Reference(IGBJ-Narrative-1.3)
 * extension[NarrativeElements][+].valueReference = Reference(IGBJ-Narrative-2.1)
 * extension[NarrativeElements][+].valueReference = Reference(IGBJ-Narrative-5.1)
 * extension[NarrativeElements][+].valueReference = Reference(IGBJ-Narrative-9)
-* extension[NarrativeElements2][+].extension[part].valueCode = $NCIT#C132349 "Schedule of Activities"
-* extension[NarrativeElements2][+].extension[narrative].valueReference = Reference(IGBJ-Narrative-1.3)
+
 
 * extension[protocol-amendment][+].extension[scope].valueCode = $NCIT#C217026	"Not Global"
 * extension[protocol-amendment][=].extension[country][+].valueCode = $iso3166-2#DE "Germany"

@@ -56,14 +56,13 @@ Use Cases
         <a href="04-use-cases.html">Use Cases and Workflow</a>
       </li>
       <li>
-        <a href="05protocol-preparation.html">Protocol Preparation</a>
+        <a href="05-protocol-preparation.html">Protocol Preparation</a>
       </li>
-
       <li>
         <a href="06-info-models.html">Information Models</a>
       </li>
       <li>
-        <a href="07-fhir-representation.html">FHIR RepresentationMappings</a>
+        <a href="07-fhir-representation.html">FHIR Representation</a>
       </li>
       <li>
         <a href="08-bundles.html">Bundles</a>
