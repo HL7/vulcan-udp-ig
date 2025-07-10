@@ -4,7 +4,7 @@ Description: "Extensions to ResearchStudy for M11."
 Context: ResearchStudy
 * value[x] 0..0
 * extension contains
-  NarrativeElements2 named narrative 0..* and
+//  NarrativeElements named narrative 0..* and
   ResearchStudyStudyAmendmentDetails named amendment 0..1 and
   confidentialityStatement 0..1 and
   saeReportingMethod 0..1

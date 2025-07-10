@@ -21,7 +21,6 @@
 <artifact id="StructureDefinition/m11-research-study" key="StructureDefinition-m11-research-study" name="M11ResearchStudy"/>
 <artifact id="ValueSet/nci-study-role-vs" key="ValueSet-nci-study-role-vs" name="NCI Study Role Value Set"/>
 <artifact id="StructureDefinition/narrative-elements" key="StructureDefinition-narrative-elements" name="Narrative Elements"/>
-<artifact id="StructureDefinition/narrative-elements2" key="StructureDefinition-narrative-elements2" name="Narrative Elements"/>
 <artifact id="StructureDefinition/research-study-narratives" key="StructureDefinition-research-study-narratives" name="Research Study Narratives"/>
 <artifact id="StructureDefinition/research-study-sae-reporting-method" key="StructureDefinition-research-study-sae-reporting-method" name="ResearchStudySaeReportingMethod"/>
 <artifact id="StructureDefinition/protocol-amendment" key="StructureDefinition-protocol-amendment" name="ResearchStudyStudyAmendment"/>

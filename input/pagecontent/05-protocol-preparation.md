@@ -48,7 +48,7 @@ Detailed steps – by approach:
 - Recommend using .docx files (vs PDF) to make cutting/pasting content easier
 - Tools provided may be used in any way to support identifying & transferring content from the existing protocol into the ICH M11 template
 
-**Steps:******
+**Steps**:
 
 1. Open **CPT_M11_Template Mapping (Section Headings Only)_March-2025_Aligned.docx** and save an instance of it with your protocol identifier.
 2. sourceReview the M11 authoring conventions within the red instructional text to understand which text is **universal**, **universal conditional**, or **optional** throughout the template; where headings can be deleted or added, etc.
@@ -56,7 +56,8 @@ Detailed steps – by approach:
    - Use CPT section mapping comments in the M11 template or alternatively the M11 red instructional text describing the intended section content to aid in this process
    - We suggest highlighting text and headings in the source protocol once it has been copied into the M11 Template to help account for all the content.
 4. Where the template indicates specific values are expected, utilize the **ICH M11 Technical Specification_Updated Step 2** reference document.
-5. You will no doubt be faced with making judgement calls on where certain content elements align with the ICH M11 template. Consult…or send an inquiry to…for assistance. (???)
+5. You will no doubt be faced with making judgement calls on where certain content elements align with the ICH M11 template. 
 6. Finally per template guidance, remove all instructional text and mapping comments, update formatting inconsistencies and update Table of Contents
 
-****Although not a long-term solution, document-based ICH M11 protocols may be transformed into FHIR using AI/ML and LLM (see reference implementations)… Long-term strategy involves digitally native, ICH M11-aligned protocols primed for exchange in FHIR.*
+NOTE: Although not a long-term solution, document-based ICH M11 protocols may be transformed into FHIR using AI/ML and LLM *(see reference implementations)* Long-term strategy involves digitally native, ICH M11-aligned protocols primed for exchange in FHIR.
+
