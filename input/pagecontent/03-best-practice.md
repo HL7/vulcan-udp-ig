@@ -1,8 +1,33 @@
-### Tips for Using this Implementation Guide - by Audience 
+> <blockquote>
+>   <p><img src="icon-warning.png" alt="Take note:" /></p>
+>   <p> source: best-practice </p>
+> </blockquote>
+
+### Implementation Best Practice 
 
 In consideration of the wide range of audiences that may be interested in this FHIR Implementation Guide, and that audiences may be in various stages of implementation of digital protocols, the following are considerations for specific audiences:
 
-#### Protocol Authors, Template Owners, and Business Process Owners
+As this is the first version, best practices specific to this implementation guide are still being identified and consolidated. Future versions will incorporate insights and recommendations based on real-world implementation experiences.
+
+#### General Implementation Considerations 
+
+General implementation considerations for a digital protocol include:
+
+1. **Stakeholder Engagement**: Involve stakeholders early and maintain communication.
+2. **Use Case Prioritization**: Focus on the most critical pain points that a digital protocol can address in your situations 
+3. **Technical Readiness**: Explore infrastructure needs, conduct exploratory work in available community     environments (i.e., GitHub) until ready to come out. Plan for integrations.
+4. **Regulatory Compliance**: Familiarize yourself with relevant standards and guidelines (e.g., ICH M11, TransCelerate, CDISC, HL7, Vulcan) as well as any regional requirements.
+5. **Training  and Support**: Provide education and support systems.
+6. **Data  Management**: Centralize protocol elements and automate tasks.
+7. **Performance Metrics**:  Monitor and improve protocol performance.
+8. **Security and Privacy**: Protect data and comply with regulations.
+9. **Stakeholder Engagement**:
+
+By considering these factors, you can create a robust plan for implementing a digital protocol that meets your organization's needs and enhances overall efficiency.
+
+#### Audience-Specific Implementation Considerations 
+
+##### Protocol Authors, Template Owners, and Business Process Owners
 
 Those involved with protocol authoring processes may wish to consider several key aspects when assessing this FHIR Implementation Guide, ICH M11, CDISC USDM and TransCelerate Digital Data Flow initiative artifacts:
 
@@ -16,7 +41,7 @@ Those involved with protocol authoring processes may wish to consider several ke
 
 By considering these aspects, protocol authors can effectively leverage the FHIR Implementation Guide, ICH M11, and CDISC USDM to enhance their processes. Refer to prior Vulcan UDP Webinars for content on implementation strategies.
 
-#### System Architects
+##### System Architects
 
 System Architects building the conceptual design who need to understand how the artifacts can be made to work together and what systems and connections are needed within their environments may wish to consider:
 
@@ -28,7 +53,7 @@ System Architects building the conceptual design who need to understand how the 
 
 ·    Strategies for integration and interoperability across the targeted workflows. This may include creation of FHIR profiles that can be used in Electronic Health Record (EHR) systems to support clinical research needs in the healthcare environment. 
 
-#### Systems Developers
+##### Systems Developers
 
 Systems developers using this Implementation Guide to translate the conceptual design into systems ready to utilize digital protocols may wish to consider: 
 
