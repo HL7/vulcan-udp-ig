@@ -1,3 +1,7 @@
+> [!NOTE]
+>
+> source: bundles.md
+
 ### Bundles
 
 FHIR content to represent a protocol will typically contain a ResearchStudy resource which refers to several other resources such as Organization, ScheduledActivity, MedicinalProductDefinition and perhaps earlier versions of ResearchStudy. For submission to a FHIR server this content is assembled into a “bundle” which is a container for the content. There are two significantly different ways in which the content can be packed into the “bundle” and the method chosen is dependent upon multiple factors and intended use. Whether or not the characteristics of each approach are pros or cons largely depends upon intended use, existing infrastructure, and other needs defined by the user.
@@ -21,24 +25,18 @@ The following table lists some of the key consequences of this difference:
 
 One may encounter a scenario where the writer (submitter) bundles the protocol in a different method than the reader (reviewer) prefers to unpack (store) it. In these scenarios, the intended storage bears more weight.  Some considerations below:
 
- 
-
- 
-
 - Storage Mode A - data is persisted (stored) as a Bundle, with all resources inside, permanently. This is like a structured document.
 - Storage Mode B - data is persisted (stored) as a linked set of resources, with no Bundle stored. This is like a database.
 
 ####  Examples of mixing the modes:
 
- ![bundles-01](C:\Filing\UDP\IG_HL7\input\images\bundles-01.png)
+<div><img src="bundles-01.png" alt="bundles-01.png" style="max-width: 80%;
+ height: auto;" />
+<p>Figure 1: Example 1 Bundle Management</p></div>
 
-Example 1
-
-![bundles-02](C:\Filing\UDP\IG_HL7\input\images\bundles-02.png)
-
-Example 2
-
-
+ <div><img src="bundles-02.png" alt="bundles-02.png" style="max-width: 80%;
+ height: auto;" />
+<p>Figure 1: Example 2 Bundle Management</p></div>
 
 During implementation, it is likely to encounter both Modes A and B. Ideally, an entity can equip itself to write and/or read either mode, noting that there are additional considerations when reading multiple (non-bundled) resources from a server (e.g. this may require precise resource linking and management overhead.)  Some practical considerations include opting for Mode A if the intended use is akin to a “document review” and opting for Mode B if some analysis is planned. Another example is the use case of the Schedule of Activities as an executable resource (e.g. driving research activities at a site), thus requiring Mode B.
 

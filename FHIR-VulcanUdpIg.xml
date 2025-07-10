@@ -34,17 +34,18 @@
 <artifact id="Bundle/h1" key="Bundle-h1" name="null (Bundle)"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
+<page key="02-background" name="02 Background"/>
+<page key="03-best-practice" name="03 Best Practice"/>
+<page key="04-use-cases" name="04 Use Cases"/>
+<page key="05-protocol-preparation" name="05 Protocol Preparation"/>
+<page key="06-info-models" name="06 Info Models"/>
+<page key="07-fhir-representation" name="07 Fhir Representation"/>
+<page key="08-bundles" name="08 Bundles"/>
+<page key="09-links" name="09 Links"/>
+<page key="10-credits" name="10 Credits"/>
+<page key="11-changes" name="11 Changes"/>
 <page key="artifacts" name="Artifacts Summary"/>
-<page key="background" name="Background"/>
-<page key="bundles" name="Bundles"/>
-<page key="changes" name="Changes"/>
 <page key="downloads" name="Downloads"/>
 <page key="index" name="Home"/>
-<page key="infoModels" name="Info Models"/>
-<page key="links" name="Links"/>
-<page key="mappings" name="Mappings"/>
-<page key="protocol-preparation" name="Protocol Preparation"/>
 <page key="toc" name="Table of Contents"/>
-<page key="useCases" name="Use Cases"/>
-<page key="use-by-audience" name="Use by Audience"/>
 </specification>
