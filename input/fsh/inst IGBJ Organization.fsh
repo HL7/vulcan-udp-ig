@@ -5,9 +5,9 @@ Usage: #example
 Description: """An illustrative example of an Organization providing the informatin required by the protocol
 """
 
-* id.value = "org-EliLilly"
+* id = "org-EliLilly"
 
-* name.value = "Eli Lilly Japan K.K"
+* name = "Eli Lilly Japan K.K"
 
 * contact[+].address.line[+] = "<aaa>"
 * contact[=].address.line[+] = "<aaa>"

@@ -15,6 +15,7 @@ by further instances of ResearchStudy linked through the relatedArtifact attribu
 """
 * identifier.type 1..1
 * identifier.type ?!
+* identifier.type. ^isModifierReason = "Protocols may have multiple business identifers from a given system - only with a type can they be distinguished." 
 * identifier.type from $identifier-type-vs (extensible)
 * identifier.type.coding.code 1..1
 

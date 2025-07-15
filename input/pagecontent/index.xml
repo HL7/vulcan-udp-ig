@@ -7,30 +7,22 @@
   <blockquote>
     <p><img src="icon-warning.png" alt="Take note:" /></p>
   <p>
-    <code>input/pagecontent/index.xml</code>
-  </p>
-  <p>
-    <b>This guide is not complete - most of the discursive sections have only placeholders while the
-      technical content is being developed</b>
+    <b>This IG has two sections outstanding: one in the "FHIR Representation" to describe the Mapping Spreadsheet, 
+      and additional section under the Audience Specific section of Implementation Best Practice"</b>
   </p>
   </blockquote>
 
   <a name="overview"> </a>
   <h3>Technical Overview</h3>
-  <p>Additional detail/context setting for those who have significant background in the domain. (Try
-    to make as understandable as you can, but set important context).</p>
-  <p>The main sections of this IG are:</p>
-  <p>This home page which sets out basic introduction and background</p>
-  <p>The following sections under Guidance that provide detail explanation and guidance:</p>
-  <ul>
-    <li>Use Cases and Work Flows - describes intended uses of a digital protocol that follows this
-      specification.</li>
-    <li>Information Models - The structure of Protocol information seen from different viewpoints</li>
-    <li>Mappings - Guidance converting the sections of a protocol into FHIR</li>
+  <p>This guide describes the representation of a Study Protocol in FHIR format.  The Document focus of protocol 
+    organization is provided by the ICH M11 CeSHarP Template and Technical Guide.  For a more structured approach 
+    to the data there is the CDISC USDM model. Both are represented in the FHIR Representation mapping spreadsheet, 
+    but for this version of the iG the emphasis is on the M11 approach.</p>
 
-  </ul>
-  <p>Artifacts - The technical components (Profiles, Extensions, Value Sets etc) of the
-    Implementation Guide</p>
+  <p>The key FHIR resources used are ResearchStudy and Composition and we also draw on some profiles and extension from the EBM IG.</p>
+
+  <p>For more description of the releationship between the resources, extensions and profiles see the FHIR Representation section and 
+    the actual specifications in the Artifacts section</p>
 
       <a name="objectives"> </a>
   <h3>Core Objectives </h3>
@@ -79,10 +71,17 @@
 
 <h3>Structure of this Implementation Guide</h3>
 <p>This FHIR Implementation Guide is organized across the following tabs:</p>
-<p>-     <strong>Home</strong>: Provides an orientation outlining objectives, background, and scope</p>
+
+<p>-     <strong>IG Home</strong>: Provides an orientation outlining objectives, background, and scope</p>
+<p>-         Home: This home page</p>
+<p>-         Background: Placing this work in the wider context</p>
+<p>-         Implementation Best Practice: Provides some general pointers on implementation, and also picks out key points from differ3ent audience prespectives.</p>
 <p>-     <strong>Guidance:</strong> Describes how the technical work was approached and why certain decisions were made</p>
-<p>-     <strong>Use Cases &amp; Workflows:</strong> Provides a view to use cases covered in this Implementation Guide as well as those others are working on and future potential use cases across stakeholders </p>
-<p>-     <strong>Implementation Best Practice:</strong> Provides considerations for how to leverage this Implementation Guide</p>
-<p>There is also a comprehensive <strong>Table of Contents</strong> to aid navigation across all content. </p>
+<p>-         Use Cases and Workflows: Provides a view to use cases covered in this Implementation Guide as well as those others are working on and future potential use cases across stakeholders </p>
+<p>-         Protocol Preparation: A guide to preparation of a protocol for submission according to the M11 format</p>
+<p>-         Information Models: Explains how the USDM, M11 and FHIR models are related</p>
+<p>-         FHIR Representation: Shows how elements of the protocol are represented in FHIR.  Also provides a link to a mapping spreadsheet.</p>
+<p>-         Bundles: Discusses representation of protocol sections within FHIR bundles and the operational consequences</p>
+<p>-     <strong>Artifact Index:</strong> Lists the formal specification of the extensions, profiles, terminology and examples.</p>
 
 </div>

@@ -1,5 +1,3 @@
-`input/pageContent/links.md`
-
 ### Links
 
 The following links provide important context for parties looking to make use of the Implementation Guide:

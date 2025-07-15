@@ -6,6 +6,7 @@ These codes represent the roles an individual or an organization can play in a s
 There is a value set $NCIT#C215480 - CDISC DDF Study Role Code Value Set Terminology 
 but it does not have any members.  This list is created as an interim.
 """
+* ^experimental = true
 
 * $NCIT#C70793  "Clinical Study Sponsor"
 //*   $NCIT#C187708  "Commercial Clinical Trial Sponsor"

@@ -1,6 +1,6 @@
 > <blockquote>
 >   <p><img src="icon-warning.png" alt="Take note:" /></p>
->   <p> source: best-practice </p>
+>   <p> To Add: An "audience" section for those familiar with USDM</p>
 > </blockquote>
 
 ### Implementation Best Practice 

@@ -4,14 +4,14 @@ Title: "IGBJ Protocol Narrative 2.1"
 Usage: #example
 Description: "2.1 Purpose of Trial"
 * status = #final
-* type = UDP#b001 "Protocol narrative"
+* type = $UDP#b001 "Protocol narrative"
 * subject = Reference(IGBJ-ResearchStudy)
 * date = "2025-06-03T12:46:00Z"
-* author = Reference(Organization/org-EliLilly) // Reference to Organization: Marketing Authorization Holder
+* author = Reference(IGBJ-Organization) // Reference to Organization: Marketing Authorization Holder
 * title = "IGBJ Protocol Narrative 2.1"
 * section[0]
   * title = "2.1 Purpose of Trial"
-  * code = UDP#a0008
+  * code = $NCIT#C218521
   * text.status = #additional
   * text.div = """<div xmlns='http://www.w3.org/1999/xhtml'> 
 |1. have had a diagnosis of either:|

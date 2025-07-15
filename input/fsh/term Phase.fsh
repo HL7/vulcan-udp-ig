@@ -3,6 +3,7 @@ Id: m11-phase-vs
 Title: "M11 Phase Value Set"
 Description: """Codes drawn from NCI Thesaurus value set $NCIT#C217045 ICH M11 Trial Phase Value Set Terminology
 These codes represent phases of a study as defined by ICH."""
+* ^experimental = true
 
 * $NCIT#C54721  "Early Phase 1"
 * $NCIT#C15600  "Phase 1"

@@ -3,13 +3,10 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: hl7.fhir.uv.VulcanUdpIg
-#canonical: https://github.com/HL7/hl7.vulcan-udp-ig
-#cannonical: HL7.fhir.uv.VulcanUdpIg
-#canonical: http://hl7.org/fhir/uv/vulcan-udp-ig
+#id: hl7.fhir.uv.VulcanUdpIg
 #canonical: http://hl7.org/fhir/uv/VulcanUdpIg
+id: hl7.fhir.uv.pharmaceutical-research-protocol
 canonical: http://hl7.org/fhir/uv/pharmaceutical-research-protocol
-#canonical: https://hl7.org/fhir/6.0.0-ballot3/VulcanUdpIg
 name: pharmaceutical-research-protocol
 title: Vulcan UDP IG
 # description: Example Implementation Guide for getting started with SUSHI
@@ -21,7 +18,7 @@ extension:
     valueCode: draft
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
     valueInteger: 0
-version: 0.3.0
+version: 0.4.0
 #fhirVersion: 	4.3.0
 #fhirVersion: 	5.0.0 # must be one of 5.0.0, 4.3.0, 4.0.1, 3.0.2 or 6.0.0-ballot3 https://www.hl7.org/fhir/valueset-FHIR-version.html
 fhirVersion: 	6.0.0-ballot3 # https://www.hl7.org/fhir/valueset-FHIR-version.html
@@ -31,8 +28,8 @@ releaseLabel: ci-build
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"	 
 publisher:
-  name: Vulcan
-  url: http://www.hl7.org/Special/committees/vulcan
+  name: HL7 International / Biomedical Research and Regulation
+  url: http://www.hl7.org/Special/committees/rcrim
   email: UDP@HL7Vulcan.org
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
@@ -46,7 +43,7 @@ dependencies:
   hl7.terminology: latest
   hl7.fhir.uv.ebm:
     id: ebm
-    uri: http://hl7.org/fhir/uv/ebm
+    uri: http://hl7.org/fhir/uv/ebm/ImplementationGuide/hl7.fhir.uv.ebm
     version: 1.0.0-ballot2
 
 #
