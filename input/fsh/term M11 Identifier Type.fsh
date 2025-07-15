@@ -2,6 +2,8 @@ ValueSet: M11IdentifierType_VS
 Title: "M11 Identifier Type Value Set"
 Id: m11-identifier-type-vs
 Description: "Identification of the type of identifier."
+* ^experimental = true
+
 * $NCIT#C132351  "Sponsor Protocol Identifier"
 * $NCIT#C218672  "Original Protocol Indicator"
 * $NCIT#C218477	 "Amendment Identifier"

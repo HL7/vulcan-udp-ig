@@ -1,3 +1,25 @@
+Alias: $UDP = narrative-elements-cs  // http://hl7.org/fhir/uv/vulcan-udp-ig/
+
+CodeSystem: NarrativeElementsCS
+Id: narrative-elements-cs
+Title: "Narrative Elements Code System"
+Description: """Composition Types to Manage Protocol Narrative Elements"""
+* ^experimental = true
+* ^caseSensitive = true
+
+* #b001 "Protocol narrative" "A composition that represents the part or all of a pharmaceutical research protocol as descriptive text"  
+
+ValueSet: NarrativeElementsVS
+Id: narrative-elements-vs
+Title: "Narrative Elements Value Set"
+Description: """Composition Types to Manage Protocol Narrative Elements"""
+* ^experimental = true
+
+* include codes from system $UDP
+
+
+
+
 //--------------------------------------------------------------------------------------
 //
 Extension: NarrativeElements
@@ -52,6 +74,7 @@ the protocol to which it belongs."
 * section.code. ^short = "Identifies the section of the narrative according to the selected coding system"
 * section.code. ^definition = "A code from a value set that identifies the narrative section.  The value set is description
 constructed from one or more code systems that define the required structure"
+* type from narrative-elements-vs (required)
 * type. ^comment  = "**///TODO** give guidance on code to use"
 * date.  ^comment = "**///TODO** give guidance on interpretation of this"
 * author only Reference(Organization)

@@ -1,10 +1,3 @@
-> [!NOTE]
->
-> source: input/pagecontent/background.md
->
-> 
->
-
 ### Background
 
 #### Introduction

@@ -1,10 +1,7 @@
  <blockquote>
  <p><img src="icon-warning.png" alt="Take note:" /></p>
  <p>
- <code>source: 04-02-credits.md</code>
- </p>
- <p>
- <b>Please check this is complete and accurate - somew links need to be added</b>
+ <code>Please check this is complete and accurate - somew links may need to be added</code>
  </p>
  </blockquote>
 

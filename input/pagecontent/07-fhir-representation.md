@@ -1,10 +1,7 @@
   <blockquote>
     <p><img src="icon-warning.png" alt="Take note:" /></p>
   <p>
-    <code>`source: mappings.md`</code>
-  </p>
-  <p>
-    <b></b>
+    <code>`To Add: discussion of the mapping spreadsheet'</code>
   </p>
   </blockquote>
 

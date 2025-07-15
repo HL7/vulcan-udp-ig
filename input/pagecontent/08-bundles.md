@@ -1,7 +1,3 @@
-> [!NOTE]
->
-> source: bundles.md
-
 ### Bundles
 
 FHIR content to represent a protocol will typically contain a ResearchStudy resource which refers to several other resources such as Organization, ScheduledActivity, MedicinalProductDefinition and perhaps earlier versions of ResearchStudy. For submission to a FHIR server this content is assembled into a “bundle” which is a container for the content. There are two significantly different ways in which the content can be packed into the “bundle” and the method chosen is dependent upon multiple factors and intended use. Whether or not the characteristics of each approach are pros or cons largely depends upon intended use, existing infrastructure, and other needs defined by the user.

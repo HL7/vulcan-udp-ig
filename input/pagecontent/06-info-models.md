@@ -1,9 +1,3 @@
-> [!NOTE]
->
-> source: infoModels.md
->
-> Links in this section need further work and an explanation for the drawing needs to be added.
-
 ### Information Models
 
 **Primary Inputs into this Implementation Guide**
