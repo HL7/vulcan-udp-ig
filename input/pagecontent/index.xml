@@ -38,17 +38,16 @@
     avoiding blockers to, additional use cases that benefit the multiple stakeholders who utilize
     protocol information.</p>
 
-
-  <h3>Scope</h3>
-  <p>The Vulcan UDP project enables digital protocol exchange through FHIR, supporting Vulcan’s
+      <a name="scope"> </a>
+  <h3>Scope </h3>
+  <p>The Vulcan UDP project enables digital protocol exchange through FHIR, supporting Vulcan's
     mission to connect clinical and translational research to clinical care. The main goal of this
     FHIR Implementation Guide is to concentrate on near-term achievable use cases to ensure
     immediate impact and feasibility, while building foundations for, and avoiding blockers to,
     long-term cross-stakeholder compatibility across many additional use cases. Governance
     requirements include retaining alignment with ICH M11 and compatible standards of CDISC USDM and
-    Controlled Terminology as well as related uses of FHIR such as those in the <a
-      href='https://hl7.org/fhir/uv/ebm/history.html'>Evidence Based Medicine</a> (EBM)
-    Implementation Guide. </p>
+    Controlled Terminology as well as related uses of FHIR such as those in the 
+    <a href="https://hl7.org/fhir/uv/ebm/history.html" > Evidence Based Medicine (EBM) </a> Implementation Guide.</p>
   <p>
     <strong>In Scope</strong>
   </p>
@@ -60,28 +59,32 @@
   </p>
   <p>While out of scope for this version of the Implementation Guide, the future aim is to develop a
     use case roadmap, considering the broad spectrum of potential use cases of digital protocols and
-    seeking opportunities to establish foundational connections. (See also the Use Cases &amp;
-    Workflows section). </p>
+    seeking opportunities to establish foundational connections. (See also the Use Cases and Workflows section). </p>
   <p>Detailed governance processes are also out of scope for this version but will be addressed in
     future iterations. Successful governance will require active participation in HL7 processes to
     ensure long-term alignment with related efforts such as EBM, and with other organizations, such
     as ICH M11, CDISC, and TransCelerate.</p>
 
 
-
+      <a name="structure"> </a>
 <h3>Structure of this Implementation Guide</h3>
 <p>This FHIR Implementation Guide is organized across the following tabs:</p>
 
-<p>-     <strong>IG Home</strong>: Provides an orientation outlining objectives, background, and scope</p>
-<p>-         Home: This home page</p>
-<p>-         Background: Placing this work in the wider context</p>
-<p>-         Implementation Best Practice: Provides some general pointers on implementation, and also picks out key points from differ3ent audience prespectives.</p>
-<p>-     <strong>Guidance:</strong> Describes how the technical work was approached and why certain decisions were made</p>
-<p>-         Use Cases and Workflows: Provides a view to use cases covered in this Implementation Guide as well as those others are working on and future potential use cases across stakeholders </p>
-<p>-         Protocol Preparation: A guide to preparation of a protocol for submission according to the M11 format</p>
-<p>-         Information Models: Explains how the USDM, M11 and FHIR models are related</p>
-<p>-         FHIR Representation: Shows how elements of the protocol are represented in FHIR.  Also provides a link to a mapping spreadsheet.</p>
-<p>-         Bundles: Discusses representation of protocol sections within FHIR bundles and the operational consequences</p>
-<p>-     <strong>Artifact Index:</strong> Lists the formal specification of the extensions, profiles, terminology and examples.</p>
-
+<ul>
+  <p><strong>IG Home</strong>: Provides an orientation outlining objectives, background, and scope</p>
+  <ul>
+    <p>Home: This home page</p>
+    <p>Background: Placing this work in the wider context</p>
+    <p>Implementation Best Practice: Provides some general pointers on implementation, and also picks out key points from differ3ent audience prespectives.</p>
+  </ul>
+  <p><strong>Guidance:</strong> Describes how the technical work was approached and why certain decisions were made</p>
+  <ul>
+    <p>Use Cases and Workflows: Provides a view to use cases covered in this Implementation Guide as well as those others are working on and future potential use cases across stakeholders </p>
+    <p>Protocol Preparation: A guide to preparation of a protocol for submission according to the M11 format</p>
+    <p>Information Models: Explains how the USDM, M11 and FHIR models are related</p>
+    <p>FHIR Representation: Shows how elements of the protocol are represented in FHIR.  Also provides a link to a mapping spreadsheet.</p>
+    <p>Bundles: Discusses representation of protocol sections within FHIR bundles and the operational consequences</p>
+  </ul>
+  <p><strong>Artifact Index:</strong> Lists the formal specification of the extensions, profiles, terminology and examples.</p>
+</ul>
 </div>
