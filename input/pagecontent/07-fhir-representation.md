@@ -1,10 +1,9 @@
   <blockquote>
     <p><img src="icon-warning.png" alt="Take note:" /></p>
   <p>
-    <code>`To Add: discussion of the mapping spreadsheet'</code>
+    <code>To Add: discussion of Terminology.  Find a reference for an intro to fhir</code>
   </p>
   </blockquote>
-
 
 
 ### FHIR Representation
@@ -98,18 +97,159 @@ Some of these extensions are general purpose and will be relevant beyond USDM an
 
 #### USDM and M11 to FHIR
 
+The relationships between the elements of M11, USDM and FHIR are shown in the Mapping spreadsheet.  The focus of this is representation of M11 so the mapping does not cover the whole of USDM.
+
+<div><p><a href="Mappings/M11 to FHIR Mapping 01.xlsx"> <img src="Mapping.png" alt="Mapping.png" style="max-width: 80%;height: auto;"/> </a> </p></div>
+
+<div>Download mapping spreadsheet <a href="Mappings/M11 to FHIR Mapping 01.xlsx">here</a> and the FHIR columns are described below:</div>
+
+| Column              |      | Purpose                                                      |      |      |
+| ------------------- | ---- | ------------------------------------------------------------ | ---- | ---- |
+| Resource            |      | A simple path  to the relevant FHIR resource                 |      |      |
+| Sample XML          |      | A fragment of XML that illustrates  the mapping. Uses parameters starting  with a $ or % for conciseness |      |      |
+| Example  Value(s)   |      | Elements beginning with % are given  a value here - above the dashed line they are fixed, below they are whatever  the actual data is. Also uses macro  values beginning with $ |      |      |
+| Binding  (strength) |      | FHIR terminology must be bound to a  value set and the strength determines whether the value set is fixed or can  be extended. |      |      |
+|                     |      |                                                              |      |      |
+
+##### Resource
+
+This is the element in FHIR that maps to the M11 element.  In many cases there is a simple equivalent in the standard FHIR resource. 
+
+| M11         | FHIR Resource       |
+| ----------- | ------------------- |
+| Trail Phase | ResearchStudy.phase |
+
+In other cases there is no immediate equivalent and a FHIR extension has to be used.  In the example below the extension is a complex one. Extensions are indicated by the word extension followed by the extension name in square brackets. The extension is called `$ext-amd` and within that the extension element is called `scope`.  
+
+| M11             | FHIR Resource                                      |
+| --------------- | -------------------------------------------------- |
+| Amendment Scope | ResearchStudy.extension[$ext-amd].extension[scope] |
+
+The other pattern found is when the ResearchStudy resource points to an instance of another resource for the necessary link.  In the example below Sponsor Name is represented in FHIR using an Organization resource which is pointed to by ResearchStudy using the associatedParty element.  The reference from one resource to another is shown using `-->`
+
+| M11           | FHIR Resource                                                |
+| ------------- | ------------------------------------------------------------ |
+| Sponsor  Name | ResearchStudy.associatedParty.party.reference  -->     Organization.name.value |
+
+> "FHIR Path" is a specific machine processable representation path through a linked series of FHIR resources.  That is NOT what is being used here.
 
 
 
-<div><img src="Mapping.png" alt="Mapping.png" style="max-width: 80%;height: auto;" /></div>
+##### Sample XML and Example  Value(s)
 
-<div>Download mapping spreadsheet <a href="Mappings/M11 to FHIR Mapping 01.xlsx">here</a></div>
+For each row the structure is shown in XML.  XML has been used in preference to JSON because the XML can be validated with a schema.  
 
-This provides the appropriate FHIR content for each row of the M11 Template
+ResearchStudy.phase is a coded value in FHIR and uses the CodeableConcept data type which itself has multiple elements.  Some of these elements have value that is fixed by the mapping and some are the values for the specific instance.  The fixed and variable values are indicated by prefixing the name with a %.  The actual values are then shown in the Example Values column - fixed values above the dashed line, variable ones below.  Because fixed values occur repeatedly and are often lengthy URLs they are represented by a macro element indicated by the $ prefix.  In the example below $NCIT has an actual value of http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl. 
+
+###### Trial Phase
+
+```xml
+<phase>       
+    <coding>         
+        <system value=  %SYSTEM />         
+        <code value= %CODE />         
+        <display value= %DISPLAY  />       
+    </coding>     
+</phase> 
+```
+
+```
+%SYSTEM = $NCIT
+------------------
+%CODE = <C15602>
+%DISPLAY = <Phase 3>
+```
+
+###### Amendment Scope
+
+```xml
+<extension url= $ext-amd>
+    <extension url="scope">
+        <valueCode value= %VALUE />
+    </extension>
+</extension>
+```
+
+```
+%VALUE = <C217026>
+```
+
+###### Sponsor  Name
+
+```xml
+<associatedParty>
+    <role>
+        <coding>
+            <system value= %SYSTEM />
+            <code value= %CODE />
+            <display value= %DISPLAY />
+        </coding>
+    </role>
+    <party>
+        <reference value="Organization/%ID" />
+    </party>
+</associatedParty>
+
+<Organization>
+    <id value= %ID />
+    ... 
+    <name value= %VALUE />
+    ...
+</Organization>
+
+```
+
+XML for Organization is not shown in full - there will be address, contact details etc which are indicated above by ...
+
+```
+
+%SYSTEM = $NCIT
+%CODE = C70793
+%DISPLAY = Clinical Study Sponsor
+----------------
+%ID = <org-EliLilly>
+%VALUE = <Eli Lilly Japan K.K>
+```
+
+##### Binding and Binding Strength
+
+It happens that the three examples shown here all make use of coded elements but this is not always the case.  Binding only applies for coded elements.
+
+For a coded element FHIR requires the specification to state the Value Set of allowed codes.  This is important for validation and for ensuring that coded elements conform to a set of values that all will understand.  A Value Set can be an arbitrary list of codes (and the identity of the code system they belong to), or the Value Set may specify an entire code system (perhaps with some codes excluded).
+
+The FHIR specification will identify a Value Set of each coded element - this is referred to as the *Value Set Binding* and these bindings can vary in the extent to which they must be enforced - this is the *Binding Strength*.  Generally a binding on a core FHIR specification can be interpreted quite flexibly and as that core specification is restricted by an Implementation Guide it will become much more rigorously specified.  There are 4 Binding Strengths
+
+| Binding Strength | Meaning                                                      |
+| ---------------- | ------------------------------------------------------------ |
+| Example          | This value set is for illustration only.  It may be useable in practice but no particular effort has been made to ensure that this is so.. |
+| Preferred        | The bound Value Set is fit for purpose but there may be other equivalent value sets more commonly used in a given context, or there may be different contexts that require a different value set. |
+| Extensible       | The bound value set has a values that MUST be used for the specific concept they represent - however if other concepts are required a new value set can be created that contains the previously bound value set plus the additional concepts. |
+| Required         | The Value Set bound to the element is the one that MUST be used.  It cannot be replaced, extended or modified. |
+
+As the table above shows the base FHIR specification will generally provide bindings of Example or Preferred strength while an Implementation Guide should provide bindings that are Extensible or Required.  Generally if the Value Set refers to a concept that has a limited number of possible values and where adding a value is likely to result in an update to the processing logic (ie a software update)  it should be a Required binding.  Where an Extensible binding is used processing system should be able to cope with addition of a value - perhaps through an exception mechanism.
+
+The bindings and binding strengths for the examples above are shown below. 
+
+###### Trial Phase
+
+```
+$phase-vs (extensible)
+```
+
+###### Amendment Scope
+
+```
+m11-study-amendment-scope-vs (required)
+
+```
+
+###### Sponsor  Name
+
+```
+$study-role-vs (extensible)
+```
 
 #### Terminology
-
-<div><img src="cdisc mappings.png" alt="cdisc mappings.png" style="max-width: 40%;height: auto;"/></div>
 
 (**TODO**: Write up this section)
 
