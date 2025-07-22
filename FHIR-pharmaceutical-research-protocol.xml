@@ -6,7 +6,6 @@
 <artifactPageExtension value="-mappings"/>
 <artifact id="ValueSet/ddf-study-title-type-vs" key="ValueSet-ddf-study-title-type-vs" name="CDISC DDF Study Title Type Value Set"/>
 <artifact id="ValueSet/cdisc-yes-no-vs" key="ValueSet-cdisc-yes-no-vs" name="CDISC Yes No Unknown Not Applicable Value Set"/>
-<artifact id="Organization/org-EliLilly" key="Organization-org-EliLilly" name="IBGJ Organization"/>
 <artifact id="MedicinalProductDefinition/IGBJ-MedicinalProduct" key="MedicinalProductDefinition-IGBJ-MedicinalProduct" name="IGBJ Medicinal Product"/>
 <artifact id="Composition/IGBJ-Narrative-1.3" key="Composition-IGBJ-Narrative-1.3" name="IGBJ Protocol Narrative 1.3 - Schedule of Activities"/>
 <artifact id="Composition/IGBJ-Narrative-2.1" key="Composition-IGBJ-Narrative-2.1" name="IGBJ Protocol Narrative 2.1"/>
@@ -17,21 +16,20 @@
 <artifact id="ValueSet/m11-phase-vs" key="ValueSet-m11-phase-vs" name="M11 Phase Value Set"/>
 <artifact id="StructureDefinition/m11-research-study-profile" key="StructureDefinition-m11-research-study-profile" name="M11 Research Study"/>
 <artifact id="ValueSet/m11-section-codes-vs" key="ValueSet-m11-section-codes-vs" name="M11 Section Codes Value Set"/>
-<artifact id="StructureDefinition/m11-research-study-narratives" key="StructureDefinition-m11-research-study-narratives" name="M11 Specific Research Study Narratives"/>
-<artifact id="StructureDefinition/m11-research-study" key="StructureDefinition-m11-research-study" name="M11ResearchStudy"/>
+<artifact id="StructureDefinition/protocol-amendment" key="StructureDefinition-protocol-amendment" name="M11_ProtocolAmendment"/>
 <artifact id="ValueSet/nci-study-role-vs" key="ValueSet-nci-study-role-vs" name="NCI Study Role Value Set"/>
 <artifact id="StructureDefinition/narrative-elements" key="StructureDefinition-narrative-elements" name="Narrative Elements"/>
 <artifact id="CodeSystem/narrative-elements-cs" key="CodeSystem-narrative-elements-cs" name="Narrative Elements Code System"/>
 <artifact id="ValueSet/narrative-elements-vs" key="ValueSet-narrative-elements-vs" name="Narrative Elements Value Set"/>
-<artifact id="StructureDefinition/research-study-narratives" key="StructureDefinition-research-study-narratives" name="Research Study Narratives"/>
+<artifact id="StructureDefinition/m11-research-study-narratives" key="StructureDefinition-m11-research-study-narratives" name="Research Study Narratives"/>
 <artifact id="StructureDefinition/research-study-sae-reporting-method" key="StructureDefinition-research-study-sae-reporting-method" name="ResearchStudySaeReportingMethod"/>
-<artifact id="StructureDefinition/protocol-amendment" key="StructureDefinition-protocol-amendment" name="ResearchStudyStudyAmendment"/>
 <artifact id="StructureDefinition/protocol-amendment-detail" key="StructureDefinition-protocol-amendment-detail" name="ResearchStudyStudyAmendmentDetails"/>
 <artifact id="StructureDefinition/ResearchStudyStudyAmendmentScopeImpact" key="StructureDefinition-ResearchStudyStudyAmendmentScopeImpact" name="ResearchStudyStudyAmendmentScopeImpact"/>
 <artifact id="ValueSet/m11-country-region-vs" key="ValueSet-m11-country-region-vs" name="Study Amendment Country Value Set"/>
 <artifact id="ValueSet/m11-study-amendment-reason-vs" key="ValueSet-m11-study-amendment-reason-vs" name="Study Amendment Reaason Value Set"/>
 <artifact id="ValueSet/m11-amendment-scope-enrollment-vs" key="ValueSet-m11-amendment-scope-enrollment-vs" name="Study Amendment Scope Enrollment Value Set"/>
 <artifact id="ValueSet/m11-study-amendment-scope-vs" key="ValueSet-m11-study-amendment-scope-vs" name="Study Amendment Scope Value Set"/>
+<artifact id="StructureDefinition/study-design" key="StructureDefinition-study-design" name="StudyDesign"/>
 <artifact id="Bundle/h1" key="Bundle-h1" name="null (Bundle)"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>

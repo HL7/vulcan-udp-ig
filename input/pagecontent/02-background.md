@@ -30,9 +30,9 @@ The **long-term benefits** of compatible exchange of digitized protocols across 
 - Potential to support better recruitment/patient matching
 - Improvement of a variety of operational tasks for providers engaging in research
 
-#### Compatibility Among Artifacts from various initiatives
+#### Compatibility Among Artifacts from Various Initiatives
 
-This Implementation Guide was developed through collaboration contributions by multiple organizations (see “Information Models” under the Guidance Tab). The intention is to ensure compatible use of multiple standards to maximize benefits. To understand how the various artifacts can be utilized together for interoperable exchange across stakeholders, imagine a standard shipping container that allows universal exchange (FHIR). Inside the container, contents can be loosely organized (ICH M11 document-based formats) or highly organized (ICH M11 and USDM structured formats), depending on the needs of the sender & receiver.  
+This Implementation Guide was developed through collaboration contributions by multiple organizations (see “Information Models” under the Guidance Tab). The intention is to ensure compatible use of multiple standards to maximize benefits. While this initial Implementation Guide version is limited to the sponsor-to-regulator use case, it is important to understand the conceptual vision for alignment of information models. To understand how the various artifacts can be aligned and utilized together for interoperable exchange across stakeholders, imagine a standard shipping container that allows universal exchange (FHIR). Inside the container, contents can be loosely organized (ICH M11 document-based formats) or highly organized (ICH M11 and USDM structured formats), depending on the needs of the sender & receiver.  
 
 <div><img src="shipping-01.png" alt="shipping-01.png" style="max-width: 80%;
  height: auto;" />

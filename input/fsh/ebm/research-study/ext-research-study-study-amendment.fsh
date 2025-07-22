@@ -37,7 +37,7 @@ Id: protocol-amendment-detail
   * ^definition = "M11 Section where the amendment was made e.g. 1.2 Trial Schema."
 
 //-----------------------------------------------------------------------------------------------------
-Extension: ResearchStudyStudyAmendment
+Extension: M11_ProtocolAmendment
 Id: protocol-amendment
 Description: "Amendment to a study protocol. This is originally from EBM."
 * ^extension[$ext-fmm].valueInteger = 0

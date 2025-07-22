@@ -1,64 +1,60 @@
-> [!NOTE]
->
-> source: useCases.md
->
-> Needs more explanation of the final set of drawings provided,  Also the workflow drawings need some updating
-
 ### Use Cases & Work Flows 
 
-The establishment of a clinical trial protocol standard by ICH M11, a standard model for structuring protocol and study information in the CDSIC USDM (Unified Study Definition Model, developed by the TransCelerate Digital Data Flow initiative), and the use of FHIR to exchange narrative text and structured content aligned to those artifacts, facilitates use of digitized protocols across research and health IT settings, and in doing so enables a vast array of business use cases across the clinical research spectrum. 
-The detail following first looks specifically at the use case used in development this IG, then looks towards additional use cases and future opportunities. 
+A vast array of business use cases across clinical research and health IT settings can be enabled through FHIR-based exchange of narrative protocol text and structured protocol content. This vision is made practical by anchoring to the ICH M11 Clinical electronic Structured Harmonized Protocol and ensuring compatibility with the CDSIC USDM (Unified Study Definition Model, developed by the TransCelerate Digital Data Flow initiative)
+
+The detail following looks first at the use case addressed in development of this Implementation Guide, then looks towards additional use cases with which compatibility will be necessary and at future opportunities. 
 
 #### Use Case Demonstrated by this Implementation Guide
 
-This implementation Guide enables exchange of protocols aligned to ICH M11 and was developed centered on the use case of sponsor-to-regulator exchange.
+For the purposes of development of this initial version of this Implementation Guide, the use case was defined narrowly as enabling sponsor-to-regulator exchange of digital protocols aligned to ICH M11 in FHIR. The specific detailed technical and business requirements for submission of M11-aligned protocols to regulators will be determined as regulators adopt M11 and establish processes for receipt and utilization of digitized protocols. Because this simplistic approach was taken, it is expected that this Implementation Guide could also be utilized by other sender/receiver roles. 
 
-##### Use Case Work Flow Diagrams
+##### Use Case Work Flow
 
-> [!NOTE]
->
-> (add the detail of the Sponsor to Regulatory submission flow. More technical detail of what was tested.)
->
+The processes supporting testing scenarios were articulated as simply and with as much flexibility for implementation as possible:
 
-##### Sponsor to Regulator for Protocol Approval
+1. Ensure protocol content and organization aligned to ICH M11
 
-This detail within this Implementation Guide could be used to augment the current common workflow with a shift from point A-to-point B document exchange (e.g. PDF) to FHIR exchange of a digital protocol between sponsors and regulators.  The image below illustrates use of a local FHIR server for validation of content before submission directly to a regulator’s "reviewer" system.
+2. Generate protocol in FHIR
+
+3. Send protocol 
+
+4. Receive protocol in FHIR
+
+5. Validate receipt of protocol (i.e., display, extraction of structured content)
+
+   
 
 <div><img src="work-flow-protocol-approval.png" alt="work-flow-protocol-approval.png" style="max-width: 80%;
  height: auto;" />
 <p>Figure 1: Sponsor to Regulator</p></div>
+##### Considerations to Enable Forward Compatibility
 
-##### Protocol Definition during design and submission
+In order to ensure this Implementation Guide is set up to enable compatibility for future use cases and future specificity of requirements, variations on the above simple process were considered, such as:
 
-This illustrates the use of a local FHIR server for validation of content before submission directly to a "reviewer" system.
+- Conversion of legacy protocols as well as protocols written native to ICH M11
+- Packaging of data elements in a single bundle as well as in multiple resources 
+- FHIR in JSON as well as FHIR in XML
+- Validation of the protocol on a local FHIR server before sending as well as validation on a FHIR server only after receipt
+- Sending protocols directly to FHIR server as well as sending to FHIR server after receipt 
+- Receiver extraction of structured elements relevant to various review needs (i.e., safety reviewer, medical reviewer)
+- Receiver response to submitter via FHIR messages as well as through other routine mechanisms
 
-<div><img src="work-flow-protocol-definition.png" alt="work-flow-protocol-definition.png" style="max-width: 80%;
- height: auto;" />
-<p>Figure 2: Protocol Definition</p></div>
+#### Future Use Cases to Present Use Case Opportunities Across Stakeholders
 
-#### Applicability to Additional Use Cases 
+The information contained in a clinical trial protocol is utilized in relation to numerous processes across the research and care continuum. Digitizing and enabling interoperable exchange of that information opens an opportunity for automation, reuse, improved quality across stakeholders. 
 
-The Vulcan UDP project specifically tested the “Sponsor to Regulatory” use case for the submission of ICH M11-aligned protocols; however, the process flow and guidance associated with this use case may be directly applicable to many other use cases.
+The Vulcan UDP project intends to address additional use cases. All are welcome to propose use cases to Vulcan and to participate in Vulcan UDP community meetings. 
 
-#### Opportunities for Stakeholders through Compatibility of Artifacts across initiatives
+Vulcan UDP is not the only group seeking to leverage digital protocols. Many have been mentioned within this Implementation Guide and others exist as well. In alignment with Vulcan principles, the Vulcan UDP project aims to ensure compatibility, avoid duplication, and make use of collective resources whenever possible. Coordination with other groups will be essential to this aim. 
 
-Both the automation of existing business processes (e.g. clinical trial budgeting, patient recruitment, regulatory review) and the enablement of new, previously unavailable (or impractical) practices (e.g. design analytics, stakeholder collaboration) are now available.  The following table provides insights into the potential automation opportunities and the link below provides a more detailed catalog of Protocol Use Cases:
+To get a sense of the extent of use cases that exist across the ecosystem, see the visual below. Digitization of existing processes are often the first use cases implementers want to achieve, but the possibilities go beyond. Many of the use cases at the “tip of the iceberg” as well as those “below the surface” are currently implemented within certain environments though perhaps using bespoke approaches and models. Increasing compatibility across artifacts (i.e., standards, guidelines) will help to accelerate and broaden the value of digital protocols across many use cases.
 
-> [!NOTE]
->
-> Needs more explanation
 
-<div><img src="iceberg-01.png" alt="iceberg-01.png" style="max-width: 80%;
- height: auto;" />
-<p>Figure 3: Obvious Use Cases</p></div>
 
 <div><img src="iceberg-02.png" alt="iceberg-02.png" style="max-width: 80%;
  height: auto;" />
-<p>Figure 4: Other Use Cases</p></div>
+<p>Figure 4: Future Use Cases</p></div>
 
-<div><img src="ddf-use-cases.png" alt="ddf-use-cases.png" style="max-width: 80%;
- height: auto;" />
-<p>Figure 5: DDF Use Cases</p></div>
 
 
 

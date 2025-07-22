@@ -14,30 +14,37 @@ Through CDISC collaboration with ICH M11, it has been established that **ICH M11
 
 Since USDM was first introduced there has been significant progress in implementation of it, primarily for sponsor-oriented use cases. Collaboration with Vulcan UDP and ICH M11 aims to accelerate the implementation and thereby bring additional value to, various stakeholders. (XREF: Protocol Definition during design and submission)
 
-**NOTE:** ICH M11 USDM The relationship between the M11 protocol template specification and the structured and unstructured capabilities of the USDM is illustrated on the DDF Github site. Each logical area of the M11 protocol template is highlighted along with the associated area within the USDM. in this infographic: See 
-
-https://github.com/data4knowledge/usdm_m11_resources/blob/main/documents/infographics/usdm_m11.pdf
-
-**Vulcan Schedule of Activities** – This work originated in PHUSE and later transitioned into a Vulcan project. It provides a FHIR representation of the Schedule of Activities, a crucial component of most protocols. The use case focuses on maintaining an unambiguous definition of the Schedule of Activities during study execution, which can be utilized to generate a detailed care plan for specific patients. (XREF: Protocol Use during study execution)
-
-**Evidence-Based Medicine (EBM)** – EBM is a project within HL7 also working on practices for leveraging FHIR for exchange of protocol information. While Vulcan Utilizing the Digital Protocol (UDP) project focuses on the design, conduct, and generation of data generally to support clinical development, EBM aims at a systematic approach to clinical decision-making that integrates the best available research evidence with clinical expertise and patient values. It involves systematically finding, appraising, and applying the results of well-designed clinical research, particularly randomized controlled trials (RCTs) and systematic reviews, to inform clinical decisions and optimize patient outcomes. Together, they enable a learning health system by utilizing digital protocol standards to facilitate research and apply systematic evidence. Vulcan UDP leverages practices and learnings from EBM. (XREF: EBM IG)
+> **NOTE:** ICH M11 USDM The relationship between the M11 protocol template specification and the structured and unstructured capabilities of the USDM is illustrated on the DDF Github site. Each logical area of the M11 protocol template is highlighted along with the associated area within the USDM. in this infographic: See 
+>
+> https://github.com/data4knowledge/usdm_m11_resources/blob/main/documents/infographics/usdm_m11.pdf
+>
 
 More detailed background and links to source material for each of these projects can be found in (XREF Support:4. Other Links)
 
+To understand how these artifacts relate to, and can be compatible with, each other, consider that standards can have different purposes. 
 
+In one very simplistic view:
+
+- Exchange Standards are containers to move information from one     system to another. For example, FHIR is used to exchange health data     across multiple systems. 
+- Content Standards are those which specify how structured the information     needs to be, how it should be referred to, and how the pieces of     information relate to each other.  For     example, the ICH M11 technical specification details which protocol content     needs to be structured (as opposed to narrative text). As another example USDM     specifies the structured items detailed by M11 as well as specifying     structure for additional content. 
+- Terminology Standards specify semantic definitions and the     possible values of structured items. For example, ICH M11 and USDM both specify terms centrally managed. 
+
+Another way to think about how the artifacts mentioned relate to, and can be compatible with, each other is through the analogy of building a house. 
+
+- FHIR can be considered the physical building clearly and universally recognizable as a house. 
+- Inside the building contains a network of plumbing, a network of electrical wiring, etc. that need to adhere to specifications in order to be functional. The specifications for these various networks are analogous to ICH M11 and USDM. 
+- Within each of the networks (plumbing, electrical, etc.) are single components that were created according to tightly defined rules; these can be considered terminology. 
+
+It is worth noting that in order for all of these components to come together into a functioning house, there were various models, testing, regulations put into place by a wide variety of experts across many different environments, often having to adjust their outputs to be compatible and flow with others. The same can be said for the digital protocol ecosystem.
+
+Visual representation of the house analogy:
 
 <div style="text-align: center;"><img src="InfoModelLayers.png" alt="InfoModelLayers" style="height:400px" />
 </div>
 
-
-
-> [!NOTE]
->
-> Add a section here that explains the relationship between the different models
->
 > 
 
-Need to illustrate what is in M11 not to provide a full representation but to make the IG readable. (XREF M11 Documents) 
+To understand this Implementation Guide, consider that ICH M11 is a subset of USDM and both leverage Controlled Terminology defined in the NCI Thesaurus.
 
 <div style="text-align: center;"><img src="image-20250415143104846.png" alt="Controlled terms" style="height:400px" />
 </div>
