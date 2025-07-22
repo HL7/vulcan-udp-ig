@@ -30,7 +30,6 @@
 <artifact id="ValueSet/m11-amendment-scope-enrollment-vs" key="ValueSet-m11-amendment-scope-enrollment-vs" name="Study Amendment Scope Enrollment Value Set"/>
 <artifact id="ValueSet/m11-study-amendment-scope-vs" key="ValueSet-m11-study-amendment-scope-vs" name="Study Amendment Scope Value Set"/>
 <artifact id="StructureDefinition/study-design" key="StructureDefinition-study-design" name="StudyDesign"/>
-<artifact id="Bundle/h1" key="Bundle-h1" name="null (Bundle)"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="02-background" name="02 Background"/>
