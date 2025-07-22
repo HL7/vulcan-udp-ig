@@ -1,18 +1,19 @@
-Alias: $phase-vs = m11-phase-vs
-Alias: $study-title-type-vs = ddf-study-title-type-vs
-Alias: $study-role-vs = nci-study-role-vs
-Alias: $identifier-type-vs = m11-identifier-type-vs
-Alias: $study-amendment-reason-vs = m11-study-amendment-reason-vs
-Alias: $YesNoUnknownVS = CDISCSDTMYesNoUnknownVS
 
 Profile: M11_ResearchStudyProfile
-Parent: ResearchStudy
+Parent: $ebm-study
 Id:  m11-research-study-profile
 Title:  "M11 Research Study"
 Description:    """Constraint of ResearchStudy to M11 Guidance
 An instance of this profile represents a single version of the protocol definition.  Previous amendments are represented
 by further instances of ResearchStudy linked through the relatedArtifact attribute. 
 """
+
+* extension contains
+    narrative-elements named narrative 0..* and
+    M11_ProtocolAmendment named amendment 0..1
+//    $ebm-ig-confidentiality named confidentialityStatement 0..1 
+//    $ebm-ig-sae named saeReporting 0..1
+
 * identifier.type 1..1
 * identifier.type ?!
 * identifier.type. ^isModifierReason = "Protocols may have multiple business identifers from a given system - only with a type can they be distinguished." 
@@ -31,4 +32,5 @@ by further instances of ResearchStudy linked through the relatedArtifact attribu
 * focus. ^comment = "Expect MedicinalProductDefinition.name.type.code to be one of C71898 Proprietary name or C97054 Non-proprietary name"
 
 * relatesTo.type. ^comment = "Set to a value of predecessor to indicate the target is the previous version of the protocol"
+
 

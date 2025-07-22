@@ -69,29 +69,26 @@ Some of these extensions are general purpose and will be relevant beyond USDM an
 
 #### Hierarchy of Resources, Extensions and Profiles Used
 
-- **ResearchStudy** 
-  - extended by **M11ResearchStudy** 
-- **ResearchStudy** 
-  - extended by **NarrativeElements** 
-  - which provides a pointer to **M11ResearchStudyNarratives**
-- **ResearchStudy** 
-  - extended by **ResearchStudyStudyAmendment** 
+
+
+<div><img src="Extensions and profiles 01.png" alt="Extensions and profiles 01.png" style="max-width: 80%;height: auto;"/>
+<p>Figure 5: Extensions and Profiles of ResearchStudy</p></div>
+
+
+
+**ResearchStudy**
+
+**ResearchStudy** 
+
+- profiled by **StudyDesign** which is part of the EBM IG.  This in turn is profiled by **M11_ResearchStudyProfile** which tightens cardinality of some attributes and binds appropriate terminology and connects some extensions.
+
+- extended by **NarrativeElements** 
+  - which provides a pointer to **M11ResearchStudyNarratives** which is a profile of **Composition**
+- **M11_ResearchStudyProfile** 
+  - contains **ResearchStudyStudyAmendment** 
     - which contains  **ResearchStudyStudyAmendmentDetails** 
     - and **ResearchStudyStudyAmendmentScopeImpact**
-- **Composition** 
-  - profiled by **ResearchStudyNarratives** 
-    - profiled by **M11ResearchStudyNarratives**
-- **ResearchStudy** 
-  - profiled by **M11_ResearchStudyProfile** which tightens cardinality of some attributes and binds appropriate terminology
 
-
-
-  <blockquote>
-    <p><img src="icon-warning.png" alt="Take note:" /></p>
-  <p>
-    <b>Need to do a drawing for this</b>
-  </p>
-  </blockquote>
 
 
 
@@ -110,6 +107,8 @@ The relationships between the elements of M11, USDM and FHIR are shown in the Ma
 | Example  Value(s)   |      | Elements beginning with % are given  a value here - above the dashed line they are fixed, below they are whatever  the actual data is. Also uses macro  values beginning with $ |      |      |
 | Binding  (strength) |      | FHIR terminology must be bound to a  value set and the strength determines whether the value set is fixed or can  be extended. |      |      |
 |                     |      |                                                              |      |      |
+
+*Narrative Content is noted in the mapping sheet but is shown on a separate tab of the spreadsheet.  It is discussed further below.*
 
 ##### Resource
 
@@ -248,6 +247,51 @@ m11-study-amendment-scope-vs (required)
 ```
 $study-role-vs (extensible)
 ```
+
+##### Narrative Content
+
+There are multiple sections that can be represented by Narrative content as discussed earlier.  Since these all follow the same pattern the example XML for the Composition part is shown here:
+
+```xml
+<composition>
+    ...
+    <type>
+        <coding>
+            <system
+                    value="http://hl7.org/fhir/uv/pharmaceutical-research-protocol/CodeSystem/narrative-elements-cs"/>
+            <code value="b001"/>
+            <display value="Protocol narrative"/>
+        </coding>
+    </type>
+     ...
+    <section>
+        <title value=%DISPLAY/>
+        <code>
+            <coding>
+                <system value=$NCIT/>
+                <code value=%CODE/>
+            </coding>
+        </code>
+        <text>
+            <status value="additional"/>
+            <div xmlns="http://www.w3.org/1999/xhtml">%NARRATIVE</div>
+        </text>
+    </section>
+    ...
+</composition>
+```
+
+The example value here are 
+
+```
+%CODE = <C218514>
+%DISPLAY = <1 PROTOCOL SUMMARY>
+--------------------------------
+%ID= <iiii>
+%NARRATIVE = <nnnn>
+```
+
+
 
 #### Terminology
 

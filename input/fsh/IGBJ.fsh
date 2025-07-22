@@ -12,7 +12,7 @@ Alias: $iso3166-2 = https://example.org/iso3166-1-2
 Alias: $mime = https://example.org/mime
 
 Instance: IGBJ-ResearchStudy
-InstanceOf: ResearchStudy
+InstanceOf: m11-research-study-profile
 Title: "IGBJ Research Study with narrative"
 Usage: #example
 Description: """Illustration of a protocol with some parts in narrative form and some in granular form.  The same example can also be viewed
@@ -44,8 +44,6 @@ on the server by following this link https://vhewer.com/display-product?url=http
 * focus = Reference(IGBJ-MedicinalProduct) // TODO: Create substance
 * condition[0] = SCT#xxx "Insulin-induced Hypoglycemia" // TODOD: Find Snomed code here
 
-//* extension[NarrativeElements2][+].extension[part].valueCode = $NCIT#C132349 "Schedule of Activities"
-//* extension[NarrativeElements2][+].extension[narrative].valueReference = Reference(IGBJ-Narrative-1.3)
 * extension[NarrativeElements][+].valueReference = Reference(IGBJ-Narrative-1.3)
 * extension[NarrativeElements][+].valueReference = Reference(IGBJ-Narrative-2.1)
 * extension[NarrativeElements][+].valueReference = Reference(IGBJ-Narrative-5.1)
@@ -91,5 +89,5 @@ on the server by following this link https://vhewer.com/display-product?url=http
 * extension[protocol-amendment][=].extension[rationale].valueString = "Updates to address safety concern & align with product guidelines."
 * extension[protocol-amendment][=].extension[description].valueString = "Protocol I8R-JE-IGBJ A Phase 3 Study of Nasal Glucagon (LY900018) Compared to Intramuscular Glucagon for Treatment of Insulin-induced Hypoglycemia in Japanese Patients with Diabetes Mellitus has been amended. The new protocol is indicated by Amendment (a) and will be used to conduct the study in place of any preceding version of the protocol. The overall changes and rationale for the changes made to this protocol are as follows: • An exclusion criterion for patients with retinopathy or maculopathy was added due to the potential risk of fundal hemorrhage induced by hypoglycemia. • The GlucaGen reconstitution volume was changed from 1.0 mL to 1.1 mL in accordance with instructions in the Summary of Product Characteristics (2015)."
 
-* extension[m11-research-study][+].extension[confidentialityStatement].valueString = "All data is confidential"
+* extension[confidentialityStatement][+].valueString = "All data is confidential"
 //* extension[m11-research-study][=].extension[saeReportingMethod].valueString = "Report Serious Adverse Events to the sponsor by phone. Refer to Section 9.4 for detailed reporting instructions."

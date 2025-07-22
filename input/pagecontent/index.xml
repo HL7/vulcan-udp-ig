@@ -4,14 +4,6 @@
   <a name="intro"> </a>
   <h3>Introduction</h3>
 
-  <blockquote>
-    <p><img src="icon-warning.png" alt="Take note:" /></p>
-  <p>
-    <b>This IG has some content outstanding in the Information Models section and the Use cases section, 
-      and additional section under the Audience Specific section of Implementation Best Practice"</b>
-  </p>
-  </blockquote>
-
   <a name="overview"> </a>
   <h3>Technical Overview</h3>
   <p>This guide describes the representation of a Study Protocol in FHIR format.  The Document focus of protocol 
@@ -31,10 +23,20 @@
     the Digital Protocol (UDP) project enhances the integration of clinical and translational
     research with clinical care by enabling digital protocol exchange through FHIR, supporting
     Vulcan's mission to connect these domains and research integration into care.</p>
-  <p>This Implementation Guide (IG) allows for FHIR-based exchange of digital clinical trial
+  
+
+  <blockquote>
+  <p><em>Conduct of Clinical Trials is guided by the International Conference on Harmonization (ICH) guidelines for Good Clinical Practice (GCP) E6. Core to this is the Clinical Protocol, a document intended to describe the objectives, design, methodology, statistical considerations and other aspects related to the organization of the clinical trial.</em></p>
+  <p><em>Clinical protocols provide the background and rationale for conducting a study, highlighting specific research questions that are addressed, and taking into consideration ethical issues.</em> </p>
+  <p><em>The clinical protocol incorporates all the aspects of what is needed to define how the study is to be conducted and reviewed.</em></p>
+  </blockquote>
+
+    <p>This Implementation Guide (IG) allows for FHIR-based exchange of digital clinical trial
     protocols aligned to ICH M11 (Clinical electronic Structured Harmonized Protocols, or CeSHarP)
-    in a manner compatible across clinical research stakeholders. The specific initial use case
-    address within is exchange between sponsors and regulators, while building foundations for, and
+    in a manner compatible across clinical research stakeholders. In the long term, this will require 
+    alignment with other uses of FHIR and compatibility of FHIR with standards and terminologies used 
+    in various sectors and environments (i.e. CDISC USDM). The specific initial use case
+    addressed within this version is exchange between sponsors and regulators, while building foundations for, and
     avoiding blockers to, additional use cases that benefit the multiple stakeholders who utilize
     protocol information.</p>
 

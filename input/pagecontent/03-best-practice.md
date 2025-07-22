@@ -1,11 +1,4 @@
-> <blockquote>
->   <p><img src="icon-warning.png" alt="Take note:" /></p>
->   <p> To Add: An "audience" section for those familiar with USDM</p>
-> </blockquote>
-
 ### Implementation Best Practice 
-
-In consideration of the wide range of audiences that may be interested in this FHIR Implementation Guide, and that audiences may be in various stages of implementation of digital protocols, the following are considerations for specific audiences:
 
 As this is the first version, best practices specific to this implementation guide are still being identified and consolidated. Future versions will incorporate insights and recommendations based on real-world implementation experiences.
 
@@ -45,22 +38,32 @@ By considering these aspects, protocol authors can effectively leverage the FHIR
 
 System Architects building the conceptual design who need to understand how the artifacts can be made to work together and what systems and connections are needed within their environments may wish to consider:
 
-·    The general principles of how messaging works: e.g. creation of FHIR messages, submission to a FHIR server for validation, etc. Consider the identity of the particular instance of the message, the related process flows, and the uses involved. 
+- The general principles of how messaging works: e.g. creation of FHIR messages, submission to a FHIR server for validation, etc. Consider the identity of the particular instance of the message, the related process flows, and the uses involved. 
 
-·    Multiple bundling approaches and which is best fit in the context of how the information will be used will be a key decision to be made. 
+- Multiple bundling approaches and which is best fit in the context of how the information will be used will be a key decision to be made. 
 
-·    Terminology concerns, e.g., what terminology is already in use with the organization and how it aligns to that which is required by M11 in order to confirm the approach for terminology management. To prepare for implementation, developers will need specific guidance. For example, if terminology is hard coded it may accelerate implementation but have implications on maintenance when standards evolve via future governance processes.
+- Terminology concerns, e.g., what terminology is already in use with the organization and how it aligns to that which is required by M11 in order to confirm the approach for terminology management. To prepare for implementation, developers will need specific guidance. For example, if terminology is hard coded it may accelerate implementation but have implications on maintenance when standards evolve via future governance processes.
 
-·    Strategies for integration and interoperability across the targeted workflows. This may include creation of FHIR profiles that can be used in Electronic Health Record (EHR) systems to support clinical research needs in the healthcare environment. 
+- Strategies for integration and interoperability across the targeted workflows. This may include creation of FHIR profiles that can be used in Electronic Health Record (EHR) systems to support clinical research needs in the healthcare environment. 
+
 
 ##### Systems Developers
 
 Systems developers using this Implementation Guide to translate the conceptual design into systems ready to utilize digital protocols may wish to consider: 
 
-·    Ensuring decisions such as those about bundling and terminology management are well understood
+- Ensuring decisions such as those about bundling and terminology management are well understood
 
-·    How the detailed mappings included within, and linked to from, this guide which aim at ensuring accurate representation of elements across standards can be used
+- How the detailed mappings included within, and linked to from, this guide which aim at ensuring accurate representation of elements across standards can be used
 
-·    How this mapping will be utilized with their environment
+- How this mapping will be utilized with their environment
 
-·    Think about tooling - reference implementation
+- Think about tooling - reference implementation
+
+##### USDM Implementers and Parties Interested in USDM
+
+Those who utilize or may in the future utilize TransCelerate Digital Data Flow / CDISC USDM should understand that USDM provides a more structured and granular approach to protocol content than is found in M11 and it includes a wider set of study related content than is defined in M11. For the purposes of this initial version of this FHIR Implementation Guide, the incorporation of USDM has been limited to the subset of USDM that is aligned with M11 and required to enable the exchange of M11 protocol documents from sponsors to regulators in FHIR. As future versions are issued to enable additional use cases, it is expected that USDM will be further utilized by this Implementation Guide
+
+ Those implementing USDM or interested in USDM may wish to consider: 
+
+- Conducting a thorough review of the mappings referenced in this Implementation Guide to understand how elements are represented across M11, USDM and FHIR.
+- Use cases prioritization based on business needs in order to inform implementation strategies.

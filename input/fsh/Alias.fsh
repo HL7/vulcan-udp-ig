@@ -2,7 +2,19 @@ Alias: SCT = http://snomed.info/sct
 //Alias: NCIT = http://terminology.hl7.org/NamingSystem/v3-nciThesaurus
 Alias: $NCIT = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
 
+Alias: $ebm-ig-confidentiality = http://hl7.org/fhir/uv/ebm/StructureDefinition/research-study-sponsor-confidentiality-statement
+//Alias: $ebm-ig-sae = http://hl7.org/fhir/uv/ebm/StructureDefinition/research-study-sae-reporting-method 
+//Alias: $ebm-study = http://hl7.org/fhir/uv/ebm/StructureDefinition/study-design 
+Alias: $ebm-study = study-design
 
+Alias: $phase-vs = m11-phase-vs
+Alias: $study-title-type-vs = ddf-study-title-type-vs
+Alias: $study-role-vs = nci-study-role-vs
+Alias: $identifier-type-vs = m11-identifier-type-vs
+Alias: $study-amendment-reason-vs = m11-study-amendment-reason-vs
+Alias: $YesNoUnknownVS = CDISCSDTMYesNoUnknownVS
+
+Alias: $UDP = narrative-elements-cs  // http://hl7.org/fhir/uv/vulcan-udp-ig/
 
 Alias: $CNEW = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
 
