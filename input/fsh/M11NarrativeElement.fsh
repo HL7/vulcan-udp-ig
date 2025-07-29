@@ -66,8 +66,12 @@ the protocol to which it belongs."
 * section.code. ^definition = "A code from a value set that identifies the narrative section.  The value set is description
 constructed from one or more code systems that define the required structure"
 * section.code. ^binding.description = "The value set can only be extended if narrative content falls outside any identified M11 section." 
+//* section.code. ^binding.additonal.key = "m11-research-study-narratives-section-binding"
+* ^experimental = true
 
 * type from narrative-elements-vs (required)
+* ^experimental = true
+
 //* type. ^comment  = "**///TODO** give guidance on code to use"
 //* date.  ^comment = "**///TODO** give guidance on interpretation of this"
 * author only Reference(Organization)

@@ -7,6 +7,7 @@
 <artifact id="ValueSet/ddf-study-title-type-vs" key="ValueSet-ddf-study-title-type-vs" name="CDISC DDF Study Title Type Value Set"/>
 <artifact id="ValueSet/cdisc-yes-no-vs" key="ValueSet-cdisc-yes-no-vs" name="CDISC Yes No Unknown Not Applicable Value Set"/>
 <artifact id="MedicinalProductDefinition/IGBJ-MedicinalProduct" key="MedicinalProductDefinition-IGBJ-MedicinalProduct" name="IGBJ Medicinal Product"/>
+<artifact id="Organization/IGBJ-Organization" key="Organization-IGBJ-Organization" name="IGBJ Organization"/>
 <artifact id="Composition/IGBJ-Narrative-1.3" key="Composition-IGBJ-Narrative-1.3" name="IGBJ Protocol Narrative 1.3 - Schedule of Activities"/>
 <artifact id="Composition/IGBJ-Narrative-2.1" key="Composition-IGBJ-Narrative-2.1" name="IGBJ Protocol Narrative 2.1"/>
 <artifact id="Composition/IGBJ-Narrative-5.1" key="Composition-IGBJ-Narrative-5.1" name="IGBJ Protocol Narrative 5.1"/>
@@ -22,7 +23,6 @@
 <artifact id="CodeSystem/narrative-elements-cs" key="CodeSystem-narrative-elements-cs" name="Narrative Elements Code System"/>
 <artifact id="ValueSet/narrative-elements-vs" key="ValueSet-narrative-elements-vs" name="Narrative Elements Value Set"/>
 <artifact id="StructureDefinition/m11-research-study-narratives" key="StructureDefinition-m11-research-study-narratives" name="Research Study Narratives"/>
-<artifact id="StructureDefinition/research-study-sae-reporting-method" key="StructureDefinition-research-study-sae-reporting-method" name="ResearchStudySaeReportingMethod"/>
 <artifact id="StructureDefinition/protocol-amendment-detail" key="StructureDefinition-protocol-amendment-detail" name="ResearchStudyStudyAmendmentDetails"/>
 <artifact id="StructureDefinition/ResearchStudyStudyAmendmentScopeImpact" key="StructureDefinition-ResearchStudyStudyAmendmentScopeImpact" name="ResearchStudyStudyAmendmentScopeImpact"/>
 <artifact id="ValueSet/m11-country-region-vs" key="ValueSet-m11-country-region-vs" name="Study Amendment Country Value Set"/>
