@@ -1,6 +1,6 @@
 ValueSet: M11StudyAmendmentReasonVS
 Id: m11-study-amendment-reason-vs
-Title: "Study Amendment Reaason Value Set"
+Title: "Study Amendment Reason Value Set"
 Description: """Codes drawn from NCI Thesaurus to represent the reasons a study was amended.
 """
 * ^experimental = true

@@ -1,32 +1,3 @@
-<!-- 
- Home
-
-Background
-
-Bundles
-
-Changes
-
-Downloads
-
-Info Models
-
-Links
-
-Mappings
-
-Protocol Preparation
-
-Use by Audience
-
-Use Cases
-
---------
-
-* credits
-
--->
-
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li>
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">IG Home<b class="caret">

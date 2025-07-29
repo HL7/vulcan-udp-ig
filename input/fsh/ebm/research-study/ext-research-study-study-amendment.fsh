@@ -1,21 +1,31 @@
 //-----------------------------------------------------------------------------------------------------
 Extension: ResearchStudyStudyAmendmentScopeImpact
-Context: ResearchStudy
+Description: "Provides number or percentage of each group affected by a single amendmwent"
+//Context: m11-research-study-profile
+* ^extension[$ext-fmm].valueInteger = 0
+* ^extension[$ext-wg].valueCode = #brr
+* ^extension[$ext-standards-status].valueCode = #draft
+
 * value[x] 0..0
 * extension contains
-  number 0..1 and  // Integer or Percent
-  scope 0..1  // code for one of country, region or site
+  number 1..1 and  // Integer or Percent
+  scope 1..1  // code for one of country, region or site
 
 * extension[number].value[x] only positiveInt or Quantity // Need to constrain to %
   * ^short = "Number of participaants, or % of participants"
 
 * extension[scope].value[x] only code
 * extension[scope].value[x] from M11AmendmentScopeEnrollmentVS
+* ^experimental = true
 
 
 //-----------------------------------------------------------------------------------------------------
 Extension: ResearchStudyStudyAmendmentDetails
 Id: protocol-amendment-detail
+Description: "Provides detail of a single amendment - repeats within the overal amendment report"
+* ^extension[$ext-fmm].valueInteger = 0
+* ^extension[$ext-wg].valueCode = #brr
+* ^extension[$ext-standards-status].valueCode = #draft
 * value[x] 0..0
 * extension contains
   detail 1..1 and 
@@ -32,9 +42,10 @@ Id: protocol-amendment-detail
   * ^definition = "Rationale."
 
 * extension[section].value[x] only CodeableConcept
-* extension[section].value[x] from M11SectionCodesVS
+* extension[section].value[x] from m11-section-codes-vs
   * ^short = "Section where the amendment was made"
   * ^definition = "M11 Section where the amendment was made e.g. 1.2 Trial Schema."
+* ^experimental = true
 
 //-----------------------------------------------------------------------------------------------------
 Extension: M11_ProtocolAmendment
@@ -81,14 +92,17 @@ Description: "Amendment to a study protocol. This is originally from EBM."
   If amending a single-country study, enter global. 
   If the amendment does not apply to all sites in the trial, select Not Global and utilize one of the identifiers based on amendment scope. 
   Use the ISO-3166 region or country identifier (for example, DE or EU)."
+* ^experimental = true
 
 * extension[country].value[x] only code
 * extension[country].value[x] from M11CountryRegionVS (extensible)
   * ^definition = "C20108"
+* ^experimental = true
 
 * extension[region].value[x] only code
 * extension[region].value[x] from M11CountryRegionVS (extensible)
   * ^definition = "C218674"
+* ^experimental = true
 
 * extension[site].value[x] only Identifier
   * ^definition = "C83081"
@@ -106,11 +120,13 @@ Description: "Amendment to a study protocol. This is originally from EBM."
 * extension[primaryReason].value[x] from M11StudyAmendmentReasonVS (extensible)
   * ^short = "Reason for amendment, e.g. Safety"
   * ^definition = "Reason for amendment, e.g. Safety."
+* ^experimental = true
 
 * extension[secondaryReason].value[x] only CodeableConcept
 * extension[secondaryReason].value[x] from M11StudyAmendmentReasonVS (extensible)
   * ^short = "Reason for amendment, e.g. Manufacturing change"
   * ^definition = "Reason for amendment, e.g. Manufacturing change."
+* ^experimental = true
 
 * extension[summary].value[x] only string
   * ^short = "summary of changes"
@@ -120,6 +136,7 @@ Description: "Amendment to a study protocol. This is originally from EBM."
 * extension[substantialImpactSafety].value[x] from $YesNoUnknownVS (required)
   * ^short = "Substantial impact on safety"
   * ^definition = "Substantial impact on safety."
+* ^experimental = true
 
 * extension[substantialImpactSafetyComment].value[x] only string
   * ^short = "Comment on substantial impact on safety"
@@ -129,6 +146,7 @@ Description: "Amendment to a study protocol. This is originally from EBM."
 * extension[substantialImpactReliability].value[x] from $YesNoUnknownVS (required)
   * ^short = "Substantial impact on reliability"
   * ^definition = "Substantial impact on reliability."
+* ^experimental = true
 
 * extension[substantialImpactReliabilityComment].value[x] only string
   * ^short = "Comment on substantial impact on reliability"
