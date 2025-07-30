@@ -1,14 +1,14 @@
 ### Use Cases & Work Flows 
 
-A vast array of business use cases across clinical research and health IT settings can be enabled through FHIR-based exchange of narrative protocol text and structured protocol content. This vision is made practical by anchoring to the ICH M11 Clinical electronic Structured Harmonized Protocol and ensuring compatibility with the CDSIC USDM (Unified Study Definition Model, developed by the TransCelerate Digital Data Flow initiative)
+A vast array of business use cases across clinical research and health IT settings can be enabled through FHIR-based exchange of narrative protocol text and structured protocol content. This vision is made practical by anchoring to the ICH M11 Clinical electronic Structured Harmonized Protocol and ensuring compatibility with the CDISC USDM (Unified Study Definition Model, developed by the TransCelerate Digital Data Flow initiative)
 
-The detail following looks first at the use case addressed in development of this Implementation Guide, then looks towards additional use cases with which compatibility will be necessary and at future opportunities. 
+The following detail looks first at the use case addressed in development of this Implementation Guide, then looks towards additional use cases with which compatibility will be necessary and at future opportunities. 
 
 #### Use Case Demonstrated by this Implementation Guide
 
 For the purposes of development of this initial version of this Implementation Guide, the use case was defined narrowly as enabling sponsor-to-regulator exchange of digital protocols aligned to ICH M11 in FHIR. The specific detailed technical and business requirements for submission of M11-aligned protocols to regulators will be determined as regulators adopt M11 and establish processes for receipt and utilization of digitized protocols. Because this simplistic approach was taken, it is expected that this Implementation Guide could also be utilized by other sender/receiver roles. 
 
-##### Use Case Work Flow
+##### Work Flow
 
 The processes supporting testing scenarios were articulated as simply and with as much flexibility for implementation as possible:
 
@@ -39,9 +39,9 @@ In order to ensure this Implementation Guide is set up to enable compatibility f
 - Receiver extraction of structured elements relevant to various review needs (i.e., safety reviewer, medical reviewer)
 - Receiver response to submitter via FHIR messages as well as through other routine mechanisms
 
-#### Future Use Cases to Present Use Case Opportunities Across Stakeholders
+#### Use Case Opportunities Present and Future
 
-The information contained in a clinical trial protocol is utilized in relation to numerous processes across the research and care continuum. Digitizing and enabling interoperable exchange of that information opens an opportunity for automation, reuse, improved quality across stakeholders. 
+The information contained in a protocol is utilized in relation to numerous processes across the research and care continuum. Digitizing and enabling interoperable exchange of that information opens an opportunity for automation, reuse, improved quality across stakeholders. 
 
 The Vulcan UDP project intends to address additional use cases. All are welcome to propose use cases to Vulcan and to participate in Vulcan UDP community meetings. 
 
@@ -51,7 +51,7 @@ To get a sense of the extent of use cases that exist across the ecosystem, see t
 
 
 
-<div><img src="iceberg-02.png" alt="iceberg-02.png" style="max-width: 80%;
+<div><img src="iceberg-02.png" alt="iceberg-02.png" style="max-width: 90%;
  height: auto;" />
 <p>Figure 4: Future Use Cases</p></div>
 
