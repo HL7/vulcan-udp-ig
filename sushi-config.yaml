@@ -6,7 +6,7 @@
 id: hl7.fhir.uv.pharmaceutical-research-protocol
 canonical: http://hl7.org/fhir/uv/pharmaceutical-research-protocol
 name: PharmaceuticalResearchProtocol
-title: PharmaceuticalResearchProtocol (Vulcan UDP)
+title: Pharmaceutical Research Protocol (Vulcan UDP)
 # description: Example Implementation Guide for getting started with SUSHI
 status:  draft #| active | retired | unknown
 extension:
