@@ -1,68 +1,118 @@
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
   <!-- The spaces between the open and close "a" tag are mandatory.  (Cuz HTML renderers are dumb...) -->
-  <a name="overview"> </a>
+  <a name="introduction"> </a>
+  <h3>Introduction</h3>
+  <p>This Implementation Guide has been developed through Vulcan UDP (Utilizing the Digital
+    Protocol). </p>
+  <p> </p>
+  <p><strong>What is a clinical trial protocol?</strong> Conduct of clinical trials is guided by the
+    International Conference on Harmonization (ICH) guidelines for Good Clinical Practice (GCP) E6
+    which specify the protocol incorporates all aspects of what is needed to define how the study is
+    to be conducted and reviewed. The protocol should provide background and rationale for the
+    study, highlight the specific research questions to be addressed, and take into consideration
+    ethical issues. It describes the objectives, design, methodology, statistical considerations and
+    other aspects related to the organization of the clinical trial. </p>
+  <p> </p>
+  <p><strong>Who can benefit from utilizing a digital protocol?</strong> Users of protocols exist
+    across the full continuum of clinical and translational research and clinical care. Traditional
+    research conducted by the biopharmaceutical industry involves complex processes with innumerous
+    opportunities for automation(See Use Case Opportunities, Present and Future).</p>
+  <p> </p>
+  <p><strong>Why FHIR?</strong> FHIR adoption in healthcare has expanded rapidly in recent years.
+    (See The State of FHIR in 2025). FHIR-based exchange of protocols will enable their use within
+    healthcare systems, helping to bridge clinical research and care and to facilitate translational
+    research. Emerging applications of FHIR in regulated clinical research include exchange of
+    electronic Product Information and PQ-CMC documentation. Leveraging FHIR for protocol exchange
+    enables regulators and sponsors to reuse infrastructure across content types, improving
+    efficiency and consistency. As an open, web-based interoperability standard, FHIR supports
+    exchange of both structured and unstructured data exchange without proprietary limitations and
+    is backed by a global community. Finally, FHIR will enable innovating on innovative automated
+    exchange of ICH M11. </p>
+  <p> </p>
+  <p><strong>Why ICH M11?</strong> It reflects a consensus-driven effort led by global regulatory
+    authorities and industry experts to standardize clinical trial protocols. Regulatory agencies
+    have played a central role in shaping both the protocol template and related specifications,
+    ensuring alignment with their expectations for structured, electronic submissions. As a result,
+    ICH M11 is expected to be incorporated into regulatory guidelines, making its adoption a strong
+    driver for global harmonization and a likely requirement for future protocol submissions. In
+    addition, it is aligned to USDM which is further into the implementation phase. </p>
+  <p> </p>
+  <p><strong>Why USDM?</strong> The Unified Study Definition Model provides a standardized, highly
+    detailed model for articulating protocol and related study information in a machine-readable
+    manner. It incorporates all structured elements of ICH M11 and additional elements (e.g.,
+    information used for clinical trial execution, reporting, etc.). USDM development was strongly
+    guided by sponsor subject matter experts and shaped through public standards-setting processes.
+    It is now being adopted by numerous biopharmaceutical companies across a range of sponsor-driven
+    use cases.</p>
+  <p> </p>
+  <p><strong>Why Vulcan?</strong> The Vulcan HL7 FHIR Accelerator aims to bridge research and
+    clinical care through the use of FHIR, strategically connecting collaborators to maximize
+    expertise and efforts. Vulcan members include implementers, sponsors, academic research,
+    government representatives who are working on or have interests in protocol digitization. The
+    Vulcan Utilizing the Digital Protocol (UDP) is an umbrella project integrating related work
+    being developed by ICH M11, CDISC, and TransCelerate to enable compatible, standards-based
+    exchange of ICH M11-aligned clinical trial protocols across research stakeholders including
+    sponsors, sites and regulators.</p>
+  <p> </p>
+  <p>For additional information on integration of the various efforts and history, please see the
+    "Background" section in this Implementation Guide under "Home" section of the banner and
+    in the "Links" section under the "Support" section of the banner.</p>
+
+    <a name="overview"> </a>
   <h3>Technical Overview</h3>
-  <p>This guide describes the representation of a Study Protocol in FHIR format.  The Document focus of protocol 
-    organization is provided by the ICH M11 CeSHarP Template and Technical Guide.  For a more structured approach 
-    to the data there is the CDISC USDM model. Both are represented in the FHIR Representation mapping spreadsheet, 
-    but for this version of the iG the emphasis is on the M11 approach.</p>
+  <p>This guide describes the representation of a Protocol in FHIR format. The "document" focus of
+    protocol organization is provided by the ICH M11 CeSHarP Template and Technical Guide. A more
+    structured approach aligned to M11 is addressed by USDM, developed by CDISC in partnership with
+    TransCelerate as part of Digital Data Flow initiative. Both M11 and USDM are represented in the
+    FHIR Representation mapping spreadsheet (found under Downloads section of the banner). This
+    initial version of the IG is focused on on the M11 "document" approach; future
+    versions are intended to expand integration of USDM and FHIR in order to enable exchange of
+    additional structured protocol content in FHIR-based systems.</p>
+  <p> The key FHIR resources used are ResearchStudy and Composition, while also drawing on some
+    profiles and extensions from the EBM IG. EBM utilizes protocol elements to be able to review and
+    reporting on research completed; UDP will include ICH M11 related items. </p>
+  <p> For more description of the relationship between the resources, extensions and profiles see
+    the FHIR Representation section and the actual specifications in the Artifacts section.</p>
 
-  <p>The key FHIR resources used are ResearchStudy and Composition and we also draw on some profiles and extension from the EBM IG.</p>
-
-  <p>For more description of the releationship between the resources, extensions and profiles see the FHIR Representation section and 
-    the actual specifications in the Artifacts section</p>
 
       <a name="objectives"> </a>
   <h3>Core Objectives </h3>
-  <p>The Vulcan HL7 FHIR Accelerator aims to bridge research and clinical care through use of FHIR,
-    strategically connecting collaborators to maximize expertise and efforts. The Vulcan Utilizing
-    the Digital Protocol (UDP) project enhances the integration of clinical and translational
-    research with clinical care by enabling digital protocol exchange through FHIR, supporting
-    Vulcan's mission to connect these domains and research integration into care.</p>
-  
+  <p>The Vulcan UDP project enables digital protocol exchange through FHIR, supporting Vulcan&#39;s
+    mission to connect clinical and translational research to clinical care. The main goal of this
+    FHIR Implementation Guide is to developed iteratively concentrating first on near-term
+    achievable use cases to ensure immediate impact and feasibility, while building foundations for,
+    and avoiding blockers to, long-term use cases. The overarching vision is for compatibility
+    across clinical research stakeholders. </p>
+  <p>The future Governance processes must ensure retaining alignment with ICH M11 and compatible
+    standards of CDISC USDM and Controlled Terminology as well as related uses of FHIR such as those
+    in the Evidence Based Medicine (EBM) Implementation Guide. Successful governance will require
+    active participation in HL7 processes to ensure long-term alignment with related efforts such as
+    EBM, and with other organizations, such as ICH M11, CDISC, and TransCelerate.</p>
 
-  <blockquote>
-  <p><em>Conduct of Clinical Trials is guided by the International Conference on Harmonization (ICH) guidelines for Good Clinical Practice (GCP) E6. Core to this is the Clinical Protocol, a document intended to describe the objectives, design, methodology, statistical considerations and other aspects related to the organization of the clinical trial.</em></p>
-  <p><em>Clinical protocols provide the background and rationale for conducting a study, highlighting specific research questions that are addressed, and taking into consideration ethical issues.</em> </p>
-  <p><em>The clinical protocol incorporates all the aspects of what is needed to define how the study is to be conducted and reviewed.</em></p>
-  </blockquote>
-
-    <p>This Implementation Guide (IG) allows for FHIR-based exchange of digital clinical trial
-    protocols aligned to ICH M11 (Clinical electronic Structured Harmonized Protocols, or CeSHarP)
-    in a manner compatible across clinical research stakeholders. In the long term, this will require 
-    alignment with other uses of FHIR and compatibility of FHIR with standards and terminologies used 
-    in various sectors and environments (i.e. CDISC USDM). The specific initial use case
-    addressed within this version is exchange between sponsors and regulators, while building foundations for, and
-    avoiding blockers to, additional use cases that benefit the multiple stakeholders who utilize
-    protocol information.</p>
 
       <a name="scope"> </a>
   <h3>Scope </h3>
-  <p>The Vulcan UDP project enables digital protocol exchange through FHIR, supporting Vulcan's
-    mission to connect clinical and translational research to clinical care. The main goal of this
-    FHIR Implementation Guide is to concentrate on near-term achievable use cases to ensure
-    immediate impact and feasibility, while building foundations for, and avoiding blockers to,
-    long-term cross-stakeholder compatibility across many additional use cases. Governance
-    requirements include retaining alignment with ICH M11 and compatible standards of CDISC USDM and
-    Controlled Terminology as well as related uses of FHIR such as those in the 
-    <a href="https://hl7.org/fhir/uv/ebm/history.html" > Evidence Based Medicine (EBM) </a> Implementation Guide.</p>
   <p>
     <strong>In Scope</strong>
   </p>
-  <p>The initial use case focuses on <strong>sponsor-to-regulator exchange of protocols which align
-    to ICH M11</strong>, leveraging and enabling compatibility with related standards where
-    possible, and building cross-organization relationships to enable future governance. </p>
+  <p>The initial use case addressed within this version is FHIR-based exchange of M11-aligned
+    protocols between sponsors and regulators, as driven by ICH M11(Clinical electronic Structured
+    Harmonized Protocols, or CeSHarP). Development was approached to 1) leverage and enable
+    compatibility with related standards where possible and 2) in such a way as to accommodate
+    future use cases. For example, work to align with CDISC USDM is ongoing and viewed as a
+    near-term pathway to expanding delivered use cases.</p>
+  <p> </p>
   <p>
     <strong>Out of scope</strong>
   </p>
-  <p>While out of scope for this version of the Implementation Guide, the future aim is to develop a
-    use case roadmap, considering the broad spectrum of potential use cases of digital protocols and
-    seeking opportunities to establish foundational connections. (See also the Use Cases and Workflows section). </p>
-  <p>Detailed governance processes are also out of scope for this version but will be addressed in
-    future iterations. Successful governance will require active participation in HL7 processes to
-    ensure long-term alignment with related efforts such as EBM, and with other organizations, such
-    as ICH M11, CDISC, and TransCelerate.</p>
+  <ul>
+    <li>Support for any non-ICH M11 aligned protocol exchange in this IG version. The future aim is
+      to develop a use case roadmap, consider the broad spectrum of potential use cases of digital
+      protocols and identify opportunities to establish foundational connections. (See also the Use
+      Cases and Workflows section for some discussion on this).</li>
+    <li>Detailed governance processes will be addressed in future iterations. </li>
+  </ul>
 
 
       <a name="structure"> </a>
@@ -74,7 +124,7 @@
   <ul>
     <p>Home: This home page</p>
     <p>Background: Placing this work in the wider context</p>
-    <p>Implementation Best Practice: Provides some general pointers on implementation, and also picks out key points from differ3ent audience prespectives.</p>
+    <p>Implementation Best Practice: Provides some general pointers on implementation, and also picks out key points from different audience perspectives.</p>
   </ul>
   <p><strong>Guidance:</strong> Describes how the technical work was approached and why certain decisions were made</p>
   <ul>
