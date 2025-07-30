@@ -37,3 +37,5 @@ One may encounter a scenario where the writer (submitter) bundles the protocol i
 During implementation, it is likely to encounter both Modes A and B. Ideally, an entity can equip itself to write and/or read either mode, noting that there are additional considerations when reading multiple (non-bundled) resources from a server (e.g. this may require precise resource linking and management overhead.)  Some practical considerations include opting for Mode A if the intended use is akin to a “document review” and opting for Mode B if some analysis is planned. Another example is the use case of the Schedule of Activities as an executable resource (e.g. driving research activities at a site), thus requiring Mode B.
 
 One of the largest drivers of the adopted approach is how protocol amendments are represented and how subsequent submissions of the amended protocol are versioned, written to the server and read by the reviewer. 
+
+Refer to the following IG’s for support on FHIR exchange and connections between resources: [Exchanging FHIR Content](https://hl7.org/fhir/exchanging.html) and [References between FHIR resources](https://hl7.org/fhir/references.html).

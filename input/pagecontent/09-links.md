@@ -8,11 +8,11 @@ These links provide general information that are germane to the development of t
 
 | Link              | Description              |
 | ----------------- | ------------------------ |
-| [ICH M11 (EMA)](https://www.ema.europa.eu/en/ich-m11-guideline-clinical-study-protocol-template-technical-specifications-scientific-guideline) | ICH M11 guideline, clinical study protocol template and technical specifications - Scientific guideline (EMA)   | 
+| [ICH M11 (EMA)](https://www.ema.europa.eu/en/ich-m11-guideline-clinical-study-protocol-template-technical-specifications-scientific-guideline) | ICH M11 guideline, protocol template and technical specifications - Scientific guideline (EMA)   |
 | [ICH M11 (FDA)](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/m11-clinical-electronic-structured-harmonised-protocol) | M11 Clinical Electronic Structured Harmonised Protocol, Center for Drug Evaluation and Research, Office of Regulatory Policy |
-| [CDISC Digital Data Flow (DDF)](https://www.cdisc.org/ddf) | CDISC/Transcelerate Digital Data Flow (DDF) |
+| [CDISC Digital Data Flow (DDF)](https://www.cdisc.org/ddf) | CDISC/TransCellerate Digital Data Flow (DDF) |
 | [HL7 Vulcan Utilising the Digital Protocol](https://www.hl7vulcan.org/udp-project) | UDP: Utilizing the Digital Protocol |
-| [CTIS](https://euclinicaltrials.eu/ctis-for-sponsors/) | Clinical Trials Information System (CTIS) assists clinical trial sponsors and other organisations involved in running clinical trials in preparing and compiling clinical trial applications and dossiers to submit for assessment by Member States in the European Union (EU) and European Economic Area (EEA). |
+| [CTIS](https://euclinicaltrials.eu/ctis-for-sponsors/) | Clinical Trials Information System (CTIS) assists clinical trial sponsors and other organizations involved in running clinical trials in preparing and compiling clinical trial applications and dossiers to submit for assessment by Member States in the European Union (EU) and European Economic Area (EEA). |
 
 #### Mapping Links
 
@@ -25,6 +25,7 @@ These links are published mappings between the different standards developed as 
 | [ClinicalTrials.gov Mapping](https://github.com/cdisc-org/DDF-RA/blob/main/Documents/Mappings/ct-gov_mapping.xlsx) | USDM | ClinicalTrials.gov | CDISC Mapping from USDM to NCI ClinicalTrials.gov schema |
 | [Common Protocol Template Mapping](https://github.com/cdisc-org/DDF-RA/blob/main/Documents/Mappings/cpt_mapping.xlsx) | USDM | Common Protocol Template | CDISC Mapping from USDM to Transcelerate Common Protocol Template (CPT) |
 | [M11 Mapping](https://github.com/cdisc-org/DDF-RA/blob/main/Documents/Mappings/m11_mapping.xlsx) | USDM | M11 | CDISC Mapping from USDM to ICH M11 Technical Specification |
+| <a href="Mappings/M11 to FHIR Mapping 01.xlsx">M11 to USDM to FHIR Mapping</a> | FHIR | M11<br />FHIR | Three way mapping discussed in the FHIR Representation section |
 
 #### Technical Links
 
