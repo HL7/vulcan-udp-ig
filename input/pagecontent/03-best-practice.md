@@ -1,4 +1,4 @@
-### Implementation Best Practice 
+### Implementation Best Practices
 
 As this is the first version, best practices specific to this implementation guide are still being identified and consolidated. Future versions will incorporate insights and recommendations based on real-world implementation experiences.
 
@@ -14,7 +14,6 @@ General implementation considerations for a digital protocol include:
 6. **Data  Management**: Centralize protocol elements and automate tasks.
 7. **Performance Metrics**:  Monitor and improve protocol performance.
 8. **Security and Privacy**: Protect data and comply with regulations.
-9. **Stakeholder Engagement**:
 
 By considering these factors, you can create a robust plan for implementing a digital protocol that meets your organization's needs and enhances overall efficiency.
 
