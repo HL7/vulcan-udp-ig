@@ -7,7 +7,7 @@ Description:    """Constraint of ResearchStudy to M11 Guidance
 An instance of this profile represents a single version of the protocol definition.  Previous amendments are represented
 by further instances of ResearchStudy linked through the relatedArtifact attribute. 
 """
-* ^experimental = true
+* ^extension[$ext-fmm].valueInteger = 1
 
 * extension contains
     narrative-elements named narrative 0..* and

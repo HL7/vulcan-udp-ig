@@ -26,7 +26,7 @@
 <artifact id="StructureDefinition/protocol-amendment-detail" key="StructureDefinition-protocol-amendment-detail" name="ResearchStudyStudyAmendmentDetails"/>
 <artifact id="StructureDefinition/ResearchStudyStudyAmendmentScopeImpact" key="StructureDefinition-ResearchStudyStudyAmendmentScopeImpact" name="ResearchStudyStudyAmendmentScopeImpact"/>
 <artifact id="ValueSet/m11-country-region-vs" key="ValueSet-m11-country-region-vs" name="Study Amendment Country Value Set"/>
-<artifact id="ValueSet/m11-study-amendment-reason-vs" key="ValueSet-m11-study-amendment-reason-vs" name="Study Amendment Reaason Value Set"/>
+<artifact id="ValueSet/m11-study-amendment-reason-vs" key="ValueSet-m11-study-amendment-reason-vs" name="Study Amendment Reason Value Set"/>
 <artifact id="ValueSet/m11-amendment-scope-enrollment-vs" key="ValueSet-m11-amendment-scope-enrollment-vs" name="Study Amendment Scope Enrollment Value Set"/>
 <artifact id="ValueSet/m11-study-amendment-scope-vs" key="ValueSet-m11-study-amendment-scope-vs" name="Study Amendment Scope Value Set"/>
 <artifact id="StructureDefinition/study-design" key="StructureDefinition-study-design" name="StudyDesign"/>

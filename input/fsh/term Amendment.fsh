@@ -3,7 +3,8 @@ Id: m11-study-amendment-scope-vs
 Title: "Study Amendment Scope Value Set"
 Description: """Codes drawn from NCI Thesaurus to represent the scope of an amendment to a study.
 """
-* ^experimental = true
+* ^extension[$ext-fmm].valueInteger = 2
+* ^experimental = false
 
 * $NCIT#C68846	"Global"
 * $NCIT#C217026	"Not Global"
@@ -12,7 +13,8 @@ ValueSet: M11AmendmentScopeEnrollmentVS
 Id: m11-amendment-scope-enrollment-vs
 Title: "Study Amendment Scope Enrollment Value Set"
 Description: """Categorising numbers affected by the amendment"""
-* ^experimental = true
+* ^extension[$ext-fmm].valueInteger = 2
+* ^experimental = false
 
 * $NCIT#C68846  "Globally"
 * $NCIT#C41065  "Locally"
@@ -27,7 +29,8 @@ ISO 3166 Country Codes, Alpha 2;
 GENC
 country affected by an amendment to a study.
 """
-* ^experimental = true
+* ^extension[$ext-fmm].valueInteger = 1
+* ^experimental = false
 
 * codes from valueset http://hl7.org/fhir/ValueSet/iso3166-1-2
 * codes from valueset http://hl7.org/fhir/ValueSet/iso3166-1-3

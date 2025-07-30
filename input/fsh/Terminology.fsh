@@ -2,7 +2,8 @@ ValueSet: M11SectionCodesVS
 Id: m11-section-codes-vs
 Title: "M11 Section Codes Value Set"
 Description: "Codes representing sections of M11."
-* ^experimental = true
+* ^extension[$ext-fmm].valueInteger = 2
+* ^experimental = false
 
 * $NCIT#C218514  "1 PROTOCOL SUMMARY"
 * $NCIT#C218515  "1.1 Protocol Synopsis"
