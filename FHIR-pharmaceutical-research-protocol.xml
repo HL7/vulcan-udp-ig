@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="" defaultVersion="current" defaultWorkgroup="brr" url="http://hl7.org/fhir/uv/pharmaceutical-research-protocol">
-<version code="current" url=""/>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/uv/pharmaceutical-research-protocol/2025Sep" ciUrl="https://github.com/HL7/vulcan-udp-ig" defaultVersion="1.0.0-ballot" defaultWorkgroup="brr" url="http://hl7.org/fhir/uv/pharmaceutical-research-protocol">
+<version code="current" url="https://github.com/HL7/vulcan-udp-ig"/>
+<version code="1.0.0-ballot" url="http://hl7.org/fhir/uv/pharmaceutical-research-protocol/2025Sep"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
