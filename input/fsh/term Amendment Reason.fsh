@@ -3,7 +3,8 @@ Id: m11-study-amendment-reason-vs
 Title: "Study Amendment Reason Value Set"
 Description: """Codes drawn from NCI Thesaurus to represent the reasons a study was amended.
 """
-* ^experimental = true
+* ^extension[$ext-fmm].valueInteger = 2
+* ^experimental = false
 
 * $NCIT#C218490  "Regulatory Agency Request To Amend"
 * $NCIT#C218491  "New Regulatory Guidance"

@@ -14,7 +14,7 @@ Alias: $identifier-type-vs = m11-identifier-type-vs
 Alias: $study-amendment-reason-vs = m11-study-amendment-reason-vs
 Alias: $YesNoUnknownVS = CDISCSDTMYesNoUnknownVS
 
-Alias: $UDP = narrative-elements-cs  // http://hl7.org/fhir/uv/vulcan-udp-ig/
+Alias: $narrative-elements-cs = narrative-elements-cs  // http://hl7.org/fhir/uv/vulcan-udp-ig/
 
 Alias: $CNEW = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
 

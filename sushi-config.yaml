@@ -3,31 +3,24 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-#id: hl7.fhir.uv.VulcanUdpIg
-#canonical: http://hl7.org/fhir/uv/VulcanUdpIg
 id: hl7.fhir.uv.pharmaceutical-research-protocol
 canonical: http://hl7.org/fhir/uv/pharmaceutical-research-protocol
 name: PharmaceuticalResearchProtocol
-title: Vulcan UDP IG
+title: PharmaceuticalResearchProtocol (Vulcan UDP)
 # description: Example Implementation Guide for getting started with SUSHI
-status: draft # | active | retired | unknown
+status:  draft #| active | retired | unknown
 extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg  #<<< must include a http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension that identifies the workgroup responsible for the IG. This is the authoritative element.
     valueCode: brr  # <<< The value must be the code for the workgroup
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
     valueCode: draft
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
-    valueInteger: 0
-#version: 0.5.0
+    valueInteger: 2
 version: 1.0.0-Ballot  
-#fhirVersion: 	4.3.0
-#fhirVersion: 	5.0.0 # must be one of 5.0.0, 4.3.0, 4.0.1, 3.0.2 or 6.0.0-ballot3 https://www.hl7.org/fhir/valueset-FHIR-version.html
 fhirVersion: 	6.0.0-ballot3 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
-#releaseLabel: ci-build
-releaseLabel: STU 1 – Ballot
+releaseLabel: STU 1 - Ballot
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
-# jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"	 
 publisher:
   name: HL7 International / Biomedical Research and Regulation

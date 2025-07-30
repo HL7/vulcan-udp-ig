@@ -2,8 +2,9 @@ CodeSystem: NarrativeElementsCS
 Id: narrative-elements-cs
 Title: "Narrative Elements Code System"
 Description: """Composition Types to Manage Protocol Narrative Elements"""
-* ^experimental = true
-* ^caseSensitive = true
+* ^extension[$ext-fmm].valueInteger = 0
+* ^experimental = false
+* ^caseSensitive = false
 
 * #b001 "Protocol narrative" "A composition that represents the part or all of a pharmaceutical research protocol as descriptive text"  
 
@@ -11,9 +12,10 @@ ValueSet: NarrativeElementsVS
 Id: narrative-elements-vs
 Title: "Narrative Elements Value Set"
 Description: """Composition Types to Manage Protocol Narrative Elements"""
-* ^experimental = true
+* ^extension[$ext-fmm].valueInteger = 2
+* ^experimental = false
 
-* include codes from system $UDP
+* include codes from system $narrative-elements-cs
 
 
 //--------------------------------------------------------------------------------------
@@ -23,6 +25,7 @@ Id: narrative-elements
 Title: "Narrative Elements"
 Description: "Narrative content for the ResearchStudy."
 Context: ResearchStudy
+* ^extension[$ext-fmm].valueInteger = 2
 * value[x] only Reference
 * valueReference only Reference(m11-research-study-narratives)
 * valueReference. ^short = "Pointer to the narrative content for the protocol"
@@ -58,6 +61,7 @@ The ICH M11 CeSHarP template for a study protocol specifies the headings to be u
 For a FHIR representation of the protocol to be compliant with this template each of the narrative sections must 
 be organised using these headings. Only if there is material that does not properly belong under one of the M11 
 headings can additional codes be created."""
+* ^extension[$ext-fmm].valueInteger = 2
 * subject. ^short = "Reference to the protocol that the narrative refers to" 
 * subject. ^comment = "This reference provides a rapid means of relating a specific narrative instnace to
 the protocol to which it belongs." 
@@ -67,10 +71,8 @@ the protocol to which it belongs."
 constructed from one or more code systems that define the required structure"
 * section.code. ^binding.description = "The value set can only be extended if narrative content falls outside any identified M11 section." 
 //* section.code. ^binding.additonal.key = "m11-research-study-narratives-section-binding"
-* ^experimental = true
 
 * type from narrative-elements-vs (required)
-* ^experimental = true
 
 //* type. ^comment  = "**///TODO** give guidance on code to use"
 //* date.  ^comment = "**///TODO** give guidance on interpretation of this"

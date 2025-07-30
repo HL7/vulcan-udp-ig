@@ -4,7 +4,7 @@ Title: "IGBJ Protocol Narrative 5.1"
 Usage: #example
 Description: "5.1	Description of Trial Population and Rationale"
 * status = #final
-* type = $UDP#b001 "Protocol narrative"
+* type = $narrative-elements-cs#b001 "Protocol narrative"
 * subject = Reference(IGBJ-ResearchStudy)
 * date = "2025-06-03T12:46:00Z"
 * author = Reference(IGBJ-Organization) // Reference to Organization: Marketing Authorization Holder

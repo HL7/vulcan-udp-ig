@@ -41,7 +41,7 @@ on the server by following this link https://vhewer.com/display-product?url=http
 * status = $Pub#draft "Draft" // TODO: Check we are really using this correctly
 * phase = $NCIT#C15602  "Phase 3"
 * focus = Reference(IGBJ-MedicinalProduct) // TODO: Create substance
-* condition[0] = SCT#xxx "Insulin-induced Hypoglycemia" // TODOD: Find Snomed code here
+* condition[0] = SCT#1137328006 "Iatrogenic hypoglycaemia" // Not "Insulin-induced Hypoglycemia" for which there is no snomed code
 
 * extension[NarrativeElements][+].valueReference = Reference(IGBJ-Narrative-1.3)
 * extension[NarrativeElements][+].valueReference = Reference(IGBJ-Narrative-2.1)
