@@ -53,5 +53,5 @@ Detailed steps – by approach:
 5. You will no doubt be faced with making judgement calls on where certain content elements align with the ICH M11 template. 
 6. Finally per template guidance, remove all instructional text and mapping comments, update formatting inconsistencies and update Table of Contents
 
-NOTE: Although not a long-term solution, document-based ICH M11 protocols may be transformed into FHIR using AI/ML and LLM *(see reference implementations)* Long-term strategy involves digitally native, ICH M11-aligned protocols primed for exchange in FHIR.
+NOTE: Although not a long-term solution, document-based ICH M11 protocols may be transformed into FHIR using AI/ML (artificial intelligence/machine learning) and LLM (large language models).  Long-term strategy involves digitally native, ICH M11-aligned protocols primed for exchange in FHIR.
 

@@ -1,15 +1,3 @@
-Alias: $EMAReason = http://spor.ema.europa.eu/v1/example-reason
-Alias: $RegID = https://example.org/regulatory-agency-identifier
-Alias: $SpID = https://example.org/sponsor-identifier
-Alias: $AmdID = https://example.org/amendment-identifier
-Alias: $AmdSite = https://example.org/site-identifier
-
-Alias: $TitleType = http://hl7.org/fhir/title-type
-Alias: $Pub = http://hl7.org/fhir/publication-status
-
-Alias: $iso3166-2 = urn:iso:std:iso:3166
-Alias: $mime = http://hl7.org/fhir/ValueSet/mimetypes
-
 Instance: IGBJ-ResearchStudy
 InstanceOf: m11-research-study-profile
 Title: "IGBJ Research Study with narrative"
@@ -41,7 +29,7 @@ on the server by following this link https://vhewer.com/display-product?url=http
 * status = $Pub#draft "Draft" // TODO: Check we are really using this correctly
 * phase = $NCIT#C15602  "Phase 3"
 * focus = Reference(IGBJ-MedicinalProduct) // TODO: Create substance
-* condition[0] = SCT#1137328006 "Iatrogenic hypoglycaemia" // Not "Insulin-induced Hypoglycemia" for which there is no snomed code
+* condition[0] = $SCT#1137328006 "Iatrogenic hypoglycaemia" // Not "Insulin-induced Hypoglycemia" for which there is no snomed code
 
 * extension[NarrativeElements][+].valueReference = Reference(IGBJ-Narrative-1.3)
 * extension[NarrativeElements][+].valueReference = Reference(IGBJ-Narrative-2.1)

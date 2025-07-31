@@ -2,7 +2,7 @@ Profile: StudyDesign
 Parent: ResearchStudy
 Id: study-design
 Description: """Profile of ResearchStudy for Evidence Based Medicine IG. 
-The StudyDesign Profile is used to add extensions for additional expressions of study design features with the study protocol."""
+The StudyDesign Profile is used to add extensions for additional expressions of study design features with the protocol."""
 * ^extension[$ext-fmm].valueInteger = 1
 * ^extension[$ext-wg].valueCode = #cds
 * ^extension[$ext-standards-status].valueCode = #draft

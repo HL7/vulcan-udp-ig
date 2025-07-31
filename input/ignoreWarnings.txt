@@ -33,6 +33,7 @@ INFORMATION: ValueSet/nci-study-role-vs: ValueSet.jurisdiction[0]: Reference to 
 
 # 02 This comes from the dependancy on items from the EBM IG which which are not currently up for ballot
 ERROR: 10-credits.html#/html/body/div/div/div/div/div/div/table/tr/td/a at Line 333, column 2718: The link 'http://hl7.org/fhir/6.0.0-ballot2' for "R6" cannot be resolved
+ERROR: 10-credits.html#/html/body/div/div/div/div/div/div/table/tr/td/a at Line 336, column 2718: The link 'http://hl7.org/fhir/6.0.0-ballot2' for "R6" cannot be resolved
 
 # 03 The profile properly belongs in EBM where examples can be found - content relevant to UDP is illustrated in the IGBJ-ResearchStudy example
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/uv/pharmaceutical-research-protocol/StructureDefinition/study-design'): The Implementation Guide contains no examples for this profile
