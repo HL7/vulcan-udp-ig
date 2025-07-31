@@ -19,7 +19,7 @@ Core project members:
 - **Mark Kramer** - MITRE
 - **Geoff Low** - Medidata
 - **Jimita Parekh** – European Medicines  Agency (EMA)
-- **Rik Smithies** – HL7 UK
+- **Rik Smithies** – NProgram Ltd
 - **Panagiotis Telonis** – European Medicines  Agency (EMA)
 
 Connectathon Contributors :

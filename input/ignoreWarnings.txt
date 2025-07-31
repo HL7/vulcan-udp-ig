@@ -160,3 +160,24 @@ INFORMATION: StructureDefinition/study-design: StructureDefinition.snapshot.elem
 INFORMATION: StructureDefinition/study-design: StructureDefinition.snapshot.element[83].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
 INFORMATION: StructureDefinition/study-design: StructureDefinition.snapshot.element[90].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
 INFORMATION: StructureDefinition/study-design: StructureDefinition.snapshot.element[102].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
+
+# 08 Standards status set to trial-use at request of FMG (eMail from Marc Duteau 2025-07-30)
+INFORMATION: CodeSystem/narrative-elements-cs: CodeSystem: The resource status 'draft' and the standards status 'trial-use' may not be consistent and should be reviewed
+INFORMATION: ImplementationGuide/hl7.fhir.uv.pharmaceutical-research-protocol: ImplementationGuide: The resource status 'draft' and the standards status 'trial-use' may not be consistent and should be reviewed
+INFORMATION: StructureDefinition/m11-research-study-narratives: StructureDefinition: The resource status 'draft' and the standards status 'trial-use' may not be consistent and should be reviewed
+INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition: The resource status 'draft' and the standards status 'trial-use' may not be consistent and should be reviewed
+INFORMATION: StructureDefinition/narrative-elements: StructureDefinition: The resource status 'draft' and the standards status 'trial-use' may not be consistent and should be reviewed
+INFORMATION: StructureDefinition/protocol-amendment: StructureDefinition: The resource status 'draft' and the standards status 'trial-use' may not be consistent and should be reviewed
+INFORMATION: StructureDefinition/protocol-amendment-detail: StructureDefinition: The resource status 'draft' and the standards status 'trial-use' may not be consistent and should be reviewed
+INFORMATION: StructureDefinition/ResearchStudyStudyAmendmentScopeImpact: StructureDefinition: The resource status 'draft' and the standards status 'trial-use' may not be consistent and should be reviewed
+INFORMATION: ValueSet/cdisc-yes-no-vs: ValueSet: The resource status 'draft' and the standards status 'trial-use' may not be consistent and should be reviewed
+INFORMATION: ValueSet/ddf-study-title-type-vs: ValueSet: The resource status 'draft' and the standards status 'trial-use' may not be consistent and should be reviewed
+INFORMATION: ValueSet/m11-amendment-scope-enrollment-vs: ValueSet: The resource status 'draft' and the standards status 'trial-use' may not be consistent and should be reviewed
+INFORMATION: ValueSet/m11-country-region-vs: ValueSet: The resource status 'draft' and the standards status 'trial-use' may not be consistent and should be reviewed
+INFORMATION: ValueSet/m11-identifier-type-vs: ValueSet: The resource status 'draft' and the standards status 'trial-use' may not be consistent and should be reviewed
+INFORMATION: ValueSet/m11-phase-vs: ValueSet: The resource status 'draft' and the standards status 'trial-use' may not be consistent and should be reviewed
+INFORMATION: ValueSet/m11-section-codes-vs: ValueSet: The resource status 'draft' and the standards status 'trial-use' may not be consistent and should be reviewed
+INFORMATION: ValueSet/m11-study-amendment-reason-vs: ValueSet: The resource status 'draft' and the standards status 'trial-use' may not be consistent and should be reviewed
+INFORMATION: ValueSet/m11-study-amendment-scope-vs: ValueSet: The resource status 'draft' and the standards status 'trial-use' may not be consistent and should be reviewed
+INFORMATION: ValueSet/narrative-elements-vs: ValueSet: The resource status 'draft' and the standards status 'trial-use' may not be consistent and should be reviewed
+INFORMATION: ValueSet/nci-study-role-vs: ValueSet: The resource status 'draft' and the standards status 'trial-use' may not be consistent and should be reviewed
