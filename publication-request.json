@@ -9,6 +9,7 @@
    "first" : true,
   "title" : "Pharmaceutical Clinical Trial Protocols",
   "ci-build" : "https://github.com/HL7/vulcan-udp-ig",
+  "gitUrl" : "https://github.com/HL7/vulcan-udp-ig",
   "category" : "Research",
   "introduction" : "Describes the representation of a Clinical Trial protocol to enable to exchange of the protocol between different actors.  This includes transfers: > from Sponsor to Regulator(s) and responses as part of the protocol approval process;  > from Clinical Trial Management Systems to EHR systems to enable integration of trial execution and individual patient care plans; > between Clinical Trial Managers and potential Trial Sites to establish if a site can provide sufficient suitable trial subjects.  The IG also provides a basic mapping of the necessary concepts to their FHIR equivalents and defines necessary vocabulary."
   }

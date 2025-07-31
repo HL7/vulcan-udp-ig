@@ -14,7 +14,7 @@ Through CDISC collaboration with ICH M11, it has been established that **ICH M11
 
 Since USDM was first introduced there has been significant progress in implementation of it, primarily for sponsor-oriented use cases. Collaboration with Vulcan UDP and ICH M11 aims to accelerate the implementation and thereby bring additional value to, various stakeholders. 
 
-> **NOTE:** ICH M11 USDM The relationship between the M11 protocol template specification and the structured and unstructured capabilities of the USDM is illustrated on the DDF GitHub site. Each logical area of the M11 protocol template is highlighted along with the associated area within the USDM. in this infographic: See  [usdm_m11.pdf](Mappings\usdm_m11.pdf) 
+> **NOTE:** ICH M11 USDM The relationship between the M11 protocol template specification and the structured and unstructured capabilities of the USDM is illustrated on the DDF GitHub site. Each logical area of the M11 protocol template is highlighted along with the associated area within the USDM. in this infographic: See  [usdm_m11.pdf](https://github.com/data4knowledge/usdm_m11_resources/blob/main/documents/infographics/usdm_m11.pdf) 
 
 More detailed background and links to source material for each of these projects can be found in the Links section.
 
