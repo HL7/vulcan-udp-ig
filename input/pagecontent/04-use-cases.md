@@ -53,7 +53,8 @@ To get a sense of the extent of use cases that exist across the ecosystem, see t
 
 <div><img src="iceberg-02.png" alt="iceberg-02.png" style="max-width: 90%;
  height: auto;" />
-<p>Figure 4: Future Use Cases</p></div>
+<p>Figure 2: Example Future Use Cases</p></div>
+
 
 
 

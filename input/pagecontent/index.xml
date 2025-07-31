@@ -5,8 +5,8 @@
   <h3>Introduction</h3>
   <p>This Implementation Guide has been developed by the Vulcan UDP Project (Utilizing the Digital
     Protocol). </p>
-    <p>The content is baased on FHIR R6.  This is to take advaantage of new features in the ResearchStudy resource. 
-      The will be backports to earlier FHIR releases in future. </p>
+    <p>The content is based on FHIR R6.  This is to take advantage of new features in the ResearchStudy resource. 
+      There will be backports to earlier FHIR releases in future. </p>
   <p> </p>
   <p><strong>What is a clinical trial protocol?</strong> Conduct of clinical trials is guided by the
     International Conference on Harmonization (ICH) guidelines for Good Clinical Practice (GCP) E6

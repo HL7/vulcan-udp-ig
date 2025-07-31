@@ -4,7 +4,7 @@ Parent: $ebm-study
 Id:  m11-research-study-profile
 Title:  "M11 Research Study"
 Description:    """Constraint of ResearchStudy to M11 Guidance
-An instance of this profile represents a single version of the protocol definition.  Previous amendments are represented
+An instance of this profile represents a single version of the protocol definition. Previous amendments are represented
 by further instances of ResearchStudy linked through the relatedArtifact attribute. 
 """
 * ^extension[$ext-fmm].valueInteger = 1
