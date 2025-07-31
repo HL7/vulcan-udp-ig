@@ -12,7 +12,7 @@ Description: """Codes drawn from NCI Thesaurus to represent the scope of an amen
 ValueSet: M11AmendmentScopeEnrollmentVS
 Id: m11-amendment-scope-enrollment-vs
 Title: "Study Amendment Scope Enrollment Value Set"
-Description: """Categorising numbers affected by the amendment"""
+Description: """Categorizing numbers affected by the amendment"""
 * ^extension[$ext-fmm].valueInteger = 2
 * ^experimental = false
 

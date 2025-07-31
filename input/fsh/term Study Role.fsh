@@ -19,5 +19,5 @@ but it does not have any members.
 //* $NCIT#C142679  "Secondary Sponsor"
 * $NCIT#C215669  "Study Co-Sponsor"
 * $NCIT#C93478  "Study Legal Sponsor"
-* $CNEW#b0001  "Device Manufacturer"
+//* $CNEW#b0001  "Device Manufacturer"
 

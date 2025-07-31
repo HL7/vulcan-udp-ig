@@ -1,12 +1,18 @@
-### FHIR Representation
+The major FHIR elements used are discussed first followed by explanation of the mappings between M11, USDM and FHIR.
 
-#### FHIR Resources
 
-We assume a basic understanding of FHIR - to get an introduction see one of the many HL7 training videos.
+
+[TOC]
+
+
+
+### FHIR Elements and Protocol Representation
+
+We assume a basic understanding of FHIR - to get an introduction, see one of the many HL7 training videos.
 
 The elements of FHIR we will refer to are as follows:
 
-**Resource** - the basic building block defined by the FHIR specification that represents a concept and its key attributes.  For our present purposes the key attribute is the **ResearchStudy** resource.
+**Resource** - the basic building block defined by the FHIR specification that represents a concept and its key attributes.  For our present purposes the key is the **ResearchStudy** resource.
 
 **Datatype** - each attribute within a resource has a specific data type.  In addition to the usual string, integer etc FHIR also defines complex data types for concepts such as Address, Signature and many more.  Of particular relevance is the Code and the CodeableConcept
 
@@ -14,7 +20,13 @@ The elements of FHIR we will refer to are as follows:
 
 **Extensions** - FHIR does not attempt to cover all minority concepts but restricts itself to those that are widely used and then provides a mechanism for defining extensions to a resource in a way that existing FHIR servers can handle even though they may never have seen the extension before.  To represent the entirety of USDM and M11 concepts we make significant use of extensions.
 
-**Profiles** - Resources that are defined by the FHIR specification generally have a lot of flexibility in them : attributes may occur zero to many times, value sets have an Example binding, and references from one resource to another allow as wide a set of options as possible.  Profiles are about reducing these options to what is relevant for a particular use case. Attributes that were optional can be made mandatory, allowable codes can be restricted to a small set and so on.  Extensions can also be subject to profiling.
+**Profiles** - Resources that are defined by the FHIR specification generally have a lot of flexibility in them.  For instance: 
+
+- attributes may occur zero to many times, 
+- value sets have an Example binding, 
+- references from one resource to another allow as wide a set of options as possible.  
+
+Profiles are about reducing these options to what is relevant for a particular use case. Attributes that were optional can be made mandatory, allowable codes can be restricted to a small set and so on.  Extensions can also be subject to profiling.
 
 #### Protocol Content - Narrative vs Structured   
 
@@ -40,9 +52,8 @@ To properly reflect the M11 template, the sections and sub-sections in the **Com
 
 The template sections can be defined in terminology
 
-<div><img src="section-vs-01.png" alt="section-vs-01.png" style="max-width: 60%;height: auto;"/>
+<div><img src="section-vs-01.png" alt="section-vs-01.png" style="max-width: 50%;height: auto;"/>
 <p>Figure 3: Section Code List</p></div>
-
 
 Specific narrative instances can then use the codes to specify which parts of the M11 Template they represent.
 
@@ -60,50 +71,57 @@ The real power of a digital protocol comes from representing the content as a se
 
 Some of these extensions are general purpose and will be relevant beyond USDM and M11 and they can be profiled to tie them to exact requirements.
 
-#### Hierarchy of Resources, Extensions and Profiles Used
-
-
+##### Hierarchy of Resources, Extensions and Profiles Used
 
 <div><img src="Extensions and profiles 01.png" alt="Extensions and profiles 01.png" style="max-width: 80%;height: auto;"/>
 <p>Figure 5: Extensions and Profiles of ResearchStudy</p></div>
+> **ResearchStudy** 
+>
+> - profiled by **StudyDesign** which is part of the EBM IG.  This in turn is profiled by **M11_ResearchStudyProfile** which tightens cardinality of some attributes and binds appropriate terminology and connects some extensions.
+>
+> - extended by **NarrativeElements** 
+>   - which provides a pointer to **M11ResearchStudyNarratives** which is a profile of **Composition**
+> - **M11_ResearchStudyProfile** 
+>   - contains **ResearchStudyStudyAmendment** 
+>     - which contains  **ResearchStudyStudyAmendmentDetails** 
+>     - and **ResearchStudyStudyAmendmentScopeImpact**
+>
+
+### Terminology
+
+The basics of terminology principles are discussed above.
+
+The Value Sets used in this IG are listed on the Artifacts page, in almost every case the value set is composed of terms from the NCI Thesaurus and have been collated by CDISC for ICH and also form part of the USDM work.  The values reflect those presented by ICH in the Technical Specification.  The exceptions to this are the ISO Country codes and a reference to the one Code System defined here which is for managing the Narrative Element structure.
+
+### Validation
+
+A benefit of FHIR that may not be immediately obvious is that all of the technical content of an FHIR Implementation Guide can be used by a FHIR server to validate content submitted to that server which should comply with the IG.   This goes beyond the validation possible for regular JSON or XML content because the IG level validation will only be applied to inputs that say they comply with the IG.  This allows a regular FHIR server to perform very targeted validation of incoming content and reject invalid input.
+
+To achieve this level of validation use the Artifact definitions in the Downloads section of this IG and load that content to your server.  Your server will have instructions on how to do this.
 
 
+### USDM and M11 to FHIR Mapping
 
-**ResearchStudy**
+The relationships between the elements of M11, USDM and FHIR are shown in the Mapping spreadsheet described in the following section.  The focus of this is representation of M11 so the mapping does not cover the whole of USDM at this time.  There is a useful infographic from CDISC here: [usdm_m11_classes.pdf](Mappings\usdm_m11_classes.pdf) that shows the overlap between M11 and USDM and in the bottom right USDM classes not covered by M11.
 
-**ResearchStudy** 
+The spreadsheet for mapping to FHIR is in 3 parts as shown  in the illustration. Click on the illustration or click <a href="Mappings/M11 to FHIR Mapping 01.xlsx">here</a> to download the full spreadsheet
 
-- profiled by **StudyDesign** which is part of the EBM IG.  This in turn is profiled by **M11_ResearchStudyProfile** which tightens cardinality of some attributes and binds appropriate terminology and connects some extensions.
+<div><p><a href="Mappings/M11 to FHIR Mapping 01.xlsx"> <img src="Mapping.png" alt="Mapping.png" style="max-width: 90%;height: auto;"/> </a> <p>
+    Figure 6 : M11 / USDM / FHIR Mapping Spreadsheet
+    </p></p></div>
 
-- extended by **NarrativeElements** 
-  - which provides a pointer to **M11ResearchStudyNarratives** which is a profile of **Composition**
-- **M11_ResearchStudyProfile** 
-  - contains **ResearchStudyStudyAmendment** 
-    - which contains  **ResearchStudyStudyAmendmentDetails** 
-    - and **ResearchStudyStudyAmendmentScopeImpact**
+The FHIR columns of the spreadsheet are described in detail below together with examples.
 
-
-
-
-#### USDM and M11 to FHIR
-
-The relationships between the elements of M11, USDM and FHIR are shown in the Mapping spreadsheet.  The focus of this is representation of M11 so the mapping does not cover the whole of USDM.
-
-<div><p><a href="Mappings/M11 to FHIR Mapping 01.xlsx"> <img src="Mapping.png" alt="Mapping.png" style="max-width: 80%;height: auto;"/> </a> </p></div>
-
-<div>Download mapping spreadsheet <a href="Mappings/M11 to FHIR Mapping 01.xlsx">here</a> and the FHIR columns are described below:</div>
-
-| Column              |      | Purpose                                                      |      |      |
-| ------------------- | ---- | ------------------------------------------------------------ | ---- | ---- |
-| Resource            |      | A simple path  to the relevant FHIR resource                 |      |      |
-| Sample XML          |      | A fragment of XML that illustrates  the mapping. Uses parameters starting  with a $ or % for conciseness |      |      |
-| Example  Value(s)   |      | Elements beginning with % are given  a value here - above the dashed line they are fixed, below they are whatever  the actual data is. Also uses macro  values beginning with $ |      |      |
-| Binding  (strength) |      | FHIR terminology must be bound to a  value set and the strength determines whether the value set is fixed or can  be extended. |      |      |
-|                     |      |                                                              |      |      |
+|     FHIR Column     | Purpose                                                      |
+| :-----------------: | ------------------------------------------------------------ |
+|      Resource       | A simple path  to the relevant FHIR resource                 |
+|     Sample XML      | A fragment of XML that illustrates  the mapping. Uses parameters starting  with a $ or % for conciseness |
+|  Example  Value(s)  | Elements beginning with % are given  a value here - above the dashed line they are fixed, below they are whatever  the actual data is. Also uses macro  values beginning with $ |
+| Binding  (strength) | FHIR terminology must be bound to a  value set and the strength determines whether the value set is fixed or can  be extended. |
 
 *Narrative Content is noted in the mapping sheet but is shown on a separate tab of the spreadsheet.  It is discussed further below.*
 
-##### Resource
+#### Resource Column
 
 This is the element in FHIR that maps to the M11 element.  In many cases there is a simple equivalent in the standard FHIR resource. 
 
@@ -127,7 +145,7 @@ The other pattern found is when the ResearchStudy resource points to an instance
 
 
 
-##### Sample XML and Example  Value(s)
+#### Sample XML and Example  Value(s) Columns
 
 For each row the structure is shown in XML.  XML has been used in preference to JSON because the XML can be validated with a schema.  
 
@@ -203,7 +221,7 @@ XML for Organization is not shown in full - there will be address, contact detai
 %VALUE = <Eli Lilly Japan K.K>
 ```
 
-##### Binding and Binding Strength
+#### Binding and Binding Strength Columns
 
 It happens that the three examples shown here all make use of coded elements but this is not always the case.  Binding only applies for coded elements.
 
@@ -241,7 +259,7 @@ m11-study-amendment-scope-vs (required)
 $study-role-vs (extensible)
 ```
 
-##### Narrative Content
+#### Narrative Content
 
 There are multiple sections that can be represented by Narrative content as discussed earlier.  Since these all follow the same pattern the example XML for the Composition part is shown here:
 
@@ -274,7 +292,7 @@ There are multiple sections that can be represented by Narrative content as disc
 </composition>
 ```
 
-The example value here are 
+The example values here are 
 
 ```
 %CODE = <C218514>

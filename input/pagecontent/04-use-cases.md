@@ -1,8 +1,8 @@
 ### Use Cases & Work Flows 
 
-A vast array of business use cases across clinical research and health IT settings can be enabled through FHIR-based exchange of narrative protocol text and structured protocol content. This vision is made practical by anchoring to the ICH M11 Clinical electronic Structured Harmonized Protocol and ensuring compatibility with the CDISC USDM (Unified Study Definition Model, developed by the TransCelerate Digital Data Flow initiative)
+Selected use cases of value across clinical research and health IT settings can be enabled through FHIR-based exchange of narrative protocol text and structured protocol content. This vision is made practical by anchoring to the ICH M11 Clinical electronic Structured Harmonized Protocol and ensuring compatibility with the USDM (Unified Study Definition Model, developed by the TransCelerate Digital Data Flow initiative)
 
-The following detail looks first at the use case addressed in development of this Implementation Guide, then looks towards additional use cases with which compatibility will be necessary and at future opportunities. 
+The detail looks first at the use case addressed in development of this Implementation Guide, then looks towards additional use cases with which compatibility will be necessary and at future opportunities. 
 
 #### Use Case Demonstrated by this Implementation Guide
 
@@ -54,7 +54,6 @@ To get a sense of the extent of use cases that exist across the ecosystem, see t
 <div><img src="iceberg-02.png" alt="iceberg-02.png" style="max-width: 90%;
  height: auto;" />
 <p>Figure 4: Future Use Cases</p></div>
-
 
 
 

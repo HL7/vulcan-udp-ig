@@ -45,12 +45,12 @@ Description: "Provides detail of a single amendment - repeats within the overal 
 //-----------------------------------------------------------------------------------------------------
 Extension: M11_ProtocolAmendment
 Id: protocol-amendment
-Description: "Amendment to a study protocol. This is originally from EBM."
+Description: "Amendment to a protocol. This is originally from EBM."
 * ^extension[$ext-fmm].valueInteger = 1
 * ^context.type = #element
 * ^context.expression = "ResearchStudy"
 * value[x] 0..0
-* . ^short = "Amendment to a study protocol - from EBM"
+* . ^short = "Amendment to a protocol - from EBM"
 * . ^definition = "Representation of amendments to a study protocol."
 * . ^comment = "The original extension is from EBM and is being modified to separate general amendments (which belong in EBM) and those specific to the UDP use cases."
 * extension contains
