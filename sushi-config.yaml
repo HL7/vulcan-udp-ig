@@ -3,10 +3,13 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: hl7.fhir.uv.pharmaceutical-research-protocol
-canonical: http://hl7.org/fhir/uv/pharmaceutical-research-protocol
-name: PharmaceuticalResearchProtocol
-title: Pharmaceutical Research Protocol (Vulcan UDP)
+#id: hl7.fhir.uv.pharmaceutical-research-protocol
+#canonical: http://hl7.org/fhir/uv/pharmaceutical-research-protocol
+#name: PharmaceuticalResearchProtocol
+id: hl7.fhir.uv.clinical-study-protocol
+canonical: http://hl7.org/fhir/uv/clinical-study-protocol
+name: ClincalStudyProtocol
+title: Clinical Study Protocol (Vulcan UDP)
 # description: Example Implementation Guide for getting started with SUSHI
 status:  draft #| active | retired | unknown
 extension:
@@ -16,7 +19,7 @@ extension:
     valueCode: trial-use
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
     valueInteger: 2
-version: 1.0.0-ballot  
+version: 1.0.1-ballot2  
 fhirVersion: 	6.0.0-ballot3 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
 releaseLabel: STU 1 - Ballot
@@ -33,8 +36,8 @@ publisher:
 #
 
 dependencies:
-  hl7.fhir.r6.core: 6.0.0-ballot3
-  hl7.fhir.uv.extensions: latest
+  #hl7.fhir.r6.core: 6.0.0-ballot3
+  hl7.fhir.uv.extensions: dev
   hl7.terminology: latest
   hl7.fhir.uv.ebm:
     id: ebm
