@@ -4,6 +4,10 @@ Selected use cases of value across clinical research and health IT settings can 
 
 The detail looks first at the use case addressed in development of this Implementation Guide, then looks towards additional use cases with which compatibility will be necessary and at future opportunities. 
 
+**Validation**: An Implementation Guide can specify required data elements, be prescriptive about the format of data items, specify the terminology coded items must be drawn from and check the data meets constrtaints specified in the implementation guide. This is done my importing the machine readable form of the implementation guide into the server and the transmitted data stating that it meets the restrictions of the implementation guide.
+
+Thus the role of a FHIR server in automatically validating content according to the requirements of an implementation guide should be considered within the workflow. This allows both the sender and the receiver to validate content according to their chosen Implementation Guide. Validation by the sender and then again by the receiver gives both parties confidence in the quality of the data being transmitted.
+
 #### Use Case Demonstrated by this Implementation Guide
 
 For the purposes of development of this initial version of this Implementation Guide, the use case was defined narrowly as enabling sponsor-to-regulator exchange of digital protocols aligned to ICH M11 in FHIR. The specific detailed technical and business requirements for submission of M11-aligned protocols to regulators will be determined as regulators adopt M11 and establish processes for receipt and utilization of digitized protocols. Because this simplistic approach was taken, it is expected that this Implementation Guide could also be utilized by other sender/receiver roles. 
@@ -34,7 +38,7 @@ In order to ensure this Implementation Guide is set up to enable compatibility f
 - Conversion of legacy protocols as well as protocols written native to ICH M11
 - Packaging of data elements in a single bundle as well as in multiple resources 
 - FHIR in JSON as well as FHIR in XML
-- Validation of the protocol on a local FHIR server before sending as well as validation on a FHIR server only after receipt
+- Validation of the protocol on a FHIR server by the sender as well as by the receiver
 - Sending protocols directly to FHIR server as well as sending to FHIR server after receipt 
 - Receiver extraction of structured elements relevant to various review needs (i.e., safety reviewer, medical reviewer)
 - Receiver response to submitter via FHIR messages as well as through other routine mechanisms
