@@ -9,7 +9,7 @@ General implementation considerations for a digital protocol include:
 1. **Stakeholder Engagement**: Involve stakeholders early and maintain communication.
 2. **Use Case Prioritization**: Focus on the most critical pain points that a digital protocol can address in your situations 
 3. **Technical Readiness**: Explore infrastructure needs, conduct exploratory work in available community     environments (i.e., GitHub) until ready to come out. Plan for integrations.
-4. **Regulatory Compliance**: Familiarize yourself with relevant standards and guidelines (e.g., ICH M11, TransCelerate, CDISC, HL7, Vulcan) as well as any regional requirements.
+4. **Regulatory Compliance**: Understand regulatory needs, particularly regional requirements, in the context of relevant standards and/or guidelines (e.g. from ICH M11, TransCelerate, CDISC, HL7, Vulcan).
 5. **Training  and Support**: Provide education and support systems.
 6. **Data  Management**: Centralize protocol elements and automate tasks.
 7. **Performance Metrics**:  Monitor and improve protocol performance.
@@ -23,13 +23,14 @@ By considering these factors, you can create a robust plan for implementing a di
 
 Those involved with protocol authoring processes may wish to consider several key aspects when assessing this FHIR Implementation Guide, ICH M11, CDISC USDM and TransCelerate Digital Data Flow initiative artifacts:
 
-·    Assess current templates against ICH M11 and plan for adjustments as necessary to align headings, sequences, and nested content as outlined in ICH M11. If utilizing the TransCelerate Common Protocol Template, refer to the version of it that has been aligned to ICH M11.
+- Assess current templates against ICH M11 and plan for adjustments as necessary to align headings, sequences, and nested content as outlined in ICH M11. If utilizing the TransCelerate Common Protocol Template, refer to the version of it that has been aligned to ICH M11.
 
-·    Identify a current business process that can be improved with digitized protocols. Concentrate on near-term achievable use cases while building in compatibility with additional use cases.
+- Identify a current business process that can be improved with digitized protocols. Concentrate on near-term achievable use cases while building in compatibility with additional use cases.
 
-·    Consider the advantage of machine-readable formats to your specific downstream users and audiences. Embrace the transition from paper formats to machine-readable formats to avoid information being "trapped" in documents and requiring manual reentry. FHIR-based formats are particularly important for interoperability and automation and are commonly used by some stakeholders. 
+- Consider the advantage of machine-readable formats to your specific downstream users and audiences. Embrace the transition from paper formats to machine-readable formats to avoid information being "trapped" in documents and requiring manual re-entry. FHIR-based formats are particularly important for interoperability and automation and are commonly used by some stakeholders. 
 
-·    Engaging actively in standards governance processes can build awareness of and consideration to your business needs.
+- Engaging actively in standards governance processes can build awareness of and consideration to your business needs.
+
 
 By considering these aspects, protocol authors can effectively leverage the FHIR Implementation Guide, ICH M11, and CDISC USDM to enhance their processes. Refer to prior Vulcan UDP Webinars for content on implementation strategies.
 
@@ -51,12 +52,9 @@ System Architects building the conceptual design who need to understand how the 
 Systems developers using this Implementation Guide to translate the conceptual design into systems ready to utilize digital protocols may wish to consider: 
 
 - Ensuring decisions such as those about bundling and terminology management are well understood
-
-- How the detailed mappings included within, and linked to from, this guide which aim at ensuring accurate representation of elements across standards can be used
-
+- How the detailed mappings in this guide can be used to ensuring accurate representation of elements across standards
 - How this mapping will be utilized with their environment
-
-- Think about tooling - reference implementation
+- Consider any available reference implementations and whether they embody tooling that can be reused
 
 ##### USDM Implementers and Parties Interested in USDM
 
@@ -66,3 +64,4 @@ Those who utilize or may in the future utilize TransCelerate Digital Data Flow /
 
 - Conducting a thorough review of the mappings referenced in this Implementation Guide to understand how elements are represented across M11, USDM and FHIR.
 - Use cases prioritization based on business needs in order to inform implementation strategies.
+- Support is available at the DDF GitHub.
