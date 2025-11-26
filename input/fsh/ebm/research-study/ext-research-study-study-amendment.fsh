@@ -63,7 +63,7 @@ Description: "Amendment to a protocol. This is originally from EBM."
   site 0..* and
   approvalDate 0..1 and
   signature 0..1 and //Signature
-  signatureURL 0..1 and
+  signatureUrl 0..1 and
   signatureMethod 0..1 and
   ResearchStudyStudyAmendmentScopeImpact named scopeImpact 0..3 and
   primaryReason 0..1 and
@@ -101,7 +101,7 @@ Description: "Amendment to a protocol. This is originally from EBM."
 
 * extension[signature].value[x] only Signature
   * ^comment = "//TODO Need to review the example"
-* extension[signatureURL].value[x] only string
+* extension[signatureUrl].value[x] only string or url
 * extension[signatureMethod].value[x] only string
 
 //* extension[scopeImpact].value[x] only ResearchStudyStudyAmendmentScopeImpact
