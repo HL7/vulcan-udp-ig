@@ -9,6 +9,7 @@
 <artifact id="ValueSet/cdisc-yes-no-vs" key="ValueSet-cdisc-yes-no-vs" name="CDISC Yes No Unknown Not Applicable Value Set"/>
 <artifact id="MedicinalProductDefinition/IGBJ-MedicinalProduct" key="MedicinalProductDefinition-IGBJ-MedicinalProduct" name="IGBJ Medicinal Product"/>
 <artifact id="Organization/IGBJ-Organization" key="Organization-IGBJ-Organization" name="IGBJ Organization"/>
+<artifact id="Composition/IGBJ-Narrative" key="Composition-IGBJ-Narrative" name="IGBJ Protocol Narrative"/>
 <artifact id="Composition/IGBJ-Narrative-1.3" key="Composition-IGBJ-Narrative-1.3" name="IGBJ Protocol Narrative 1.3 - Schedule of Activities"/>
 <artifact id="Composition/IGBJ-Narrative-2.1" key="Composition-IGBJ-Narrative-2.1" name="IGBJ Protocol Narrative 2.1"/>
 <artifact id="Composition/IGBJ-Narrative-5.1" key="Composition-IGBJ-Narrative-5.1" name="IGBJ Protocol Narrative 5.1"/>

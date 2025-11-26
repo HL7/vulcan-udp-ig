@@ -5,19 +5,22 @@
   <h3>Introduction</h3>
   <p>This Implementation Guide has been developed by the Vulcan UDP Project (Utilizing the Digital
     Protocol). </p>
-    <p>The content is based on FHIR R6.  This is to take advantage of new features in the ResearchStudy resource. 
-      There will be backports to earlier FHIR releases in future. </p>
+  <p>The content is based on FHIR R6. This is to take advantage of new features in the ResearchStudy
+    resource.
+    There will be backports to earlier FHIR releases in future. </p>
   <p> </p>
-  <p><strong>What is a clinical trial protocol?</strong> Conduct of clinical trials is guided by the
-    International Conference on Harmonization (ICH) guidelines for Good Clinical Practice (GCP) E6
-    which specify the protocol incorporates all aspects of what is needed to define how the study is
-    to be conducted and reviewed. The protocol should provide background and rationale for the
-    study, highlight the specific research questions to be addressed, and take into consideration
-    ethical issues. It describes the objectives, design, methodology, statistical considerations and
-    other aspects related to the organization of the clinical trial. </p>
+  <p><strong>What is a clinical study protocol?</strong> Conduct of clinical trials is guided by the
+    International Council for Harmonization of Technical (ICH) Requirements for Human Use, Guideline
+    for Good Clinical Practice (GCP) E6 which specifies the protocol as “A document that describes
+    the objective(s), design, methodology, statistical considerations and organisation of a trial,”
+    incorporating all aspects of what is needed to define how the study is to be conducted and
+    reviewed. The protocol should provide background and rationale for the study, highlight the
+    specific research questions to be addressed, and take into consideration ethical issues. It
+    describes the objectives, design, methodology, statistical considerations and other aspects
+    related to the organization of the clinical trial.</p>
   <p> </p>
   <p><strong>Who can benefit from utilizing a digital protocol?</strong> Users of protocols exist
-    across the full continuum of clinical and translational research and clinical care. Traditional
+    across the full continuum of clinical and translational research. Traditional
     research conducted by the biopharmaceutical industry involves complex processes with innumerous
     opportunities for automation(See Use Case Opportunities, Present and Future).</p>
   <p> </p>
@@ -61,7 +64,7 @@
     "Background" section in this Implementation Guide under "Home" section of the banner and
     in the "Links" section under the "Support" section of the banner.</p>
 
-    <a name="overview"> </a>
+  <a name="overview"> </a>
   <h3>Technical Overview</h3>
   <p>This guide describes the representation of a Protocol in FHIR format. The "document" focus of
     protocol organization is provided by the ICH M11 CeSHarP Template and Technical Guide. A more
@@ -78,7 +81,7 @@
     the FHIR Representation section and the actual specifications in the Artifacts section.</p>
 
 
-      <a name="objectives"> </a>
+  <a name="objectives"> </a>
   <h3>Core Objectives </h3>
   <p>The Vulcan UDP project enables digital protocol exchange through FHIR, supporting Vulcan&#39;s
     mission to connect clinical and translational research to clinical care. The main goal of this
@@ -93,7 +96,7 @@
     EBM, and with other organizations, such as ICH M11, CDISC, and TransCelerate.</p>
 
 
-      <a name="scope"> </a>
+  <a name="scope"> </a>
   <h3>Scope </h3>
   <p>
     <strong>In Scope</strong>
@@ -117,25 +120,32 @@
   </ul>
 
 
-      <a name="structure"> </a>
-<h3>Structure of this Implementation Guide</h3>
-<p>This FHIR Implementation Guide is organized across the following tabs:</p>
+  <a name="structure"> </a>
+  <h3>Structure of this Implementation Guide</h3>
+  <p>This FHIR Implementation Guide is organized across the following tabs:</p>
 
-<ul>
-  <p><strong>IG Home</strong>: Provides an orientation outlining objectives, background, and scope</p>
   <ul>
-    <p>Home: This home page</p>
-    <p>Background: Placing this work in the wider context</p>
-    <p>Implementation Best Practice: Provides some general pointers on implementation, and also picks out key points from different audience perspectives.</p>
+    <p><strong>IG Home</strong>: Provides an orientation outlining objectives, background, and scope</p>
+    <ul>
+      <p>Home: This home page</p>
+      <p>Background: Placing this work in the wider context</p>
+      <p>Implementation Best Practice: Provides some general pointers on implementation, and also
+        picks out key points from different audience perspectives.</p>
+    </ul>
+    <p><strong>Guidance:</strong> Describes how the technical work was approached and why certain
+      decisions were made</p>
+    <ul>
+      <p>Use Cases and Workflows: Provides a view to use cases covered in this Implementation Guide
+        as well as those others are working on and future potential use cases across stakeholders </p>
+      <p>Protocol Preparation: A guide to preparation of a protocol for submission according to the
+        M11 format</p>
+      <p>Information Models: Explains how the USDM, M11 and FHIR models are related</p>
+      <p>FHIR Representation: Shows how elements of the protocol are represented in FHIR. Also
+        provides a link to a mapping spreadsheet.</p>
+      <p>Bundles: Discusses representation of protocol sections within FHIR bundles and the
+        operational consequences</p>
+    </ul>
+    <p><strong>Artifact Index:</strong> Lists the formal specification of the extensions, profiles,
+      terminology and examples.</p>
   </ul>
-  <p><strong>Guidance:</strong> Describes how the technical work was approached and why certain decisions were made</p>
-  <ul>
-    <p>Use Cases and Workflows: Provides a view to use cases covered in this Implementation Guide as well as those others are working on and future potential use cases across stakeholders </p>
-    <p>Protocol Preparation: A guide to preparation of a protocol for submission according to the M11 format</p>
-    <p>Information Models: Explains how the USDM, M11 and FHIR models are related</p>
-    <p>FHIR Representation: Shows how elements of the protocol are represented in FHIR.  Also provides a link to a mapping spreadsheet.</p>
-    <p>Bundles: Discusses representation of protocol sections within FHIR bundles and the operational consequences</p>
-  </ul>
-  <p><strong>Artifact Index:</strong> Lists the formal specification of the extensions, profiles, terminology and examples.</p>
-</ul>
 </div>
