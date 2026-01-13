@@ -16,6 +16,7 @@ Alias: $study-role-vs = nci-study-role-vs
 Alias: $study-title-type-vs = ddf-study-title-type-vs
 Alias: $TitleType = http://hl7.org/fhir/title-type
 Alias: $YesNoUnknownVS = CDISCSDTMYesNoUnknownVS
+Alias: $ID-EligibilityCriteria = https://example.org/ID-EligibilityCriteria
 
 //-----------------------------------------------------------------------------
 // From EBM
@@ -24,3 +25,11 @@ Alias: $ext-fmm = http://hl7.org/fhir/StructureDefinition/structuredefinition-fm
 Alias: $ext-standards-status = http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
 Alias: $ext-wg = http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
 
+//-----------------------------------------------------------------------------
+// Development
+//Alias: $cited-artifact-status-type = http://terminology.hl7.org/CodeSystem/cited-artifact-status-type
+Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
+Alias: $LOINC = http://loinc.org
+// Alias: $sct = http://snomed.info/sct
+Alias: $UCUM = http://unitsofmeasure.org
+Alias: $fhir-types = http://hl7.org/fhir/fhir-types
