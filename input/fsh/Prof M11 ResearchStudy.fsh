@@ -1,6 +1,5 @@
-
 Profile: M11_ResearchStudyProfile
-Parent: $ebm-study
+Parent: ResearchStudy
 Id:  m11-research-study-profile
 Title:  "M11 Research Study"
 Description:    """Constraint of ResearchStudy to M11 Guidance
@@ -11,7 +10,8 @@ by further instances of ResearchStudy linked through the relatedArtifact attribu
 
 * extension contains
     narrative-elements named narrative 0..* and
-    M11_ProtocolAmendment named amendment 0..1
+    M11_ProtocolAmendment named amendment 0..1 and
+    ResearchStudySponsorConfidentialityStatement named confidentialityStatement 0..1
 
 * identifier.type 1..1
 * identifier.type ?!
@@ -31,5 +31,7 @@ by further instances of ResearchStudy linked through the relatedArtifact attribu
 * focus. ^comment = "Expect MedicinalProductDefinition.name.type.code to be one of C71898 Proprietary name or C97054 Non-proprietary name"
 
 * relatesTo.type. ^comment = "Set to a value of predecessor to indicate the target is the previous version of the protocol"
+
+* title ^comment = "The protocol should have a descriptive title that identifies the scientific aspects of the trial sufficiently to ensure it is immediately evident what the trial is investigating and on whom, and to allow retrieval from literature or internet searches."
 
 

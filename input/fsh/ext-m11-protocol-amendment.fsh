@@ -1,5 +1,6 @@
 //-----------------------------------------------------------------------------------------------------
-Extension: ResearchStudyStudyAmendmentScopeImpact
+Extension: M11_AmendmentScopeImpact
+Id: m11-amendment-scope-impact
 Description: "Provides number or percentage of each group affected by a single amendment"
 //Context: m11-research-study-profile
 * ^extension[$ext-fmm].valueInteger = 1
@@ -12,14 +13,14 @@ Description: "Provides number or percentage of each group affected by a single a
 * extension[number].value[x] only positiveInt or Quantity // Need to constrain to %
   * ^short = "Number of participants, or % of participants"
 
-* extension[scope].value[x] only code
+* extension[scope].value[x] only CodeableConcept // Changed from code in EBM
 * extension[scope].value[x] from M11AmendmentScopeEnrollmentVS
 
 
 
 //-----------------------------------------------------------------------------------------------------
-Extension: ResearchStudyStudyAmendmentDetails
-Id: protocol-amendment-detail
+Extension: M11_AmendmentDetails
+Id: m11-amendment-detail
 Description: "Provides detail of a single amendment - repeats within the overal amendment report"
 * ^extension[$ext-fmm].valueInteger = 1
 * value[x] 0..0
@@ -44,7 +45,7 @@ Description: "Provides detail of a single amendment - repeats within the overal 
 
 //-----------------------------------------------------------------------------------------------------
 Extension: M11_ProtocolAmendment
-Id: protocol-amendment
+Id: m11-protocol-amendment
 Description: "Amendment to a protocol. This is originally from EBM."
 * ^extension[$ext-fmm].valueInteger = 1
 * ^context.type = #element
@@ -65,7 +66,7 @@ Description: "Amendment to a protocol. This is originally from EBM."
   signature 0..1 and //Signature
   signatureUrl 0..1 and
   signatureMethod 0..1 and
-  ResearchStudyStudyAmendmentScopeImpact named scopeImpact 0..3 and
+  M11_AmendmentScopeImpact named scopeImpact 0..3 and
   primaryReason 0..1 and
   secondaryReason 0..1 and
   summary 0..1 and 
@@ -73,11 +74,11 @@ Description: "Amendment to a protocol. This is originally from EBM."
   substantialImpactSafetyComment 0..1 and 
   substantialImpactReliability 0..1 and 
   substantialImpactReliabilityComment 0..1 and
-  ResearchStudyStudyAmendmentDetails named details 0..* and 
+  M11_AmendmentDetails named details 0..* and 
   rationale 0..1 and
   description 0..1
 
-* extension[scope].value[x] only code
+* extension[scope].value[x] only CodeableConcept // Changed from code in EBM
 * extension[scope].value[x] from M11AmendmentScopeVS (extensible)
   * ^short = "Global, Not Global"
   * ^definition = "C218673 Global, Country, Region, or Site."
@@ -86,15 +87,15 @@ Description: "Amendment to a protocol. This is originally from EBM."
   If the amendment does not apply to all sites in the trial, select Not Global and utilize one of the identifiers based on amendment scope. 
   Use the ISO-3166 region or country identifier (for example, DE or EU)."
 
-* extension[country].value[x] only code
+* extension[country].value[x] only CodeableConcept // Changed from code in EBM
 * extension[country].value[x] from M11CountryRegionVS (extensible)
   * ^definition = "C20108"
 
-* extension[region].value[x] only code
+* extension[region].value[x] only CodeableConcept // Changed from code in EBM
 * extension[region].value[x] from M11CountryRegionVS (extensible)
   * ^definition = "C218674"
 
-* extension[site].value[x] only Identifier
+* extension[site].value[x] only Identifier or Reference // Changed from code in EBM
   * ^definition = "C83081"
 
 * extension[approvalDate].value[x] only date
@@ -104,7 +105,7 @@ Description: "Amendment to a protocol. This is originally from EBM."
 * extension[signatureUrl].value[x] only string or url
 * extension[signatureMethod].value[x] only string
 
-//* extension[scopeImpact].value[x] only ResearchStudyStudyAmendmentScopeImpact
+//* extension[scopeImpact].value[x] only M11_AmendmentScopeImpact
 
 * extension[primaryReason].value[x] only CodeableConcept
 * extension[primaryReason].value[x] from M11StudyAmendmentReasonVS (extensible)
@@ -120,7 +121,7 @@ Description: "Amendment to a protocol. This is originally from EBM."
   * ^short = "summary of changes"
   * ^definition = "Summary of amendmets."
 
-* extension[substantialImpactSafety].value[x] only code
+* extension[substantialImpactSafety].value[x] only CodeableConcept // Changed from code in EBM
 * extension[substantialImpactSafety].value[x] from $YesNoUnknownVS (required)
   * ^short = "Substantial impact on safety"
   * ^definition = "Substantial impact on safety."
@@ -129,7 +130,7 @@ Description: "Amendment to a protocol. This is originally from EBM."
   * ^short = "Comment on substantial impact on safety"
   * ^definition = "Comment on substantial impact on safety."
 
-* extension[substantialImpactReliability].value[x] only code
+* extension[substantialImpactReliability].value[x] only CodeableConcept // Changed from code in EBM
 * extension[substantialImpactReliability].value[x] from $YesNoUnknownVS (required)
   * ^short = "Substantial impact on reliability"
   * ^definition = "Substantial impact on reliability."

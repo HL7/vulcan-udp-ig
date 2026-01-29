@@ -1,11 +1,5 @@
 The major FHIR elements used are discussed first followed by explanation of the mappings between M11, USDM and FHIR.
 
-
-
-[TOC]
-
-
-
 ### FHIR Elements and Protocol Representation
 
 We assume a basic understanding of FHIR - to get an introduction, see one of the many HL7 training videos.
@@ -30,7 +24,7 @@ Profiles are about reducing these options to what is relevant for a particular u
 
 #### Protocol Content - Narrative vs Structured   
 
-The M11 template details both narrative content and structured content
+ICH M11 specifies a globally harmonized organization of protocol content through the headings and common text in template and guideline, and also provides a bases for digital data exchange by specifying the technical representation through the specific specifies protocol content that must be structured in 
 
 Implementers will vary in their desired use of M11: some will treat as a document, others will leverage structured content, others will utilize for machine processing
 
@@ -48,12 +42,12 @@ In FHIR representation of "documents" is done using a *Composition* resource.  T
 <div><img src="narrative-content-01.png" alt="narrative-content-01.png" style="max-width: 80%;height: auto;"/>
 <p>Figure 2: Narrative Content</p></div>
 
-To properly reflect the M11 template, the sections and sub-sections in the **Composition** need to match those in the template. 
+To properly reflect the M11 template, the sections and sub-sections in the **Composition** need to match those in the protocol template. 
 
 The template sections can be defined in terminology
 
 <div><img src="section-vs-01.png" alt="section-vs-01.png" style="max-width: 50%;height: auto;"/>
-<p>Figure 3: Section Code List</p></div>
+<p>Figure 3: A part of the Section Code List</p></div>
 
 Specific narrative instances can then use the codes to specify which parts of the M11 Template they represent.
 
@@ -92,6 +86,40 @@ Some of these extensions are general purpose and will be relevant beyond USDM an
 The basics of terminology principles are discussed above.
 
 The Value Sets used in this IG are listed on the Artifacts page, in almost every case the value set is composed of terms from the NCI Thesaurus and have been collated by CDISC for ICH and also form part of the USDM work.  The values reflect those presented by ICH in the Technical Specification.  The exceptions to this are the ISO Country codes and a reference to the one Code System defined here which is for managing the Narrative Element structure.
+
+The following series of diagrams explains how the different models all use a common terminology sourec.
+
+In USDM Phase is represented by the studyPhase attribute of the StudyDesign class.  
+
+<div><p><a href="../images/image-20260129155349453.png"> <img src="image-20260129155349453.png" alt="image-20260129155349453" style="max-width: 90%;height: auto;"/> </a> <p>
+    Figure 1 : USDM for Phase"
+    </p></p></div>
+
+In M11 Phase is represented by TrialPhase attribute in the Template and Technical Specification 
+
+<div><p><a href="../images/image-20260129155431823.png"> <img src="image-20260129155431823.png" alt="image-20260129155431823" style="max-width: 90%;height: auto;"/> </a> <p>
+    Figure 2 : M11 for "Phase"
+    </p></p></div>
+
+
+
+These values are all held in the NCI Thesaurus and the concepts are in an NCI code set with code C217045
+
+<div><p><a href="../images/image-20260129165903655.png"> <img src="image-20260129165903655.png" alt="image-20260129165903655.png" style="max-width: 90%;height: auto;"/> </a> <p>
+    Figure 3 : NCI Code Set for "Phase"
+    </p></p></div>
+
+In the UDP IG this code set is represented by a value set with the identifier m11-phase-vs and the expansion of the value set is derived from the NCI content (*the NCI content is the master, the FHIR value set is not detached from the NCI source*). 
+
+<div><p><a href="../images/image-20260129165955355.png"> <img src="image-20260129165955355.png" alt="image-20260129165955355.png" style="max-width: 90%;height: auto;"/> </a> <p>
+    Figure 4 : UDP Value Set for "Phase"
+    </p></p></div>
+
+The phase attribute in FHIR is then bound to this value set.
+
+<div><p><a href="../images/image-20260129170010341.png"> <img src="image-20260129170010341.png" alt="image-20260129170010341.png" style="max-width: 90%;height: auto;"/> </a> <p>
+    Figure 5 : UDP attribute for "Phase" bound to value set
+    </p></p></div>
 
 ### Validation
 

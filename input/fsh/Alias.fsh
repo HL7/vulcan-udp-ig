@@ -30,6 +30,5 @@ Alias: $ext-wg = http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
 //Alias: $cited-artifact-status-type = http://terminology.hl7.org/CodeSystem/cited-artifact-status-type
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $LOINC = http://loinc.org
-// Alias: $sct = http://snomed.info/sct
 Alias: $UCUM = http://unitsofmeasure.org
 Alias: $fhir-types = http://hl7.org/fhir/fhir-types
