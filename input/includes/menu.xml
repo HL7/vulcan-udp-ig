@@ -8,10 +8,10 @@
         <a href="index.html">Home</a>
       </li>
       <li>
-        <a href="02-background.html">Background</a>
+        <a href="background.html">Background</a>
       </li>
       <li>
-        <a href="03-best-practice.html">Implementation Best Practice</a>
+        <a href="best-practice.html">Implementation Best Practice</a>
       </li>
     </ul>
   </li>
@@ -24,19 +24,19 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="04-use-cases.html">Use Cases and Workflow</a>
+        <a href="use-cases.html">Use Cases and Workflow</a>
       </li>
       <li>
-        <a href="05-protocol-preparation.html">Protocol Preparation</a>
+        <a href="protocol-preparation.html">Protocol Preparation</a>
       </li>
       <li>
-        <a href="06-info-models.html">Information Models</a>
+        <a href="info-models.html">Information Models</a>
       </li>
       <li>
-        <a href="07-fhir-representation.html">FHIR Representation</a>
+        <a href="fhir-representation.html">FHIR Representation</a>
       </li>
       <li>
-        <a href="08-bundles.html">Bundles</a>
+        <a href="bundles.html">Bundles</a>
       </li>
     </ul>
   </li>
@@ -49,13 +49,13 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="09-links.html">Links</a>
+        <a href="links.html">Links</a>
       </li>      
       <li>
-        <a href="10-credits.html">Credits</a>
+        <a href="credits.html">Credits</a>
       </li>
       <li>
-        <a href="11-changes.html">Change Log</a>
+        <a href="changes.html">Change Log</a>
       </li>
     </ul>
   </li>

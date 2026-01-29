@@ -1,0 +1,591 @@
+// PUT using "https://[myHost]/Bundle/IGBJ-Bundle"
+// PUT creates if id not found otherwise does an update
+{
+    "resourceType": "Bundle",
+    "id": "IGBJ-Bundle",
+    "type": "transaction",
+    "entry": [
+        //----------------------------
+        // Organization/IGBJ-Organization"
+        {
+            "resource": {
+                "resourceType": "Organization",
+                "id": "IGBJ-Organization",
+                "name": "Eli Lilly Japan K.K"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Organization/IGBJ-Organization"
+            }
+        },
+        //----------------------------
+        // MedicinalProductDefinition/IGBJ-MedicinalProduct
+        {
+            "resource": {
+                "resourceType": "MedicinalProductDefinition",
+                "id": "IGBJ-MedicinalProduct",
+                "identifier": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "C218675",
+                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                    "display": "Sponsor Investigational Product Code"
+                                }
+                            ]
+                        },
+                        "system": "https://example.org/sponsor-identifier",
+                        "value": "LY900018"
+                    }
+                ],
+                "name": [
+                    {
+                        "productName": "glucagon nasal powder",
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "C97054",
+                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "productName": "BAQSIMI",
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "C71898",
+                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "MedicinalProductDefinition/IGBJ-MedicinalProduct"
+            }
+        },
+        //----------------------------
+        // Composition/IGBJ-Narrative
+        {
+            "resource": {
+                "resourceType": "Composition",
+                "id": "IGBJ-Narrative",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/m11-research-study-narratives"
+                    ]
+                },
+                "author": [
+                    {
+                        "reference": "Organization/IGBJ-Organization"
+                    }
+                ],
+                "section": [
+                    {
+                        "text": {
+                            "status": "additional",
+                            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">text describing SoA</div>"
+                        },
+                        "title": "1.3 Schedule of Activities",
+                        "code": {
+                            "coding": [
+                                {
+                                    "code": "C218519",
+                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "text": {
+                            "status": "additional",
+                            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Seventy-five patients may be enrolled in order to have at least 66 patients (at least 30 patients with T1DM and T2DM, respectively) complete the study. For purposes of this study, a completer is defined as a patient who completes both periods with evaluable primary outcome. If patients discontinue from the study before completion of both periods with evaluable primary outcome for any reason, the patient may be replaced to ensure 66 patients complete the study. The replacement patients will be assigned the same treatment sequence as the patients to be replaced and will complete that treatment sequence in its entirety. Replacement should not occur beyond 75 patients enrolled, if it is expected to have at least 66 patients complete the study. Eligibility of patients for the study will be based on the results of screening medical history, physical examination, vital signs, clinical laboratory tests, and ECG. The nature of any conditions present at the time of the physical examination and any preexisting conditions will be documented. Screening may occur up to 28 days prior to enrollment. Patients who are not enrolled within 28 days of screening may be subjected to an additional medical assessment and/or clinical measurements to confirm their eligibility. Prospective approval of protocol deviations to recruitment and enrollment criteria, also known as protocol waivers or exemptions, are not permitted.</div>"
+                        },
+                        "title": "5.1\tDescription of Trial Population and Rationale",
+                        "code": {
+                            "coding": [
+                                {
+                                    "code": "C218548",
+                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "status": "final",
+                "type": {
+                    "coding": [
+                        {
+                            "code": "b001",
+                            "system": "http://hl7.org/fhir/uv/clinical-study-protocol/CodeSystem/narrative-elements-cs",
+                            "display": "Protocol narrative"
+                        }
+                    ]
+                },
+                "date": "2025-06-30T12:46:00Z",
+                "title": "IGBJ Protocol Narratives"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Composition/IGBJ-Narrative"
+            }
+        },
+        //----------------------------
+        // Composition/IGBJ-Narrative-2.1
+        {
+            "resource": {
+                "resourceType": "Composition",
+                "id": "IGBJ-Narrative-2.1",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/m11-research-study-narratives"
+                    ]
+                },
+                "author": [
+                    {
+                        "reference": "Organization/IGBJ-Organization"
+                    }
+                ],
+                "section": [
+                    {
+                        "text": {
+                            "status": "additional",
+                            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">|1. have had a diagnosis of either:| |a. T1DM based on the World Health Organization (WHO) diagnostic criteria, and have been on the following daily insulin therapy for at least 1 year ​ i. multiple daily injection of long-acting insulin analog (either insulin glargine [U-100 or U-300] or insulin degludec [U-100]) and rapid-acting insulin analog (insulin lispro, insulin aspart, or insulin glulisine), or ​ ii. continuous subcutaneous insulin infusion (CSII) | |**Or** b. T2DM based on the WHO diagnostic criteria, and have received the following daily insulin therapy with or without oral anti-hyperglycemic medications (OAMs) for at least 1 year ​ i. insulin: long-acting insulin analog (either insulin glargine [U-100 or U-300] or insulin degludec [U-100]) alone, or in combination with rapid-acting insulin analog (insulin lispro, insulin aspart, or insulin glulisine) or CSII ​ ii. OAM: up to 3 of the following OAMs in accordance with local regulations: metformin, dipeptidyl peptidase-4 inhibitor, sodium glucose cotransporter 2 inhibitor, sulfonylurea (should not be more than half of maximum approved doses), glinides, alpha-glucosidase inhibitor, or thiazolidine | | tabl title | | ---------- | | row 1 | | row 2 | | row 3 |</div>"
+                        },
+                        "title": "2.1 Purpose of Trial",
+                        "code": {
+                            "coding": [
+                                {
+                                    "code": "C218521",
+                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "status": "final",
+                "type": {
+                    "coding": [
+                        {
+                            "code": "b001",
+                            "system": "http://hl7.org/fhir/uv/clinical-study-protocol/CodeSystem/narrative-elements-cs",
+                            "display": "Protocol narrative"
+                        }
+                    ]
+                },
+                "date": "2025-06-03T12:46:00Z",
+                "title": "IGBJ Protocol Narrative 2.1"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Composition/IGBJ-Narrative-2.1"
+            }
+        },
+        //----------------------------
+        // Composition/IGBJ-Narrative-9
+        {
+            "resource": {
+                "resourceType": "Composition",
+                "id": "IGBJ-Narrative-9",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/m11-research-study-narratives"
+                    ]
+                },
+                "author": [
+                    {
+                        "reference": "Organization/IGBJ-Organization"
+                    }
+                ],
+                "section": [
+                    {
+                        "text": {
+                            "status": "additional",
+                            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h4>9\tADVERSE EVENTS, SERIOUS ADVERSE EVENTS, PRODUCT COMPLAINTS, PREGNANCY AND POSTPARTUM INFORMATION</h4><h5>9.1\tDefinitions</h5><h6>9.1.1\tDefinitions of Adverse Events</h6><p>Investigators are responsible for monitoring the safety of patients who have entered this study and for alerting Lilly or its designee to any event that seems unusual, even if this event may be considered an unanticipated benefit to the patient. The investigator is responsible for the appropriate medical care of patients during the study. Investigators must document their review of each laboratory safety report. The investigator remains responsible for following, through an appropriate health care option, AEs that are serious or otherwise medically important, considered related to the investigational product or the study, or that caused the patient to discontinue the investigational product before completing the study. The patient should be followed until the event resolves, stabilizes with appropriate diagnostic evaluation, or is reasonably explained. The frequency of follow-up evaluations of the AE is left to the discretion of the investigator. After the informed consent form is signed, study site personnel will record, via CRF, the occurrence and nature of each patient’s preexisting conditions, including clinically significant signs and symptoms of the disease under treatment in the study. Additionally, site personnel will record any change in the condition(s) and the occurrence and nature of any AEs. The investigator will interpret and document whether or not an AE has a reasonable possibility of being related to study treatment, medical device, or a study procedure, taking into account the disease, concomitant treatment, or pathologies. A “reasonable possibility” means that there is a potential cause and effect relationship between the investigational product, medical device, and/or study procedure and the AE. Planned surgeries should not be reported as AEs unless the underlying medical condition has worsened during the course of the study.</p><h6>9.1.2\tDefinitions of Serious Adverse Events</h6><p>An SAE is any AE from this study that results in one of the following:</p><ul><li>death</li><li>initial or prolonged inpatient hospitalization</li><li>a life-threatening experience (that is, immediate risk of dying)</li><li>persistent or significant disability/incapacity</li><li>congenital anomaly/birth defect</li><li>important medical events that may not be immediately life-threatening or result in death or hospitalization but may jeopardize the patient or may require intervention to prevent one of the other outcomes listed in the definition above</li><li>when a condition related to the medical device necessitates medical or surgical intervention to preclude either permanent impairment of a body function or permanent damage to a body structure, the serious outcome of “required intervention” will be assigned.</li></ul><p>Study site personnel must alert the Lilly CRP/CP, or its designee, of any SAE as soon as practically possible. Additionally, study site personnel must alert Lilly Global Patient Safety, or its designee, of any SAE within 24 hours of investigator awareness of the event via a sponsor-approved method. If alerts are issued via telephone, they are to be immediately followed with official notification on study-specific SAE forms. This 24-hour notification requirement refers to the initial SAE information and all follow-up SAE information. Although all AEs are recorded in the CRF after signing informed consent, SAE reporting to the sponsor begins after the patient has signed informed consent and has received investigational product. However, if an SAE occurs after signing informed consent, but prior to receiving investigational product, AND is considered reasonably possibly related to a study procedure then it MUST be reported. Investigators are not obligated to actively seek AEs or SAEs in patients once they have discontinued from and/or completed the study (the patient summary CRF has been completed). However, if the investigator learns of any SAE, including a death, at any time after a patient has been discharged from the study, and he/she considers the event reasonably possibly related to the study treatment or study participation, the investigator must promptly notify Lilly. Pregnancy (maternal or paternal exposure to investigational product) does not meet the definition of an AE. However, to fulfill regulatory requirements any pregnancy should be reported following the SAE process to collect data on the outcome for both mother and fetus&gt;</p><h6>9.1.2.1 Suspected Unexpected Serious Adverse Reactions</h6><p>Suspected unexpected serious adverse reactions (SUSARs) are serious events that are not listed in the IB and that the investigator reports as related to investigational product or procedure. Lilly has procedures that will be followed for the recording and expedited reporting of SUSARs that are consistent with global regulations and the associated detailed guidances</p><h6>9.1.3\tProduct Complaints</h6><p>Lilly collects product complaints on investigational products used in clinical trials in order to ensure the safety of study participants, monitor quality, and to facilitate process and product improvements. Patients should be instructed to contact the investigator as soon as possible if he or she has a complaint or problem with the investigational product so that the situation can be assessed.</p><h5>9.2\tTiming and Mechanism for Collection and Reporting</h5><p>See Section 9.1 above.</p><h6>9.2.1.1\tAdverse Event Monitoring with a Systematic Questionnaire</h6><p>Before administering the Nasal and Non-nasal Score Questionnaire (see Appendix 6) and Edinburgh Hypoglycemia Scale (see Appendix 7), study site personnel will question the patient about any change in the preexisting condition(s) and the occurrence and nature of any AEs. Study site personnel will explain the possibility to the patient of AEs associated with the study and that these AEs will be captured during the study through the use of the Nasal and Non-nasal Score Questionnaire and Edinburgh Hypoglycemia Scale. Nonserious AEs obtained through the questionnaire are recorded and analyzed separately. Only SAEs elicited through the Nasal and Non-nasal Score Questionnaire and Edinburgh Hypoglycemia Scale are to be recorded as AEs via CRF and reported to Lilly or its designee within 24 hours as SAEs</p><h5>9.3\tIdentification, Recording and Follow-Up</h5><p>The Lilly CP or CRP/scientist will monitor safety data throughout the course of the study. Lilly will review SAEs within time frames mandated by company procedures. The Lilly CP or CRP will periodically review the following data: • trends in safety data • laboratory analytes • AEs including monitoring of nasal cavity and IM injection site When appropriate, the Lilly CP or CRP will consult with the functionally independent Global Patient Safety therapeutic area physician or clinical research scientist</p><h6>9.3.1\tIdentification</h6><p>See Separate Reporting Form Instructions.</p><h6>9.3.2\tSeverity</h6><p>See Separate Reporting Form Instructions</p><h6>9.3.3\tCausality</h6><p>See Separate Reporting Form Instructions.</p><h6>9.3.4\tFollow-up</h6><p>See Separate Reporting Form Instructions.</p><h5>9.4\tReporting</h5><p>See Separate Reporting Form Instructions.</p><h6>9.4.1\tRegulatory Reporting Requirements</h6><p>See Section 9.1 &amp; 9.2.</p><h6>9.4.2\tAdverse Events of Special Interest</h6><p>Not Applicable</p><h6>9.4.3\tDisease-related Events or Outcomes Not Qualifying as AEs or SAEs</h6><p>Not applicable.</p><h5>9.5\tPregnancy and Postpartum Information</h5><p>Not applicable.</p></div>"
+                        },
+                        "title": "9\tADVERSE EVENTS, SERIOUS ADVERSE EVENTS, PRODUCT COMPLAINTS, PREGNANCY AND POSTPARTUM INFORMATION",
+                        "code": {
+                            "coding": [
+                                {
+                                    "code": "C218608",
+                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "status": "final",
+                "type": {
+                    "coding": [
+                        {
+                            "code": "b001",
+                            "system": "http://hl7.org/fhir/uv/clinical-study-protocol/CodeSystem/narrative-elements-cs",
+                            "display": "Protocol narrative"
+                        }
+                    ]
+                },
+                "date": "2025-06-03T12:46:00Z",
+                "title": "IGBJ Protocol Narrative 9"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Composition/IGBJ-Narrative-9"
+            }
+        },
+        //----------------------------
+        // ResearchStudy/IGBJ-ResearchStudy
+        {
+            "resource": {
+                "resourceType": "ResearchStudy",
+                "id": "IGBJ-ResearchStudy",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/m11-research-study-profile"
+                    ]
+                },
+                "identifier": [
+                    {
+                        "type": {
+                            "text": "Regulatory Agency Identifier"
+                        },
+                        "system": "https://example.org/regulatory-agency-identifier",
+                        "value": "NCT03421379",
+                        "use": "official"
+                    },
+                    {
+                        "type": {
+                            "text": "Sponsor Identifier"
+                        },
+                        "system": "https://example.org/sponsor-identifier",
+                        "value": "I8R-JE-IGBJ",
+                        "use": "usual"
+                    },
+                    {
+                        "type": {
+                            "text": "Amendment Identifier"
+                        },
+                        "system": "https://example.org/amendment-identifier",
+                        "value": "I8R-JE-IGBJ(a)",
+                        "use": "usual"
+                    }
+                ],
+                "label": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "short-title",
+                                    "system": "http://hl7.org/fhir/title-type",
+                                    "display": "Short title"
+                                }
+                            ]
+                        },
+                        "value": "A Phase 3 Study of Nasal Glucagon (LY900018) Compared to Intramuscular Glucagon for Treatment of Insulin-induced Hypoglycemia in Japanese Patients with Diabetes Mellitus"
+                    }
+                ],
+                "focus": [
+                    {
+                        "reference": {
+                            "reference": "MedicinalProductDefinition/IGBJ-MedicinalProduct"
+                        }
+                    }
+                ],
+                "condition": [
+                    {
+                        "coding": [
+                            {
+                                "code": "1137328006",
+                                "system": "http://snomed.info/sct",
+                                "display": "Iatrogenic hypoglycaemia"
+                            }
+                        ]
+                    }
+                ],
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/narrative-elements",
+                        "valueReference": {
+                            "reference": "Composition/IGBJ-Narrative"
+                        }
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/narrative-elements",
+                        "valueReference": {
+                            "reference": "Composition/IGBJ-Narrative-2.1"
+                        }
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/narrative-elements",
+                        "valueReference": {
+                            "reference": "Composition/IGBJ-Narrative-9"
+                        }
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "scope",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "code": "C217026",
+                                            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                            "display": "Not Global"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "url": "country",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "code": "DE",
+                                            "system": "urn:iso:std:iso:3166",
+                                            "display": "Germany"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "url": "country",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "code": "GB",
+                                            "system": "urn:iso:std:iso:3166",
+                                            "display": "United Kingdom of Great Britain and Northern Ireland"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "url": "region",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "code": "AU-NSW",
+                                            "system": "urn:iso:std:iso:3166",
+                                            "display": "New South Wales"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "valueIdentifier": {
+                                    "system": "https://example.org/site-identifier",
+                                    "value": "sss"
+                                },
+                                "url": "site"
+                            },
+                            {
+                                "url": "approvalDate",
+                                "valueDate": "2017-12-05"
+                            },
+                            {
+                                "valueSignature": {
+                                    "data": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPEVudmVsb3BlIHhtbG5zPSJ1cm46ZW52ZWxvcGUiPgogIDxTaWduYXR1cmUgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkveG1sZHNpZyMiPgogICAgPFNpZ25lZEluZm8+CiAgICAgIDxDYW5vbmljYWxpemF0aW9uTWV0aG9kIAogICAgICAgICAgIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvVFIvMjAwMS9SRUMteG1sLWMxNG4tCjIwMDEwMzE1I1dpdGhDb21tZW50cyIvPgogICAgICA8U2lnbmF0dXJlTWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS8KeG1sZHNpZyNkc2Etc2hhMSIvPgogICAgICA8UmVmZXJlbmNlIFVSST0iIj4KICAgICAgICA8VHJhbnNmb3Jtcz4KICAgICAgICAgIDxUcmFuc2Zvcm0gQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwLzA5Lwp4bWxkc2lnI2VudmVsb3BlZC1zaWduYXR1cmUiLz4KICAgICAgICA8L1RyYW5zZm9ybXM+CiAgICAgICAgPERpZ2VzdE1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkvCnhtbGRzaWcjc2hhMSIvPgogICAgICAgIDxEaWdlc3RWYWx1ZT51b29xYldZYTVWQ3FjSkNidXltQktxbTE3dlk9PC9EaWdlc3RWYWx1ZT4KICAgICAgPC9SZWZlcmVuY2U+CiAgICA8L1NpZ25lZEluZm8+CjxTaWduYXR1cmVWYWx1ZT4KS2VkSnVUb2I1Z3R2WXg5cU0zazNnbTdrYkxCd1ZiRVFSbDI2UzJ0bVhqcU5ORDdNUkd0b2V3PT0KICAgIDwvU2lnbmF0dXJlVmFsdWU+CiAgICA8S2V5SW5mbz4KICAgICAgPEtleVZhbHVlPgogICAgICAgIDxEU0FLZXlWYWx1ZT4KICAgICAgICAgIDxQPgovS2FDem80U3lyb203OHozRVE1U2JiQjRzRjdleTgwZXRLSUk4NjRXRjY0QjgxdVJwSDV0OWpRVHhlCkV1MEltYnpSTXF6VkRaa1ZHOXhEN25OMWt1Rnc9PQogICAgICAgICAgPC9QPgogICAgICAgICAgPFE+bGk3ZHpEYWN1bzY3Smc3bXRxRW0yVFJ1T01VPTwvUT4KICAgICAgICAgIDxHPlo0UnhzbnFjOUU3cEdrbkZGSDJ4cWFyeVJQQmFRMDFraHBNZExSUW5HNTQxQXd0eC8KWFBhRjVCcHN5NHBOV01PSENCaU5VME5vZ3BzUVc1UXZubE1wQT09CiAgICAgICAgICA8L0c+CiAgICAgICAgICA8WT5xVjM4SXFyV0pHMFYvCm1aUXZSVmkxT0h3OVpqODRuREM0ak84UDBheGkxZ2I2ZCs0NzV5aE1qU2MvCkJySVZDNThXM3lkYmtLK1JpNE9LYmFSWmxZZVJBPT0KICAgICAgICAgPC9ZPgogICAgICAgIDwvRFNBS2V5VmFsdWU+CiAgICAgIDwvS2V5VmFsdWU+CiAgICA8L0tleUluZm8+CiAgPC9TaWduYXR1cmU+CjwvRW52ZWxvcGU+IA=="
+                                },
+                                "url": "signature"
+                            },
+                            {
+                                "url": "signatureUrl",
+                                "valueUrl": "https://somelocation"
+                            },
+                            {
+                                "url": "signatureMethod",
+                                "valueString": "electronic and wet ink copy"
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "scope",
+                                        "valueCodeableConcept": {
+                                            "coding": [
+                                                {
+                                                    "code": "C41065",
+                                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                                    "display": "Locally"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "url": "number",
+                                        "valuePositiveInt": 234
+                                    }
+                                ],
+                                "url": "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/ResearchStudyStudyAmendmentScopeImpact"
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "scope",
+                                        "valueCodeableConcept": {
+                                            "coding": [
+                                                {
+                                                    "code": "C68846",
+                                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                                    "display": "Globally"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "url": "number",
+                                        "valuePositiveInt": 983
+                                    }
+                                ],
+                                "url": "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/ResearchStudyStudyAmendmentScopeImpact"
+                            },
+                            {
+                                "url": "primaryReason",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "code": "C218490",
+                                            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                            "display": "Regulatory Agency Request To Amend"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "url": "secondaryReason",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "code": "C218494",
+                                            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                            "display": "Manufacturing Change"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "url": "summary",
+                                "valueString": "Regulator required manufacturing chanage."
+                            },
+                            {
+                                "url": "substantialImpactSafety",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "code": "C49488",
+                                            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                            "display": "Yes"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "url": "substantialImpactSafetyComment",
+                                "valueString": "Specifically implemented to decrease safety risks."
+                            },
+                            {
+                                "url": "substantialImpactReliability",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "code": "C17998",
+                                            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                            "display": "Unknown"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "url": "substantialImpactReliabilityComment",
+                                "valueString": "ccc"
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "detail",
+                                        "valueString": "amendment one"
+                                    },
+                                    {
+                                        "url": "rationale",
+                                        "valueString": "clarification"
+                                    },
+                                    {
+                                        "url": "section",
+                                        "valueCodeableConcept": {
+                                            "coding": [
+                                                {
+                                                    "code": "C218515",
+                                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                                    "display": "1.1 Protocol Synopsis"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "url": "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/protocol-amendment-detail"
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "detail",
+                                        "valueString": "amendment two"
+                                    },
+                                    {
+                                        "url": "rationale",
+                                        "valueString": "exclude regular drinkers"
+                                    },
+                                    {
+                                        "url": "section",
+                                        "valueCodeableConcept": {
+                                            "coding": [
+                                                {
+                                                    "code": "C218550",
+                                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                                    "display": "5.3 Exclusion Criteria"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "url": "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/protocol-amendment-detail"
+                            },
+                            {
+                                "url": "rationale",
+                                "valueString": "Updates to address safety concern & align with product guidelines."
+                            },
+                            {
+                                "url": "description",
+                                "valueString": "Protocol I8R-JE-IGBJ A Phase 3 Study of Nasal Glucagon (LY900018) Compared to Intramuscular Glucagon for Treatment of Insulin-induced Hypoglycemia in Japanese Patients with Diabetes Mellitus has been amended. The new protocol is indicated by Amendment (a) and will be used to conduct the study in place of any preceding version of the protocol. The overall changes and rationale for the changes made to this protocol are as follows: • An exclusion criterion for patients with retinopathy or maculopathy was added due to the potential risk of fundal hemorrhage induced by hypoglycemia. • The GlucaGen reconstitution volume was changed from 1.0 mL to 1.1 mL in accordance with instructions in the Summary of Product Characteristics (2015)."
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/protocol-amendment"
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/uv/ebm/StructureDefinition/research-study-sponsor-confidentiality-statement",
+                        "valueString": "All data is confidential"
+                    }
+                ],
+                "version": "(a)",
+                "title": "A Phase 3 Study of Nasal Glucagon (LY900018) Compared to Intramuscular Glucagon for Treatment of Insulin-induced Hypoglycemia in Japanese Patients with Diabetes Mellitus",
+                "date": "2017-12-05",
+                "status": "draft",
+                "phase": {
+                    "coding": [
+                        {
+                            "code": "C15602",
+                            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                            "display": "Phase 3"
+                        }
+                    ]
+                }
+            },
+            "request": {
+                "method": "PUT",
+                "url": "ResearchStudy/IGBJ-ResearchStudy"
+            }
+        }
+    ]
+}

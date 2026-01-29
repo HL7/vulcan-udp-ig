@@ -1,6 +1,6 @@
 ### Use Cases & Work Flows 
 
-Selected use cases of value across clinical research and health IT settings can be enabled through FHIR-based exchange of narrative protocol text and structured protocol content. This vision is made practical by anchoring to the ICH M11 Clinical electronic Structured Harmonized Protocol and ensuring compatibility with the USDM (Unified Study Definition Model, developed by the TransCelerate Digital Data Flow initiative)
+Selected use cases of value across clinical research and health IT settings can be enabled through FHIR-based exchange of narrative protocol text and structured protocol content. 
 
 The detail looks first at the use case addressed in development of this Implementation Guide, then looks towards additional use cases with which compatibility will be necessary and at future opportunities. 
 
@@ -16,7 +16,7 @@ For the purposes of development of this initial version of this Implementation G
 
 The processes supporting testing scenarios were articulated as simply and with as much flexibility for implementation as possible:
 
-1. Ensure protocol content and organization aligned to ICH M11
+1. Ensure protocol content and organization aligned to ICH M11 (see [Section 5.1 Protocol Preparation](Section 5.1 Protocol Preparation))
 
 2. Generate protocol in FHIR
 
@@ -26,7 +26,9 @@ The processes supporting testing scenarios were articulated as simply and with a
 
 5. Validate receipt of protocol (i.e., display, extraction of structured content)
 
-   
+NOTE: methods for generation, exchange, and validation of receipt will vary
+
+
 
 <div><img src="work-flow-protocol-approval.png" alt="work-flow-protocol-approval.png" style="max-width: 80%;
  height: auto;" />
@@ -39,7 +41,7 @@ In order to ensure this Implementation Guide is set up to enable compatibility f
 - Packaging of data elements in a single bundle as well as in multiple resources 
 - FHIR in JSON as well as FHIR in XML
 - Validation of the protocol on a FHIR server by the sender as well as by the receiver
-- Sending protocols directly to FHIR server as well as sending to FHIR server after receipt 
+- Sending protocols directly to FHIR server as well as validating using a FHIR server after receipt 
 - Receiver extraction of structured elements relevant to various review needs (i.e., safety reviewer, medical reviewer)
 - Receiver response to submitter via FHIR messages as well as through other routine mechanisms
 

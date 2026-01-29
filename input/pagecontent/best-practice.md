@@ -40,7 +40,7 @@ System Architects building the conceptual design who need to understand how the 
 
 - The general principles of how messaging works: e.g. creation of FHIR messages, submission to a FHIR server for validation, etc. Consider the identity of the particular instance of the message, the related process flows, and the uses involved. 
 
-- Multiple bundling approaches and which is best fit in the context of how the information will be used will be a key decision to be made. 
+- Multiple bundling approaches and which is best fit in the context of how the information will be used will be a key decision to be made. (see [Bundles discussion](bundles.html) )
 
 - Terminology concerns, e.g., what terminology is already in use with the organization and how it aligns to that which is required by M11 in order to confirm the approach for terminology management. To prepare for implementation, developers will need specific guidance. For example, if terminology is hard coded it may accelerate implementation but have implications on maintenance when standards evolve via future governance processes.
 
@@ -51,7 +51,7 @@ System Architects building the conceptual design who need to understand how the 
 
 Systems developers using this Implementation Guide to translate the conceptual design into systems ready to utilize digital protocols may wish to consider: 
 
-- Ensuring decisions such as those about bundling and terminology management are well understood
+- Ensuring decisions such as those about bundling (see [Bundles discussion](bundles.html) ) and terminology management [see Terminology discussion](fhir-representation.html#terminology) are well understood
 - How the detailed mappings in this guide can be used to ensuring accurate representation of elements across standards
 - How this mapping will be utilized with their environment
 - Consider any available reference implementations and whether they embody tooling that can be reused
@@ -62,6 +62,6 @@ Those who utilize or may in the future utilize TransCelerate Digital Data Flow /
 
  Those implementing USDM or interested in USDM may wish to consider: 
 
-- Conducting a thorough review of the mappings referenced in this Implementation Guide to understand how elements are represented across M11, USDM and FHIR.
+- Conducting a thorough review of the mappings referenced in this Implementation Guide [mappings referenced in this Implementation Guide](fhir-representation.html#usdm-and-m11-to-fhir-mapping) to understand how elements are represented across M11, USDM and FHIR.
 - Use cases prioritization based on business needs in order to inform implementation strategies.
 - Support is available at the DDF GitHub.

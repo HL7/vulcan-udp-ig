@@ -9,8 +9,13 @@ Contributing individuals and organizations are:
 
 Current project Leads:
 
-- **Hugh Glover** - Vulcan
 - **Stacy Tegan** - TransCelerate  Biopharma
+
+- **Vivian Coombes** - Eli Lilly
+
+Project Technical Lead
+
+- **Hugh Glover** - Vulcan
 
 Core project members:
 

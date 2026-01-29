@@ -5,24 +5,24 @@
   <h3>Introduction</h3>
   <p>This Implementation Guide has been developed by the Vulcan UDP Project (Utilizing the Digital
     Protocol). </p>
-  <p>The content is based on FHIR R6. This is to take advantage of new features in the ResearchStudy
-    resource.
-    There will be backports to earlier FHIR releases in future. </p>
+  <p>The content is based on FHIR R6. This is to take advantage of new features in the <a
+      href="https://hl7.org/fhir/6.0.0-ballot3/researchstudy.html">ResearchStudy</a> resource. There
+    will be backports to earlier FHIR releases in future. </p>
   <p> </p>
-  <p><strong>What is a clinical study protocol?</strong> Conduct of clinical trials is guided by the
-    International Council for Harmonization of Technical (ICH) Requirements for Human Use, Guideline
-    for Good Clinical Practice (GCP) E6 which specifies the protocol as “A document that describes
-    the objective(s), design, methodology, statistical considerations and organisation of a trial,”
-    incorporating all aspects of what is needed to define how the study is to be conducted and
-    reviewed. The protocol should provide background and rationale for the study, highlight the
+  <p><strong>What is a clinical study protocol?</strong> Conduct of clinical studies is guided by
+    the International Council for Harmonization of Technical (ICH) Requirements for Human Use,
+    Guideline for Good Clinical Practice (GCP) E6 which specifies the protocol as “A document that
+    describes the objective(s), design, methodology, statistical considerations and organisation of
+    a trial,” incorporating all aspects of what is needed to define how the study is to be conducted
+    and reviewed. The protocol should provide background and rationale for the study, highlight the
     specific research questions to be addressed, and take into consideration ethical issues. It
     describes the objectives, design, methodology, statistical considerations and other aspects
-    related to the organization of the clinical trial.</p>
+    related to the organization of the clinical study.</p>
   <p> </p>
   <p><strong>Who can benefit from utilizing a digital protocol?</strong> Users of protocols exist
-    across the full continuum of clinical and translational research. Traditional
-    research conducted by the biopharmaceutical industry involves complex processes with innumerous
-    opportunities for automation(See Use Case Opportunities, Present and Future).</p>
+    across the full continuum of clinical and translational research. Traditional research conducted
+    by the biopharmaceutical industry involves complex processes with numerous opportunities for
+    automation(See Use Case Opportunities, Present and Future).</p>
   <p> </p>
   <p><strong>Why FHIR?</strong> FHIR adoption in healthcare has expanded rapidly in recent years.
     (See The State of FHIR in 2025). FHIR-based exchange of protocols will enable their use within
@@ -51,32 +51,39 @@
     It is now being adopted by numerous biopharmaceutical companies across a range of sponsor-driven
     use cases.</p>
   <p> </p>
-  <p><strong>Why Vulcan?</strong> The Vulcan HL7 FHIR Accelerator aims to bridge research and
-    clinical care through the use of FHIR, strategically connecting collaborators to maximize
-    expertise and efforts. Vulcan members include implementers, sponsors, academic research,
-    government representatives who are working on or have interests in protocol digitization. The
-    Vulcan Utilizing the Digital Protocol (UDP) is an umbrella project integrating related work
-    being developed by ICH M11, CDISC, and TransCelerate to enable compatible, standards-based
-    exchange of ICH M11-aligned clinical trial protocols across research stakeholders including
-    sponsors, sites and regulators.</p>
+  <p><strong>Why <a href="https://hl7vulcan.org/">Vulcan</a>?</strong> The Vulcan HL7 FHIR
+    Accelerator aims to bridge research and clinical care through the use of FHIR, strategically
+    connecting collaborators to maximize expertise and efforts. Vulcan members include implementers,
+    sponsors, academic research, government representatives who are working on or have interests in
+    protocol digitization. The Vulcan Utilizing the Digital Protocol (UDP) is an umbrella project
+    integrating related work being developed by ICH M11, CDISC, and TransCelerate to enable
+    compatible, standards-based exchange of ICH M11-aligned clinical trial protocols across research
+    stakeholders including sponsors, sites and regulators.</p>
   <p> </p>
   <p>For additional information on integration of the various efforts and history, please see the
-    "Background" section in this Implementation Guide under "Home" section of the banner and
-    in the "Links" section under the "Support" section of the banner.</p>
+    "Background" section in this Implementation Guide under <strong><a href="index.html">Home</a>
+    </strong> section of the banner and in the <a href="links.html">Links</a> section under the <strong>Support</strong> section of the banner.</p>
 
   <a name="overview"> </a>
   <h3>Technical Overview</h3>
-  <p>This guide describes the representation of a Protocol in FHIR format. The "document" focus of
-    protocol organization is provided by the ICH M11 CeSHarP Template and Technical Guide. A more
-    structured approach aligned to M11 is addressed by USDM, developed by CDISC in partnership with
-    TransCelerate as part of Digital Data Flow initiative. Both M11 and USDM are represented in the
-    FHIR Representation mapping spreadsheet (found under Downloads section of the banner). This
-    initial version of the IG is focused on on the M11 "document" approach; future
-    versions are intended to expand integration of USDM and FHIR in order to enable exchange of
-    additional structured protocol content in FHIR-based systems.</p>
-  <p> The key FHIR resources used are ResearchStudy and Composition, while also drawing on some
-    profiles and extensions from the EBM IG. EBM utilizes protocol elements to be able to review and
-    reporting on research completed; UDP will include ICH M11 related items. </p>
+  <p>This Implementation Guide describes the representation of a protocol in FHIR format aligned
+    with the ICH M11 CeSHarP Template, Guideline, and Technical Specification. This initial version
+    of the IG is focused primarily on exchange of protocols as traditional "documents", i.e.,
+    narrative text, with only some elements exchanged as structured content. An approach which
+    enables more digital structuring of elements aligned to M11 is addressed by USDM, the developed
+    by CDISC in partnership with TransCelerate as part of Digital Data Flow initiative. Future
+    versions this IG are intended to expand integration of USDM and FHIR in order to enable exchange
+    of additional structured protocol content in FHIR-based systems. As additional IGs may be
+    developed for specific use cases which this IG serving as the base or core. Both M11 and USDM
+    are represented in the FHIR Representation mapping spreadsheet (found under <a
+      href="downloads.html">Downloads</a> section of the banner).</p>
+  <p> The key FHIR resources used are <a
+      href="https://hl7.org/fhir/6.0.0-ballot3/researchstudy.html">ResearchStudy</a> and <a
+      href="https://hl7.org/fhir/6.0.0-ballot3/composition.html">Composition</a>, while also drawing
+    on some patterns found in profiles and extensions from the <a
+      href="https://build.fhir.org/ig/HL7/ebm/en/index.html">EBM IG</a>. EBM utilizes protocol
+    elements to be able to review and reporting on research completed; UDP will include ICH M11
+    related items. </p>
   <p> For more description of the relationship between the resources, extensions and profiles see
     the FHIR Representation section and the actual specifications in the Artifacts section.</p>
 
@@ -114,8 +121,8 @@
   <ul>
     <li>Support for any non-ICH M11 aligned protocol exchange in this IG version. The future aim is
       to develop a use case roadmap, consider the broad spectrum of potential use cases of digital
-      protocols and identify opportunities to establish foundational connections. (See also the Use
-      Cases and Workflows section for some discussion on this).</li>
+      protocols and identify opportunities to establish foundational connections. (See also the <a
+        href="use-cases.html">Use Cases and Workflow</a> section for some discussion on this).</li>
     <li>Detailed governance processes will be addressed in future iterations. </li>
   </ul>
 
@@ -127,25 +134,62 @@
   <ul>
     <p><strong>IG Home</strong>: Provides an orientation outlining objectives, background, and scope</p>
     <ul>
-      <p>Home: This home page</p>
-      <p>Background: Placing this work in the wider context</p>
-      <p>Implementation Best Practice: Provides some general pointers on implementation, and also
-        picks out key points from different audience perspectives.</p>
+      <p><strong>
+          <a href="index.html">
+            Home
+          </a>
+        </strong>: This home page</p>
+      <p>
+        <a href="background.html">
+          <strong>Background</strong>
+        </a>: Placing this work in the wider context </p>
+      <p><a href="best-practice.html">
+          <strong>Implementation Best Practice</strong>
+        </a>: Provides some general pointers
+        on implementation, and also picks out key points from different audience perspectives.</p>
     </ul>
     <p><strong>Guidance:</strong> Describes how the technical work was approached and why certain
       decisions were made</p>
     <ul>
-      <p>Use Cases and Workflows: Provides a view to use cases covered in this Implementation Guide
-        as well as those others are working on and future potential use cases across stakeholders </p>
-      <p>Protocol Preparation: A guide to preparation of a protocol for submission according to the
-        M11 format</p>
-      <p>Information Models: Explains how the USDM, M11 and FHIR models are related</p>
-      <p>FHIR Representation: Shows how elements of the protocol are represented in FHIR. Also
-        provides a link to a mapping spreadsheet.</p>
-      <p>Bundles: Discusses representation of protocol sections within FHIR bundles and the
-        operational consequences</p>
+      <p><a href="use-cases.html">
+          <strong>Use Cases and Workflow</strong>
+        </a>: Provides a view to use cases covered
+        in this Implementation Guide as well as those others are working on and future potential use
+        cases across stakeholders </p>
+      <p><a href="protocol-preparation.html">
+          <strong>Protocol Preparation</strong>
+        </a>: A guide to preparation of a protocol
+        for submission according to the M11 format</p>
+      <p><a href="info-models.html">
+          <strong>Information Models</strong>
+        </a>: Explains how the USDM, M11 and FHIR
+        models are related</p>
+      <p><a href="fhir-representation.html">
+          <strong>FHIR Representation</strong>
+        </a>: Shows how elements of the protocol are
+        represented in FHIR. Also provides a link to a mapping spreadsheet.</p>
+      <p><a href="bundles.html">
+          <strong>Bundles</strong>
+        </a>: Discusses representation of protocol sections within
+        FHIR bundles and the operational consequences</p>
     </ul>
-    <p><strong>Artifact Index:</strong> Lists the formal specification of the extensions, profiles,
-      terminology and examples.</p>
+    <p><strong><a href="artifacts.html">Artifact Index</a>:</strong> Lists the formal specification
+      of the extensions, profiles, terminology and examples.</p>
+    <p>
+      <strong>Support:</strong>
+    </p>
+    <ul>
+      <p>
+        <strong><a href="links.html">Links</a>:</strong> Other relevant resources</p>
+      <p>
+        <strong><a href="credits.html">Credits</a>:</strong> General acknowledgement of all who have
+        contributed</p>
+      <p>
+        <strong><a href="changes.html">Change Log</a>:</strong> Major changes between versions of
+        this IG</p>
+    </ul>
+    <p>
+      <strong><a href="downloads.html">Downloads</a>:</strong> Machine readable copy of the IG for
+      server validation and other resources</p>
   </ul>
 </div>

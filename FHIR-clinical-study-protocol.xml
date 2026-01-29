@@ -15,37 +15,53 @@
 <artifact id="Composition/IGBJ-Narrative-5.1" key="Composition-IGBJ-Narrative-5.1" name="IGBJ Protocol Narrative 5.1"/>
 <artifact id="Composition/IGBJ-Narrative-9" key="Composition-IGBJ-Narrative-9" name="IGBJ Protocol Narrative 9"/>
 <artifact id="ResearchStudy/IGBJ-ResearchStudy" key="ResearchStudy-IGBJ-ResearchStudy" name="IGBJ Research Study with narrative"/>
+<artifact id="Group/425098" key="Group-425098" name="Japanese Protocol from Vulcan UDP Eligibility Criteria"/>
+<artifact id="Group/IGBJ-Eligibility" key="Group-IGBJ-Eligibility" name="M11 IGBJ Protocol Example Eligibility Criteria"/>
 <artifact id="ValueSet/m11-identifier-type-vs" key="ValueSet-m11-identifier-type-vs" name="M11 Identifier Type Value Set"/>
 <artifact id="ValueSet/m11-phase-vs" key="ValueSet-m11-phase-vs" name="M11 Phase Value Set"/>
 <artifact id="StructureDefinition/m11-research-study-profile" key="StructureDefinition-m11-research-study-profile" name="M11 Research Study"/>
 <artifact id="ValueSet/m11-section-codes-vs" key="ValueSet-m11-section-codes-vs" name="M11 Section Codes Value Set"/>
-<artifact id="StructureDefinition/protocol-amendment" key="StructureDefinition-protocol-amendment" name="M11_ProtocolAmendment"/>
+<artifact id="StructureDefinition/m11-amendment-detail" key="StructureDefinition-m11-amendment-detail" name="M11_AmendmentDetails"/>
+<artifact id="StructureDefinition/m11-amendment-scope-impact" key="StructureDefinition-m11-amendment-scope-impact" name="M11_AmendmentScopeImpact"/>
+<artifact id="StructureDefinition/m11-confidentiality-statement" key="StructureDefinition-m11-confidentiality-statement" name="M11_ConfidentialityStatement"/>
+<artifact id="StructureDefinition/m11-protocol-amendment" key="StructureDefinition-protocol-amendment" name="M11_ProtocolAmendment"/>
 <artifact id="ValueSet/nci-study-role-vs" key="ValueSet-nci-study-role-vs" name="NCI Study Role Value Set"/>
 <artifact id="StructureDefinition/narrative-elements" key="StructureDefinition-narrative-elements" name="Narrative Elements"/>
 <artifact id="CodeSystem/narrative-elements-cs" key="CodeSystem-narrative-elements-cs" name="Narrative Elements Code System"/>
 <artifact id="ValueSet/narrative-elements-vs" key="ValueSet-narrative-elements-vs" name="Narrative Elements Value Set"/>
 <artifact id="StructureDefinition/m11-research-study-narratives" key="StructureDefinition-m11-research-study-narratives" name="Research Study Narratives"/>
-<artifact id="StructureDefinition/protocol-amendment-detail" key="StructureDefinition-protocol-amendment-detail" name="ResearchStudyStudyAmendmentDetails"/>
-<artifact id="StructureDefinition/ResearchStudyStudyAmendmentScopeImpact" key="StructureDefinition-ResearchStudyStudyAmendmentScopeImpact" name="ResearchStudyStudyAmendmentScopeImpact"/>
+<artifact deprecated="true" id="StructureDefinition/protocol-amendment-detail" key="StructureDefinition-protocol-amendment-detail" name="ResearchStudyStudyAmendmentDetails"/>
+<artifact deprecated="true" id="StructureDefinition/ResearchStudyStudyAmendmentScopeImpact" key="StructureDefinition-ResearchStudyStudyAmendmentScopeImpact" name="ResearchStudyStudyAmendmentScopeImpact"/>
 <artifact id="ValueSet/m11-country-region-vs" key="ValueSet-m11-country-region-vs" name="Study Amendment Country Value Set"/>
 <artifact id="ValueSet/m11-study-amendment-reason-vs" key="ValueSet-m11-study-amendment-reason-vs" name="Study Amendment Reason Value Set"/>
 <artifact id="ValueSet/m11-amendment-scope-enrollment-vs" key="ValueSet-m11-amendment-scope-enrollment-vs" name="Study Amendment Scope Enrollment Value Set"/>
 <artifact id="ValueSet/m11-study-amendment-scope-vs" key="ValueSet-m11-study-amendment-scope-vs" name="Study Amendment Scope Value Set"/>
-<artifact id="StructureDefinition/study-design" key="StructureDefinition-study-design" name="StudyDesign"/>
+<artifact deprecated="true" id="StructureDefinition/study-design" key="StructureDefinition-study-design" name="StudyDesign"/>
+<artifact id="Group/DIBASY-Eligibility" key="Group-DIBASY-Eligibility" name="StudyEligibilityCriteria: Eligibility Criteria for DIBASY Trial"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
-<page key="02-background" name="02 Background"/>
-<page key="03-best-practice" name="03 Best Practice"/>
-<page key="04-use-cases" name="04 Use Cases"/>
-<page key="05-protocol-preparation" name="05 Protocol Preparation"/>
-<page key="06-info-models" name="06 Info Models"/>
-<page key="07-fhir-representation" name="07 Fhir Representation"/>
-<page key="08-bundles" name="08 Bundles"/>
-<page key="09-links" name="09 Links"/>
-<page key="10-credits" name="10 Credits"/>
-<page key="11-changes" name="11 Changes"/>
+<page deprecated="true" key="02-background" name="02 Background"/>
+<page deprecated="true" key="03-best-practice" name="03 Best Practice"/>
+<page deprecated="true" key="04-use-cases" name="04 Use Cases"/>
+<page deprecated="true" key="05-protocol-preparation" name="05 Protocol Preparation"/>
+<page deprecated="true" key="06-info-models" name="06 Info Models"/>
+<page deprecated="true" key="07-fhir-representation" name="07 Fhir Representation"/>
+<page deprecated="true" key="08-bundles" name="08 Bundles"/>
+<page deprecated="true" key="09-links" name="09 Links"/>
+<page deprecated="true" key="10-credits" name="10 Credits"/>
+<page deprecated="true" key="11-changes" name="11 Changes"/>
 <page key="artifacts" name="Artifacts Summary"/>
+<page key="background" name="Background"/>
+<page key="best-practice" name="Best Practice"/>
+<page key="bundles" name="Bundles"/>
+<page key="changes" name="Changes"/>
+<page key="credits" name="Credits"/>
 <page key="downloads" name="Downloads"/>
+<page key="fhir-representation" name="Fhir Representation"/>
 <page key="index" name="Home"/>
+<page key="info-models" name="Info Models"/>
+<page key="links" name="Links"/>
+<page key="protocol-preparation" name="Protocol Preparation"/>
 <page key="toc" name="Table of Contents"/>
+<page key="use-cases" name="Use Cases"/>
 </specification>
