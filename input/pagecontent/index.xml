@@ -60,9 +60,12 @@
     compatible, standards-based exchange of ICH M11-aligned clinical trial protocols across research
     stakeholders including sponsors, sites and regulators.</p>
   <p> </p>
-  <p>For additional information on integration of the various efforts and history, please see the
-    "Background" section in this Implementation Guide under <strong><a href="index.html">Home</a>
-    </strong> section of the banner and in the <a href="links.html">Links</a> section under the <strong>Support</strong> section of the banner.</p>
+  <p>For additional information on integration of the various efforts and history, please see the <a
+      href="background.html">
+      <strong>Background</strong>
+    </a> section in this Implementation Guide under the <strong>
+    Home</strong> section of the banner and in the <a href="links.html">Links</a> section under the <strong>
+    Support</strong> section of the banner.</p>
 
   <a name="overview"> </a>
   <h3>Technical Overview</h3>
