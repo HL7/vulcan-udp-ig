@@ -40,12 +40,13 @@ The FHIR implementation must therefore cover both narrative and structured conte
 
 ##### Narrative Representation
 
-In FHIR representation of "documents" is done using a *Composition* resource.  This is not immediately accessible from the ResearchStudy resource and so we create an extension to attach Composition to ResearchStudy. 
+In FHIR representation of "documents" is done using a *Composition* resource.  This is not immediately accessible from the ResearchStudy resource and so we create an extension called [NarrativeElements](StructureDefinition-narrative-elements.html) to allow ResearchStudy to point to Composition. 
 
 
 
 <div><img src="narrative-content-01.png" alt="narrative-content-01.png" style="max-width: 80%;height: auto;"/>
-<p>Figure 2: Narrative Content</p></div>
+<p>Figure 2: Narrative Elements</p></div>
+
 
 To properly reflect the M11 template, the sections and sub-sections in the **Composition** need to match those in the protocol template. 
 
@@ -140,7 +141,9 @@ To achieve this level of validation use the Artifact definitions in the Download
 
 ### USDM and M11 to FHIR Mapping
 
-The relationships between the elements of M11, USDM and FHIR are shown in the Mapping spreadsheet described in the following section.  The focus of this is representation of M11 so the mapping does not cover the whole of USDM at this time.  There is a useful infographic from CDISC here: [usdm_m11_classes.pdf](Mappings\usdm_m11_classes.pdf) that shows the overlap between M11 and USDM and in the bottom right USDM classes not covered by M11.
+There haas to be a mapping from M11 to FHIR and also one from USDM to FHIR. The relationships between the elements of M11, USDM and FHIR are shown in the Mapping spreadsheet described in the following section.  The focus of this is representation of M11 so the mapping does not cover the whole of USDM at this time.  There is a useful infographic from CDISC here: [usdm_m11_classes.pdf](Mappings\usdm_m11_classes.pdf) that shows the overlap between M11 and USDM and in the bottom right USDM classes not covered by M11.
+
+The USDM to M11 mapping is provided by CDISC. There is then a consequence that the USDM to FHIR mapping may be forced to a particular form by the M11 to FHIR mapping that would not be the case if it was just a USDM to FHIR mapping. The mapping to FHIR is then a mapping from USDM to FHIR and M11 to FHIR since the two must be consistent. It is two mappings in the one document. 
 
 The spreadsheet for mapping to FHIR is in 3 parts as shown  in the illustration. Click on the illustration or click <a href="Mappings/M11 to FHIR Mapping 01.xlsx">here</a> to download the full spreadsheet
 
