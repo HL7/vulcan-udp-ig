@@ -2,7 +2,7 @@ The major FHIR elements used are discussed first followed by explanation of the 
 
 ### FHIR Elements and Protocol Representation
 
-We assume a basic understanding of FHIR - to get an introduction, see one of the many HL7 training videos.
+We assume a basic understanding of FHIR - to get an introduction, see the section on [Introduction to FHIR](links.html#introduction-to-fhir) in the links section of this IG.
 
 The elements of FHIR we will refer to are as follows:
 
@@ -22,11 +22,16 @@ The elements of FHIR we will refer to are as follows:
 
 Profiles are about reducing these options to what is relevant for a particular use case. Attributes that were optional can be made mandatory, allowable codes can be restricted to a small set and so on.  Extensions can also be subject to profiling.
 
+The relationship between these components is simplistically shown in the diagram below.
+
+<div><img src="FHIR-components.png" alt="FHIR-components.png" style="max-width: auto;height: auto;"/>
+<p>Figure 1: Simple representation of FHIR components</p></div>
+
 #### Protocol Content - Narrative vs Structured   
 
-ICH M11 specifies a globally harmonized organization of protocol content through the headings and common text in template and guideline, and also provides a bases for digital data exchange by specifying the technical representation through the specific specifies protocol content that must be structured in 
+ICH M11 provides a globally harmonized standard set of protocol content and organization of that content through the headings and common text in [M11 Template](https://hl7.org/fhir/uv/pharmaceutical-research-protocol/2025Sep/Mappings/ICH_M11_Technical%20Specification_Updated%20Step%202_2025_0203.docx) and [M11 Guideline](https://hl7.org/fhir/uv/pharmaceutical-research-protocol/2025Sep/Mappings/ICH_M11_Technical%20Specification_Updated%20Step%202_2025_0203.docx). The [M11 Technical Specification](https://hl7.org/fhir/uv/pharmaceutical-research-protocol/2025Sep/Mappings/ICH_M11_Technical%20Specification_Updated%20Step%202_2025_0203.docx) also provides a bases for digital data exchange by specifying a set of data fields and terminologies to be included in the technical representation of protocols which can be exchanged through various standards. This Implementation Guide specifies how to leverage FHIR for exchange of protocols according to the ICH M11 specifications. 
 
-Implementers will vary in their desired use of M11: some will treat as a document, others will leverage structured content, others will utilize for machine processing
+The implementers will vary in their desired use of M11: some will treat as a document, others will leverage structured content, others will utilize for machine processing
 
 The FHIR implementation must therefore cover both narrative and structured content. The challenge is that some data is purely textual while others is quite granular.  We also have to recognize that some implementers will cling to a document paradigm while others will want to use the granular machine readable content as they automate systems.
 
@@ -44,7 +49,7 @@ In FHIR representation of "documents" is done using a *Composition* resource.  T
 
 To properly reflect the M11 template, the sections and sub-sections in the **Composition** need to match those in the protocol template. 
 
-The template sections can be defined in terminology
+The template sections can be defined in terminology – a part of the terminology is shown in the diagram below.
 
 <div><img src="section-vs-01.png" alt="section-vs-01.png" style="max-width: 50%;height: auto;"/>
 <p>Figure 3: A part of the Section Code List</p></div>
@@ -53,8 +58,13 @@ Specific narrative instances can then use the codes to specify which parts of th
 
 <div><img src="narrative-content-02.png" alt="narrative-content-02.png" style="max-width: 50%;height: auto;"/>
     <p>Figure 4: Narrative Content Example</p></div>
-
 In the illustration above **ResearchStudy** has two **NarrativeContent** sections attached. One with code *C218517* which is *1.1.2 Overall Design* and one with code *C218520* which is *2 INTRODUCTION* and this would then have all the sub-sections within the *INTRODUCTION*.
+
+###### Composition Examples
+
+This structure allows flexibility in the way compositions are used. It is possible to use a single composition and put all the narrative content into that; at the other extrememe it is possible to put every narrative section into its own composition. The expectation is that use of a single composition will be appropriate for document centric use cases but for other use cases where the focus is on more granular data a balance can be found between the number of distinct compositions and the overhead of having multiple compositions.
+
+In the examples provided [Composition-IGBJ-Narrative.html](Composition-IGBJ-Narrative.html) shows combination of two sections (*1.3 Schedule of Activities* and *5.1 Description of Trial Population and Rationale*) into one composition while [Composition-IGBJ-Narrative-2.1.html](Composition-IGBJ-Narrative-2.1.html) and [Composition-IGBJ-Narrative-9.html](Composition-IGBJ-Narrative-9.html) show separate compositions for section *2.1 Purpose of Trial* and section *9 ADVERSE EVENTS, SERIOUS ADVERSE EVENTS, PRODUCT COMPLAINTS, PREGNANCY AND POSTPARTUM INFORMATION* respectively. These compositions are all referred to from the full example [ResearchStudy-IGBJ-ResearchStudy.html ](ResearchStudy-IGBJ-ResearchStudy.html) 
 
 ##### Structured Representation
 
