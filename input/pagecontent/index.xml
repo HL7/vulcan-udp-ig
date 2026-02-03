@@ -6,7 +6,7 @@
   <p>This Implementation Guide has been developed by the Vulcan UDP Project (Utilizing the Digital
     Protocol). </p>
   <p>The content is based on FHIR R6. This is to take advantage of new features in the <a
-      href="https://hl7.org/fhir/6.0.0-ballot3/researchstudy.html">ResearchStudy</a> resource. There
+      href="https://hl7.org/fhir/6.0.0-ballot4/researchstudy.html">ResearchStudy</a> resource. There
     will be backports to earlier FHIR releases in future. </p>
   <p> </p>
   <p><strong>What is a clinical study protocol?</strong> Conduct of clinical studies is guided by
@@ -81,8 +81,8 @@
     are represented in the FHIR Representation mapping spreadsheet (found under <a
       href="downloads.html">Downloads</a> section of the banner).</p>
   <p> The key FHIR resources used are <a
-      href="https://hl7.org/fhir/6.0.0-ballot3/researchstudy.html">ResearchStudy</a> and <a
-      href="https://hl7.org/fhir/6.0.0-ballot3/composition.html">Composition</a>, while also drawing
+      href="https://hl7.org/fhir/6.0.0-ballot4/researchstudy.html">ResearchStudy</a> and <a
+      href="https://hl7.org/fhir/6.0.0-ballot4/composition.html">Composition</a>, while also drawing
     on some patterns found in profiles and extensions from the <a
       href="https://build.fhir.org/ig/HL7/ebm/en/index.html">EBM IG</a>. EBM utilizes protocol
     elements to be able to review and reporting on research completed; UDP will include ICH M11
