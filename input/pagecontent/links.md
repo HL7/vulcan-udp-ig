@@ -28,14 +28,14 @@ These links provide general information that are germane to the development of t
 
 These links are published mappings between the different standards developed as part of the development process
 
-| Link | Target | Source | Description |
+| Link | Source | Target | Description |
 | -------------- | -------------- | -------------- | -------------- |
 | [CTIS Mapping](https://github.com/cdisc-org/DDF-RA/blob/main/Documents/Mappings/ctis_mapping.xlsx) | USDM | CTIS | CDISC Mapping from USDM to EMA CTIS |
 | [SDTM Mapping](https://github.com/cdisc-org/DDF-RA/blob/main/Documents/Mappings/sdtm_mapping.xlsx) | USDM | SDTM | CDISC Mapping from USDM to CDISC SDTM Model |
 | [ClinicalTrials.gov Mapping](https://github.com/cdisc-org/DDF-RA/blob/main/Documents/Mappings/ct-gov_mapping.xlsx) | USDM | ClinicalTrials.gov | CDISC Mapping from USDM to NCI ClinicalTrials.gov schema |
 | [Common Protocol Template Mapping](https://github.com/cdisc-org/DDF-RA/blob/main/Documents/Mappings/cpt_mapping.xlsx) | USDM | Common Protocol Template | CDISC Mapping from USDM to TransCelerate Common Protocol Template (CPT) |
 | [M11 Mapping](https://github.com/cdisc-org/DDF-RA/blob/main/Documents/Mappings/m11_mapping.xlsx) | USDM | M11 | CDISC Mapping from USDM to ICH M11 Technical Specification |
-| <a href="Mappings/M11 to FHIR Mapping 01.xlsx">M11 to USDM to FHIR Mapping</a> | FHIR | M11<br />FHIR | Three way mapping discussed in the FHIR Representation section |
+| <a href="Mappings/M11 to FHIR Mapping 01.xlsx">M11 to USDM to FHIR Mapping</a> | M11 and<br />USDM<br /> | FHIR | Three way mapping discussed in the FHIR Representation section on [mapping](fhir-representation.html#usdm-and-m11-to-fhir-mapping). The versions mapped are specified in the file and will normally be the most recent. |
 
 ### Technical Links
 

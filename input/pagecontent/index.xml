@@ -25,7 +25,7 @@
     automation(See Use Case Opportunities, Present and Future).</p>
   <p> </p>
   <p><strong>Why FHIR?</strong> FHIR adoption in healthcare has expanded rapidly in recent years.
-    (See The State of FHIR in 2025). FHIR-based exchange of protocols will enable their use within
+    (See <a href="https://www.hl7.org/documentcenter/public/white-papers/2025%20State%20of%20FHIR%20Survey%20Report.pdf">The State of FHIR in 2025</a>). FHIR-based exchange of protocols will enable their use within
     healthcare systems, helping to bridge clinical research and care and to facilitate translational
     research. Emerging applications of FHIR in regulated clinical research include exchange of
     electronic Product Information and PQ-CMC documentation. Leveraging FHIR for protocol exchange
