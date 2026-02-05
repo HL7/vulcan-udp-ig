@@ -35,8 +35,9 @@ The implementers will vary in their desired use of M11: some will treat as a doc
 
 The FHIR implementation must therefore cover both narrative and structured content. The challenge is that some data is purely textual while others is quite granular.  We also have to recognize that some implementers will cling to a document paradigm while others will want to use the granular machine readable content as they automate systems.
 
-<div><img src="narrative-and-structured-01.png" alt="narrative-and-structured-01.png" style="max-width: 50%;height: auto;"/>
-<p>Figure 1: Narrative vs Structured</p></div>
+<div><img src="narrative-and-structured-02.png" alt="narrative-and-structured-02.png" style="max-width: 50%;height: auto;"/>
+<p>Figure 1: FHIR must support both Narrative and Structured representation</p></div>
+
 
 ##### Narrative Representation
 
@@ -78,19 +79,48 @@ Some of these extensions are general purpose and will be relevant beyond USDM an
 
 ##### Hierarchy of Resources, Extensions and Profiles Used
 
-<div><img src="Extensions and profiles 01.png" alt="Extensions and profiles 01.png" style="max-width: 80%;height: auto;"/>
-<p>Figure 5: Extensions and Profiles of ResearchStudy</p></div>
-> **ResearchStudy** 
->
-> - profiled by **StudyDesign** which is part of the EBM IG.  This in turn is profiled by **M11_ResearchStudyProfile** which tightens cardinality of some attributes and binds appropriate terminology and connects some extensions.
->
-> - extended by **NarrativeElements** 
->   - which provides a pointer to **M11ResearchStudyNarratives** which is a profile of **Composition**
-> - **M11_ResearchStudyProfile** 
->   - contains **ResearchStudyStudyAmendment** 
->     - which contains  **ResearchStudyStudyAmendmentDetails** 
->     - and **ResearchStudyStudyAmendmentScopeImpact**
->
+The drawing below shows the names of the Profiles used and the Extensions made for UDP. For description of the function of profiles and extensions see the [description above](fhir-representation.html#fhir-elements-and-protocol-representation)
+
+<div><img src="Extensions and profiles 02.png" alt="Extensions and profiles 02.png" style="max-width: 80%;height: auto;"/>
+<p>Figure 5: Profiles of ResearchStudy and Composition and associated Extensions</p></div>
+
+The list below shows the hierarchy, of profiles, extensions and their attributes (the [artifact definitions](artifacts.html#structures-resource-profiles) should be consulted for the full details)
+
+> - p) m11-research-study-profile(ResearchStudy)
+>   - (e) narrative-elements named narrative
+>     - value
+>     - (p) m11-research-study-narratives(composition)
+>       - subject
+>       - section
+>       - type
+>       - author
+>   - (e) M11_ProtocolAmendment named amendment
+>     - scope
+>     - country
+>     - region
+>     - site
+>     - approvalDate
+>     - signature
+>     - signatureUrl
+>     - signatureMethod
+>     - (e) ResearchStudyStudyAmendmentScopeImpact named scopeImpact
+>       - number
+>       - scope
+>     - primaryReason
+>     - secondaryReason
+>     - summary
+>     - substantialImpactSafety
+>     - substantialImpactSafetyComment
+>     - substantialImpactReliability
+>     - substantialImpactReliabilityComment
+>     - (e) ResearchStudyStudyAmendmentDetails
+>       - detail
+>       - rationale
+>       - section
+>     - rationale
+>     - description
+>   - (e) ResearchStudySponsorConfidentialityStatement named confidentialityStatement
+>     - value
 
 ### Terminology
 
