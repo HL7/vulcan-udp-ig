@@ -158,19 +158,80 @@ dependencies:
 # is specified by id or name, SUSHI will replace it with the correct
 # URL when generating the IG JSON.
 #
-# groups:
-#   GroupA:
-#     name: Group A
-#     description: The Alpha Group
-#     resources:
-#     - StructureDefinition/animal-patient
-#     - StructureDefinition/arm-procedure
-#   GroupB:
-#     name: Group B
-#     description: The Beta Group
-#     resources:
-#     - StructureDefinition/bark-control
-#     - StructureDefinition/bee-sting
+groups:
+  GroupNAR:
+    name: Profiles & Extensions - Narrative Structures
+    description: Profiles and Extensions to allow representation of narrative structures
+    resources:
+    - StructureDefinition/m11-research-study-narratives
+    - StructureDefinition/m11-research-study-profile
+    - StructureDefinition/narrative-elements
+  GroupAMD:
+    name: Profiles & Extensions - Protocol amendment
+    description: Profiles and Extensions representing amendments to a protocol
+    resources:
+    - StructureDefinition/m11-protocol-amendment
+    - StructureDefinition/m11-amendment-detail
+    - StructureDefinition/m11-amendment-scope-impact
+  GroupOTH:
+    name: Profiles & Extensions - other
+    description: Other Profiles and Extensions
+    resources:
+    - StructureDefinition/m11-confidentiality-statement
+#Terminology
+  GroupCS:
+    name: Terminology - Code Systems
+    description: The majority of required code systems are maintained by CDISC on the NCI Thesaurus
+    resources:
+    - CodeSystem/narrative-elements-cs
+  GroupVS:
+    name: Terminology - Value Sets
+    description: "These define sets of codes used by systems conforming to this implementation guide. 
+                  (NOTE ICH and CDISC have signed a Memorandum of Understanding (MOU) collaborating to 
+                  support the maintenance and governance of ICH M11 controlled terminology...focusing on 
+                  the use of CDISC’s unified governance process and terminology services for long-term support.)"
+    resources:
+    - ValueSet/m11-study-amendment-reason-vs
+    - ValueSet/ddf-study-title-type-vs
+    - ValueSet/cdisc-yes-no-vs
+    - ValueSet/m11-identifier-type-vs
+    - ValueSet/m11-phase-vs
+    - ValueSet/m11-section-codes-vs
+    - ValueSet/nci-study-role-vs
+    - ValueSet/narrative-elements-vs
+    - ValueSet/m11-country-region-vs
+    - ValueSet/m11-amendment-scope-enrollment-vs
+    - ValueSet/m11-study-amendment-scope-vs
+# Examples
+  GroupJPN:
+    name: Example Instances - Japanese Protocol
+    description: "These examples show how the same content can be represented in both English and Japanese. 
+      See the [Downloads section](downloads.html) for a file to load the instance set to a server."
+    resources:
+    - ResearchStudy/JPMA0001-jpn
+    - ResearchStudy/JPMA0001-eng
+    - Group/JPMA0001-Criteria-JPN
+    - Composition/JPMA0001-Section5-jpn
+    - Organization/JPMA-Organization
+  GroupIGBJ:
+    name: Example Instances - IGBJ
+    description: Example Protocol - IGBJ - English
+    resources:
+     - ResearchStudy/IGBJ-ResearchStudy
+     - Composition/IGBJ-Narrative
+     - Composition/IGBJ-Narrative-1.3
+     - Composition/IGBJ-Narrative-2.1
+     - Composition/IGBJ-Narrative-5.1
+     - Composition/IGBJ-Narrative-9
+     - MedicinalProductDefinition/IGBJ-MedicinalProduct
+     - Organization/IGBJ-Organization
+  GroupELIG:
+    name: Example Instances - Eligibility Criteria
+    description: Structured Representation of Eligbility Criteria
+    resources:
+    - Group/DIBASY-Eligibility
+    - Group/IGBJ-Eligibility
+
 #
 #
 # The ImplementationGuide resource defines several other properties
