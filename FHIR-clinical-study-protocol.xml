@@ -15,7 +15,11 @@
 <artifact id="Composition/IGBJ-Narrative-5.1" key="Composition-IGBJ-Narrative-5.1" name="IGBJ Protocol Narrative 5.1"/>
 <artifact id="Composition/IGBJ-Narrative-9" key="Composition-IGBJ-Narrative-9" name="IGBJ Protocol Narrative 9"/>
 <artifact id="ResearchStudy/IGBJ-ResearchStudy" key="ResearchStudy-IGBJ-ResearchStudy" name="IGBJ Research Study with narrative"/>
-<artifact id="Group/425098" key="Group-425098" name="Japanese Protocol from Vulcan UDP Eligibility Criteria"/>
+<artifact id="Organization/JPMA-Organization" key="Organization-JPMA-Organization" name="JPMA Organization"/>
+<artifact id="Composition/JPMA0001-Section5-jpn" key="Composition-JPMA0001-Section5-jpn" name="JPMA0001 Inclusion/Exclusion Narrative"/>
+<artifact id="ResearchStudy/JPMA0001-eng" key="ResearchStudy-JPMA0001-eng" name="JPMA0001 Provided Example - English Language"/>
+<artifact id="ResearchStudy/JPMA0001-jpn" key="ResearchStudy-JPMA0001-jpn" name="JPMA0001 Provided Example - Japanese Language"/>
+<artifact id="Group/JPMA0001-Criteria-JPN" key="Group-JPMA0001-Criteria-JPN" name="Japanese Protocol from Vulcan UDP Eligibility Criteria"/>
 <artifact id="Group/IGBJ-Eligibility" key="Group-IGBJ-Eligibility" name="M11 IGBJ Protocol Example Eligibility Criteria"/>
 <artifact id="ValueSet/m11-identifier-type-vs" key="ValueSet-m11-identifier-type-vs" name="M11 Identifier Type Value Set"/>
 <artifact id="ValueSet/m11-phase-vs" key="ValueSet-m11-phase-vs" name="M11 Phase Value Set"/>
