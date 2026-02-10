@@ -72,8 +72,9 @@ In the examples provided [Composition-IGBJ-Narrative.html](Composition-IGBJ-Narr
 
 The real power of a digital protocol comes from representing the content as a series of distinct attributes. USDM and M11 provide information models that can be represented by FHIR using the same resources used for the narrative representation.  While many of the necessary attributes are already present there are inevitably some that have no FHIR equivalent.  For this we use the extension mechanism.
 
-<div><img src="structured-content-01.png" alt="GranularContent 01.png" style="max-width: 80%;height: auto;"/>
+<div><img src="structured-content-01.png" alt="structured-content-01.png" style="max-width: 80%;height: auto;"/>
 <p>Figure 4: Structured Content</p></div>
+
 
 Some of these extensions are general purpose and will be relevant beyond USDM and M11 and they can be profiled to tie them to exact requirements.
 
