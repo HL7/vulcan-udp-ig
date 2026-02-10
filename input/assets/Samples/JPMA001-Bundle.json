@@ -1,0 +1,461 @@
+// POST using "https://[myHost]"
+// Individual resources will be PUT which creates the resource if not found otherwise does an update
+// Japanese Language Version
+{
+    "resourceType": "Bundle",
+    "type": "transaction",
+    "entry": [
+        //----------------------------
+        // Organization/JPMA-Organization"
+        {
+            "resource": {
+                "resourceType": "Organization",
+                "id": "JPMA-Organization",
+                "name": "JPMA"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Organization/JPMA-Organization"
+            }
+        },
+        //----------------------------
+        // MedicinalProductDefinition/IGBJ-MedicinalProduct
+        // missing
+        //----------------------------
+        // Composition/JPMA0001-Section5-jpn
+        {
+            "resource": {
+                "resourceType": "Composition",
+                "id": "JPMA0001-Section5-jpn",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/m11-research-study-narratives"
+                    ]
+                },
+                "subject": [
+                    {
+                        "reference": "ResearchStudy/IGBJ-ResearchStudy"
+                    }
+                ],
+                "author": [
+                    {
+                        "reference": "Organization/JPMA-Organization"
+                    }
+                ],
+                "section": [
+                    {
+                        "text": {
+                            "status": "additional",
+                            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">To be eligible to participate in this trial, an individual must meet all the following criteria: 1　同意取得前に2型糖尿病と診断されている患者 2　食事療法および運動療法を実施中の男女患者で以下の経口血糖降下薬1剤による治療を受けている患者 3　ビグアナイド薬：薬剤の種類および用法・用量を同意取得前12週間変更していないこと 他の経口血糖降下薬：薬剤の種類および用法・用量を同意取得前8週間変更していないこと 4　Visit 1でのHbA1cが≥7.5% ≤12.0%（NGSP） 5　薬物治療中の高血圧症を合併している患者の場合，その降圧薬が治験薬の割付前4週間以上変更なく安定して使用されている患者 6　同意取得時の年齢が20歳以上 7　Visit 1でのBMI（体格指数）が40.0 kg/m2以下 8　GCP（医薬品の臨床試験の実施の基準，平成9年3月27日，厚生省令第28号）および薬事法に従い，Visit 1 までに署名・日付入りの文書同意が得られた患者</div>"
+                        },
+                        "title": "5.2\tInclusion Criteria",
+                        "code": {
+                            "coding": [
+                                {
+                                    "code": "C218549",
+                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "text": {
+                            "status": "additional",
+                            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">An individual who meets any of the following criteria will be excluded from participation in this trial: 1　プラセボ導入期間中に測定した一晩絶食後の空腹時血糖値が240 mg/dL（13.3 mmol/L）を確認された，コントロール不良な高血糖を有する患者 2　経口血糖降下薬で治療されていない患者，および2種類以上の経口血糖降下薬で治療されている患者 3　同意取得前24週間以内に急性冠症候群（非ST上昇型心筋梗塞，ST上昇型心筋梗塞および不安定狭心症），脳卒中または一過性脳虚血発作の既往を有する患者 4　スクリーニング時またはプラセボ導入期間中に測定した血清ALT（SGPT），AST（SGOT），ｱﾙｶﾘﾌｨｽﾌｧﾀｰｾﾞのいずれかが基準値上限の3倍を超えた，肝機能障害の兆候を示す患者 5　肥満外科手術を過去2年以内に受けた患者，または慢性的吸収障害を引き起こす他の消化管手術を受けた患者 6　その他治験に参加している間に，患者の安全性を脅かすと考えられる臨床状態を有すると治験責任（分担）医師が判断した患者 7 テストEX、7-1: ±（プラスマイナス）、7-2: ×（倍率）、7-3: µg(マイクログラム) 8 テストEX、8-1: α、β、δ等（ギリシャ文字）、8-2:Δ（変化量）、8-3: σ（シグマ） 9　テストEX、9-1: ＝（イコール）、9-2: ≠（ノットイコール）、9-3: ®（商標記号） 10　テストEX、10-1:参照や補足説明：*、†、‡、※、10-2:分数記号：½、10-3:℃ 11 テストEX、11-1:␣ （改行しないスペース）、（改行しないハイフン）、Å（ウムラウト）</div>"
+                        },
+                        "title": "5.3\tExclusion Criteria",
+                        "code": {
+                            "coding": [
+                                {
+                                    "code": "C218550",
+                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "status": "final",
+                "type": {
+                    "coding": [
+                        {
+                            "code": "b001",
+                            "system": "http://hl7.org/fhir/uv/clinical-study-protocol/CodeSystem/narrative-elements-cs",
+                            "display": "Protocol narrative"
+                        }
+                    ]
+                },
+                "date": "2026-01-14",
+                "title": "JPMA0001 Protocol Narrative Sections 5.2 and 5.3 (Inclusion/Exclusion Ctriteria)"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Composition/JPMA0001-Section5-jpn"
+            }
+        },
+        //----------------------------
+        // ResearchStudy/JPMA0001-jpn
+        {
+            "resource": {
+                "resourceType": "ResearchStudy",
+                "id": "JPMA0001-jpn",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/m11-research-study-profile"
+                    ]
+                },
+                "identifier": [
+                    {
+                        "type": {
+                            "text": "Sponsor Identifier"
+                        },
+                        "system": "https://example.org/sponsor-identifier",
+                        "value": "JPMA001",
+                        "use": "usual"
+                    }
+                ],
+                "label": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "short-title",
+                                    "system": "http://hl7.org/fhir/title-type",
+                                    "display": "Short title"
+                                }
+                            ]
+                        },
+                        "value": "2型糖尿病患者への投与"
+                    }
+                ],
+                "recruitment": {
+                    "eligibility": {
+                        "reference": "Group/JPMA0001-Criteria-JPN"
+                    }
+                },
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/narrative-elements",
+                        "valueReference": {
+                            "reference": "Composition/JPMA0001-Section5-jpn"
+                        }
+                    }
+                ],
+                "version": "2.0",
+                "title": "\t経口血糖降下薬単剤による治療では血糖コントロール不十分な2型糖尿病患者を対象として，JPMA001を併用投与した時の安全性および有効性を検討する多施設共同，52週間，ランダム化，並行群間試験",
+                "date": "2026-01-14",
+                "status": "draft",
+                "phase": {
+                    "coding": [
+                        {
+                            "code": "C15602",
+                            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                            "display": "Phase 3"
+                        }
+                    ]
+                }
+            },
+            "request": {
+                "method": "PUT",
+                "url": "ResearchStudy/JPMA0001-jpn"
+            }
+        },
+        //----------------------------
+        // Group/JPMA0001-Criteria-JPN
+        {
+            "resource": {
+                "resourceType": "Group",
+                "id": "JPMA0001-Criteria-JPN",
+                "identifier": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "FILL",
+                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                                    "display": "Filler Identifier"
+                                }
+                            ]
+                        },
+                        "system": "https://example.org/ID-EligibilityCriteria",
+                        "value": "425098"
+                    }
+                ],
+                "characteristic": [
+                    {
+                        "timing": [
+                            {
+                                "contextCode": {
+                                    "coding": [
+                                        {
+                                            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                            "code": "C16735",
+                                            "display": "Informed Consent"
+                                        }
+                                    ]
+                                },
+                                "offsetDuration": {
+                                    "comparator": "<",
+                                    "value": 0
+                                },
+                                "text": "before obtaining informed consent"
+                            }
+                        ],
+                        "description": "同意取得前に2型糖尿病と診断されている患者",
+                        "code": {
+                            "coding": [
+                                {
+                                    "code": "64572001",
+                                    "system": "http://snomed.info/sct",
+                                    "display": "Disease (disorder)"
+                                }
+                            ]
+                        },
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "code": "44054006",
+                                    "system": "http://snomed.info/sct",
+                                    "display": "Diabetes mellitus type 2 (disorder)"
+                                }
+                            ]
+                        },
+                        "exclude": false
+                    },
+                    {
+                        "valueRange": {
+                            "low": {
+                                "value": 7.5,
+                                "code": "%",
+                                "system": "http://unitsofmeasure.org",
+                                "unit": "%"
+                            },
+                            "high": {
+                                "value": 12,
+                                "code": "%",
+                                "system": "http://unitsofmeasure.org",
+                                "unit": "%"
+                            }
+                        },
+                        "timing": [
+                            {
+                                "text": "at Visit 1"
+                            }
+                        ],
+                        "description": "Visit 1でのHbA1cが≥7.5% ≤12.0%（NGSP）",
+                        "code": {
+                            "coding": [
+                                {
+                                    "code": "59261-8",
+                                    "system": "http://loinc.org",
+                                    "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+                                }
+                            ]
+                        },
+                        "exclude": false
+                    },
+                    {
+                        "code": {
+                            "text": "Defined by CodeableConcept"
+                        },
+                        "valueCodeableConcept": {
+                            "text": "薬物治療中の高血圧症を合併している患者の場合，その降圧薬が治験薬の割付前4週間以上変更なく安定して使用されている患者"
+                        },
+                        "description": "薬物治療中の高血圧症を合併している患者の場合，その降圧薬が治験薬の割付前4週間以上変更なく安定して使用されている患者",
+                        "exclude": false
+                    },
+                    {
+                        "valueQuantity": {
+                            "comparator": ">=",
+                            "value": 20,
+                            "code": "a",
+                            "system": "http://unitsofmeasure.org",
+                            "unit": "years"
+                        },
+                        "timing": [
+                            {
+                                "contextCode": {
+                                    "coding": [
+                                        {
+                                            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                            "code": "C16735",
+                                            "display": "Informed Consent"
+                                        }
+                                    ]
+                                },
+                                "offsetDuration": {
+                                    "value": 0
+                                }
+                            }
+                        ],
+                        "description": "同意取得時の年齢が20歳以上",
+                        "code": {
+                            "coding": [
+                                {
+                                    "code": "397669002",
+                                    "system": "http://snomed.info/sct",
+                                    "display": "Age"
+                                }
+                            ]
+                        },
+                        "exclude": false
+                    },
+                    {
+                        "valueQuantity": {
+                            "comparator": "<=",
+                            "value": 40,
+                            "code": "kg/m2",
+                            "system": "http://unitsofmeasure.org",
+                            "unit": "kilogram per square meter (kg/m2)"
+                        },
+                        "timing": [
+                            {
+                                "text": "At Visit 1"
+                            }
+                        ],
+                        "description": "Visit 1でのBMI（体格指数）が40.0 kg/m2以下",
+                        "code": {
+                            "coding": [
+                                {
+                                    "code": "39156-5",
+                                    "system": "http://loinc.org",
+                                    "display": "Body mass index (BMI) [Ratio]"
+                                }
+                            ]
+                        },
+                        "exclude": false
+                    },
+                    {
+                        "code": {
+                            "text": "Defined by CodeableConcept"
+                        },
+                        "valueCodeableConcept": {
+                            "text": "GCP（医薬品の臨床試験の実施の基準，平成9年3月27日，厚生省令第28号）および薬事法に従い，Visit 1 までに署名・日付入りの文書同意が得られた患者"
+                        },
+                        "description": "GCP（医薬品の臨床試験の実施の基準，平成9年3月27日，厚生省令第28号）および薬事法に従い，Visit 1 までに署名・日付入りの文書同意が得られた患者",
+                        "exclude": false
+                    },
+                    {
+                        "code": {
+                            "text": "Defined by CodeableConcept"
+                        },
+                        "valueCodeableConcept": {
+                            "text": "プラセボ導入期間中に測定した一晩絶食後の空腹時血糖値が240 mg/dL（13.3 mmol/L）を確認された，コントロール不良な高血糖を有する患者"
+                        },
+                        "description": "プラセボ導入期間中に測定した一晩絶食後の空腹時血糖値が240 mg/dL（13.3 mmol/L）を確認された，コントロール不良な高血糖を有する患者",
+                        "exclude": true
+                    },
+                    {
+                        "code": {
+                            "text": "Defined by CodeableConcept"
+                        },
+                        "valueCodeableConcept": {
+                            "text": "経口血糖降下薬で治療されていない患者，および2種類以上の経口血糖降下薬で治療されている患者"
+                        },
+                        "description": "経口血糖降下薬で治療されていない患者，および2種類以上の経口血糖降下薬で治療されている患者",
+                        "exclude": true
+                    },
+                    {
+                        "code": {
+                            "text": "Defined by CodeableConcept"
+                        },
+                        "valueCodeableConcept": {
+                            "text": "同意取得前24週間以内に急性冠症候群（非ST上昇型心筋梗塞，ST上昇型心筋梗塞および不安定狭心症），脳卒中または一過性脳虚血発作の既往を有する患者"
+                        },
+                        "description": "同意取得前24週間以内に急性冠症候群（非ST上昇型心筋梗塞，ST上昇型心筋梗塞および不安定狭心症），脳卒中または一過性脳虚血発作の既往を有する患者",
+                        "exclude": true
+                    },
+                    {
+                        "code": {
+                            "text": "Defined by CodeableConcept"
+                        },
+                        "valueCodeableConcept": {
+                            "text": "スクリーニング時またはプラセボ導入期間中に測定した血清ALT（SGPT），AST（SGOT），ｱﾙｶﾘﾌｨｽﾌｧﾀｰｾﾞのいずれかが基準値上限の3倍を超えた，肝機能障害の兆候を示す患者"
+                        },
+                        "description": "スクリーニング時またはプラセボ導入期間中に測定した血清ALT（SGPT），AST（SGOT），ｱﾙｶﾘﾌｨｽﾌｧﾀｰｾﾞのいずれかが基準値上限の3倍を超えた，肝機能障害の兆候を示す患者",
+                        "exclude": true
+                    },
+                    {
+                        "code": {
+                            "text": "Defined by CodeableConcept"
+                        },
+                        "valueCodeableConcept": {
+                            "text": "肥満外科手術を過去2年以内に受けた患者，または慢性的吸収障害を引き起こす他の消化管手術を受けた患者"
+                        },
+                        "description": "肥満外科手術を過去2年以内に受けた患者，または慢性的吸収障害を引き起こす他の消化管手術を受けた患者",
+                        "exclude": true
+                    },
+                    {
+                        "code": {
+                            "text": "Defined by CodeableConcept"
+                        },
+                        "valueCodeableConcept": {
+                            "text": "その他治験に参加している間に，患者の安全性を脅かすと考えられる臨床状態を有すると治験責任（分担）医師が判断した患者"
+                        },
+                        "description": "その他治験に参加している間に，患者の安全性を脅かすと考えられる臨床状態を有すると治験責任（分担）医師が判断した患者",
+                        "exclude": true
+                    },
+                    {
+                        "code": {
+                            "text": "Defined by CodeableConcept"
+                        },
+                        "valueCodeableConcept": {
+                            "text": "テストEX、7-1: ±（プラスマイナス）、7-2: ×（倍率）、7-3: µg(マイクログラム)"
+                        },
+                        "description": "テストEX、7-1: ±（プラスマイナス）、7-2: ×（倍率）、7-3: µg(マイクログラム)",
+                        "exclude": true
+                    },
+                    {
+                        "code": {
+                            "text": "Defined by CodeableConcept"
+                        },
+                        "valueCodeableConcept": {
+                            "text": "テストEX、8-1: α、β、δ等（ギリシャ文字）、8-2:Δ（変化量）、8-3: σ（シグマ）"
+                        },
+                        "description": "テストEX、8-1: α、β、δ等（ギリシャ文字）、8-2:Δ（変化量）、8-3: σ（シグマ）",
+                        "exclude": true
+                    },
+                    {
+                        "code": {
+                            "text": "Defined by CodeableConcept"
+                        },
+                        "valueCodeableConcept": {
+                            "text": "テストEX、9-1: ＝（イコール）、9-2: ≠（ノットイコール）、9-3: ®（商標記号）"
+                        },
+                        "description": "テストEX、9-1: ＝（イコール）、9-2: ≠（ノットイコール）、9-3: ®（商標記号）",
+                        "exclude": true
+                    },
+                    {
+                        "code": {
+                            "text": "Defined by CodeableConcept"
+                        },
+                        "valueCodeableConcept": {
+                            "text": "テストEX、10-1:参照や補足説明：*、†、‡、※、10-2:分数記号：½、10-3:℃"
+                        },
+                        "description": "テストEX、10-1:参照や補足説明：*、†、‡、※、10-2:分数記号：½、10-3:℃",
+                        "exclude": true
+                    },
+                    {
+                        "code": {
+                            "text": "Defined by CodeableConcept"
+                        },
+                        "valueCodeableConcept": {
+                            "text": "テストEX、11-1:␣ （改行しないスペース）、（改行しないハイフン）、Å（ウムラウト）"
+                        },
+                        "description": "テストEX、11-1:␣ （改行しないスペース）、（改行しないハイフン）、Å（ウムラウト）",
+                        "exclude": true
+                    }
+                ],
+                "name": "JPMA Eligibility Example",
+                "title": "Japanese Protocol from Vulcan UDP Eligibility Criteria",
+                "status": "active",
+                "type" : "person",
+                "membership": "definitional",
+                "combinationMethod": "all-of"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Group/JPMA0001-Criteria-JPN"
+            }
+        }
+    ]
+}
