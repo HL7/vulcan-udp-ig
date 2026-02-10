@@ -160,32 +160,32 @@ dependencies:
 #
 groups:
   GroupNAR:
-    name: Profiles & Extensions - Narrative Structures
+    name: "Profiles & Extensions: Narrative Structures"
     description: Profiles and Extensions to allow representation of narrative structures
     resources:
     - StructureDefinition/m11-research-study-narratives
     - StructureDefinition/m11-research-study-profile
     - StructureDefinition/narrative-elements
   GroupAMD:
-    name: Profiles & Extensions - Protocol amendment
+    name: "Profiles & Extensions: Protocol amendment"
     description: Profiles and Extensions representing amendments to a protocol
     resources:
     - StructureDefinition/m11-protocol-amendment
     - StructureDefinition/m11-amendment-detail
     - StructureDefinition/m11-amendment-scope-impact
   GroupOTH:
-    name: Profiles & Extensions - other
+    name: "Profiles & Extensions: Other"
     description: Other Profiles and Extensions
     resources:
     - StructureDefinition/m11-confidentiality-statement
 #Terminology
   GroupCS:
-    name: Terminology - Code Systems
+    name: "Terminology: Code Systems"
     description: The majority of required code systems are maintained by CDISC on the NCI Thesaurus
     resources:
     - CodeSystem/narrative-elements-cs
   GroupVS:
-    name: Terminology - Value Sets
+    name: "Terminology: Value Sets"
     description: "These define sets of codes used by systems conforming to this implementation guide. 
                   (NOTE ICH and CDISC have signed a Memorandum of Understanding (MOU) collaborating to 
                   support the maintenance and governance of ICH M11 controlled terminology...focusing on 
@@ -204,7 +204,7 @@ groups:
     - ValueSet/m11-study-amendment-scope-vs
 # Examples
   GroupJPN:
-    name: Example Instances - Japanese Protocol
+    name: "Example Instances: Japanese Protocol"
     description: "These examples show how the same content can be represented in both English and Japanese. 
       See the [Downloads section](downloads.html) for a file to load the instance set to a server."
     resources:
@@ -214,7 +214,7 @@ groups:
     - Composition/JPMA0001-Section5-jpn
     - Organization/JPMA-Organization
   GroupIGBJ:
-    name: Example Instances - IGBJ
+    name: "Example Instances: IGBJ"
     description: Example Protocol - IGBJ - English
     resources:
      - ResearchStudy/IGBJ-ResearchStudy
@@ -226,7 +226,7 @@ groups:
      - MedicinalProductDefinition/IGBJ-MedicinalProduct
      - Organization/IGBJ-Organization
   GroupELIG:
-    name: Example Instances - Eligibility Criteria
+    name: "Example Instances: Eligibility Criteria"
     description: Structured Representation of Eligbility Criteria
     resources:
     - Group/DIBASY-Eligibility
