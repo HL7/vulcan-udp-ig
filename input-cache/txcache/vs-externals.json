@@ -1,3 +1,6 @@
 {
+  "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl" : null,
+  "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl?fhir_vs=C217045" : null,
+  "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl/C217045" : null,
   "http://hl7Vulcan.org/Pending|null" : null
 }

@@ -6,12 +6,13 @@ Description:    """Constraint of ResearchStudy to M11 Guidance
 An instance of this profile represents a single version of the protocol definition. Previous amendments are represented
 by further instances of ResearchStudy linked through the relatedArtifact attribute. 
 """
-* ^extension[$ext-fmm].valueInteger = 1
+* ^extension[$ext-fmm].valueInteger = 2
+* ^status = #active
 
 * extension contains
     narrative-elements named narrative 0..* and
     M11_ProtocolAmendment named amendment 0..1 and
-    ResearchStudySponsorConfidentialityStatement named confidentialityStatement 0..1
+    m11-confidentiality-statement named confidentialityStatement 0..1
 
 * identifier.type 1..1
 * identifier.type ?!

@@ -27,7 +27,7 @@ on the server by following this link https://vhewer.com/display-product?url=http
 * label[=].value = "A Phase 3 Study of Nasal Glucagon (LY900018) Compared to Intramuscular Glucagon for Treatment of Insulin-induced Hypoglycemia in Japanese Patients with Diabetes Mellitus"
 * date = 2017-12-05
 * status = $Pub#draft "Draft" // TODO: Check we are really using this correctly
-* phase = $NCIT#C15602  "Phase 3"
+* phase = $NCIT#C15602  "Phase III Trial"
 * focus = Reference(IGBJ-MedicinalProduct)
 * condition[0] = $SCT#1137328006 "Iatrogenic hypoglycaemia" // Not "Insulin-induced Hypoglycemia" for which there is no snomed code
 
@@ -53,26 +53,26 @@ on the server by following this link https://vhewer.com/display-product?url=http
 
 * extension[m11-protocol-amendment][=].extension[scopeImpact][+].extension[scope].valueCodeableConcept = $NCIT#C41065  "Locally"
 * extension[m11-protocol-amendment][=].extension[scopeImpact][=].extension[number].valuePositiveInt = 234
-* extension[m11-protocol-amendment][=].extension[scopeImpact][+].extension[scope].valueCodeableConcept = $NCIT#C68846  "Globally"
+* extension[m11-protocol-amendment][=].extension[scopeImpact][+].extension[scope].valueCodeableConcept = $NCIT#C68846  "Global"
 * extension[m11-protocol-amendment][=].extension[scopeImpact][=].extension[number].valuePositiveInt = 983
 
-* extension[m11-protocol-amendment][=].extension[primaryReason].valueCodeableConcept = $NCIT#C218490  "Regulatory Agency Request To Amend"
-* extension[m11-protocol-amendment][=].extension[secondaryReason].valueCodeableConcept = $NCIT#C218494  "Manufacturing Change"
+* extension[m11-protocol-amendment][=].extension[primaryReason].valueCodeableConcept = $NCIT#C218490  "Regulatory Agency Request to Amend Amendment Reason"
+* extension[m11-protocol-amendment][=].extension[secondaryReason].valueCodeableConcept = $NCIT#C218494  "Manufacturing Change Amendment Reason"
 
 * extension[m11-protocol-amendment][=].extension[summary].valueString = "Regulator required manufacturing chanage."
 
 * extension[m11-protocol-amendment][=].extension[substantialImpactSafety].valueCodeableConcept =  $NCIT#C49488  "Yes"
 * extension[m11-protocol-amendment][=].extension[substantialImpactSafetyComment].valueString = "Specifically implemented to decrease safety risks."
-* extension[m11-protocol-amendment][=].extension[substantialImpactReliability].valueCodeableConcept =  $NCIT#C17998  "Unknown"
+* extension[m11-protocol-amendment][=].extension[substantialImpactReliability].valueCodeableConcept =  $NCIT#C49487  "No"
 * extension[m11-protocol-amendment][=].extension[substantialImpactReliabilityComment].valueString = "ccc"
 
 * extension[m11-protocol-amendment][=].extension[details][+].extension[detail].valueString = "amendment one"
 * extension[m11-protocol-amendment][=].extension[details][=].extension[rationale].valueString = "clarification"
-* extension[m11-protocol-amendment][=].extension[details][=].extension[section].valueCodeableConcept = $NCIT#C218515  "1.1 Protocol Synopsis"
+* extension[m11-protocol-amendment][=].extension[details][=].extension[section].valueCodeableConcept = $NCIT#C218515  "ICH M11 Protocol Section 1.1 Protocol Synopsis"
 
 * extension[m11-protocol-amendment][=].extension[details][+].extension[detail].valueString = "amendment two"
 * extension[m11-protocol-amendment][=].extension[details][=].extension[rationale].valueString = "exclude regular drinkers"
-* extension[m11-protocol-amendment][=].extension[details][=].extension[section].valueCodeableConcept = $NCIT#C218550  "5.3 Exclusion Criteria"
+* extension[m11-protocol-amendment][=].extension[details][=].extension[section].valueCodeableConcept = $NCIT#C218550  "ICH M11 Protocol Section 5.3 Exclusion Criteria"
 
 * extension[m11-protocol-amendment][=].extension[rationale].valueString = "Updates to address safety concern & align with product guidelines."
 * extension[m11-protocol-amendment][=].extension[description].valueString = "Protocol I8R-JE-IGBJ A Phase 3 Study of Nasal Glucagon (LY900018) Compared to Intramuscular Glucagon for Treatment of Insulin-induced Hypoglycemia in Japanese Patients with Diabetes Mellitus has been amended. The new protocol is indicated by Amendment (a) and will be used to conduct the study in place of any preceding version of the protocol. The overall changes and rationale for the changes made to this protocol are as follows: • An exclusion criterion for patients with retinopathy or maculopathy was added due to the potential risk of fundal hemorrhage induced by hypoglycemia. • The GlucaGen reconstitution volume was changed from 1.0 mL to 1.1 mL in accordance with instructions in the Summary of Product Characteristics (2015)."

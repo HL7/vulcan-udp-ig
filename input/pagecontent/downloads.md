@@ -13,7 +13,7 @@ Download mapping spreadsheet <a href="Mappings/M11 to FHIR Mapping 01.xlsx">here
 
 Instances can be loaded direct to a FHIR server using the files linked below.  These use JSON format and assume that the FHIR server will accept  FHIR R6
 
-[Japanese Instances](Samples/JPMA0001-Bundle.json)
+[Japanese Instances](Samples/JPMA001-Bundle.json)
 
 [IGBJ Instances](samples/IGBJ-Bundle.json)
 

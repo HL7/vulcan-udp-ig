@@ -3,19 +3,20 @@
 Alias: $AmdID = https://example.org/amendment-identifier
 Alias: $AmdSite = https://example.org/site-identifier
 Alias: $ebm-study = study-design
-Alias: $identifier-type-vs = m11-identifier-type-vs
+Alias: $identifier-type-vs = udp-identifier-type-vs
 Alias: $iso3166-2 = urn:iso:std:iso:3166
 Alias: $narrative-elements-cs = narrative-elements-cs
 Alias: $NCIT = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
+Alias: $NCITURL = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
 Alias: $phase-vs = m11-phase-vs
 Alias: $Pub = http://hl7.org/fhir/publication-status
 Alias: $RegID = https://example.org/regulatory-agency-identifier
 Alias: $SCT = http://snomed.info/sct
 Alias: $SpID = https://example.org/sponsor-identifier
-Alias: $study-role-vs = nci-study-role-vs
-Alias: $study-title-type-vs = ddf-study-title-type-vs
+Alias: $study-role-vs = m11-blinded-roles-vs
+Alias: $study-title-type-vs = udp-study-title-type-vs
 Alias: $TitleType = http://hl7.org/fhir/title-type
-Alias: $YesNoUnknownVS = CDISCSDTMYesNoUnknownVS
+Alias: $YesNoUnknownVS = m11-yes-no-vs
 Alias: $ID-EligibilityCriteria = https://example.org/ID-EligibilityCriteria
 
 //-----------------------------------------------------------------------------

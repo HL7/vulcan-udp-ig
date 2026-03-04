@@ -12,6 +12,7 @@ Description: "Simple Eligibility criteria - Age 30-60 years + BMI>=35 + History 
 * status = #active
 
 * description = "Patients aged 30-60 years with a body-mass index of 35 kg/m(2) or more and a history of type 2 diabetes lasting at least 5 years"
+* type = #person
 * membership = #definitional
 * combinationMethod = #all-of
 

@@ -37,13 +37,17 @@ publisher:
 
 dependencies:
   #hl7.fhir.r6.core: 6.0.0-ballot3
-  hl7.fhir.uv.extensions: dev
-  hl7.terminology: latest
-  hl7.fhir.uv.ebm:
-    id: ebm
-    uri: http://hl7.org/fhir/uv/ebm/ImplementationGuide/hl7.fhir.uv.ebm
-    version: 1.0.0-ballot2
+  
+  #/*
+  #hl7.fhir.uv.extensions: dev
+  #hl7.terminology: latest
+  #hl7.fhir.uv.ebm:
+  #  id: ebm
+  #  uri: http://hl7.org/fhir/uv/ebm/ImplementationGuide/hl7.fhir.uv.ebm
+  #  version: 1.0.0-ballot2
+  #  */
 
+  
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
 # auto-generate the page list, but if the author includes pages in
@@ -183,25 +187,31 @@ groups:
     name: "Terminology: Code Systems"
     description: The majority of required code systems are maintained by CDISC on the NCI Thesaurus
     resources:
-    - CodeSystem/narrative-elements-cs
-  GroupVS:
-    name: "Terminology: Value Sets"
+    - CodeSystem/ncit-cs
+  GroupVSM11:
+    name: "Terminology: M11 Value Sets"
     description: "These define sets of codes used by systems conforming to this implementation guide. 
+                  This list has value sets defined b y the M11 Techncial Specification
                   (NOTE ICH and CDISC have signed a Memorandum of Understanding (MOU) collaborating to 
                   support the maintenance and governance of ICH M11 controlled terminology...focusing on 
                   the use of CDISC’s unified governance process and terminology services for long-term support.)"
     resources:
-    - ValueSet/m11-study-amendment-reason-vs
-    - ValueSet/ddf-study-title-type-vs
-    - ValueSet/cdisc-yes-no-vs
-    - ValueSet/m11-identifier-type-vs
-    - ValueSet/m11-phase-vs
-    - ValueSet/m11-section-codes-vs
-    - ValueSet/nci-study-role-vs
-    - ValueSet/narrative-elements-vs
-    - ValueSet/m11-country-region-vs
     - ValueSet/m11-amendment-scope-enrollment-vs
+    - ValueSet/m11-blinded-roles-vs
+    - ValueSet/m11-country-region-vs
+    - ValueSet/m11-phase-vs
+    - ValueSet/m11-study-amendment-reason-vs
     - ValueSet/m11-study-amendment-scope-vs
+    - ValueSet/m11-yes-no-vs
+  GroupVSUDP:
+    name: "Terminology: UDP Value Sets"
+    description: "These define sets of codes used by systems conforming to this implementation guide. 
+                       This list is value sets that are defined by this IG"
+    resources:
+    - ValueSet/udp-identifier-type-vs
+    - ValueSet/udp-narrative-elements-vs
+    - ValueSet/udp-section-codes-vs
+    - ValueSet/udp-study-title-type-vs
 # Examples
   GroupJPN:
     name: "Example Instances: Japanese Protocol"

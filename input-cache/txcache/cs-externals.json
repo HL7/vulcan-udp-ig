@@ -1,12 +1,16 @@
 {
   "http://unstats.un.org/unsd/methods/m49/m49.htm" : null,
-  "urn:ietf:bcp:13|null" : null,
-  "http://hl7.org/fhir/uv/vulcan-udp-ig/Terminology" : null,
-  "http://unstats.un.org/unsd/methods/m49/m49.htm|null" : null,
+  "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl?fhir_vs=C217045" : null,
+  "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl/C217045" : null,
   "http://hl7Vulcan.org/Pending|null" : null,
-  "http://hl7Vulcan.org/Pending" : null,
-  "http://hl7.org/fhir/research-study-phase" : null,
   "http://snomed.info/sct|null" : null,
   "http://hl7.org/fhir/uv/vulcan-udp-ig/Terminology|null" : null,
-  "http://hl7.org/fhir/research-study-phase|null" : null
+  "http://hl7.org/fhir/research-study-phase|null" : null,
+  "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl" : null,
+  "urn:ietf:bcp:13|null" : null,
+  "http://hl7.org/fhir/uv/vulcan-udp-ig/Terminology" : null,
+  "urn:iso:std:iso:3166" : null,
+  "http://unstats.un.org/unsd/methods/m49/m49.htm|null" : null,
+  "http://hl7Vulcan.org/Pending" : null,
+  "http://hl7.org/fhir/research-study-phase" : null
 }

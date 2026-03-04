@@ -9,6 +9,7 @@ template
 output
 fsh-generated
 input/images/x
+ignore
 
 
 # Don't commit this because it's so large #

@@ -42,7 +42,7 @@ Description: "Example showing Janapese text"
 // Inclusion 4
 // Visit 1でのHbA1cが≥7.5% ≤12.0%（NGSP）
 * characteristic[+].description = "Visit 1でのHbA1cが≥7.5% ≤12.0%（NGSP）" 
-* characteristic[=].code = $LOINC#59261-8 "Hemoglobin A1c/Hemoglobin.total in Blood"
+* characteristic[=].code = $LOINC#59261-8 "Hemoglobin A1c/Hemoglobin.total standardized per IFCC-RMP for CDT in Blood"
 * characteristic[=].valueRange.low = 7.5 '%' "%"
 * characteristic[=].valueRange.high = 12 '%' "%"
 * characteristic[=].exclude = false

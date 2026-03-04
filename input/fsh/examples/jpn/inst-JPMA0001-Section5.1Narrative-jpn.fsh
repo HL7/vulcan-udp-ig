@@ -4,7 +4,8 @@ Title: "JPMA0001 Inclusion/Exclusion Narrative"
 Usage: #example
 Description: "Protocol Narrative Sections 5.2 and 5.3"
 * status = #final
-* type = $narrative-elements-cs#b001 "Protocol narrative"
+//* type = $narrative-elements-cs#b001 "Protocol narrative"
+* type = $NCIT#C207508 // Narrative
 * subject = Reference(JPMA0001-jpn)
 * date = "2026-01-14"
 * author = Reference(JPMA-Organization) // Reference to Organization: Marketing Authorization Holder

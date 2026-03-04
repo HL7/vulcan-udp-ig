@@ -16,7 +16,7 @@ For the purposes of development of this initial version of this Implementation G
 
 The processes supporting testing scenarios were articulated as simply and with as much flexibility for implementation as possible:
 
-1. Ensure protocol content and organization aligned to ICH M11 (see [Section 5.1 Protocol Preparation](Section 5.1 Protocol Preparation))
+1. Ensure protocol content and organization aligned to ICH M11 (see [Protocol Preparation](protocol-preparation.html#protocol-preparation))
 
 2. Generate protocol in FHIR
 
