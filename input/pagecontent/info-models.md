@@ -44,6 +44,6 @@ Another way to visualise the distinction between an exchange model and a content
 
 While these models have different purposes and hence different structures they still operate through a common terminology.  The diagram below illustrates the NCI thesaurus as a common source.  For a more detailed treatment of this see the terminology discussion [here](fhir-representation.html#terminology).
 
-<div><p><a href="../images/image-20260129164106045.png"> <img src="image-20260129164106045.png" alt="image-20260129164106045.png" style="max-width: 90%;height: auto;"/> </a> <p>
+<div><p><a href="image-20260129164106045.png"> <img src="image-20260129164106045.png" alt="image-20260129164106045.png" style="max-width: 90%;height: auto;"/> </a> <p>
     Figure 1 : All three models drawing from the same terminology source (the NCI Thesaurus) for their set of available values for "Phase"
     </p></p></div>

@@ -4,7 +4,7 @@ Title: "IGBJ Protocol Narrative 9"
 Usage: #example
 Description: "9	ADVERSE EVENTS, SERIOUS ADVERSE EVENTS, PRODUCT COMPLAINTS, PREGNANCY AND POSTPARTUM INFORMATION"
 * status = #final
-* type = $narrative-elements-cs#b001 "Protocol narrative"
+* type = $NCIT#C207508 // Narrative
 * subject = Reference(IGBJ-ResearchStudy)
 * date = "2025-06-03T12:46:00Z"
 * author = Reference(IGBJ-Organization) // Reference to Organization: Marketing Authorization Holder

@@ -85,7 +85,7 @@ The drawing below shows the names of the Profiles used and the Extensions made f
 <div><img src="Extensions and profiles 02.png" alt="Extensions and profiles 02.png" style="max-width: 80%;height: auto;"/>
 <p>Figure 5: Profiles of ResearchStudy and Composition and associated Extensions</p></div>
 
-The list below shows the hierarchy, of profiles, extensions and their attributes (the [artifact definitions](artifacts.html#structures-resource-profiles) should be consulted for the full details)
+The list below shows the hierarchy, of profiles, extensions and their attributes (the  [narrative definitions](artifacts.html#profiles-extensions-narrative-structures) and [amendment definitions](artifacts.html#profiles-extensions-protocol-amendment) should be consulted for the full details)
 
 > - p) m11-research-study-profile(ResearchStudy)
 >   - (e) narrative-elements named narrative
@@ -133,13 +133,14 @@ The following series of diagrams explains how the different models all use a com
 
 In USDM Phase is represented by the studyPhase attribute of the StudyDesign class.  
 
-<div><p><a href="../images/image-20260129155349453.png"> <img src="image-20260129155349453.png" alt="image-20260129155349453" style="max-width: 90%;height: auto;"/> </a> <p>
+<div><p><a href="image-20260129155349453.png"> <img src="image-20260129155349453.png" alt="image-20260129155349453" style="max-width: 90%;height: auto;"/> </a> <p>
     Figure 1 : USDM for Phase"
     </p></p></div>
 
+
 In M11 Phase is represented by TrialPhase attribute in the Template and Technical Specification 
 
-<div><p><a href="../images/image-20260129155431823.png"> <img src="image-20260129155431823.png" alt="image-20260129155431823" style="max-width: 90%;height: auto;"/> </a> <p>
+<div><p><a href="image-20260129155431823.png"> <img src="image-20260129155431823.png" alt="image-20260129155431823" style="max-width: 90%;height: auto;"/> </a> <p>
     Figure 2 : M11 for "Phase"
     </p></p></div>
 
@@ -147,21 +148,24 @@ In M11 Phase is represented by TrialPhase attribute in the Template and Technica
 
 These values are all held in the NCI Thesaurus and the concepts are in an NCI code set with code C217045
 
-<div><p><a href="../images/image-20260129165903655.png"> <img src="image-20260129165903655.png" alt="image-20260129165903655.png" style="max-width: 90%;height: auto;"/> </a> <p>
+<div><p><a href="image-20260129165903655.png"> <img src="image-20260129165903655.png" alt="image-20260129165903655.png" style="max-width: 90%;height: auto;"/> </a> <p>
     Figure 3 : NCI Code Set for "Phase"
     </p></p></div>
 
+
 In the UDP IG this code set is represented by a value set with the identifier m11-phase-vs and the expansion of the value set is derived from the NCI content (*the NCI content is the master, the FHIR value set is not detached from the NCI source*). 
 
-<div><p><a href="../images/image-20260129165955355.png"> <img src="image-20260129165955355.png" alt="image-20260129165955355.png" style="max-width: 90%;height: auto;"/> </a> <p>
+<div><p><a href="image-20260129165955355.png"> <img src="image-20260129165955355.png" alt="image-20260129165955355.png" style="max-width: 90%;height: auto;"/> </a> <p>
     Figure 4 : UDP Value Set for "Phase"
     </p></p></div>
 
+
 The phase attribute in FHIR is then bound to this value set.
 
-<div><p><a href="../images/image-20260129170010341.png"> <img src="image-20260129170010341.png" alt="image-20260129170010341.png" style="max-width: 90%;height: auto;"/> </a> <p>
+<div><p><a href="image-20260129170010341.png"> <img src="image-20260129170010341.png" alt="image-20260129170010341.png" style="max-width: 90%;height: auto;"/> </a> <p>
     Figure 5 : UDP attribute for "Phase" bound to value set
     </p></p></div>
+
 
 ### Validation
 

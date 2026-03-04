@@ -5,7 +5,7 @@ Usage: #example
 Description: """Illustration of a MedicinalProductDefinition used by the protocol
 """
 
-* identifier[+].type.coding[+] = $NCIT#C218675 "Sponsor Investigational Product Code"
+* identifier[+].type.coding[+] = $NCIT#C218675 "Sponsor's Investigational Product Code"
 
 //* identifier[+].type.coding[+].system = $NCIT
 //* identifier[=].type.coding[=].code = #C218675

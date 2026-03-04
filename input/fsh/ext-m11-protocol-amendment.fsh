@@ -2,9 +2,10 @@
 Extension: M11_AmendmentScopeImpact
 Id: m11-amendment-scope-impact
 Description: "Provides number or percentage of each group affected by a single amendment"
-//Context: m11-research-study-profile
-* ^extension[$ext-fmm].valueInteger = 1
-
+Context: M11_ProtocolAmendment
+//m11-research-study-profile
+* ^extension[$ext-fmm].valueInteger = 2
+* ^status = #active
 * value[x] 0..0
 * extension contains
   number 1..1 and  // Integer or Percent
@@ -22,7 +23,9 @@ Description: "Provides number or percentage of each group affected by a single a
 Extension: M11_AmendmentDetails
 Id: m11-amendment-detail
 Description: "Provides detail of a single amendment - repeats within the overal amendment report"
-* ^extension[$ext-fmm].valueInteger = 1
+Context: M11_ProtocolAmendment
+* ^extension[$ext-fmm].valueInteger = 2
+* ^status = #active
 * value[x] 0..0
 * extension contains
   detail 1..1 and 
@@ -39,7 +42,7 @@ Description: "Provides detail of a single amendment - repeats within the overal 
   * ^definition = "Rationale."
 
 * extension[section].value[x] only CodeableConcept
-* extension[section].value[x] from m11-section-codes-vs
+* extension[section].value[x] from udp-section-codes-vs
   * ^short = "Section where the amendment was made"
   * ^definition = "M11 Section where the amendment was made e.g. 1.2 Trial Schema."
 
@@ -47,9 +50,13 @@ Description: "Provides detail of a single amendment - repeats within the overal 
 Extension: M11_ProtocolAmendment
 Id: m11-protocol-amendment
 Description: "Amendment to a protocol. This is originally from EBM."
-* ^extension[$ext-fmm].valueInteger = 1
-* ^context.type = #element
-* ^context.expression = "ResearchStudy"
+Context: M11_ResearchStudyProfile
+* ^extension[$ext-fmm].valueInteger = 2
+* ^status = #active
+//!!!
+//* ^context.type = #element
+//* ^context.expression = "ResearchStudy"
+
 * value[x] 0..0
 * . ^short = "Amendment to a protocol - from EBM"
 * . ^definition = "Representation of amendments to a study protocol."

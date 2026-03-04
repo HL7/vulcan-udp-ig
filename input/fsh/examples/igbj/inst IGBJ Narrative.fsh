@@ -4,7 +4,7 @@ Title: "IGBJ Protocol Narrative"
 Usage: #example
 Description: "1.3 Schedule of Activities and 5.1	Description of Trial Population and Rationale"
 * status = #final
-* type = $narrative-elements-cs#b001 "Protocol narrative"
+* type = $NCIT#C207508 // Narrative
 * subject = Reference(IGBJ-ResearchStudy)
 * date = "2025-06-30T12:46:00Z"
 * author = Reference(IGBJ-Organization) // Reference to Organization: Marketing Authorization Holder
