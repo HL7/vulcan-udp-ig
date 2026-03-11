@@ -12,27 +12,30 @@ by further instances of ResearchStudy linked through the relatedArtifact attribu
 * extension contains
     narrative-elements named narrative 0..* and
     M11_ProtocolAmendment named amendment 0..1 and
-    m11-confidentiality-statement named confidentialityStatement 0..1
-
+    m11-confidentiality-statement named confidentialityStatement 0..1 and
+    m11-approval named approval 0..1 and
+    m11-research-study named m11-research-study 1..1
+    
 * identifier.type 1..1
 * identifier.type ?!
 * identifier.type. ^isModifierReason = "Protocols may have multiple business identifers from a given system - only with a type can they be distinguished." 
 * identifier.type from $identifier-type-vs (extensible)
 * identifier.type.coding.code 1..1
 
+// not R4
 * label.type. ^comment = "The value set used here is defined by CDISC/DDF"
 * label.type from $study-title-type-vs (extensible)
 
 * phase. ^comment = "M11 has specified its own preferred terms rather than NCI terms and these should be provided in the display element of the coding."
 * phase from $phase-vs (required)
 
+// not R4
 * associatedParty.role. ^comment = "NCI has study roles defined - M11 only requires a limited set of these"
-* associatedParty.role from $study-role-vs (extensible)
+* associatedParty.role from $party-role-vs (extensible)
 
 * focus. ^comment = "Expect MedicinalProductDefinition.name.type.code to be one of C71898 Proprietary name or C97054 Non-proprietary name"
 
+// not R4
 * relatesTo.type. ^comment = "Set to a value of predecessor to indicate the target is the previous version of the protocol"
 
 * title ^comment = "The protocol should have a descriptive title that identifies the scientific aspects of the trial sufficiently to ensure it is immediately evident what the trial is investigating and on whom, and to allow retrieval from literature or internet searches."
-
-

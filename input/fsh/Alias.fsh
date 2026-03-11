@@ -11,13 +11,21 @@ Alias: $NCITURL = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
 Alias: $phase-vs = m11-phase-vs
 Alias: $Pub = http://hl7.org/fhir/publication-status
 Alias: $RegID = https://example.org/regulatory-agency-identifier
+Alias: $EMA_CTREG = https://exemplarEMA.org/registry-identifier
+Alias: $ERA_REG = https://exemplarRegulator.org/registry-identifier
 Alias: $SCT = http://snomed.info/sct
-Alias: $SpID = https://example.org/sponsor-identifier
+Alias: $SpID = https://exemplarSponsor.com/sponsor-identifier
 Alias: $study-role-vs = m11-blinded-roles-vs
+Alias: $party-role-vs = udp-party-role-type-vs
 Alias: $study-title-type-vs = udp-study-title-type-vs
 Alias: $TitleType = http://hl7.org/fhir/title-type
 Alias: $YesNoUnknownVS = m11-yes-no-vs
 Alias: $ID-EligibilityCriteria = https://example.org/ID-EligibilityCriteria
+
+
+
+// R4
+Alias: $SigType = http://uri.etsi.org/01903/v1.2.2
 
 //-----------------------------------------------------------------------------
 // From EBM

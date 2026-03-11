@@ -12,18 +12,6 @@ identifier attribute classified by an approriate terminology. This value set ena
 * ^status = #active
 * ^publisher = "UDP"
 
-//* $NCIT#C132351  "Sponsor Protocol Identifier"
-//* $NCIT#C218672  "Original Protocol Indicator"
-//* $NCIT#C218477	 "Amendment Identifier"
-//* $NCIT#C218684  "EU CT Number"
-//* $NCIT#C218685  "FDA IND Number"
-//* $NCIT#C218686  "IDE Number"
-//* $NCIT#C218687  "jRCT Number"
-//* $NCIT#C172240  "NCT Number"
-//* $NCIT#C218688  "NMPA IND Number"
-//* $NCIT#C218689  "WHO/UTN Number"
-//* $NCIT#C218690  "Other Regulatory or Clinical Trial Identifier"
-
 * $NCIT#C132351 "Sponsor Protocol Identifier" 
 * $NCIT#C218672 "Original Protocol Indicator" 
 * $NCIT#C218477 "Amendment Identifier" 

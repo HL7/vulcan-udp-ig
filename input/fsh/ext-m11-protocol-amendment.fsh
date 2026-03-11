@@ -32,10 +32,10 @@ Context: M11_ProtocolAmendment
   rationale 1..1 and 
   section 1..1
 
-* extension[detail].value[x] only string
-  * ^short = "Statement regarding prior amendments"
-  * ^definition = "Statement regarding prior amendments."
-  * ^comment = "State {Not applicable. This protocol has not been amended.} or state {This protocol has been amended previously. Details of prior amendments are presented in Prior Protocol Amendment(s).} or include Current Amendment details as appropriate (See instructions)."
+// * extension[detail].value[x] only string
+//   * ^short = "Statement regarding prior amendments"
+//   * ^definition = "Statement regarding prior amendments."
+//   * ^comment = "State {Not applicable. This protocol has not been amended.} or state {This protocol has been amended previously. Details of prior amendments are presented in Prior Protocol Amendment(s).} or include Current Amendment details as appropriate (See instructions)."
 
 * extension[rationale].value[x] only string
   * ^short = "Rationale"
@@ -63,8 +63,9 @@ Context: M11_ResearchStudyProfile
 * . ^comment = "The original extension is from EBM and is being modified to separate general amendments (which belong in EBM) and those specific to the UDP use cases."
 * extension contains
 // // profile  version 0..1 and
-// // profile identifier 1..1 and
 // // profile date 1..1 and
+  identifier 1..1 and
+  previous 1..1 and
   scope 1..1 and 
   country 0..* and
   region 0..* and
@@ -75,7 +76,7 @@ Context: M11_ResearchStudyProfile
   signatureMethod 0..1 and
   M11_AmendmentScopeImpact named scopeImpact 0..3 and
   primaryReason 0..1 and
-  secondaryReason 0..1 and
+  secondaryReason 0..* and
   summary 0..1 and 
   substantialImpactSafety 0..1 and 
   substantialImpactSafetyComment 0..1 and 
@@ -84,6 +85,13 @@ Context: M11_ResearchStudyProfile
   M11_AmendmentDetails named details 0..* and 
   rationale 0..1 and
   description 0..1
+
+* extension[identifier].value[x] only Identifier
+  * ^short = "Amendment identifier"
+  * ^definition = "Identifier for this amendment - if it is the current amendment the identifier is repeated from the title page"
+
+* extension[previous].value[x] only CodeableConcept 
+* extension[previous].value[x] from M11AmendmentDetailsStatementVS (required)
 
 * extension[scope].value[x] only CodeableConcept // Changed from code in EBM
 * extension[scope].value[x] from M11AmendmentScopeVS (extensible)
