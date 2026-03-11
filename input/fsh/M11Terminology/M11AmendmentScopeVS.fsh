@@ -4,7 +4,10 @@ ValueSet: M11AmendmentScopeVS
 Id: m11-study-amendment-scope-vs
 Title: "ICH M11 Amendment Scope Value Set Terminology"
 Description: """Terminology associated with the amendment scope value set codelist of the ICH M11 protocol template.
-This is an ICH M11 Value Set drawn from the NCI Thesaurus."""
+This is an ICH M11 Value Set drawn from the NCI Thesaurus.
+
+// TODO Needs "Not applicable adding"
+"""
 * ^extension[$ext-fmm].valueInteger = 0
 * ^experimental = false
 * ^status = #active

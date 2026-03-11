@@ -7,7 +7,22 @@
 <artifactPageExtension value="-mappings"/>
 <artifact deprecated="true" id="ValueSet/ddf-study-title-type-vs" key="ValueSet-ddf-study-title-type-vs" name="CDISC DDF Study Title Type Value Set"/>
 <artifact deprecated="true" id="ValueSet/cdisc-yes-no-vs" key="ValueSet-cdisc-yes-no-vs" name="CDISC Yes No Unknown Not Applicable Value Set"/>
+<artifact id="Organization/Exemplar-CoSponsor-Organization" key="Organization-Exemplar-CoSponsor-Organization" name="Exemplar CoSponsor Organization"/>
+<artifact id="Practitioner/Exemplar-CoSponsor-Practitioner" key="Practitioner-Exemplar-CoSponsor-Practitioner" name="Exemplar CoSponsor Practitioner"/>
+<artifact id="Organization/Exemplar-Devices-Organization" key="Organization-Exemplar-Devices-Organization" name="Exemplar Devices Organization"/>
+<artifact id="Organization/Exemplar-Local-Sponsor-Organization" key="Organization-Exemplar-Local-Sponsor-Organization" name="Exemplar Local Sponsor Organization"/>
+<artifact id="Practitioner/Exemplar-Local-Sponsor-Practitioner" key="Practitioner-Exemplar-Local-Sponsor-Practitioner" name="Exemplar Local Sponsor Practitioner"/>
+<artifact id="MedicinalProductDefinition/Exemplar-MedicinalProduct" key="MedicinalProductDefinition-Exemplar-MedicinalProduct" name="Exemplar Medicinal Product"/>
+<artifact id="Composition/Exemplar-Narrative" key="Composition-Exemplar-Narrative" name="Exemplar Protocol Narrative"/>
+<artifact id="Composition/Exemplar-Narrative-2.1" key="Composition-Exemplar-Narrative-2.1" name="Exemplar Protocol Narrative 2.1"/>
+<artifact id="Composition/Exemplar-Narrative-9" key="Composition-Exemplar-Narrative-9" name="Exemplar Protocol Narrative 9"/>
+<artifact id="Organization/Exemplar-Regulator-Organization" key="Organization-Exemplar-Regulator-Organization" name="Exemplar Regulating Authority (ERA)"/>
+<artifact id="ResearchStudy/Exemplar-ResearchStudy" key="ResearchStudy-Exemplar-ResearchStudy" name="Exemplar Research Study with narrative"/>
+<artifact id="Practitioner/Exemplar-Sponsor-Expert-Practitioner" key="Practitioner-Exemplar-Sponsor-Expert-Practitioner" name="Exemplar Sponsor Expert Medical Practitioner"/>
+<artifact id="Organization/Exemplar-Sponsor-Organization" key="Organization-Exemplar-Sponsor-Organization" name="Exemplar Sponsor Organization"/>
+<artifact id="Practitioner/Exemplar-Sponsor-Practitioner" key="Practitioner-Exemplar-Sponsor-Practitioner" name="Exemplar Sponsor Practitioner"/>
 <artifact id="CodeSystem/ncit-cs" key="CodeSystem-ncit-cs" name="Fragment of NCIT Code System"/>
+<artifact id="ValueSet/m11-amendment-details-statement-vs" key="ValueSet-m11-amendment-details-statement-vs" name="ICH M11 Amendment Details Statement Value Set Terminology"/>
 <artifact id="ValueSet/m11-amendment-scope-enrollment-vs" key="ValueSet-m11-amendment-scope-enrollment-vs" name="ICH M11 Amendment Scope Enrollment Description Value Set Terminology"/>
 <artifact id="ValueSet/m11-study-amendment-scope-vs" key="ValueSet-m11-study-amendment-scope-vs" name="ICH M11 Amendment Scope Value Set Terminology"/>
 <artifact id="ValueSet/m11-yes-no-vs" key="ValueSet-m11-yes-no-vs" name="ICH M11 No Yes Value Set Terminology"/>
@@ -34,8 +49,10 @@
 <artifact deprecated="true" id="ValueSet/m11-section-codes-vs" key="ValueSet-m11-section-codes-vs" name="M11 Section Codes Value Set"/>
 <artifact id="StructureDefinition/m11-amendment-detail" key="StructureDefinition-m11-amendment-detail" name="M11_AmendmentDetails"/>
 <artifact id="StructureDefinition/m11-amendment-scope-impact" key="StructureDefinition-m11-amendment-scope-impact" name="M11_AmendmentScopeImpact"/>
+<artifact id="StructureDefinition/m11-approval" key="StructureDefinition-m11-approval" name="M11_Approval"/>
 <artifact id="StructureDefinition/m11-confidentiality-statement" key="StructureDefinition-m11-confidentiality-statement" name="M11_ConfidentialityStatement"/>
 <artifact id="StructureDefinition/m11-protocol-amendment" key="StructureDefinition-protocol-amendment" name="M11_ProtocolAmendment"/>
+<artifact id="StructureDefinition/m11-research-study" key="StructureDefinition-m11-research-study" name="M11_ResearchStudy"/>
 <artifact deprecated="true" id="ValueSet/nci-study-role-vs" key="ValueSet-nci-study-role-vs" name="NCI Study Role Value Set"/>
 <artifact id="StructureDefinition/narrative-elements" key="StructureDefinition-narrative-elements" name="Narrative Elements"/>
 <artifact deprecated="true" id="CodeSystem/narrative-elements-cs" key="CodeSystem-narrative-elements-cs" name="Narrative Elements Code System"/>
@@ -45,8 +62,10 @@
 <artifact deprecated="true" id="StructureDefinition/ResearchStudyStudyAmendmentScopeImpact" key="StructureDefinition-ResearchStudyStudyAmendmentScopeImpact" name="ResearchStudyStudyAmendmentScopeImpact"/>
 <artifact deprecated="true" id="StructureDefinition/study-design" key="StructureDefinition-study-design" name="StudyDesign"/>
 <artifact id="Group/DIBASY-Eligibility" key="Group-DIBASY-Eligibility" name="StudyEligibilityCriteria: Eligibility Criteria for DIBASY Trial"/>
+<artifact id="ValueSet/udp-address-purpose-type-vs" key="ValueSet-udp-address-purpose-type-vs" name="UDP Address Purpose Type Value Set"/>
 <artifact id="ValueSet/udp-identifier-type-vs" key="ValueSet-udp-identifier-type-vs" name="UDP Identifier Type Value Set"/>
 <artifact id="ValueSet/udp-narrative-elements-vs" key="ValueSet-udp-narrative-elements-vs" name="UDP Narrative Elements Value Set"/>
+<artifact id="ValueSet/udp-party-role-type-vs" key="ValueSet-udp-party-role-type-vs" name="UDP Party Role Type Value Set"/>
 <artifact id="ValueSet/udp-section-codes-vs" key="ValueSet-udp-section-codes-vs" name="UDP Section Codes Value Set"/>
 <artifact id="ValueSet/udp-study-title-type-vs" key="ValueSet-udp-study-title-type-vs" name="UDP Study Title Type Value Set"/>
 <page key="NA" name="(NA)"/>

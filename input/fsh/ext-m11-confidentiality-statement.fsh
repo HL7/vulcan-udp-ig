@@ -3,7 +3,7 @@ Id: m11-confidentiality-statement
 Description: "Sponsor Confidentiality Statement.  This is a replica of EBM ResearchStudySponsorConfidentialityStatewent"
 Context: M11_ResearchStudyProfile
 * ^extension[$ext-fmm].valueInteger = 2
-* ^extension[$ext-wg].valueCode = #cds
+* ^extension[$ext-wg].valueCode = #brr
 * ^extension[$ext-standards-status].valueCode = #draft
 //* ^context.type = #element
 //* ^context.expression = "ResearchStudy"

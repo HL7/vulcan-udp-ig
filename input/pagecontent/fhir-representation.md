@@ -39,7 +39,7 @@ The FHIR implementation must therefore cover both narrative and structured conte
 <p>Figure 1: FHIR must support both Narrative and Structured representation</p></div>
 
 
-##### Narrative Representation
+#### Narrative Representation
 
 In FHIR representation of "documents" is done using a *Composition* resource.  This is not immediately accessible from the ResearchStudy resource and so we create an extension called [NarrativeElements](StructureDefinition-narrative-elements.html) to allow ResearchStudy to point to Composition. 
 
@@ -62,13 +62,15 @@ Specific narrative instances can then use the codes to specify which parts of th
     <p>Figure 4: Narrative Content Example</p></div>
 In the illustration above **ResearchStudy** has two **NarrativeContent** sections attached. One with code *C218517* which is *1.1.2 Overall Design* and one with code *C218520* which is *2 INTRODUCTION* and this would then have all the sub-sections within the *INTRODUCTION*.
 
-###### Composition Examples
+#### Narrative Examples
 
-This structure allows flexibility in the way compositions are used. It is possible to use a single composition and put all the narrative content into that; at the other extrememe it is possible to put every narrative section into its own composition. The expectation is that use of a single composition will be appropriate for document centric use cases but for other use cases where the focus is on more granular data a balance can be found between the number of distinct compositions and the overhead of having multiple compositions.
+The structure allows flexibility in the way NarrativeContent compositions are used. It is possible to use a single composition and put all the narrative content into that; at the other extreme it is possible to put every narrative section into its own composition. The expectation is that use of a single composition will be appropriate for document centric use cases but for other use cases where the focus is on more granular data a balance can be found between the number of distinct compositions and the overhead of having multiple compositions.
 
 In the examples provided [Composition-IGBJ-Narrative.html](Composition-IGBJ-Narrative.html) shows combination of two sections (*1.3 Schedule of Activities* and *5.1 Description of Trial Population and Rationale*) into one composition while [Composition-IGBJ-Narrative-2.1.html](Composition-IGBJ-Narrative-2.1.html) and [Composition-IGBJ-Narrative-9.html](Composition-IGBJ-Narrative-9.html) show separate compositions for section *2.1 Purpose of Trial* and section *9 ADVERSE EVENTS, SERIOUS ADVERSE EVENTS, PRODUCT COMPLAINTS, PREGNANCY AND POSTPARTUM INFORMATION* respectively. These compositions are all referred to from the full example [ResearchStudy-IGBJ-ResearchStudy.html ](ResearchStudy-IGBJ-ResearchStudy.html) 
 
-##### Structured Representation
+**Implementers need to carefully consider the balance of simplicity and conciseness achieved by using a single composition as opposed to the increased overheads of using multiple compositions.** 
+
+#### Structured Representation
 
 The real power of a digital protocol comes from representing the content as a series of distinct attributes. USDM and M11 provide information models that can be represented by FHIR using the same resources used for the narrative representation.  While many of the necessary attributes are already present there are inevitably some that have no FHIR equivalent.  For this we use the extension mechanism.
 
@@ -78,7 +80,7 @@ The real power of a digital protocol comes from representing the content as a se
 
 Some of these extensions are general purpose and will be relevant beyond USDM and M11 and they can be profiled to tie them to exact requirements.
 
-##### Hierarchy of Resources, Extensions and Profiles Used
+#### Hierarchy of Resources, Extensions and Profiles Used
 
 The drawing below shows the names of the Profiles used and the Extensions made for UDP. For description of the function of profiles and extensions see the [description above](fhir-representation.html#fhir-elements-and-protocol-representation)
 
