@@ -1,2 +1,44 @@
 {
+  "systems" : [{
+    "system" : "http://loinc.org",
+    "url" : "http://loinc.org",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://snomed.info/sct",
+    "url" : "http://snomed.info/sct",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://unitsofmeasure.org",
+    "url" : "http://unitsofmeasure.org",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+    "url" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "urn:ietf:bcp:47",
+    "url" : "urn:ietf:bcp:47",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "urn:iso:std:iso:3166",
+    "url" : "urn:iso:std:iso:3166",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "urn:iso:std:iso:3166:-2",
+    "url" : "urn:iso:std:iso:3166:-2",
+    "authoritative" : [],
+    "candidates" : []
+  }]
 }

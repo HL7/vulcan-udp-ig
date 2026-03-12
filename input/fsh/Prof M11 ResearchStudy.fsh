@@ -36,6 +36,9 @@ by further instances of ResearchStudy linked through the relatedArtifact attribu
 * focus. ^comment = "Expect MedicinalProductDefinition.name.type.code to be one of C71898 Proprietary name or C97054 Non-proprietary name"
 
 // not R4
-* relatesTo.type. ^comment = "Set to a value of predecessor to indicate the target is the previous version of the protocol"
+// TODO this needs the latest R6 to work
+//* relatesTo.type from udp-related-artifact-type-vs (extensible)
+* relatesTo.type. ^comment = "Set to a value of predecessor to indicate the target is the previous version of the protocol or to C218694
+                            to indicate the target is the amendment details that have been incorporated"
 
 * title ^comment = "The protocol should have a descriptive title that identifies the scientific aspects of the trial sufficiently to ensure it is immediately evident what the trial is investigating and on whom, and to allow retrieval from literature or internet searches."

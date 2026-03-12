@@ -216,6 +216,7 @@ groups:
     - ValueSet/udp-identifier-type-vs
     - ValueSet/udp-narrative-elements-vs
     - ValueSet/udp-party-role-type-vs
+    - ValueSet/udp-related-artifact-type-vs
     - ValueSet/udp-section-codes-vs
     - ValueSet/udp-study-title-type-vs
 # Examples
@@ -224,6 +225,7 @@ groups:
     description: "These examples are a synthetic set of data that aims to exercise as many data points
       as possible.  The protocol described is entierly made up for illustration."
     resources:
+    - ResearchStudy/Exemplar-ResearchStudy
     - Composition/Exemplar-Narrative
     - Composition/Exemplar-Narrative-2.1
     - Composition/Exemplar-Narrative-9
@@ -237,7 +239,7 @@ groups:
     - Practitioner/Exemplar-Local-Sponsor-Practitioner
     - Practitioner/Exemplar-Sponsor-Expert-Practitioner
     - Practitioner/Exemplar-Sponsor-Practitioner
-    - ResearchStudy/Exemplar-ResearchStudy
+    - ResearchStudy/Exemplar-ResearchStudy-Current-Amendment
   GroupJPN:
     name: "Example Instances: Japanese Protocol"
     description: "These examples show how the same content can be represented in both English and Japanese. 

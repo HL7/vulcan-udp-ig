@@ -53,8 +53,10 @@ Title: "Exemplar Sponsor Expert Medical Practitioner"
 Usage: #example
 Description: "A minimal Practitioner definition"
 
+* language = #en
+
 * text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang = \"en\" xml:lang = \"en\">
     <p>Dr Exemplar Consultant: </p><p>Mobile: +44 7999 999 999 </p><p>eMail: Ex.Consultant@ExemplarHospital.nhs.uk</p>
     </div>"
 * name.text = "Dr Exemplar Consultant"
