@@ -155,5 +155,5 @@ Context: M11_ResearchStudyProfile
   * ^definition = "Comment on substantial impact on reliability."
 
 * extension[rationale].value[x] only string
-* extension[description].value[x] only string
+* extension[description].value[x] only string or markdown
 
