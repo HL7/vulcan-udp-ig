@@ -13,6 +13,7 @@ Note that the NCI Thesaurus holds separate codes for protocol name (C132300) tha
 * ^status = #active
 * ^publisher = "UDP"
 
+* include codes from valueset http://terminology.hl7.org/ValueSet/title-type
 * $NCIT#C207615  "Brief Study Title"
 * $NCIT#C207646  "Study Acronym"
 

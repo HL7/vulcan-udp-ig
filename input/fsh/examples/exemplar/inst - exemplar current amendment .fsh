@@ -41,8 +41,8 @@ Pharmaceuticals.  The regulator is the Exemplar Regulating Authority (ERA)
 * extension[m11-protocol-amendment][=].extension[previous].valueCodeableConcept = $NCIT#C218488	"Protocol Previously Amended See Summary of Changes Before the Table of Contents"
 
 * extension[m11-protocol-amendment][=].extension[scope].valueCodeableConcept = $NCIT#C217026	"Not Global"
-* extension[m11-protocol-amendment][=].extension[country][+].valueCodeableConcept = $iso3166-2#DE "Germany"
-* extension[m11-protocol-amendment][=].extension[country][+].valueCodeableConcept = $iso3166-2#GB "United Kingdom of Great Britain and Northern Ireland"
+* extension[m11-protocol-amendment][=].extension[country][+].valueCodeableConcept = $iso3166#DE "Germany"
+* extension[m11-protocol-amendment][=].extension[country][+].valueCodeableConcept = $iso3166#GB "United Kingdom of Great Britain and Northern Ireland"
 * extension[m11-protocol-amendment][=].extension[region].valueCodeableConcept = $iso3166-2#AU-NSW "New South Wales"
 * extension[m11-protocol-amendment][=].extension[site][+].valueIdentifier.system = $AmdSite
 * extension[m11-protocol-amendment][=].extension[site][=].valueIdentifier.value = "exemplarSite-14"
@@ -70,11 +70,11 @@ Pharmaceuticals.  The regulator is the Exemplar Regulating Authority (ERA)
 
 * extension[m11-protocol-amendment][=].extension[details][+].extension[detail].valueString = "Exclusion change"
 * extension[m11-protocol-amendment][=].extension[details][=].extension[rationale].valueString = "Exclude regular drinkers at request of regulator"
-* extension[m11-protocol-amendment][=].extension[details][=].extension[section].valueCodeableConcept = $NCIT#C218550  "'ICH M11 Protocol Section 5.3 Exclusion Criteria"
+* extension[m11-protocol-amendment][=].extension[details][=].extension[section].valueCodeableConcept = $NCIT#C218550  "ICH M11 Protocol Section 5.3 Exclusion Criteria"
 
 * extension[m11-protocol-amendment][=].extension[details][+].extension[detail].valueString = "Packaging change"
 * extension[m11-protocol-amendment][=].extension[details][=].extension[rationale].valueString = "Change to recyclable packaging (stated in proprietary name)."
-* extension[m11-protocol-amendment][=].extension[details][=].extension[section].valueCodeableConcept = $NCIT#C217356  "Section Title Page"
+* extension[m11-protocol-amendment][=].extension[details][=].extension[section].valueCodeableConcept = $NCIT#C222769  "ICH M11 Protocol Section Title Page"
 
 
 // * extension[m11-protocol-amendment][=].extension[rationale].valueString = "Updates to address safety concern & align with product guidelines."

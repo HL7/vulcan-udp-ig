@@ -40,5 +40,11 @@
     "url" : "urn:iso:std:iso:3166:-2",
     "authoritative" : [],
     "candidates" : []
+  },
+  {
+    "system" : "urn:iso:std:iso:3166:2",
+    "url" : "urn:iso:std:iso:3166:2",
+    "authoritative" : [],
+    "candidates" : []
   }]
 }

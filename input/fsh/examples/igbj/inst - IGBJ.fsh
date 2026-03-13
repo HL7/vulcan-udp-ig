@@ -22,6 +22,9 @@ on the server by following this link https://vhewer.com/display-product?url=http
 
 * version = "(a)"
 
+* extension[m11-research-study].extension[originalProtocol].valueCodeableConcept = $NCIT#C218488	"Protocol Previously Amended See Summary of Changes Before the Table of Contents"
+* extension[m11-research-study].extension[versionDate].valueDate = 2017-10-01
+
 * title = "A Phase 3 Study of Nasal Glucagon (LY900018) Compared to Intramuscular Glucagon for Treatment of Insulin-induced Hypoglycemia in Japanese Patients with Diabetes Mellitus"
 * label[+].type = $TitleType#short-title "Short title"
 * label[=].value = "A Phase 3 Study of Nasal Glucagon (LY900018) Compared to Intramuscular Glucagon for Treatment of Insulin-induced Hypoglycemia in Japanese Patients with Diabetes Mellitus"
@@ -37,10 +40,13 @@ on the server by following this link https://vhewer.com/display-product?url=http
 //* extension[NarrativeElements][+].valueReference = Reference(IGBJ-Narrative-5.1)
 * extension[NarrativeElements][+].valueReference = Reference(IGBJ-Narrative-9)
 
+* extension[m11-protocol-amendment][+].extension[identifier][+].valueIdentifier.type.text = "Amendment Identifier"
+* extension[m11-protocol-amendment][=].extension[identifier][=].valueIdentifier.system = $AmdID
+* extension[m11-protocol-amendment][=].extension[identifier][=].valueIdentifier.value = "I8R-JE-IGBJ(a)"
 
-* extension[m11-protocol-amendment][+].extension[scope].valueCodeableConcept = $NCIT#C217026	"Not Global"
-* extension[m11-protocol-amendment][=].extension[country][+].valueCodeableConcept = $iso3166-2#DE "Germany"
-* extension[m11-protocol-amendment][=].extension[country][+].valueCodeableConcept = $iso3166-2#GB "United Kingdom of Great Britain and Northern Ireland"
+* extension[m11-protocol-amendment][=].extension[scope].valueCodeableConcept = $NCIT#C217026	"Not Global"
+* extension[m11-protocol-amendment][=].extension[country][+].valueCodeableConcept = $iso3166#DE "Germany"
+* extension[m11-protocol-amendment][=].extension[country][+].valueCodeableConcept = $iso3166#GB "United Kingdom of Great Britain and Northern Ireland"
 * extension[m11-protocol-amendment][=].extension[region].valueCodeableConcept = $iso3166-2#AU-NSW "New South Wales"
 * extension[m11-protocol-amendment][=].extension[site][+].valueIdentifier.system = $AmdSite
 * extension[m11-protocol-amendment][=].extension[site][=].valueIdentifier.value = "sss"
@@ -75,6 +81,6 @@ on the server by following this link https://vhewer.com/display-product?url=http
 * extension[m11-protocol-amendment][=].extension[details][=].extension[section].valueCodeableConcept = $NCIT#C218550  "ICH M11 Protocol Section 5.3 Exclusion Criteria"
 
 * extension[m11-protocol-amendment][=].extension[rationale].valueString = "Updates to address safety concern & align with product guidelines."
-* extension[m11-protocol-amendment][=].extension[description].valueMarkdown = "Protocol I8R-JE-IGBJ A Phase 3 Study of Nasal Glucagon (LY900018) Compared to Intramuscular Glucagon for Treatment of Insulin-induced Hypoglycemia in Japanese Patients with Diabetes Mellitus has been amended. The new protocol is indicated by Amendment (a) and will be used to conduct the study in place of any preceding version of the protocol. The overall changes and rationale for the changes made to this protocol are as follows: • An exclusion criterion for patients with retinopathy or maculopathy was added due to the potential risk of fundal hemorrhage induced by hypoglycemia. • The GlucaGen reconstitution volume was changed from 1.0 mL to 1.1 mL in accordance with instructions in the Summary of Product Characteristics (2015)."
+* extension[m11-protocol-amendment][=].extension[description].valueString = "Protocol I8R-JE-IGBJ A Phase 3 Study of Nasal Glucagon (LY900018) Compared to Intramuscular Glucagon for Treatment of Insulin-induced Hypoglycemia in Japanese Patients with Diabetes Mellitus has been amended. The new protocol is indicated by Amendment (a) and will be used to conduct the study in place of any preceding version of the protocol. The overall changes and rationale for the changes made to this protocol are as follows: • An exclusion criterion for patients with retinopathy or maculopathy was added due to the potential risk of fundal hemorrhage induced by hypoglycemia. • The GlucaGen reconstitution volume was changed from 1.0 mL to 1.1 mL in accordance with instructions in the Summary of Product Characteristics (2015)."
 
 * extension[confidentialityStatement][+].valueString = "All data is confidential"

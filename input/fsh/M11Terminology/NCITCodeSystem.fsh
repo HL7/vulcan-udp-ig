@@ -48,16 +48,6 @@ These should all be moved into tx.fhir.org but are included here for testing and
     * #C218484 "Location of Sponsor Approval Date" "The physical or virtual location of the date on which the sponsor approved the current version of the protocol."
     * #C222064 "Location of Sponsor Signatory Information" "The physical or virtual location of the sponsor signatory information."
 
-* #C7057 "Disease, Disorder or Finding" "A condition that is relevant to human neoplasms and non-neoplastic disorders.  This includes observations, test results, history and other concepts relevant to the characterization of human pathologic conditions."
-  * #C2991 "Disease or Disorder" "Any abnormal condition of the body or mind that causes discomfort, dysfunction, or distress to the person affected or those in contact with the person. The term is often used broadly to include injuries, disabilities, syndromes, symptoms, deviant behaviors, and atypical variations of structure and function."
-    * #C3262 "Neoplasm" "A benign or malignant tissue growth resulting from uncontrolled cell proliferation. Benign neoplastic cells resemble normal cells without exhibiting significant cytologic atypia, while malignant cells exhibit overt signs such as dysplastic features, atypical mitotic figures, necrosis, nuclear pleomorphism, and anaplasia. Representative examples of benign neoplasms include papillomas, cystadenomas, and lipomas; malignant neoplasms include carcinomas, sarcomas, lymphomas, and leukemias."
-      * #C4741 "Neoplasm by Morphology" "A classification system grouping neoplasms according to their cellular characteristics."
-        * #C7058 "Melanocytic Neoplasm" "A benign, atypical, or malignant neoplasm that arises from and is composed of melanocytes. This category includes melanocytic nevi, melanocytomas, and melanomas."
-          * #C9498 "Melanocytoma" "A usually benign neoplasm that arises from the sun-exposed skin, eye, and meninges. It is composed of spindle and/or epithelioid melanocytes and melanophages. It rarely progresses to melanoma."
-            * #C165525 "BAP1-Inactivated Melanocytoma" "A cutaneous melanocytoma caused by the inactivation of BAP1 tumor suppressor gene. It is characterized by the presence of a predominantly intradermal proliferation of large epithelioid melanocytes with a large amount of eosinophilic cytoplasm, and vesicular nuclei with prominent nucleoli. Progression to melanoma is infrequent."
-              * #C165523 "Combined BAP1-Inactivated Melanocytoma" "A BAP1-inactivated melanocytoma that is combined with a smaller area of melanocytic proliferation in the basal layer of the epidermis."
-
-
 * #C43431 "Activity" "An active process; excludes processes and mechanisms which fulfill biological functions."
   * #C16326 "Behavior" "The actions or reactions of an object or organism, usually in relation to the environment or surrounding world of stimuli."
     * #C16452 "Communication" "The exchange of information between objects, people, or groups."
@@ -102,6 +92,10 @@ These should all be moved into tx.fhir.org but are included here for testing and
 
 
 * #C20181 "Conceptual Entity" "An organizational header for concepts representing mostly abstract entities."
+  * #C19160 "Occupation or Discipline" "A grouping of occupations and fields of study."
+    * #C25193 "Occupation" "The principal activity that a person does to earn money."
+      * #C25392 "Manufacturer" "A person, enterprise, or entity that produces finished goods."
+        * #C156625 "Device Manufacture" "A person or entity that designs, manufactures, fabricates, assembles, or processes a finished device."
   * #C49154 "Statement" "A verbal and/or written message that asserts, affirms, or declares something."
     * #C218474 "Protocol Amendment Details Statement" "no definition found"
       * #C218485 "Protocol Not Amended" "This protocol has not been amended."

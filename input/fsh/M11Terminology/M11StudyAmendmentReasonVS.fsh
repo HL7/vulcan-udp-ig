@@ -4,7 +4,7 @@ ValueSet: M11StudyAmendmentReasonVS
 Id: m11-study-amendment-reason-vs
 Title: "ICH M11 Reason for Amendment Value Set Terminology"
 Description: """Terminology associated with the reason for amendment value set codelist of the ICH M11 protocol template.
-This is an ICH M11 Value Set drawn from the NCI Thesaurus."""
+This is ICH M11 Value Set C217276 drawn from the NCI Thesaurus."""
 * ^extension[$ext-fmm].valueInteger = 0
 * ^experimental = false
 * ^status = #active

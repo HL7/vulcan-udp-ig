@@ -4,7 +4,9 @@ Alias: $AmdID = https://example.org/amendment-identifier
 Alias: $AmdSite = https://example.org/site-identifier
 Alias: $ebm-study = study-design
 Alias: $identifier-type-vs = udp-identifier-type-vs
-Alias: $iso3166-2 = urn:iso:std:iso:3166
+Alias: $iso3166 = urn:iso:std:iso:3166
+//http://hl7.org/fhir/ValueSet/iso3166-1-2  //urn:iso:std:iso:3166:2
+Alias: $iso3166-2 = urn:iso:std:iso:3166:-2
 Alias: $narrative-elements-cs = narrative-elements-cs
 Alias: $NCIT = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
 Alias: $NCITURL = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl

@@ -4,8 +4,7 @@ Title: "ICH M11 Study Amendment Country Value Set"
 Description: """Codes drawn from 
 ISO 3166 Country Codes, Alpha 3; 
 ISO 3166 Country Codes, Alpha 2; 
-GENC
-country affected by an amendment to a study.
+country/region codes.
 """
 * ^extension[$ext-fmm].valueInteger = 1
 * ^experimental = false
