@@ -5,6 +5,7 @@
   "http://hl7Vulcan.org/Pending|null" : null,
   "http://snomed.info/sct|null" : null,
   "http://hl7.org/fhir/uv/vulcan-udp-ig/Terminology|null" : null,
+  "urn:iso:std:iso:3166:2" : null,
   "http://unitsofmeasure.org" : null,
   "http://hl7.org/fhir/research-study-phase|null" : null,
   "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl" : null,

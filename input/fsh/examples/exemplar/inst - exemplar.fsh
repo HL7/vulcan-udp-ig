@@ -45,9 +45,9 @@ Pharmaceuticals.  The regulator is the Exemplar Regulating Authority (ERA)
 * extension[m11-research-study].extension[versionDate].valueDate = 2017-10-01
 
 * title = "A Phase 3 Study of Inhaled Exoticillin compared to Intramuscular Exoticillin for Treatment of Bronchtis Japanese Patients with Iatrogenic Diabetes Mellitus"
-* label[+].type = $TitleType#C207646 "Study Acronym"
+* label[+].type = $NCIT#C207646 "Study Acronym"
 * label[=].value = "Inhaled vs IM Exoticillin"
-* label[+].type = $TitleType#C207615 "Brief Study Title"
+* label[+].type = $NCIT#C207615 "Brief Study Title"
 * label[=].value = "A Phase 3 Study of Inhaled versus Intramuscular Exoticillin for Bronchtis in Diabetic Japanese Patients"
 
 
@@ -73,7 +73,7 @@ Pharmaceuticals.  The regulator is the Exemplar Regulating Authority (ERA)
 * associatedParty[=].role = $NCIT#C215670	"Local Legal Sponsor"
 
 * associatedParty[+].party = Reference(Organization/Exemplar-Devices-Organization)
-* associatedParty[=].role = $NCIT#C165525  "Device Manufacturer"
+* associatedParty[=].role = $NCIT#C156625  "Device Manufacturer"
 
 * associatedParty[+].party = Reference(Practitioner/Exemplar-Sponsor-Expert-Practitioner)
 * associatedParty[=].role = $NCIT#C51876  "Sponsor Medical Expert"
@@ -89,8 +89,8 @@ Pharmaceuticals.  The regulator is the Exemplar Regulating Authority (ERA)
 //
 
 //* relatesTo[+].type = $NCIT#C218694 "Amendment details" // TODO This is the code that should be used
-* relatesTo[+].type = http://terminology.hl7.org/CodeSystem/artifact-relationship-type#Justification
-* relatesTo[=].targetReference = Reference(m11-research-study-profile/Exemplar-ResearchStudy-Current-Amendment)
+* relatesTo[+].type = http://terminology.hl7.org/CodeSystem/artifact-relationship-type#justification
+* relatesTo[=].targetReference = Reference(Exemplar-ResearchStudy-Current-Amendment)
 
 // // This identifier is a duplicate of the one above
 // * extension[m11-protocol-amendment][+].extension[identifier][+].valueIdentifier.type.text = "Amendment Identifier"

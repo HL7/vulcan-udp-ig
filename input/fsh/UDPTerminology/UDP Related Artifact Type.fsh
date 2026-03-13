@@ -17,5 +17,5 @@ from the NCI Thesaurus which is suitable for use here.
 * ^publisher = "UDP"
 
 * include codes from valueset http://terminology.hl7.org/ValueSet/artifact-relationship-type
-* $NCIT#C218694 "Amendment details" // A written message within the study protocol that describes the amendment details, especially as to whether the protocol has been amended previously.
+* $NCIT#C218694 "Protocol Amendment Details" // A written message within the study protocol that describes the amendment details, especially as to whether the protocol has been amended previously.
 

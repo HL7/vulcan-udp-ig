@@ -10,12 +10,14 @@ Description: """Illustration of a Japanese language protocol - this is the origi
 * identifier[=].use = #usual
 
 * version = "2.0"
-// version date
+* extension[m11-research-study].extension[originalProtocol].valueCodeableConcept = $NCIT#C218485	"Protocol Not Amended"
+* extension[m11-research-study].extension[versionDate].valueDate = 2026-01-14
+
 
 * title = "経口血糖降下薬単剤による治療では血糖コントロール不十分な2型糖尿病患者を対象として，JPMA001を併用投与した時の安全性および有効性を検討する多施設共同，52週間，ランダム化，並行群間試験"
 * label[+].type = $TitleType#short-title "Short title"
 * label[=].value = "2型糖尿病患者への投与"
-* date = 2026-01-14
+
 * status = $Pub#draft "Draft" // TODO: Check we are really using this correctly
 * phase = $NCIT#C15602  "Phase III Trial"
 

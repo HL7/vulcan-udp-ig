@@ -65,7 +65,7 @@ Context: M11_ResearchStudyProfile
 // // profile  version 0..1 and
 // // profile date 1..1 and
   identifier 1..1 and
-  previous 1..1 and
+  previous 0..1 and
   scope 1..1 and 
   country 0..* and
   region 0..* and
