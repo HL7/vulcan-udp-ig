@@ -66,9 +66,19 @@ In the illustration above **ResearchStudy** has two **NarrativeContent** section
 
 The structure allows flexibility in the way NarrativeContent compositions are used. It is possible to use a single composition and put all the narrative content into that; at the other extreme it is possible to put every narrative section into its own composition. The expectation is that use of a single composition will be appropriate for document centric use cases but for other use cases where the focus is on more granular data a balance can be found between the number of distinct compositions and the overhead of having multiple compositions.
 
-In the examples provided [Composition-IGBJ-Narrative.html](Composition-IGBJ-Narrative.html) shows combination of two sections (*1.3 Schedule of Activities* and *5.1 Description of Trial Population and Rationale*) into one composition while [Composition-IGBJ-Narrative-2.1.html](Composition-IGBJ-Narrative-2.1.html) and [Composition-IGBJ-Narrative-9.html](Composition-IGBJ-Narrative-9.html) show separate compositions for section *2.1 Purpose of Trial* and section *9 ADVERSE EVENTS, SERIOUS ADVERSE EVENTS, PRODUCT COMPLAINTS, PREGNANCY AND POSTPARTUM INFORMATION* respectively. These compositions are all referred to from the full example [ResearchStudy-IGBJ-ResearchStudy.html ](ResearchStudy-IGBJ-ResearchStudy.html) 
+There are 4 specific examples of allocating parts of the protocol to the Narrative Composition:
 
-**Implementers need to carefully consider the balance of simplicity and conciseness achieved by using a single composition as opposed to the increased overheads of using multiple compositions.** 
+   
+
+| Approach                            | Description                                                  | Instances                                                    |
+| ----------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Narrative - Single Composition      | Illustration of a protocol with narrative as Single Composition. | ResearchStudy/ResearchStudy-Single-Composition<br />Composition/Narrative-Single-Composition |
+| Narrative - Composition per Section | Illustration of a protocol with Composition Section for Each M11 Section | ResearchStudy/ResearchStudy-Composition-Section-Per-Section<br/><br/>- Composition/Narrative-Composition-per-M11-Section-1<br/>  - Composition/Narrative-Composition-per-M11-Section-2<br/>  - Composition/Narrative-Composition-per-M11-Section-3<br/>    #- Organization/Narrative-Organization |
+| Narrative - Section per Section     | Illustration of a protocol with composition for each M11 narrative section | ResearchStudy/ResearchStudy-Narrative-Comp-Per-M11<br/><br/>- Composition/Narrative-Composition-Section-per-Section<br/>  #- Organization/Narrative-Organization |
+| Narrative - Complex                 | Illustration of a protocol with 1) more granular decomposition of the narrative 2) more complex formatting 3) content that falls outside the M11 template | ResearchStudy/ResearchStudy-Narrative-Complex<br />Composition/Narrative-Complex |
+|                                     |                                                              |                                                              |
+
+The probable best approach is the second or third of these.  The other two examples are for illustration of the options.  While none of these approaches carry heavy overheads **Implementers need to carefully consider the balance of simplicity and conciseness achieved by using a single composition as opposed to the increased overheads of using multiple compositions.** 
 
 #### Structured Representation
 

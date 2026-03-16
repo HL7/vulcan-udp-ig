@@ -250,27 +250,63 @@ groups:
     - Organization/JPMA-Organization
     - ResearchStudy/JPMA0001-eng
     - ResearchStudy/JPMA0001-jpn
-  GroupIGBJ:
-    name: "Example Instances: Narrative"
-    description: "Example Protocol - IGBJ - English.  These examples illustrate hoqw the narrative sections can be structured.
-       There is one example where all the narrative elements are present in a single composition, another that illustrates placing 
-      the narratives in distinct instances; another that shows a mixture of the approaches and a finaal one that shows narrative 
-      sections that are not present in the M11 Template.  See also the section in fhir-representation.html#narrative-representation"
+  
+  GroupComp1:
+    name: "Example Instances: Narrative - Single Composition"
+    description: "Illustration of a protocol with narrative as Single Composition. For discussion see section: fhir-representation.html#structured-representation"
     resources:
-    - Composition/IGBJ-Narrative
-    - Composition/IGBJ-Narrative-1.3
-    - Composition/IGBJ-Narrative-2.1
-    - Composition/IGBJ-Narrative-5.1
-    - Composition/IGBJ-Narrative-9
-    - MedicinalProductDefinition/IGBJ-MedicinalProduct
-    - Organization/IGBJ-Organization
-    - ResearchStudy/IGBJ-ResearchStudy
+    - ResearchStudy/ResearchStudy-Single-Composition
+    - Composition/Narrative-Single-Composition
+    - Organization/Narrative-Organization
+
+  GroupComp2:
+    name: "Example Instances: Narrative - Composition per Section"
+    description: "Illustration of a protocol with Composition Section for Each M11 Section. For discussion see section: fhir-representation.html#structured-representation"
+    resources:
+    - ResearchStudy/ResearchStudy-Composition-Section-Per-Section
+    - Composition/Narrative-Composition-per-M11-Section-1
+    - Composition/Narrative-Composition-per-M11-Section-2
+    - Composition/Narrative-Composition-per-M11-Section-3
+    #- Organization/Narrative-Organization
+
+  GroupComp3:
+    name: "Example Instances: Narrative - Section per Section"
+    description: "Illustration of a protocol with composition for each M11 narrative section. For discussion see section: fhir-representation.html#structured-representation "
+    resources:  
+    - ResearchStudy/ResearchStudy-Narrative-Comp-Per-M11
+    - Composition/Narrative-Composition-Section-per-Section
+    #- Organization/Narrative-Organization
+
+  GroupComp4:
+    name: "Example Instances: Narrative - Complex"
+    description: "Illustration of a protocol with 1) more granular decomposition of the narrative 2) more complex formatting 3) content that falls outside the M11 template. For discussion see section: fhir-representation.html#structured-representation"
+    resources:
+    - ResearchStudy/ResearchStudy-Narrative-Complex
+    - Composition/Narrative-Complex
+    #- Organization/Narrative-Organization
+
+  
+  # GroupIGBJ:
+  #   name: "Example Instances: Narrative"
+  #   description: "Example Protocol - IGBJ - English.  These examples illustrate hoqw the narrative sections can be structured.
+  #      There is one example where all the narrative elements are present in a single composition, another that illustrates placing 
+  #     the narratives in distinct instances; another that shows a mixture of the approaches and a finaal one that shows narrative 
+  #     sections that are not present in the M11 Template.  See also the section in fhir-representation.html#narrative-representation"
+  #   resources:
+  #   - Composition/IGBJ-Narrative
+  #   - Composition/IGBJ-Narrative-1.3
+  #   - Composition/IGBJ-Narrative-2.1
+  #   - Composition/IGBJ-Narrative-5.1
+  #   - Composition/IGBJ-Narrative-9
+  #   - MedicinalProductDefinition/IGBJ-MedicinalProduct
+  #   - Organization/IGBJ-Organization
+  #   - ResearchStudy/IGBJ-ResearchStudy
   GroupELIG:
     name: "Example Instances: Eligibility Criteria"
     description: Structured Representation of Eligbility Criteria
     resources:
     - Group/DIBASY-Eligibility
-    - Group/IGBJ-Eligibility
+    # - Group/IGBJ-Eligibility
 
 #
 #
