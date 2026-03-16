@@ -3,8 +3,8 @@ InstanceOf: m11-research-study-profile
 Title: "IGBJ Research Study with narrative as Single Composition"
 Usage: #example
 Description: """Illustration of a protocol with narrative as Single Composition.   The same example can also be viewed
-    on the server by following this link https://vhewer.com/display-product?url= 
-    """ // TODO Add server details 
+on the server by following this link https://vhewer.com/display-product?url= 
+""" #TODO Add server details 
 
 * identifier[+].type.text = "Sponsor Identifier"
 * identifier[=].system = $SpID

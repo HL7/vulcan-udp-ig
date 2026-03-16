@@ -11,7 +11,7 @@ This is not a recommended pattern.
 * date = "2025-06-30T12:46:00Z"
 * author = Reference(Narrative-Organization) // Reference to Organization: Marketing Authorization Holder
 * title = "Example Single Narrative- (this is the Composition Title}"
-* section[+]
+* section[0]
   * title = "Example Single Narrative - {this is the Section Title}"
   * code = $NCIT#C218519 // TODO need to find code for "everything"
   * text.status = #additional
