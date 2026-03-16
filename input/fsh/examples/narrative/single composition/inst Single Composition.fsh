@@ -6,6 +6,7 @@ Description: """Example Narrative Single Composition.  This illustrates taking t
 all the content in a single section within a single composition.
 This is not a recommended pattern.
 """
+
 * status = $Comp#partial
 * type = $NCIT#C207508 // Narrative
 * date = "2025-06-30T12:46:00Z"

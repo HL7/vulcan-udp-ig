@@ -6,6 +6,8 @@ Description: """Example Narrative Composition per M11 Section.  This illustrates
 each major M11 Section in a composition. This is M11 Section 2.
 This pattern may be useful when working with part of a protocol.
 """
+
+
 * status = $Comp#partial
 * type = $NCIT#C207508 // Narrative
 * date = "2025-06-30T12:46:00Z"

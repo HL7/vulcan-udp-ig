@@ -6,6 +6,7 @@ Description: """Illustration of a protocol with narrative as Single Composition.
     on the server by following this link https://vhewer.com/display-product?url= 
     """ // TODO Add server details 
 
+    
 * identifier[+].type.text = "Sponsor Identifier"
 * identifier[=].system = $SpID
 * identifier[=].value = "ABC-123"

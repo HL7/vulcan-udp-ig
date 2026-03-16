@@ -5,6 +5,7 @@ Usage: #example
 Description: """Example Narrative Single Composition with a Section for Each M11 Section.  This illustrates taking the illustration protocol and putting the content for each section in a section within the same composition.
 This is probably the most appropriate general purpose pattern.
 """
+
 * status = #partial
 * type = $NCIT#C207508 // Narrative
 * date = "2025-06-30T12:46:00Z"
