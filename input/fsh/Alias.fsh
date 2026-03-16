@@ -12,6 +12,7 @@ Alias: $NCIT = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
 Alias: $NCITURL = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
 Alias: $phase-vs = m11-phase-vs
 Alias: $Pub = http://hl7.org/fhir/publication-status
+Alias: $Comp = http://hl7.org/fhir/composition-status
 Alias: $RegID = https://example.org/regulatory-agency-identifier
 Alias: $EMA_CTREG = https://exemplarEMA.org/registry-identifier
 Alias: $ERA_REG = https://exemplarRegulator.org/registry-identifier
