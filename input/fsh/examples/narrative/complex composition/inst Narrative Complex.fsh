@@ -4,10 +4,7 @@ Title: "Example Narrative Complex - Other Patterns and Non M11 Content Suggestio
 Usage: #example
 Description: """Example Narrative Complex -  Custom Content
 This example shows: 1) more granular decomposition of the narrative 2) more complex formatting 3) content that falls outside the M11 template.  These illustrations show what is possible.  It is not a recommended way of laying out the protocol. Individual use cases may need other solutions.
- The same example can also be viewed
-on the server by following this link https://vhewer.com/display-product?url= 
-""" #TODO Add server details 
-
+"""
 * status = $Comp#final
 * type = $NCIT#C207508 // Narrative
 * date = "2025-06-30T12:46:00Z"

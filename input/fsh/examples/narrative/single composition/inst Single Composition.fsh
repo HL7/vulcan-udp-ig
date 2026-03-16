@@ -6,12 +6,13 @@ Description: """Example Narrative Single Composition.  This illustrates taking t
 all the content in a single section within a single composition.
 This is not a recommended pattern.
 """
+
 * status = $Comp#partial
 * type = $NCIT#C207508 // Narrative
 * date = "2025-06-30T12:46:00Z"
 * author = Reference(Narrative-Organization) // Reference to Organization: Marketing Authorization Holder
 * title = "Example Single Narrative- (this is the Composition Title}"
-* section[0]
+* section[+]
   * title = "Example Single Narrative - {this is the Section Title}"
   * code = $NCIT#C218519 // TODO need to find code for "everything"
   * text.status = #additional

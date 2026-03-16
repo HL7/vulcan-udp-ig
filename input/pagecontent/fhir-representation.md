@@ -2,7 +2,7 @@ The major FHIR elements used are discussed first followed by explanation of the 
 
 ### FHIR Elements and Protocol Representation
 
-We assume a basic understanding of FHIR - to get an introduction, see the section on [Introduction to FHIR](links.html#introduction-to-fhir) in the links section of this IG.
+We assume a basic understanding of FHIR - to get an introduction, see the section on [Introduction to FHIR](links.html#introduction-to-fhir) in the links section of this Implementation Guide.  
 
 The elements of FHIR we will refer to are as follows:
 

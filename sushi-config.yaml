@@ -253,7 +253,7 @@ groups:
   
   GroupComp1:
     name: "Example Instances: Narrative - Single Composition"
-    description: "Illustration of a protocol with narrative as Single Composition. For discussion see section: fhir-representation.html#structured-representation"
+    description: "Illustration of a protocol with narrative as Single Composition. For discussion see section: Fhir-representation.html#structured-representation"
     resources:
     - ResearchStudy/ResearchStudy-Single-Composition
     - Composition/Narrative-Single-Composition
