@@ -7,6 +7,7 @@ Context: M11_ProtocolAmendment
 * ^extension[$ext-fmm].valueInteger = 2
 * ^status = #active
 * value[x] 0..0
+
 * extension contains
   number 1..1 and  // Integer or Percent
   scope 1..1  // code for one of country, region or site
@@ -61,12 +62,17 @@ Context: M11_ResearchStudyProfile
 * . ^short = "Amendment to a protocol - from EBM"
 * . ^definition = "Representation of amendments to a study protocol."
 * . ^comment = "The original extension is from EBM and is being modified to separate general amendments (which belong in EBM) and those specific to the UDP use cases."
+
+* obeys scope-required
+* obeys scopeImpact-required
+* obeys safetyComment-required
+* obeys reliabilityComment-required
+
 * extension contains
-// // profile  version 0..1 and
-// // profile date 1..1 and
+
   identifier 1..1 and
   previous 0..1 and
-  scope 1..1 and 
+  scope 1..1 MS and 
   country 0..* and
   region 0..* and
   site 0..* and
@@ -74,15 +80,15 @@ Context: M11_ResearchStudyProfile
   signature 0..1 and //Signature
   signatureUrl 0..1 and
   signatureMethod 0..1 and
-  M11_AmendmentScopeImpact named scopeImpact 0..3 and
-  primaryReason 0..1 and
-  secondaryReason 0..* and
-  summary 0..1 and 
-  substantialImpactSafety 0..1 and 
-  substantialImpactSafetyComment 0..1 and 
+  M11_AmendmentScopeImpact named scopeImpact 0..3 MS and
+  primaryReason 0..1 MS and
+  secondaryReason 0..* MS and
+  summary 0..1 MS and 
+  substantialImpactSafety 0..1 MS and 
+  substantialImpactSafetyComment 0..1 MS and 
   substantialImpactReliability 0..1 and 
   substantialImpactReliabilityComment 0..1 and
-  M11_AmendmentDetails named details 0..* and 
+  M11_AmendmentDetails named details 0..* MS and 
   rationale 0..1 and
   description 0..1
 
@@ -157,3 +163,22 @@ Context: M11_ResearchStudyProfile
 * extension[rationale].value[x] only string
 * extension[description].value[x] only string or markdown
 
+Invariant: scope-required
+Description: "At least one of country, region and site SHALL be populated"
+Expression: "country.exists() or region.exists() or site.exists()"
+Severity: #error
+
+Invariant: scopeImpact-required  // TODO make sure this doesn't conflict if there are no amendments
+Description: "If protocol has been amended at least one of country, region and site SHALL be populated and the number affected provided"
+Expression: "(country.exists() or region.exists() or site.exists()) and number.exists()"
+Severity: #error
+
+Invariant: safetyComment-required
+Description: "If substantialImpactSafety is TRUE there SHALL be an explanatory comment"
+Expression: "substantialImpactSafety.exists() and substantialImpactSafety.value = true and substantialImpactSafetyComment.exists()"
+Severity: #error
+
+Invariant: reliabilityComment-required
+Description: "If substantialImpactReliability is TRUE there SHALL be an explanatory comment"
+Expression: "substantialImpactReliability.exists() and substantialImpactReliability.value = true and substantialImpactReliabilityComment.exists()"
+Severity: #error

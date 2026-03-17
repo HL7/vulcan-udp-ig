@@ -8,7 +8,7 @@ This pattern may be useful when working with part of a protocol.
 """
 
 
-* status = $Comp#partial
+* status = #final
 * type = $NCIT#C207508 // Narrative
 * date = "2025-06-30T12:46:00Z"
 * title = "Example Narrative Composition per M11 Section - Section 21 - (this is the Composition Title}"

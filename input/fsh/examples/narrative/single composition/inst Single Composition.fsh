@@ -7,7 +7,7 @@ all the content in a single section within a single composition.
 This is not a recommended pattern.
 """
 
-* status = $Comp#partial
+* status = #final
 * type = $NCIT#C207508 // Narrative
 * date = "2025-06-30T12:46:00Z"
 * author = Reference(Narrative-Organization) // Reference to Organization: Marketing Authorization Holder

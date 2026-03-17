@@ -7,7 +7,7 @@ each major M11 Section in a composition. This is M11 Section 3.
 This pattern may be useful when working with part of a protocol.
 """
 
-* status = #active
+* status = #final
 * type = $NCIT#C207508 // Narrative
 * date = "2025-06-30T12:46:00Z"
 * author = Reference(Narrative-Organization) // Reference to Organization: Marketing 
