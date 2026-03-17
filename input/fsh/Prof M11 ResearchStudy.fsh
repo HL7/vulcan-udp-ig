@@ -1,10 +1,10 @@
 Profile: M11_ResearchStudyProfile
 Parent: ResearchStudy
 Id:  m11-research-study-profile
-Title:  "M11 Research Study"
+Title:  "M11 Research Study Profile"
 Description:    """Constraint of ResearchStudy to M11 Guidance
 An instance of this profile represents a single version of the protocol definition. Previous amendments are represented
-by further instances of ResearchStudy linked through the relatedArtifact attribute. 
+by further instances of ResearchStudy linked through the relatesTo attribute. 
 """
 * ^extension[$ext-fmm].valueInteger = 2
 * ^status = #active
@@ -15,9 +15,10 @@ by further instances of ResearchStudy linked through the relatedArtifact attribu
     m11-confidentiality-statement named confidentialityStatement 0..1 and
     m11-approval named approval 0..1 and
     m11-research-study named m11-research-study 1..1
+
+* identifier MS
     
-* identifier.type 1..1
-* identifier.type ?!
+* identifier.type 1..1 ?! MS
 * identifier.type. ^isModifierReason = "Protocols may have multiple business identifers from a given system - only with a type can they be distinguished." 
 * identifier.type from $identifier-type-vs (extensible)
 * identifier.type.coding.code 1..1
