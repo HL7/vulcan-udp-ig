@@ -6,7 +6,7 @@ Description: """Example Narrative Single Composition with a Section for Each M11
 This is probably the most appropriate general purpose pattern.
 """
 
-* status = #partial
+* status = #final
 * type = $NCIT#C207508 // Narrative
 * date = "2025-06-30T12:46:00Z"
 * author = Reference(Narrative-Organization) // Reference to Organization: Marketing 

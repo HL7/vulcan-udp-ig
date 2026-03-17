@@ -13,7 +13,7 @@ Context: M11_ResearchStudyProfile
 * . ^comment = "Additional concepts required by M11 that have no other obvious home."
 
 * extension contains
-  originalProtocol 1..1 and
+  originalProtocol 1..1 MS and
   versionDate 1..1
 
 * extension[originalProtocol].value[x] only CodeableConcept

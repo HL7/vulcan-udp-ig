@@ -36,5 +36,6 @@ constructed from one or more code systems that define the required structure"
 * section.code. ^binding.description = "The value set can only be extended if narrative content falls outside any identified M11 section." 
 // !!!
 //* section.code. ^binding.additional.key = "m11-research-study-narratives-section-binding"
+* type MS
 * type from udp-narrative-elements-vs (required)
 * author only Reference(Organization)

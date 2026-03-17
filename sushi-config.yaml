@@ -164,6 +164,12 @@ dependencies:
 # URL when generating the IG JSON.
 #
 groups:
+  GroupBASE:
+    name: "Profiles & Extensions: Base"
+    description: Base Profiles and Extensions
+    resources:
+    - StructureDefinition/m11-approval
+    - StructureDefinition/m11-confidentiality-statement
   GroupNAR:
     name: "Profiles & Extensions: Narrative Structures"
     description: Profiles and Extensions to allow representation of narrative structures
@@ -179,12 +185,6 @@ groups:
     - StructureDefinition/m11-protocol-amendment
     - StructureDefinition/m11-amendment-detail
     - StructureDefinition/m11-amendment-scope-impact
-  GroupOTH:
-    name: "Profiles & Extensions: Other"
-    description: Other Profiles and Extensions
-    resources:
-    - StructureDefinition/m11-approval
-    - StructureDefinition/m11-confidentiality-statement
 #Terminology
   GroupCS:
     name: "Terminology: Code Systems"

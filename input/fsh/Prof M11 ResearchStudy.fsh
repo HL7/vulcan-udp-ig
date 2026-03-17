@@ -9,14 +9,19 @@ by further instances of ResearchStudy linked through the relatesTo attribute.
 * ^extension[$ext-fmm].valueInteger = 2
 * ^status = #active
 
-* extension contains
-    narrative-elements named narrative 0..* and
-    M11_ProtocolAmendment named amendment 0..1 and
-    m11-confidentiality-statement named confidentialityStatement 0..1 and
-    m11-approval named approval 0..1 and
-    m11-research-study named m11-research-study 1..1
+* obeys identifier-required
 
-* identifier MS
+* extension contains
+    narrative-elements named narrative 0..* MS and
+    M11_ProtocolAmendment named amendment 0..1 MS and
+    m11-confidentiality-statement named confidentialityStatement 0..1 and
+    m11-approval named approval 0..1 MS and
+    m11-research-study named m11-research-study 1..1 MS
+
+* title MS
+* identifier 1..* MS
+* phase MS
+* associatedParty.party.reference MS
     
 * identifier.type 1..1 ?! MS
 * identifier.type. ^isModifierReason = "Protocols may have multiple business identifers from a given system - only with a type can they be distinguished." 
@@ -43,3 +48,9 @@ by further instances of ResearchStudy linked through the relatesTo attribute.
                             to indicate the target is the amendment details that have been incorporated"
 
 * title ^comment = "The protocol should have a descriptive title that identifies the scientific aspects of the trial sufficiently to ensure it is immediately evident what the trial is investigating and on whom, and to allow retrieval from literature or internet searches."
+
+
+Invariant: identifier-required
+Description: "The identifier MUST be populated with at least a Sponsor identifier"
+Expression: "identifier.exists()"
+Severity: #error
