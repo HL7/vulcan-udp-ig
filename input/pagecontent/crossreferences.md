@@ -10,6 +10,8 @@ This FHIR implementation guide has the following relationships with other FHIR i
 
 [Evidence Based Medicine](https://hl7.org/fhir/uv/ebm/history.html) (EBM) - EBM is a project within HL7 also working on practices for leveraging FHIR for exchange of protocol information. While Vulcan Utilizing the Digital Protocol (UDP) project focuses on the design, conduct, and generation of data generally to support clinical development, EBM aims at a systematic approach to clinical decision-making that integrates the best available research evidence with clinical expertise and patient values. It involves systematically finding, appraising, and applying the results of well-designed clinical research, particularly randomized controlled trials (RCTs) and systematic reviews, to inform clinical decisions and optimize patient outcomes. Together, they enable a learning health system by utilizing digital protocol standards to facilitate research and apply systematic evidence. Vulcan UDP leverages practices and learnings from EBM.
 
+
+
 ### Conformance
 
 §§§
