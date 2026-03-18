@@ -6,6 +6,7 @@ Description: """Illustration of a protocol with composition for each M11 narrati
 on the server by following this link https://vhewer.com/display-product?url= 
 """ //TODO Add server details 
 
+* status = #active
 
 * identifier[+].type.text = "Sponsor Identifier"
 * identifier[=].system = $SpID
@@ -14,7 +15,7 @@ on the server by following this link https://vhewer.com/display-product?url=
 * version = "(a)"
 
 * title = "Illustration of Complex Narrative and Formatting"
-* status = $Pub#partial
+
 * extension[m11-research-study].extension[versionDate].valueDate = 2017-10-01
 * extension[m11-research-study].extension[originalProtocol].valueCodeableConcept = $NCIT#C218485	"Protocol Not Amended"
 

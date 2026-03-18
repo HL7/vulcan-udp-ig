@@ -5,7 +5,8 @@ Title:  "M11 Research Study Extension"
 Context: M11_ResearchStudyProfile
 * ^extension[$ext-fmm].valueInteger = 2
 * ^extension[$ext-wg].valueCode = #brr
-* ^extension[$ext-standards-status].valueCode = #draft
+
+* ^status = #active
 
 * value[x] 0..0
 * . ^short = "Additional concepts for M11"

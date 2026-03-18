@@ -53,14 +53,14 @@
 <artifact id="ResearchStudy/JPMA0001-jpn" key="ResearchStudy-JPMA0001-jpn" name="JPMA0001 Provided Example - Japanese Language"/>
 <artifact id="Group/JPMA0001-Criteria-JPN" key="Group-JPMA0001-Criteria-JPN" name="Japanese Protocol from Vulcan UDP Eligibility Criteria"/>
 <artifact deprecated="true" id="ValueSet/m11-identifier-type-vs" key="ValueSet-m11-identifier-type-vs" name="M11 Identifier Type Value Set"/>
-<artifact id="StructureDefinition/m11-research-study-profile" key="StructureDefinition-m11-research-study-profile" name="M11 Research Study"/>
+<artifact id="StructureDefinition/m11-research-study" key="StructureDefinition-m11-research-study" name="M11 Research Study Extension"/>
+<artifact id="StructureDefinition/m11-research-study-profile" key="StructureDefinition-m11-research-study-profile" name="M11 Research Study Profile"/>
 <artifact deprecated="true" id="ValueSet/m11-section-codes-vs" key="ValueSet-m11-section-codes-vs" name="M11 Section Codes Value Set"/>
 <artifact id="StructureDefinition/m11-amendment-detail" key="StructureDefinition-m11-amendment-detail" name="M11_AmendmentDetails"/>
 <artifact id="StructureDefinition/m11-amendment-scope-impact" key="StructureDefinition-m11-amendment-scope-impact" name="M11_AmendmentScopeImpact"/>
 <artifact id="StructureDefinition/m11-approval" key="StructureDefinition-m11-approval" name="M11_Approval"/>
 <artifact id="StructureDefinition/m11-confidentiality-statement" key="StructureDefinition-m11-confidentiality-statement" name="M11_ConfidentialityStatement"/>
 <artifact id="StructureDefinition/m11-protocol-amendment" key="StructureDefinition-protocol-amendment" name="M11_ProtocolAmendment"/>
-<artifact id="StructureDefinition/m11-research-study" key="StructureDefinition-m11-research-study" name="M11_ResearchStudy"/>
 <artifact deprecated="true" id="ValueSet/nci-study-role-vs" key="ValueSet-nci-study-role-vs" name="NCI Study Role Value Set"/>
 <artifact id="Organization/Narrative-Organization" key="Organization-Narrative-Organization" name="Narrative Author Organization"/>
 <artifact id="StructureDefinition/narrative-elements" key="StructureDefinition-narrative-elements" name="Narrative Elements"/>
@@ -91,12 +91,13 @@
 <page deprecated="true" key="09-links" name="09 Links"/>
 <page deprecated="true" key="10-credits" name="10 Credits"/>
 <page deprecated="true" key="11-changes" name="11 Changes"/>
+<page key="acknowledgements" name="Acknowledgements"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="background" name="Background"/>
 <page key="best-practice" name="Best Practice"/>
 <page key="bundles" name="Bundles"/>
 <page key="changes" name="Changes"/>
-<page key="credits" name="Credits"/>
+<page key="CrossReferences" name="Cross References"/>
 <page key="downloads" name="Downloads"/>
 <page key="fhir-representation" name="Fhir Representation"/>
 <page key="index" name="Home"/>

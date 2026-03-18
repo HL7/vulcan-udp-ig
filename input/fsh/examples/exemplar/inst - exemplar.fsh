@@ -51,8 +51,7 @@ Pharmaceuticals.  The regulator is the Exemplar Regulating Authority (ERA)
 * label[=].value = "A Phase 3 Study of Inhaled versus Intramuscular Exoticillin for Bronchtis in Diabetic Japanese Patients"
 
 
-//* date = 2017-12-05 // TODO - fix use of date /  version
-* status = $Pub#draft "Draft" // TODO: Check we are really using this correctly
+* status = #active
 
 * phase = $NCIT#C15602  "Phase III Trial"
 * focus = Reference(Exemplar-MedicinalProduct) // TODO Add more details to medicinal product resource

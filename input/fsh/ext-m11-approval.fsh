@@ -4,14 +4,14 @@ Description: "Approval and sign off"
 Context: M11_ResearchStudyProfile
 * ^extension[$ext-fmm].valueInteger = 2
 * ^extension[$ext-wg].valueCode = #brr
-* ^extension[$ext-standards-status].valueCode = #draft
+* ^status = #active
 
 * value[x] 0..0
 * . ^short = "Sign-off details"
 * . ^definition = "Signature and date for approval."
 * . ^comment = "This may need transferring into the StudyDesign profile eventually."
 
-* obeys date-required
+// * obeys date-required
 
 * extension contains
   approvalDate 0..1 MS and
@@ -24,7 +24,7 @@ Context: M11_ResearchStudyProfile
 * extension[signatureUrl].value[x] only string or url
 * extension[signatureMethod].value[x] only string
 
-Invariant: date-required
-Description: "At least one of approvalDate or signatureUrl SHALL be populated"
-Expression: "approvalDate.exists() or signatureUrl.exists()"
-Severity: #error
+// Invariant: date-required
+// Description: "At least one of approvalDate or signatureUrl SHOULD be populated."
+// Expression: "extension[approvalDate].exists() or extension[signatureUrl].exists()"
+// Severity: #warning

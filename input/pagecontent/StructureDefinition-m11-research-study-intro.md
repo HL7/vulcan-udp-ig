@@ -1,6 +1,6 @@
 ### Must Support Elements
 
-Both originalProtocol and versionDate SHALL be populated
+§Both originalProtocol and versionDate SHALL be populated§
 
 
 

@@ -1,6 +1,6 @@
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li>
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">IG Home<b class="caret">
+    <a data-toggle="dropdown" href="index.html" class="dropdown-toggle">IG Home<b class="caret">
       </b>
     </a>
     <ul class="dropdown-menu">
@@ -19,7 +19,7 @@
     <a href="toc.html">Table of Contents</a>
   </li>-->
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance<b class="caret">
+    <a data-toggle="dropdown" href="index.html" class="dropdown-toggle">Guidance<b class="caret">
       </b>
     </a>
     <ul class="dropdown-menu">
@@ -44,7 +44,7 @@
     <a href="artifacts.html">Artifact Index</a>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
+    <a data-toggle="dropdown" href="index.html" class="dropdown-toggle">Support<b class="caret">
       </b>
     </a>
     <ul class="dropdown-menu">
@@ -55,7 +55,7 @@
         <a href="terminology.html">Terminology Support</a>
       </li>  
       <li>
-        <a href="credits.html">Credits</a>
+        <a href="crossreferences.html">Cross References</a>
       </li>
       <li>
         <a href="changes.html">Change Log</a>
@@ -64,6 +64,9 @@
   </li>
   <li>
     <a href="downloads.html">Downloads</a>
+  </li>
+    <li>
+    <a href="acknowledgements.html">Acknowledgements</a>
   </li>
 
 </ul>      
