@@ -4,9 +4,10 @@ Description: "Sponsor Confidentiality Statement.  This is a replica of EBM Resea
 Context: M11_ResearchStudyProfile
 * ^extension[$ext-fmm].valueInteger = 2
 * ^extension[$ext-wg].valueCode = #brr
-* ^extension[$ext-standards-status].valueCode = #draft
 //* ^context.type = #element
 //* ^context.expression = "ResearchStudy"
+* ^status = #active
+
 * value[x] only string
 * . ^short = "Sponsor Confidentiality Statement, if applicable."
 * . ^definition = "Sponsor Confidentiality Statement, if applicable."

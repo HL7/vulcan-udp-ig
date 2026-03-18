@@ -78,12 +78,14 @@ Pharmaceuticals.  The regulator is the Exemplar Regulating Authority (ERA)
 
 
 // * extension[m11-protocol-amendment][=].extension[rationale].valueString = "Updates to address safety concern & align with product guidelines."
-* extension[m11-protocol-amendment][=].extension[description].valueString = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-    <p>Protocol ABC-Exemplar A Phase 3 Study of Inhaled Exoticillin compared to Intramuscular Exoticillin for Treatment of Bronchtis Japanese Patients with Iatrogenic Diabetes Mellitus
-    has been amended. </p><p>The new protocol is indicated by Amendment (a) and will be used to conduct the study in place of any preceding version of the protocol. 
-    The overall changes and rationale for the changes made to this protocol are as follows: </p><p>An exclusion criterion for patients with retinopathy or maculopathy was added due to the potential risk of 
-    fundal hemorrhage induced by hypoglycemia. The Intravenous Exoticillin GlucaGen reconstitution volume was changed from 1.0 mL to 1.1 mL in accordance with instructions in the Summary of Product Characteristics (2015).</p>
-    </div>"
+* extension[m11-protocol-amendment][=].extension[description].valueMarkdown = """#Protocol ABC-Exemplar A Phase 3 Study of Inhaled Exoticillin compared to Intramuscular Exoticillin for Treatment of Bronchtis Japanese Patients with Iatrogenic Diabetes Mellitus
+    has been amended.
+    The new protocol is indicated by *Amendment (a)* and will be used to conduct the study in place of any preceding version of the protocol. 
+    The overall changes and rationale for the changes made to this protocol are as follows: 
+    - An exclusion criterion for patients with retinopathy or maculopathy was added due to the potential risk of 
+    fundal hemorrhage induced by hypoglycemia. 
+    - The Intravenous Exoticillin GlucaGen reconstitution volume was changed from 1.0 mL to 1.1 mL in accordance with instructions in the Summary of Product Characteristics (2015).
+    """
 
 
 

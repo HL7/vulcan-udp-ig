@@ -9,9 +9,10 @@
 id: hl7.fhir.uv.clinical-study-protocol
 canonical: http://hl7.org/fhir/uv/clinical-study-protocol
 name: ClincalStudyProtocol
-title: Clinical Study Protocol (Vulcan UDP)
+title: "HL7 FHIR® Implementation Guide: Clinical Study Protocol, Edition 1"  
+# title: Clinical Study Protocol (Vulcan UDP)
 # description: Example Implementation Guide for getting started with SUSHI
-status:  draft #| active | retired | unknown
+status:  active # draft | active | retired | unknown
 extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg  #<<< must include a http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension that identifies the workgroup responsible for the IG. This is the authoritative element.
     valueCode: brr  # <<< The value must be the code for the workgroup

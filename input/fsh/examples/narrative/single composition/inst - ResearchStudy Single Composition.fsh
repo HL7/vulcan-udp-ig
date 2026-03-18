@@ -6,6 +6,7 @@ Description: """Illustration of a protocol with narrative as Single Composition.
     on the server by following this link https://vhewer.com/display-product?url= 
     """ // TODO Add server details 
 
+* status = #active
     
 * identifier[+].type.text = "Sponsor Identifier"
 * identifier[=].system = $SpID
@@ -14,7 +15,7 @@ Description: """Illustration of a protocol with narrative as Single Composition.
 * version = "(a)"
 
 * title = "Illustration of Assembling Narrative Sections"
-* status = $Pub#active
+
 * extension[m11-research-study].extension[versionDate].valueDate = 2017-10-01
 * extension[m11-research-study].extension[originalProtocol].valueCodeableConcept = $NCIT#C218485	"Protocol Not Amended"
 

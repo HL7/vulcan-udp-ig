@@ -20,5 +20,5 @@ Description: """Illustration of a Japanese language protocol - this is the Engli
 * label[+].type = $TitleType#short-title "Short title"
 * label[=].value = "Administration for patients with type 2 diabetes"
 * date = 2026-01-14
-* status = $Pub#draft "Draft" 
+* status = #active
 * phase = $NCIT#C15602  "Phase III Trial"

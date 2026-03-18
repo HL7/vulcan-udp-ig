@@ -67,18 +67,23 @@ WARNING: StructureDefinition/m11-research-study-narratives: StructureDefinition.
 WARNING: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[4].binding.additional[0]: Constraint failed: eld-31: 'additionalBindings should have a key (key.exists())' (defined in http://hl7.org/fhir/StructureDefinition/ElementDefinition) (Best Practice Recommendation)
 
 # 06 These are the locations for illustration in examples - they don't have to resolve
-WARNING: ResearchStudy/Exemplar-ResearchStudy: ResearchStudy.extension[2].extension[2].value.ofType(url): No definition could be found for URL value 'https://somelocation'
-WARNING: ResearchStudy/Exemplar-ResearchStudy-Current-Amendment: ResearchStudy.extension[1].extension[2].value.ofType(url): No definition could be found for URL value 'https://somelocation'
 WARNING: MedicinalProductDefinition/Exemplar-MedicinalProduct: MedicinalProductDefinition.identifier[0].system: No definition could be found for URL value 'https://exemplarSponsor.com/sponsor-identifier'
-WARNING: ResearchStudy/IGBJ-ResearchStudy: ResearchStudy.extension[4].extension[8].value.ofType(url): No definition could be found for URL value 'https://somelocation'
-WARNING: ResearchStudy/IGBJ-ResearchStudy: ResearchStudy.identifier[1].system: No definition could be found for URL value 'https://exemplarSponsor.com/sponsor-identifier'
 WARNING: MedicinalProductDefinition/IGBJ-MedicinalProduct: MedicinalProductDefinition.identifier[0].system: No definition could be found for URL value 'https://exemplarSponsor.com/sponsor-identifier'
+WARNING: ResearchStudy/Exemplar-ResearchStudy: ResearchStudy.extension[2].extension[2].value.ofType(url): No definition could be found for URL value 'https://somelocation'
 WARNING: ResearchStudy/Exemplar-ResearchStudy: ResearchStudy.identifier[0].system: No definition could be found for URL value 'https://exemplarSponsor.com/sponsor-identifier'
-WARNING: ResearchStudy/Exemplar-ResearchStudy-Current-Amendment: ResearchStudy.identifier[0].system: No definition could be found for URL value 'https://exemplarSponsor.com/sponsor-identifier'
-WARNING: ResearchStudy/JPMA0001-eng: ResearchStudy.identifier[0].system: No definition could be found for URL value 'https://exemplarSponsor.com/sponsor-identifier'
-WARNING: ResearchStudy/JPMA0001-jpn: ResearchStudy.identifier[0].system: No definition could be found for URL value 'https://exemplarSponsor.com/sponsor-identifier'
 WARNING: ResearchStudy/Exemplar-ResearchStudy: ResearchStudy.identifier[1].system: No definition could be found for URL value 'https://exemplarEMA.org/registry-identifier'
 WARNING: ResearchStudy/Exemplar-ResearchStudy: ResearchStudy.identifier[2].system: No definition could be found for URL value 'https://exemplarRegulator.org/registry-identifier'
+WARNING: ResearchStudy/Exemplar-ResearchStudy-Current-Amendment: ResearchStudy.extension[1].extension[2].value.ofType(url): No definition could be found for URL value 'https://somelocation'
+WARNING: ResearchStudy/Exemplar-ResearchStudy-Current-Amendment: ResearchStudy.identifier[0].system: No definition could be found for URL value 'https://exemplarSponsor.com/sponsor-identifier'
+WARNING: ResearchStudy/IGBJ-ResearchStudy: ResearchStudy.extension[4].extension[8].value.ofType(url): No definition could be found for URL value 'https://somelocation'
+WARNING: ResearchStudy/IGBJ-ResearchStudy: ResearchStudy.identifier[1].system: No definition could be found for URL value 'https://exemplarSponsor.com/sponsor-identifier'
+WARNING: ResearchStudy/JPMA0001-eng: ResearchStudy.identifier[0].system: No definition could be found for URL value 'https://exemplarSponsor.com/sponsor-identifier'
+WARNING: ResearchStudy/JPMA0001-jpn: ResearchStudy.identifier[0].system: No definition could be found for URL value 'https://exemplarSponsor.com/sponsor-identifier'
+WARNING: ResearchStudy/ResearchStudy-Composition-Section-Per-Section: ResearchStudy.identifier[0].system: No definition could be found for URL value 'https://exemplarSponsor.com/sponsor-identifier'
+WARNING: ResearchStudy/ResearchStudy-Narrative-Complex: ResearchStudy.identifier[0].system: No definition could be found for URL value 'https://exemplarSponsor.com/sponsor-identifier'
+WARNING: ResearchStudy/ResearchStudy-Narrative-Comp-Per-M11: ResearchStudy.identifier[0].system: No definition could be found for URL value 'https://exemplarSponsor.com/sponsor-identifier'
+WARNING: ResearchStudy/ResearchStudy-Single-Composition: ResearchStudy.identifier[0].system: No definition could be found for URL value 'https://exemplarSponsor.com/sponsor-identifier'
+
 
 # 07 fhirpath-types is flagged as experimental! This is not in our control.
 INFORMATION: StructureDefinition/m11-amendment-detail: StructureDefinition.snapshot.element[1].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
@@ -194,6 +199,10 @@ INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition
 INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[78].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
 INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[86].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
 INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[94].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
+INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[77].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
+INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[108].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
+INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[115].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
+INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[127].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
 
 # 08 These display names are all valid in NCI Thesaurus and are the preferred ones for this application
 ERROR: MedicinalProductDefinition/Exemplar-MedicinalProduct: MedicinalProductDefinition.name[0].type.coding[0].display: Wrong Display Name 'Nonproprietary Name(s)' for http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C97054. Valid display is 'Generic Name' (for the language(s) 'en')

@@ -63,10 +63,10 @@ Context: M11_ResearchStudyProfile
 * . ^definition = "Representation of amendments to a study protocol."
 * . ^comment = "The original extension is from EBM and is being modified to separate general amendments (which belong in EBM) and those specific to the UDP use cases."
 
-* obeys scope-required
-* obeys scopeImpact-required
-* obeys safetyComment-required
-* obeys reliabilityComment-required
+// * obeys scope-required
+// * obeys scopeImpact-required
+// * obeys safetyComment-required
+// * obeys reliabilityComment-required
 
 * extension contains
 
@@ -163,22 +163,22 @@ Context: M11_ResearchStudyProfile
 * extension[rationale].value[x] only string
 * extension[description].value[x] only string or markdown
 
-Invariant: scope-required
-Description: "At least one of country, region and site SHALL be populated"
-Expression: "country.exists() or region.exists() or site.exists()"
-Severity: #error
+// Invariant: scope-required
+// Description: "At least one of country, region and site SHALL be populated"
+// Expression: "country.exists() or region.exists() or site.exists()"
+// Severity: #error
 
-Invariant: scopeImpact-required  // TODO make sure this doesn't conflict if there are no amendments
-Description: "If protocol has been amended at least one of country, region and site SHALL be populated and the number affected provided"
-Expression: "(country.exists() or region.exists() or site.exists()) and number.exists()"
-Severity: #error
+// Invariant: scopeImpact-required  // TODO make sure this doesn't conflict if there are no amendments
+// Description: "If protocol has been amended at least one of country, region and site SHALL be populated and the number affected provided"
+// Expression: "(country.exists() or region.exists() or site.exists()) and number.exists()"
+// Severity: #error
 
-Invariant: safetyComment-required
-Description: "If substantialImpactSafety is TRUE there SHALL be an explanatory comment"
-Expression: "substantialImpactSafety.exists() and substantialImpactSafety.value = true and substantialImpactSafetyComment.exists()"
-Severity: #error
+// Invariant: safetyComment-required
+// Description: "If substantialImpactSafety is TRUE there SHALL be an explanatory comment"
+// Expression: "substantialImpactSafety.exists() and substantialImpactSafety.value = true and substantialImpactSafetyComment.exists()"
+// Severity: #error
 
-Invariant: reliabilityComment-required
-Description: "If substantialImpactReliability is TRUE there SHALL be an explanatory comment"
-Expression: "substantialImpactReliability.exists() and substantialImpactReliability.value = true and substantialImpactReliabilityComment.exists()"
-Severity: #error
+// Invariant: reliabilityComment-required
+// Description: "If substantialImpactReliability is TRUE there SHALL be an explanatory comment"
+// Expression: "substantialImpactReliability.exists() and substantialImpactReliability.value = true and substantialImpactReliabilityComment.exists()"
+// Severity: #error

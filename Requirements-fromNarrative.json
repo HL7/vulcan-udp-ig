@@ -6,5 +6,65 @@
   "title" : "Narrative Conformance Statements",
   "status" : "active",
   "experimental" : false,
-  "description" : "Conformance statements found throughout the narrative of the IG consolidated into this computable resource for traceability purposes"
+  "description" : "Conformance statements found throughout the narrative of the IG consolidated into this computable resource for traceability purposes",
+  "statement" : [{
+    "key" : "1",
+    "conformance" : ["SHALL"],
+    "requirement" : "At least one of approvalDate or signatureUrl SHALL be populated"
+  },
+  {
+    "key" : "2",
+    "conformance" : ["SHALL"],
+    "requirement" : "Attributes type and section.code SHALL be used to specify the structure in accordance with M11"
+  },
+  {
+    "key" : "3",
+    "conformance" : ["SHALL"],
+    "requirement" : "identifier - there SHALL be a value assigned by the Sponsor value"
+  },
+  {
+    "key" : "4",
+    "conformance" : ["SHOULD"],
+    "requirement" : "identifier - there SHOULD be a value assigned by the Regulator"
+  },
+  {
+    "key" : "5",
+    "conformance" : ["SHALL"],
+    "requirement" : "identifier.type - SHALL be populated so that the different identifiers required by M11 can be recognised"
+  },
+  {
+    "key" : "6",
+    "conformance" : ["SHALL"],
+    "requirement" : "title - M11 requirement, SHALL be present"
+  },
+  {
+    "key" : "7",
+    "conformance" : ["SHALL"],
+    "requirement" : "m11-research-study - M11 requirement, extension SHALL be populated"
+  },
+  {
+    "key" : "8",
+    "conformance" : ["SHALL"],
+    "requirement" : "m11-protocol-amendment - M11 requirement, extension SHALL be populated"
+  },
+  {
+    "key" : "9",
+    "conformance" : ["SHALL"],
+    "requirement" : "phase - M11 requirement, SHALL be present"
+  },
+  {
+    "key" : "10",
+    "conformance" : ["SHALL"],
+    "requirement" : "associatedParty.party.reference - M11 requirement, SHALL have a Sponsor name and address"
+  },
+  {
+    "key" : "11",
+    "conformance" : ["SHALL"],
+    "requirement" : "m11-approval - M11 requirement, SHALL have either a date or location for approval of protocol"
+  },
+  {
+    "key" : "12",
+    "conformance" : ["SHALL"],
+    "requirement" : "Both originalProtocol and versionDate SHALL be populated"
+  }]
 }

@@ -18,7 +18,7 @@ Description: """Illustration of a Japanese language protocol - this is the origi
 * label[+].type = $TitleType#short-title "Short title"
 * label[=].value = "2型糖尿病患者への投与"
 
-* status = $Pub#draft "Draft" 
+* status = #active
 * phase = $NCIT#C15602  "Phase III Trial"
 
 * recruitment[+].eligibility = Reference(JPMA0001-Criteria-JPN)
