@@ -11,7 +11,7 @@ Context: M11_ResearchStudyProfile
 * . ^definition = "Signature and date for approval."
 * . ^comment = "This may need transferring into the StudyDesign profile eventually."
 
-// * obeys date-required
+* obeys date-required
 
 * extension contains
   approvalDate 0..1 MS and
@@ -24,7 +24,7 @@ Context: M11_ResearchStudyProfile
 * extension[signatureUrl].value[x] only string or url
 * extension[signatureMethod].value[x] only string
 
-// Invariant: date-required
-// Description: "At least one of approvalDate or signatureUrl SHOULD be populated."
-// Expression: "extension[approvalDate].exists() or extension[signatureUrl].exists()"
-// Severity: #warning
+Invariant: date-required
+Description: "At least one of approvalDate or signatureUrl SHOULD be populated."
+Expression: "extension.where(url = 'approvalDate').exists() or extension.where(url = 'signatureUrl').exists()"
+Severity: #warning

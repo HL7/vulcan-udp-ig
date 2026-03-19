@@ -9,8 +9,8 @@
   "description" : "Conformance statements found throughout the narrative of the IG consolidated into this computable resource for traceability purposes",
   "statement" : [{
     "key" : "1",
-    "conformance" : ["SHALL"],
-    "requirement" : "At least one of approvalDate or signatureUrl SHALL be populated"
+    "conformance" : ["SHOULD"],
+    "requirement" : "At least one of approvalDate or signatureUrl SHOULD be populated"
   },
   {
     "key" : "2",

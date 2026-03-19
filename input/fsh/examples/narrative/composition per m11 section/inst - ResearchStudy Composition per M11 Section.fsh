@@ -3,7 +3,7 @@ InstanceOf: m11-research-study-profile
 Title: "IGBJ Research Study with composition for each M11 narrative section"
 Usage: #example
 Description: """Illustration of a protocol with composition for each M11 narrative section.   The same example can also be viewed
-on the server by following this link https://vhewer.com/display-product?url= 
+on the server by following this link  (to be done)
 """ //TODO Add server details 
 
 * status = #active

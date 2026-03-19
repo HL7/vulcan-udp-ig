@@ -188,23 +188,38 @@ To achieve this level of validation use the Artifact definitions in the Download
 
 ### USDM and M11 to FHIR Mapping
 
-There haas to be a mapping from M11 to FHIR and also one from USDM to FHIR. The relationships between the elements of M11, USDM and FHIR are shown in the Mapping spreadsheet described in the following section.  The focus of this is representation of M11 so the mapping does not cover the whole of USDM at this time.  There is a useful infographic from CDISC here: [usdm_m11_classes.pdf](Mappings\usdm_m11_classes.pdf) that shows the overlap between M11 and USDM and in the bottom right USDM classes not covered by M11.
+#### Purpose
 
-The USDM to M11 mapping is provided by CDISC. There is then a consequence that the USDM to FHIR mapping may be forced to a particular form by the M11 to FHIR mapping that would not be the case if it was just a USDM to FHIR mapping. The mapping to FHIR is then a mapping from USDM to FHIR and M11 to FHIR since the two must be consistent. It is two mappings in the one document. 
+M11 provides a template for a protocol that defines the sections, sub-sections etc and also a limited number of more granular fields.  USDM is not really concerned with the section and sub-sections but instead seeks to represent all of the protocol in granular form. These two approaches have been developed to work in harmony and as a consequence there is an existing mapping from M11 to USDM that keeps concepts aligned.
+
+FHIR exists to provide a uniform method for holding data in a digital form that has an entire infrastructure for validation, storage and transport of data.  
+
+There is a new mapping from M11 to FHIR  and as noted above there is an existing mapping from M11 to USDM that is provided by CDISC.  By extension this combination also provides a mapping from USDM to FHIR.
+
+For many concepts FHIR has some flexibility in how the concept might be represented, not least when codes have to be chosen - there are often different coding systems that might be used. By considering the existing M11 to USDM mapping and selecting a FHIR mapping that is appropriate for both ensures consistency of representation whatever the source.
+
+The usage of the mapping depends on the objective.  For a largely document centric approach - for instance protocol approval - use of the mapping will focus on the M11 to FHIR part.  In contrast for a data collection tool that seeks to match the data items considered by the protocol  to those that the tool will collect the USDM representation is a better starting point.  This will require the USDM to FHIR mapping to establish the data representation. 
+
+Both M11 and USDM have to converge on the FHIR concepts they map to and so we have to have a three way mapping that relates M11 to USDM and both of them to FHIR.
+
+#### Mapping Representation
+
+The relationships between the elements of M11, USDM and FHIR are shown in the Mapping spreadsheet described in the following section.  The present focus of this mapping is representation of M11 so the mapping does not cover the whole of USDM.  There is a useful infographic from CDISC here: [usdm_m11_classes.pdf](Mappings\usdm_m11_classes.pdf) that shows the overlap between M11 and USDM and in the bottom right USDM classes not covered by M11.
 
 The spreadsheet for mapping to FHIR is in 3 parts as shown  in the illustration. Click on the illustration or click <a href="Mappings/M11 to FHIR Mapping 01.xlsx">here</a> to download the full spreadsheet
 
-<div><p><a href="Mappings/M11 to FHIR Mapping 01.xlsx"> <img src="Mapping.png" alt="Mapping.png" style="max-width: 90%;height: auto;"/> </a> <p>
+<div><p><a href="Mappings/M11 to FHIR Mapping 02.xlsx"> <img src="Mapping.png" alt="Mapping.png" style="max-width: 90%;height: auto;"/> </a> <p>
     Figure 6 : M11 / USDM / FHIR Mapping Spreadsheet
     </p></p></div>
+
 
 The FHIR columns of the spreadsheet are described in detail below together with examples.
 
 |     FHIR Column     | Purpose                                                      |
 | :-----------------: | ------------------------------------------------------------ |
 |      Resource       | A simple path  to the relevant FHIR resource                 |
-|     Sample XML      | A fragment of XML that illustrates  the mapping. Uses parameters starting  with a $ or % for conciseness |
-|  Example  Value(s)  | Elements beginning with % are given  a value here - above the dashed line they are fixed, below they are whatever  the actual data is. Also uses macro  values beginning with $ |
+|     Sample JSON     | A fragment of JSON that illustrates  the mapping.            |
+|  Example  Value(s)  | The key data values represented in the Sample                |
 | Binding  (strength) | FHIR terminology must be bound to a  value set and the strength determines whether the value set is fixed or can  be extended. |
 
 *Narrative Content is noted in the mapping sheet but is shown on a separate tab of the spreadsheet.  It is discussed further below.*
@@ -390,3 +405,8 @@ The example values here are
 %NARRATIVE = <nnnn>
 ```
 
+#### Representation in FHIR R4 and R5
+
+This implementation guide is based on FHIR Release 6.  This release was chosen because of updates to some key resources present in R6 but not in R5.  Moving data between FHIR releases is generally feasible by use of profiles and extensions and where necessary "backport" version of an implementation guide can be produced to show how to do this.
+
+During the connectathons held during the development of this IG there has been no demand for a backport version but we have done exploration of what is necessary.  Between R6 and R5 the changes are mainly in the ResearchStudy and Group resources.  Between R6 and R4 there are additional changes that while manageable take more effort.  We are committed to supporting releases of FHIR earlier than R6 if there is a demand.  If you have such a requirement please contact the UDP team (udp@HL7Vulcan.org). 

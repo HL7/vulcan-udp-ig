@@ -26,7 +26,7 @@ The processes supporting testing scenarios were articulated as simply and with a
 
 5. Validate receipt of protocol (i.e., display, extraction of structured content)
 
-NOTE: methods for generation, exchange, and validation of receipt will vary
+NOTE: methods for generation, exchange, and validation of receipt will vary.  The Vulcan UDP project welcomes experience from stakeholders.
 
 
 

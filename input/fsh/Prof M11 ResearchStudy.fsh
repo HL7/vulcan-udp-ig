@@ -42,7 +42,7 @@ by further instances of ResearchStudy linked through the relatesTo attribute.
 * focus. ^comment = "Expect MedicinalProductDefinition.name.type.code to be one of C71898 Proprietary name or C97054 Non-proprietary name"
 
 // not R4
-// TODO this needs the latest R6 to work
+// TODO this needs the latest R6 to work because the currenty version has a required binding that is now extensible in the build version
 //* relatesTo.type from udp-related-artifact-type-vs (extensible)
 * relatesTo.type. ^comment = "Set to a value of predecessor to indicate the target is the previous version of the protocol or to C218694
                             to indicate the target is the amendment details that have been incorporated"
