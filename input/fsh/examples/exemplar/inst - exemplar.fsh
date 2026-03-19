@@ -17,24 +17,23 @@ Pharmaceuticals.  The regulator is the Exemplar Regulating Authority (ERA)
 * identifier[+].type.coding[+] = $NCIT#C132351 "Sponsor Protocol Identifier"
 * identifier[=].system = $SpID
 * identifier[=].value = "ABC-Exemplar"
-* identifier[=].use = #usual
 
 * identifier[+].type.text = "EU CT Number"
 * identifier[=].type.coding[+].system = $NCIT
 * identifier[=].type.coding[=].code = #C218684
 * identifier[=].system = $EMA_CTREG
 * identifier[=].value = "EU-1234"
-* identifier[=].use = #official
 
 * identifier[+].type.text = "Other Regulatory or Clinical Trial Identifier"
 * identifier[=].type.coding[+].system = $NCIT
 * identifier[=].type.coding[=].code = #C218690
 * identifier[=].system = $ERA_REG
 * identifier[=].value = "ERA1234"
-* identifier[=].use = #official
 * identifier[=].assigner = Reference(Organization/Exemplar-Regulator-Organization)
  
 * identifier[+].type.text = "Amendment Identifier"
+* identifier[=].type.coding[+].system = $NCIT
+* identifier[=].type.coding[=].code = #C218477
 * identifier[=].system = $AmdID
 * identifier[=].value = "ABC-Exemplar(a)"
 // for rendition if there is an amendment at this level need to go and find the amendment with this ID and display the scope
@@ -54,7 +53,7 @@ Pharmaceuticals.  The regulator is the Exemplar Regulating Authority (ERA)
 * status = #active
 
 * phase = $NCIT#C15602  "Phase III Trial"
-* focus = Reference(Exemplar-MedicinalProduct) // TODO Add more details to medicinal product resource
+* focus = Reference(Exemplar-MedicinalProduct)
 
 * associatedParty[+].party = Reference(Organization/Exemplar-Sponsor-Organization)
 * associatedParty[=].role = $NCIT#C70793 "Clinical Study Sponsor"
@@ -82,68 +81,18 @@ Pharmaceuticals.  The regulator is the Exemplar Regulating Authority (ERA)
 * extension[approval].extension[signatureUrl].valueUrl = "https://somelocation" 
 * extension[approval].extension[signatureMethod].valueString = "electronic and wet ink copy"
 
+* relatesTo[+].type = http://terminology.hl7.org/CodeSystem/artifact-relationship-type#justification
 
 //---------------------------------------------------------------
-// Title Page Amemndment Summary
-//
-
-//* relatesTo[+].type = $NCIT#C218694 "Amendment details" // TODO This is the code that should be used
-* relatesTo[+].type = http://terminology.hl7.org/CodeSystem/artifact-relationship-type#justification
+// Amendment
 * relatesTo[=].targetReference = Reference(Exemplar-ResearchStudy-Current-Amendment)
-
-// // This identifier is a duplicate of the one above
-// * extension[m11-protocol-amendment][+].extension[identifier][+].valueIdentifier.type.text = "Amendment Identifier"
-// * extension[m11-protocol-amendment][=].extension[identifier][=].valueIdentifier.system = $AmdID
-// * extension[m11-protocol-amendment][=].extension[identifier][=].valueIdentifier.value = "ABC-Exemplar(a)"
-
-// * extension[m11-protocol-amendment][=].extension[previous].valueCodeableConcept = $NCIT#C218488	"Protocol Previously Amended See Summary of Changes Before the Table of Contents"
-
-// * extension[m11-protocol-amendment][=].extension[scope].valueCodeableConcept = $NCIT#C217026	"Not Global"
-// * extension[m11-protocol-amendment][=].extension[country][+].valueCodeableConcept = $iso3166-2#DE "Germany"
-// * extension[m11-protocol-amendment][=].extension[country][+].valueCodeableConcept = $iso3166-2#GB "United Kingdom of Great Britain and Northern Ireland"
-// * extension[m11-protocol-amendment][=].extension[region].valueCodeableConcept = $iso3166-2#AU-NSW "New South Wales"
-// * extension[m11-protocol-amendment][=].extension[site][+].valueIdentifier.system = $AmdSite
-// * extension[m11-protocol-amendment][=].extension[site][=].valueIdentifier.value = "exemplarSite-14"
-
-
-
-// * extension[m11-protocol-amendment][=].extension[scopeImpact][+].extension[scope].valueCodeableConcept = $NCIT#C41065  "Locally"
-// * extension[m11-protocol-amendment][=].extension[scopeImpact][=].extension[number].valuePositiveInt = 234
-// * extension[m11-protocol-amendment][=].extension[scopeImpact][+].extension[scope].valueCodeableConcept = $NCIT#C68846  "Global"
-// * extension[m11-protocol-amendment][=].extension[scopeImpact][=].extension[number].valuePositiveInt = 983
-
-// * extension[m11-protocol-amendment][=].extension[primaryReason].valueCodeableConcept = $NCIT#C218490  "Regulatory Agency Request to Amend Amendment Reason"
-// * extension[m11-protocol-amendment][=].extension[secondaryReason][+].valueCodeableConcept = $NCIT#C218494  "Manufacturing Change Amendment Reason"
-// * extension[m11-protocol-amendment][=].extension[secondaryReason][+].valueCodeableConcept = $NCIT#C17649  "Other"
-// * extension[m11-protocol-amendment][=].extension[secondaryReason][=].valueCodeableConcept.text = "Packaging revision"
-// * extension[m11-protocol-amendment][=].extension[summary].valueString = "Manufacturing chanage to enable packaging change to recyclable materials."
-
-// * extension[m11-protocol-amendment][=].extension[substantialImpactSafety].valueCodeableConcept =  $NCIT#C49488  "Yes"
-// * extension[m11-protocol-amendment][=].extension[substantialImpactSafetyComment].valueString = "Specifically implemented to decrease safety risks."
-// * extension[m11-protocol-amendment][=].extension[substantialImpactReliability].valueCodeableConcept =  $NCIT#C49487  "No"
-
-// * extension[m11-protocol-amendment][=].extension[details][+].extension[detail].valueString = "Clarification"
-// * extension[m11-protocol-amendment][=].extension[details][=].extension[rationale].valueString = "Clarification of synopsis at request of regulator"
-// * extension[m11-protocol-amendment][=].extension[details][=].extension[section].valueCodeableConcept = $NCIT#C218515  "Section 1"
-
-// * extension[m11-protocol-amendment][=].extension[details][+].extension[detail].valueString = "Exclusion change"
-// * extension[m11-protocol-amendment][=].extension[details][=].extension[rationale].valueString = "Exclude regular drinkers at request of regulator"
-// * extension[m11-protocol-amendment][=].extension[details][=].extension[section].valueCodeableConcept = $NCIT#C218550  "Section 5"
-
-// * extension[m11-protocol-amendment][=].extension[details][+].extension[detail].valueString = "Packaging change"
-// * extension[m11-protocol-amendment][=].extension[details][=].extension[rationale].valueString = "Change to recyclable packaging (stated in proprietary name)."
-// * extension[m11-protocol-amendment][=].extension[details][=].extension[section].valueCodeableConcept = $NCIT#C217356  "Section Title Page"
-
-
-
-
 
 
 //---------------------------------------------------------------
 // Narrative
 * extension[NarrativeElements][+].valueReference = Reference(Exemplar-Narrative)
 * extension[NarrativeElements][+].valueReference = Reference(Exemplar-Narrative-2.1)
-* extension[NarrativeElements][+].valueReference = Reference(Exemplar-Narrative-9)
+
 
 
 //---------------------------------------------------------------

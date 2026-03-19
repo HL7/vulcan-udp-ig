@@ -122,7 +122,6 @@ Context: M11_ResearchStudyProfile
 * extension[approvalDate].value[x] only date
 
 * extension[signature].value[x] only Signature
-  * ^comment = "//TODO Need to review the example"
 * extension[signatureUrl].value[x] only string or url
 * extension[signatureMethod].value[x] only string
 

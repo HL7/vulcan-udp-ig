@@ -14,7 +14,7 @@ This is not a recommended pattern.
 * title = "Example Single Narrative- (this is the Composition Title}"
 * section[+]
   * title = "Example Single Narrative - {this is the Section Title}"
-  * code = $NCIT#C218519 // TODO need to find code for "everything"
+  * code = $NCIT#C217360 // "ICH M11 Protocol Section Title" This is the parent to Protocol Summary
   * text.status = #additional
   * text.div = """<div xmlns='http://www.w3.org/1999/xhtml' xml:lang="en" lang="en"> 
           <h1>1 PROTOCOL SUMMARY</h1>

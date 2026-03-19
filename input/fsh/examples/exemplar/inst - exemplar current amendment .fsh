@@ -9,8 +9,7 @@ This desceribes an entirely ficticious protocol for an imaginary product with Br
 Pharmaceuticals.  The regulator is the Exemplar Regulating Authority (ERA) 
 """
 
-* status = $Pub#draft "Draft" // TODO: Check we are really using this correctly
-
+* status = #active
 //---------------------------------------------------------------
 // Title Page
 * identifier[+].type.coding[+] = $NCIT#C132351 "Sponsor Protocol Identifier"

@@ -22,7 +22,6 @@
 <artifact id="MedicinalProductDefinition/Exemplar-MedicinalProduct" key="MedicinalProductDefinition-Exemplar-MedicinalProduct" name="Exemplar Medicinal Product"/>
 <artifact id="Composition/Exemplar-Narrative" key="Composition-Exemplar-Narrative" name="Exemplar Protocol Narrative"/>
 <artifact id="Composition/Exemplar-Narrative-2.1" key="Composition-Exemplar-Narrative-2.1" name="Exemplar Protocol Narrative 2.1"/>
-<artifact id="Composition/Exemplar-Narrative-9" key="Composition-Exemplar-Narrative-9" name="Exemplar Protocol Narrative 9"/>
 <artifact id="Organization/Exemplar-Regulator-Organization" key="Organization-Exemplar-Regulator-Organization" name="Exemplar Regulating Authority (ERA)"/>
 <artifact id="Practitioner/Exemplar-Sponsor-Expert-Practitioner" key="Practitioner-Exemplar-Sponsor-Expert-Practitioner" name="Exemplar Sponsor Expert Medical Practitioner"/>
 <artifact id="Organization/Exemplar-Sponsor-Organization" key="Organization-Exemplar-Sponsor-Organization" name="Exemplar Sponsor Organization"/>
@@ -97,7 +96,7 @@
 <page key="best-practice" name="Best Practice"/>
 <page key="bundles" name="Bundles"/>
 <page key="changes" name="Changes"/>
-<page key="CrossReferences" name="Cross References"/>
+<page key="crossreferences" name="Crossreferences"/>
 <page key="downloads" name="Downloads"/>
 <page key="fhir-representation" name="Fhir Representation"/>
 <page key="index" name="Home"/>
