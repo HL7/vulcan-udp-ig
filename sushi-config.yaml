@@ -226,7 +226,7 @@ groups:
     description: "These examples are a synthetic set of data that aims to exercise as many data points
       as possible.  The protocol described is entierly made up for illustration."
     resources:
-    - ResearchStudy/Exemplar-ResearchStudy
+    - ResearchStudy/Exemplar-ResearchStudy-001
     - Composition/Exemplar-Narrative
     - Composition/Exemplar-Narrative-2.1
     - MedicinalProductDefinition/Exemplar-MedicinalProduct
@@ -255,7 +255,7 @@ groups:
     name: "Example Instances: Narrative - Single Composition"
     description: "Illustration of a protocol with narrative as Single Composition. For discussion see section: Fhir-representation.html#structured-representation"
     resources:
-    - ResearchStudy/ResearchStudy-Single-Composition
+    - ResearchStudy/ResearchStudy-Single-Composition-001
     - Composition/Narrative-Single-Composition
     - Organization/Narrative-Organization
 
@@ -263,7 +263,7 @@ groups:
     name: "Example Instances: Narrative - Composition per Section"
     description: "Illustration of a protocol with Composition Section for Each M11 Section. For discussion see section: fhir-representation.html#structured-representation"
     resources:
-    - ResearchStudy/ResearchStudy-Composition-Section-Per-Section
+    - ResearchStudy/ResearchStudy-Composition-Section-Per-Section-001
     - Composition/Narrative-Composition-per-M11-Section-1
     - Composition/Narrative-Composition-per-M11-Section-2
     - Composition/Narrative-Composition-per-M11-Section-3
@@ -273,7 +273,7 @@ groups:
     name: "Example Instances: Narrative - Section per Section"
     description: "Illustration of a protocol with composition for each M11 narrative section. For discussion see section: fhir-representation.html#structured-representation "
     resources:  
-    - ResearchStudy/ResearchStudy-Narrative-Comp-Per-M11
+    - ResearchStudy/ResearchStudy-Narrative-Comp-Per-M11-001
     - Composition/Narrative-Composition-Section-per-Section
     #- Organization/Narrative-Organization
 
@@ -281,7 +281,7 @@ groups:
     name: "Example Instances: Narrative - Complex"
     description: "Illustration of a protocol with 1) more granular decomposition of the narrative 2) more complex formatting 3) content that falls outside the M11 template. For discussion see section: fhir-representation.html#structured-representation"
     resources:
-    - ResearchStudy/ResearchStudy-Narrative-Complex
+    - ResearchStudy/ResearchStudy-Narrative-Complex-001
     - Composition/Narrative-Complex
     #- Organization/Narrative-Organization
 

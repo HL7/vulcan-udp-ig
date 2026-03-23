@@ -206,7 +206,7 @@ Both M11 and USDM have to converge on the FHIR concepts they map to and so we ha
 
 The relationships between the elements of M11, USDM and FHIR are shown in the Mapping spreadsheet described in the following section.  The present focus of this mapping is representation of M11 so the mapping does not cover the whole of USDM.  There is a useful infographic from CDISC here: [usdm_m11_classes.pdf](Mappings\usdm_m11_classes.pdf) that shows the overlap between M11 and USDM and in the bottom right USDM classes not covered by M11.
 
-The spreadsheet for mapping to FHIR is in 3 parts as shown  in the illustration. Click on the illustration or click <a href="Mappings/M11 to FHIR Mapping 01.xlsx">here</a> to download the full spreadsheet
+The spreadsheet for mapping to FHIR is in 3 parts as shown  in the illustration. Click on the illustration or click <a href="Mappings/M11 to FHIR Mapping 02.xlsx">here</a> to download the full spreadsheet
 
 <div><p><a href="Mappings/M11 to FHIR Mapping 02.xlsx"> <img src="Mapping.png" alt="Mapping.png" style="max-width: 90%;height: auto;"/> </a> <p>
     Figure 6 : M11 / USDM / FHIR Mapping Spreadsheet
@@ -232,11 +232,11 @@ This is the element in FHIR that maps to the M11 element.  In many cases there i
 | ----------- | ------------------- |
 | Trial Phase | ResearchStudy.phase |
 
-In other cases there is no immediate equivalent and a FHIR extension has to be used.  In the example below the extension is a complex one. Extensions are indicated by the word extension followed by the extension name in square brackets. The extension is called `$ext-amd` and within that the extension element is called `scope`.  
+In other cases there is no immediate equivalent and a FHIR extension has to be used.  In the example below the extension is a complex one. Extensions are indicated by the word extension followed by the extension name in square brackets. The extension is called `$m11-approval` and within that the extension element is called `approvalDate`.  Looking on the Macros page of the spreadsheet shows that `$m11-approval` expands out to `http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/m11-approval`
 
-| M11             | FHIR Resource                                      |
-| --------------- | -------------------------------------------------- |
-| Amendment Scope | ResearchStudy.extension[$ext-amd].extension[scope] |
+| M11           | FHIR Resource                                                |
+| ------------- | ------------------------------------------------------------ |
+| Approval date | ResearchStudy.extension[$m11-approval].extension[approvalDate].valueDate |
 
 The other pattern found is when the ResearchStudy resource points to an instance of another resource for the necessary link.  In the example below Sponsor Name is represented in FHIR using an Organization resource which is pointed to by ResearchStudy using the associatedParty element.  The reference from one resource to another is shown using `-->`
 
@@ -248,80 +248,86 @@ The other pattern found is when the ResearchStudy resource points to an instance
 
 
 
-#### Sample XML and Example  Value(s) Columns
+#### Sample JSON and Example  Value(s) Columns
 
-For each row the structure is shown in XML.  XML has been used in preference to JSON because the XML can be validated with a schema.  
-
-ResearchStudy.phase is a coded value in FHIR and uses the CodeableConcept data type which itself has multiple elements.  Some of these elements have value that is fixed by the mapping and some are the values for the specific instance.  The fixed and variable values are indicated by prefixing the name with a %.  The actual values are then shown in the Example Values column - fixed values above the dashed line, variable ones below.  Because fixed values occur repeatedly and are often lengthy URLs they are represented by a macro element indicated by the $ prefix.  In the example below $NCIT has an actual value of http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl. 
+For each row the structure is shown in JSON and in a separate cell the key data values are listed.
 
 ###### Trial Phase
 
-```xml
-<phase>       
-    <coding>         
-        <system value=  %SYSTEM />         
-        <code value= %CODE />         
-        <display value= %DISPLAY  />       
-    </coding>     
-</phase> 
+`ResearchStudy.phase` is a coded value in FHIR and uses the CodeableConcept data type which itself has multiple elements.  Some of these elements have value that is fixed by the mapping and some are the values for the specific instance.  In the example below the `system` value is fixed by the mapping to `http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl` while the `code` and `display` are data items
+
+```json
+{  "resourceType": "ResearchStudy",
+   "phase": {
+    "coding": [      {
+        "code": "C15602",
+        "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+        "display": "Phase III Trial"      }    ]  }
 ```
 
+These are the variable data items
+
 ```
-%SYSTEM = $NCIT
-------------------
-%CODE = <C15602>
-%DISPLAY = <Phase 3>
+C15602
+Phase III Trial
 ```
 
 ###### Amendment Scope
 
-```xml
-<extension url= $ext-amd>
-    <extension url="scope">
-        <valueCode value= %VALUE />
-    </extension>
-</extension>
+Amendment Scope is in a separate `ResearchStudy` resource.  The first code block has the reference to `ResearchStudy/Exemplar-ResearchStudy-Current-Amendment` and the second code block is the `ResearchStudy` resource with this identifier.
+
+```json
+{  "resourceType": "ResearchStudy",
+  "relatesTo": [    {
+      "type": "justification",
+      "targetReference": {
+        "reference": "ResearchStudy/Exemplar-ResearchStudy-Current-Amendment"  }  }  ],
 ```
 
+```json
+{  "resourceType": "ResearchStudy",
+ "id": "Exemplar-ResearchStudy-Current-Amendment",        {    {
+      "extension": [
+          "url": "scope",
+          "valueCodeableConcept": {
+            "coding": [              {
+                "code": "C217026",
+                "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                "display": "Not Global"        }        ]          }        },      ],
+      "url": "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/m11-protocol-amendment"
 ```
-%VALUE = <C217026>
+
+These are the variable data items
+
+```
+C217026
+Not Global
 ```
 
 ###### Sponsor  Name
 
-```xml
-<associatedParty>
-    <role>
-        <coding>
-            <system value= %SYSTEM />
-            <code value= %CODE />
-            <display value= %DISPLAY />
-        </coding>
-    </role>
-    <party>
-        <reference value="Organization/%ID" />
-    </party>
-</associatedParty>
-
-<Organization>
-    <id value= %ID />
-    ... 
-    <name value= %VALUE />
-    ...
-</Organization>
-
+```json
+{  "resourceType": "ResearchStudy",  …
+"associatedParty": [    {
+      "party": {
+        "reference": "Organization/Exemplar-Sponsor-Organization"      },
+      "role": {
+        "coding": [          {
+            "code": "C70793",
+            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+            "display": "Clinical Study Sponsor"          }        ]      }    }  ]
 ```
 
-XML for Organization is not shown in full - there will be address, contact details etc which are indicated above by ...
-
+```JSON
+{  "resourceType": "Organization",
+  "id": "Exemplar-Sponsor-Organization",
+  "name": "Exemplar Pharmaceuticals Co."
 ```
 
-%SYSTEM = $NCIT
-%CODE = C70793
-%DISPLAY = Clinical Study Sponsor
-----------------
-%ID = <org-EliLilly>
-%VALUE = <Eli Lilly Japan K.K>
+These are the variable data items
+
+```
+Exemplar Pharmaceuticals Co.
 ```
 
 #### Binding and Binding Strength Columns
@@ -352,7 +358,7 @@ $phase-vs (extensible)
 ###### Amendment Scope
 
 ```
-m11-study-amendment-scope-vs (required)
+$m11-study-amendment-scope-vs (required)
 
 ```
 
@@ -364,45 +370,34 @@ $study-role-vs (extensible)
 
 #### Narrative Content
 
-There are multiple sections that can be represented by Narrative content as discussed earlier.  Since these all follow the same pattern the example XML for the Composition part is shown here:
+There are multiple sections that can be represented by Narrative content as discussed earlier.  Since these all follow the same pattern the example JSON for the Composition part is shown here:
 
-```xml
-<composition>
-    ...
-    <type>
-        <coding>
-            <system
-                    value="http://hl7.org/fhir/uv/pharmaceutical-research-protocol/CodeSystem/narrative-elements-cs"/>
-            <code value="b001"/>
-            <display value="Protocol narrative"/>
-        </coding>
-    </type>
-     ...
-    <section>
-        <title value=%DISPLAY/>
-        <code>
-            <coding>
-                <system value=$NCIT/>
-                <code value=%CODE/>
-            </coding>
-        </code>
-        <text>
-            <status value="additional"/>
-            <div xmlns="http://www.w3.org/1999/xhtml">%NARRATIVE</div>
-        </text>
-    </section>
-    ...
-</composition>
+```JSON
+{ "resourceType": "Composition",
+ "id": "Exemplar-Narrative",
+ "meta": {
+  "profile": [
+   "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/m11-research-study-narratives"  ] },
+ "subject": [  {
+   "reference": "ResearchStudy/Exemplar-ResearchStudy"  } ],
+ "author": [  {   "reference": "Organization/Exemplar-Sponsor-Organization"  } ],
+ "section": [  {
+   "text": {
+     "status": "additional",
+     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"> <h2>1.3 Schedule of Activities</h2><p>Hic textus tantummodo locum tenens est. Nullum verum sensum habet praeter spatium in pagina vel velo implere. Utile tamen est ad rem illustrandam. Huiusmodi ineptiae plerumque cum \\\"lorem ipsum\\\" incipiunt, sed ita translatae non sunt textus laetus.</p></div>"   },
+   "title": "1.3 Schedule of Activities",
+   "code": {
+    "coding": [     {
+      "code": "C218519",
+      "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"   }  ]  }  },
 ```
 
 The example values here are 
 
 ```
-%CODE = <C218514>
-%DISPLAY = <1 PROTOCOL SUMMARY>
---------------------------------
-%ID= <iiii>
-%NARRATIVE = <nnnn>
+C218519
+1.3 Schedule of Activities
+<h2>1.3 Schedule of Activities</h2><p>Hic textus tantummodo locum tenens est. Nullum verum sensum habet praeter spatium in pagina vel velo implere. Utile tamen est ad rem illustrandam. Huiusmodi ineptiae plerumque cum \\\"lorem ipsum\\\" incipiunt, sed ita translatae non sunt textus laetus.</p>
 ```
 
 #### Representation in FHIR R4 and R5
