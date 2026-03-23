@@ -41,11 +41,11 @@
 <artifact deprecated="true" id="Composition/IGBJ-Narrative-2.1" key="Composition-IGBJ-Narrative-2.1" name="IGBJ Protocol Narrative 2.1"/>
 <artifact deprecated="true" id="Composition/IGBJ-Narrative-5.1" key="Composition-IGBJ-Narrative-5.1" name="IGBJ Protocol Narrative 5.1"/>
 <artifact deprecated="true" id="Composition/IGBJ-Narrative-9" key="Composition-IGBJ-Narrative-9" name="IGBJ Protocol Narrative 9"/>
-<artifact id="ResearchStudy/ResearchStudy-Composition-Section-Per-Section" key="ResearchStudy-ResearchStudy-Composition-Section-Per-Section" name="IGBJ Research Study with Composition Section for Each M11 Section"/>
-<artifact id="ResearchStudy/ResearchStudy-Narrative-Complex" key="ResearchStudy-ResearchStudy-Narrative-Complex" name="IGBJ Research Study with complex narrative"/>
-<artifact id="ResearchStudy/ResearchStudy-Narrative-Comp-Per-M11" key="ResearchStudy-ResearchStudy-Narrative-Comp-Per-M11" name="IGBJ Research Study with composition for each M11 narrative section"/>
+<artifact id="ResearchStudy/ResearchStudy-Composition-Section-Per-Section-001" key="ResearchStudy-ResearchStudy-Composition-Section-Per-Section-001" name="IGBJ Research Study with Composition Section for Each M11 Section"/>
+<artifact id="ResearchStudy/ResearchStudy-Narrative-Complex-001" key="ResearchStudy-ResearchStudy-Narrative-Complex-001" name="IGBJ Research Study with complex narrative"/>
+<artifact id="ResearchStudy/ResearchStudy-Narrative-Comp-Per-M11-001" key="ResearchStudy-ResearchStudy-Narrative-Comp-Per-M11-001" name="IGBJ Research Study with composition for each M11 narrative section"/>
 <artifact deprecated="true" id="ResearchStudy/IGBJ-ResearchStudy" key="ResearchStudy-IGBJ-ResearchStudy" name="IGBJ Research Study with narrative"/>
-<artifact id="ResearchStudy/ResearchStudy-Single-Composition" key="ResearchStudy-ResearchStudy-Single-Composition" name="IGBJ Research Study with narrative as Single Composition"/>
+<artifact id="ResearchStudy/ResearchStudy-Single-Composition-001" key="ResearchStudy-ResearchStudy-Single-Composition-001" name="IGBJ Research Study with narrative as Single Composition"/>
 <artifact id="Organization/JPMA-Organization" key="Organization-JPMA-Organization" name="JPMA Organization"/>
 <artifact id="Composition/JPMA0001-Section5-jpn" key="Composition-JPMA0001-Section5-jpn" name="JPMA0001 Inclusion/Exclusion Narrative"/>
 <artifact id="ResearchStudy/JPMA0001-eng" key="ResearchStudy-JPMA0001-eng" name="JPMA0001 Provided Example - English Language"/>
@@ -68,7 +68,7 @@
 <artifact id="StructureDefinition/m11-research-study-narratives" key="StructureDefinition-m11-research-study-narratives" name="Research Study Narratives"/>
 <artifact deprecated="true" id="StructureDefinition/protocol-amendment-detail" key="StructureDefinition-protocol-amendment-detail" name="ResearchStudyStudyAmendmentDetails"/>
 <artifact deprecated="true" id="StructureDefinition/ResearchStudyStudyAmendmentScopeImpact" key="StructureDefinition-ResearchStudyStudyAmendmentScopeImpact" name="ResearchStudyStudyAmendmentScopeImpact"/>
-<artifact id="ResearchStudy/Exemplar-ResearchStudy" key="ResearchStudy-Exemplar-ResearchStudy" name="START HERE: Exemplar Research Study with narrative"/>
+<artifact id="ResearchStudy/Exemplar-ResearchStudy-001" key="ResearchStudy-Exemplar-ResearchStudy-001" name="START HERE: Exemplar Research Study with narrative"/>
 <artifact deprecated="true" id="StructureDefinition/study-design" key="StructureDefinition-study-design" name="StudyDesign"/>
 <artifact id="Group/DIBASY-Eligibility" key="Group-DIBASY-Eligibility" name="StudyEligibilityCriteria: Eligibility Criteria for DIBASY Trial"/>
 <artifact id="ValueSet/udp-address-purpose-type-vs" key="ValueSet-udp-address-purpose-type-vs" name="UDP Address Purpose Type Value Set"/>

@@ -3,8 +3,9 @@ InstanceOf: m11-research-study-profile
 Title: "IGBJ Research Study with Composition Section for Each M11 Section"
 Usage: #example
 Description: """Illustration of a protocol with Composition Section for Each M11 Section.  The same example can also be viewed
-    on the server by following this link  (to be done)
-    """ // TODO Add server details 
+on the server by following this link https://vhewer.com/display-product?url=https://jghxykgqfk.edge.aidbox.app/ResearchStudy/Narrative-Section-001.
+    """ // TODO Check server details 
+* id = "ResearchStudy-Composition-Section-Per-Section-001"  // This is specified ONLY to allow documentatation of examples - it is not normally specified
 
 * status = #active
 

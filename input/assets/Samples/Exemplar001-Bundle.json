@@ -1,0 +1,171 @@
+// POST using "https://[myHost]" to PUT each resource independantly
+// PUT creates if id not found otherwise does an update
+{
+    "resourceType": "Bundle",
+    "type": "transaction",
+    "entry": [
+        //----------------------------
+        // Organization/Narrative-Organization"
+        {
+            "resource": {
+                "resourceType": "Organization",
+                "id": "Narrative-Organization",
+                "name": "Exemplar Pharmaceuticals Co."
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Organization/Narrative-Organization"
+            }
+        },
+        //----------------------------
+        // Composition/Narrative-Complex
+        {
+            "resource": {
+                "resourceType": "Composition",
+                "id": "Narrative-Complex",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/m11-research-study-narratives"
+                    ]
+                },
+                "author": [
+                    {
+                        "reference": "Organization/Narrative-Organization"
+                    }
+                ],
+                "section": [
+                    {
+                        "text": {
+                            "status": "additional",
+                            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><h3>1.1.2 Overall Design</h3><p>Hic textus tantummodo locum tenens est. Nullum verum sensum habet praeter spatium in pagina vel velo implere. Utile tamen est ad rem illustrandam. Huiusmodi ineptiae plerumque cum \\\"lorem ipsum\\\" incipiunt, sed ita translatae non sunt textus laetus.</p></div>"
+                        },
+                        "title": "1.1.2 Overall Design - {this is the Section Title}",
+                        "code": {
+                            "coding": [
+                                {
+                                    "code": "C218517",
+                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                    "display": "ICH M11 Protocol Section 1.1.2 Overall Design"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "text": {
+                            "status": "additional",
+                            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><h2>1.2 Trial Schema</h2><p>Hic textus tantummodo locum tenens est. Nullum verum sensum habet praeter spatium in pagina vel velo implere. Utile tamen est ad rem illustrandam. Huiusmodi ineptiae plerumque cum \\\"lorem ipsum\\\" incipiunt, sed ita translatae non sunt textus laetus.</p></div>"
+                        },
+                        "title": "1.1.2 Overall Design - {this is the Section Title}",
+                        "code": {
+                            "coding": [
+                                {
+                                    "code": "C218518",
+                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                    "display": "ICH M11 Protocol Section 1.2 Trial Schema"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "text": {
+                            "status": "additional",
+                            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><head><style>body {\n            font-family: Arial, Helvetica, sans-serif;\n            background-color: #f4f4f4;\n            color: #333333;\n            margin: 20px;\n          }\n\n          /* Heading style */\n          h1 {\n              color: #0066cc;\n              border-bottom: 2px solid #0066cc;\n              padding-bottom: 5px;\n            }\n\n          h2 {\n              color: #56f318;\n              border-bottom: 2px solid #56f318;\n              padding-bottom: 3px;\n            }\n\n          /* Paragraph style */\n          p {\n              font-size: 1em;\n              line-height: 1.5em;\n            }</style></head><title>Simple XHTML with No Stylesheet</title><h2>1.3 Schedule of Activities</h2><p>Hic textus tantummodo locum tenens est. Nullum verum sensum habet praeter spatium in pagina vel velo implere. Utile tamen est ad rem illustrandam. Huiusmodi ineptiae plerumque cum \\\"lorem ipsum\\\" incipiunt, sed ita translatae non sunt textus laetus.</p><p>This section should contain a graphic This section should contain a graphic This section should contain a graphic This section should contain a graphic This section should contain a graphic This section should contain a graphic This section should contain a graphic This section should contain a graphic This section should contain a graphic This section should contain a graphic.</p><p>Figure 1\tStudy Schema</p><img alt=\"alt text\" src=\"data:image/png;base64\" value=\"iVBORw0KGgoAAAANSUhEUgAABSgAAAINCAYAAAFKUKEVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAIdUAACHVAQSctJ0AAPq3SURBVHhe7N0HmBTF1gZgyTkHARGQYELBBCIoXiNiQlFMmEUQ/6so5nCNgIg5J1TEACpKUBAUBBTJQbKA5JxzDvXz1dbprent2Z3Zndmtmfne5zl0dVV3T6C35kxNhyMUkWO4U+ayN954w5Qyd8QRof81/vm2bdvq6ZIlS/Q0mXCnzGX2TokdDTF8+PCQeSkLqZ84caKef++997z22bNn62ky4U7pGHtn9JOdMtHt3r1bv858+fLpef9r5k7pCPzHZLZDJgt5jccee6yqV6+eLleuXFl9/fXXXpsT78K2bdtMKU3t2rVNKV337t1NKR0+uuSv7Z9//gn5T61SpYopKdWiRQs97dKli57u2bNHrV27VpfF3r17VcmSJXUZ26xUqZIuH3300elv1uHprl27vLIoW7asntp1RYoUMaXIYN1p06ap+fPnq6ZNm3rP+aKLLtLvj73tZOfEK5WdEm/8yJEjQ/4DpIxp0MeX/OdB3bp19bRw4cKqQoUKuoz1ZJmCBQvqKQQ9RoMGDbwydlwYOHCgrrOXh5tvvtmrO/LII/VUoH7ChAlmLntuu+02U0o9oe80UR444rl5ppSGOyXlOe6U5Bw3d8rNS5Ua1D4tXgj4gmDXPcu/o2Tjbk+JnQ075YF9psKHO2PScvvjO6sdjztmUnJ6p+zZs2dI9O3bN9MYPHhwljF69OhMY8qUKVnGvHnzMo1Vq1ZlGps3b9bDXplFKsuVnTI7P4dt37498D+LkfyRKzvluHHjTCly3ClTN5zbKeVXEf9O2b59e91m1/nnpS5cvb+O4WY4tVPu3LnTlNhTpnKE3SkLFChgSqHQ49jTSPDjmxFNRNVTRrMj2rKzU1LqynSnHDB... (truncated)\"/><p>IV = intravenous; PBO = placebo; TCZ = tocilizumab.</p><p>This section should contain a graphic This section should contain a graphic This section should contain a graphic This section should contain a graphic This section should contain a graphic This section should contain a graphic This section should contain a graphic This section should contain a graphic This section should contain a graphic This section should contain a graphic.</p></div>"
+                        },
+                        "title": "Formatting Possibilities",
+                        "code": {
+                            "coding": [
+                                {
+                                    "code": "C218519",
+                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "code": {
+                            "text": "Uncoded Special Section"
+                        },
+                        "text": {
+                            "status": "additional",
+                            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><h1>15 SPECIAL PURPOSE - NON M11</h1><h2>A section not in M11</h2><p>Hic textus tantummodo locum tenens est. Nullum verum sensum habet praeter spatium in pagina vel velo implere. Utile tamen est ad rem illustrandam. Huiusmodi ineptiae plerumque cum \\\"lorem ipsum\\\" incipiunt, sed ita translatae non sunt textus laetus.</p></div>"
+                        },
+                        "title": "Section 15 - {this is the Section Title}"
+                    }
+                ],
+                "status": "final",
+                "type": {
+                    "coding": [
+                        {
+                            "code": "C207508",
+                            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
+                        }
+                    ]
+                },
+                "date": "2025-06-30T12:46:00Z",
+                "title": "Narrative 15"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Composition/Narrative-Complex"
+            }
+        },
+        //----------------------------
+        // ResearchStudy/ResearchStudy-Narrative-Complex
+        {
+            "resource": {
+                "resourceType": "ResearchStudy",
+                "id": "ResearchStudy-Narrative-Complex",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/m11-research-study-profile"
+                    ]
+                },
+                "identifier": [
+                    {
+                        "type": {
+                            "text": "Sponsor Identifier"
+                        },
+                        "system": "https://exemplarSponsor.com/sponsor-identifier",
+                        "value": "ABC-123"
+                    }
+                ],
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/narrative-elements",
+                        "valueReference": {
+                            "reference": "Composition/Narrative-Complex"
+                        }
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/m11-research-study",
+                        "extension": [
+                            {
+                                "url": "versionDate",
+                                "valueDate": "2017-10-01"
+                            },
+                            {
+                                "url": "originalProtocol",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "code": "C218485",
+                                            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                            "display": "Protocol Not Amended"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "version": "(a)",
+                "title": "Illustration of Complex Narrative and Formatting",
+                "status": "active"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "ResearchStudy/ResearchStudy-Narrative-Complex"
+            }
+        }
+    ]
+}

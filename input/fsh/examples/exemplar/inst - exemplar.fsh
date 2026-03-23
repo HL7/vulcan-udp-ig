@@ -3,11 +3,12 @@ InstanceOf: m11-research-study-profile
 Title: "START HERE: Exemplar Research Study with narrative"
 Usage: #example
 Description: """Illustration of a protocol with some parts in narrative form and some in granular form.  The same example can also be viewed
-on the server by following this link https://vhewer.com/display-product?url=https://fs-01.azurewebsites.net/Bundle/ICH-M11-Template-Exemplar-Bundle.
+on the server by following this link https://vhewer.com/display-product?url=https://jghxykgqfk.edge.aidbox.app/ResearchStudy/Exemplar-ResearchStudy-001.
 
 This desceribes an entirely ficticious protocol for an imaginary product with Brand name Exotex and generic name Exoticillin produced by Exemplar 
 Pharmaceuticals.  The regulator is the Exemplar Regulating Authority (ERA) 
 """
+* id = "Exemplar-ResearchStudy-001"  // This is specified ONLY to allow documentatation of examples - it is not normally specified
 
 
 //---------------------------------------------------------------
