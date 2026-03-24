@@ -23,7 +23,7 @@ extension:
 version: 1.0.1-ballot2  
 fhirVersion: 	6.0.0-ballot3 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 #fhirVersion: 4.0.1
-copyrightYear: 2025+
+copyrightYear: 2026+
 releaseLabel: STU 1 - Ballot
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"	 
@@ -81,10 +81,11 @@ dependencies:
 # For parameters defined by the FHIR Tools IG see:
 # http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html
 #
-# parameters:
+parameters:
 #   excludettl: true
 #   validation: [allow-any-extensions, no-broken-links]
-#
+  special-url:
+    - http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
 # │ as a simple structure where the YAML key is the menu item name and the value is the URL.       │

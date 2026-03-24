@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/uv/pharmaceutical-research-protocol/2025Sep" ciUrl="https://github.com/HL7/vulcan-udp-ig" defaultVersion="1.0.0-ballot" defaultWorkgroup="brr" gitUrl="https://github.com/HL7/vulcan-udp-ig" url="http://hl7.org/fhir/uv/clinical-study-protocol">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/uv/clinical-study-protocol/2026May" ciUrl="https://github.com/HL7/vulcan-udp-ig" defaultVersion="1.0.1-ballot2" defaultWorkgroup="brr" gitUrl="https://github.com/HL7/vulcan-udp-ig" url="http://hl7.org/fhir/uv/clinical-study-protocol">
 <version code="current" url="https://github.com/HL7/vulcan-udp-ig"/>
-<version code="1.0.0-ballot" url="http://hl7.org/fhir/uv/pharmaceutical-research-protocol/2025Sep"/>
+<version code="1.0.1-ballot2" url="http://hl7.org/fhir/uv/clinical-study-protocol/2026May"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
