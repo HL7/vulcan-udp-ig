@@ -13,6 +13,7 @@
   "urn:ietf:bcp:47" : null,
   "http://hl7.org/fhir/uv/vulcan-udp-ig/Terminology" : null,
   "urn:iso:std:iso:3166" : null,
+  "urn:ietf:bcp:13" : null,
   "http://unstats.un.org/unsd/methods/m49/m49.htm|null" : null,
   "urn:iso:std:iso:3166:-2" : null,
   "http://hl7Vulcan.org/Pending" : null,
