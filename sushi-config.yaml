@@ -6,11 +6,12 @@
 #id: hl7.fhir.uv.pharmaceutical-research-protocol
 #canonical: http://hl7.org/fhir/uv/pharmaceutical-research-protocol
 #name: PharmaceuticalResearchProtocol
+#title: Pharmaceutical Research Protocol (Vulcan UDP)
 id: hl7.fhir.uv.clinical-study-protocol
 canonical: http://hl7.org/fhir/uv/clinical-study-protocol
 name: ClincalStudyProtocol
-title: "HL7 FHIR® Implementation Guide: Clinical Study Protocol, Edition 1"  
-# title: Clinical Study Protocol (Vulcan UDP)
+#title: "HL7 FHIR® Implementation Guide: Clinical Study Protocol, Edition 1"  
+title: Clinical Study Protocol (ICH M11 Aligned)
 # description: Example Implementation Guide for getting started with SUSHI
 status:  active # draft | active | retired | unknown
 extension:
@@ -20,11 +21,11 @@ extension:
     valueCode: trial-use
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
     valueInteger: 2
-version: 1.0.1-ballot2  
+version: 1.0.0-ballot2  
 fhirVersion: 	6.0.0-ballot3 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 #fhirVersion: 4.0.1
 copyrightYear: 2026+
-releaseLabel: STU 1 - Ballot
+releaseLabel: STU 1 - Ballot2
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"	 
 publisher:

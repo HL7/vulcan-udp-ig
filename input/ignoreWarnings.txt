@@ -4,215 +4,40 @@
 # instructions for ignoreWarnings.txt https://confluence.hl7.org/pages/viewpage.action?pageId=66938614#ImplementationGuideParameters-ManagingWarningsandHints
 # (And include comments like this justifying why)
 
-# 01 Can't do anything about these because the necessary R6 packages do not exist yet. See: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/R6.20IG.20doesn't.20find.20R6.20extension.20pack.20or.20THO.20pack
+# 01 These display names are all valid in NCI Thesaurus and are the preferred ones for this application
+ERROR: MedicinalProductDefinition/Exemplar-MedicinalProduct: MedicinalProductDefinition.name[0].type.coding[0].display: Wrong Display Name 'Nonproprietary Name(s)' for http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C97054. Valid display is 'Generic Name' (for the language(s) 'en')
+ERROR: MedicinalProductDefinition/Exemplar-MedicinalProduct: MedicinalProductDefinition.name[1].type.coding[0].display: Wrong Display Name 'Proprietary Name(s)' for http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C71898. Valid display is 'Proprietary Name' (for the language(s) 'en')
+ERROR: ResearchStudy/Exemplar-ResearchStudy-001: ResearchStudy.associatedParty[6].role.coding[0].display: Wrong Display Name 'Device Manufacturer' for http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C156625. Valid display is 'Device Manufacture' (for the language(s) 'en')
+INFORMATION: ValueSet/udp-party-role-type-vs: ValueSet.compose.include[0].concept[6]: Wrong Display Name 'Device Manufacturer' for http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C156625. Valid display is 'Device Manufacture' (for the language(s) 'en, en-US'). Note that the display in the ValueSet does not have to match; this check exists to help check that it's not accidentally the wrong code
+
+# 02 These codes will eventually be added to the NCI Thesaurus content already in THO - for now they are in a CodeSystem that is a fragment of the NCI Thesaurus
+%The value set references CodeSystem 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' which has status 'fragment'%
+
+# 03 These are the locations for illustration in examples - they don't have to resolve
+%No definition could be found for URL value 'https://exemplarSponsor.com/sponsor-identifier'%
+%No definition could be found for URL value 'https://exemplarEMA.org/registry-identifier'%
+%No definition could be found for URL value 'https://somelocation'%
+%No definition could be found for URL value 'https://exemplarRegulator.org/registry-identifier'%
+
+# 04 Binding is extensible and a value set has been created with original value set plus additional codes
+INFORMATION: Organization/Exemplar-Sponsor-Organization: Organization.contact[1].purpose: None of the codings provided are in the value set 'Contact entity type' (http://terminology.hl7.org/ValueSet/contactentity-type|2.0.0), and a coding is recommended to come from this value set (codes = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C70946)
+
+# 05 The definition is writtten in FSH and using a caret path of ^binding.additonal.key is rejected.  No suggestions forthcoming on a solution as yet. See: https://chat.fhir.org/#narrow/channel/215610-shorthand/topic/FSH.20for.20binding.2Eadditional.2Ekey
+WARNING: StructureDefinition/m11-research-study-narratives: StructureDefinition.snapshot.element[4].binding.additional[0]: Constraint failed: eld-31: 'additionalBindings should have a key (key.exists())' (defined in http://hl7.org/fhir/StructureDefinition/ElementDefinition) (Best Practice Recommendation)
+WARNING: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[4].binding.additional[0]: Constraint failed: eld-31: 'additionalBindings should have a key (key.exists())' (defined in http://hl7.org/fhir/StructureDefinition/ElementDefinition) (Best Practice Recommendation)
+
+# 06 Can't do anything about these because the necessary R6 packages do not exist yet. See: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/R6.20IG.20doesn't.20find.20R6.20extension.20pack.20or.20THO.20pack
 ERROR: ImplementationGuide/hl7.fhir.uv.clinical-study-protocol: This IG is version 6.0.0-ballot3, while the IG 'hl7.terminology.r5' is from version 5.0.0
 ERROR: ImplementationGuide/hl7.fhir.uv.clinical-study-protocol: This IG is version 6.0.0-ballot3, while the IG 'hl7.fhir.uv.extensions.r5' is from version 5.0.0
 ERROR: ImplementationGuide/hl7.fhir.uv.clinical-study-protocol: This IG is version 6.0.0-ballot3, while the IG 'hl7.fhir.uv.tools.r5' is from version 5.0.0
 ERROR: ImplementationGuide/hl7.fhir.uv.clinical-study-protocol: ImplementationGuide.dependsOn[1]: The canonical URL http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions points to the package hl7.fhir.uv.extensions which is inconsistent with the stated packageId of hl7.fhir.uv.extensions.r5
 WARNING: ImplementationGuide/hl7.fhir.uv.clinical-study-protocol: ImplementationGuide.dependsOn[0]: The ImplementationGuide is based on FHIR version 6.0.0-ballot3 but package hl7.terminology.r5#7.1.0 is based on FHIR version 5.0.0. In general, this version mismatch should be avoided - some tools will try to make this work with variable degrees of success, but others will not even try
 
-# 02 The Jurisdiction value set does not seem to be deprecated (https://terminology.hl7.org/7.0.1/ValueSet-jurisdiction.html) and we have no control over these bindings 
-INFORMATION: CodeSystem/ncit-cs: CodeSystem.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: ImplementationGuide/hl7.fhir.uv.clinical-study-protocol: ImplementationGuide.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-amendment-detail: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-confidentiality-statement: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-narratives: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: StructureDefinition/narrative-elements: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: ValueSet/m11-amendment-scope-enrollment-vs: ValueSet.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: ValueSet/m11-blinded-roles-vs: ValueSet.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: ValueSet/m11-country-region-vs: ValueSet.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: ValueSet/m11-phase-vs: ValueSet.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: ValueSet/m11-study-amendment-reason-vs: ValueSet.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: ValueSet/m11-study-amendment-scope-vs: ValueSet.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: ValueSet/m11-yes-no-vs: ValueSet.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: ValueSet/udp-identifier-type-vs: ValueSet.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: ValueSet/udp-narrative-elements-vs: ValueSet.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: ValueSet/udp-section-codes-vs: ValueSet.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: ValueSet/udp-study-title-type-vs: ValueSet.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-amendment-scope-impact: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-amendment-scope-impact: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-approval: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: ValueSet/udp-related-artifact-type-vs: ValueSet.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: ValueSet/m11-amendment-details-statement-vs: ValueSet.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: ValueSet/udp-address-purpose-type-vs: ValueSet.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: ValueSet/udp-party-role-type-vs: ValueSet.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: ValueSet/udp-party-role-type-vs: ValueSet.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
+# 07 The Jurisdiction value set does not seem to be deprecated (https://terminology.hl7.org/7.0.1/ValueSet-jurisdiction.html) and we have no control over these bindings 
+%Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3%
 
+# 08 fhirpath-types is flagged as experimental! This is not in our control.
+%Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3%
 
-
-# 03 These codes will eventually be added to the NCI Thesaurus content already in THO - for now they are in a CodeSystem that is a fragment of the NCI Thesaurus
-INFORMATION: ValueSet/udp-section-codes-vs: ValueSet.compose.include[0]: The value set references CodeSystem 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' which has status 'fragment'
-INFORMATION: ValueSet/m11-amendment-scope-enrollment-vs: ValueSet.compose.include[0]: The value set references CodeSystem 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' which has status 'fragment'
-INFORMATION: ValueSet/m11-blinded-roles-vs: ValueSet.compose.include[0]: The value set references CodeSystem 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' which has status 'fragment'
-INFORMATION: ValueSet/m11-phase-vs: ValueSet.compose.include[0]: The value set references CodeSystem 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' which has status 'fragment'
-INFORMATION: ValueSet/m11-study-amendment-reason-vs: ValueSet.compose.include[0]: The value set references CodeSystem 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' which has status 'fragment'
-INFORMATION: ValueSet/m11-study-amendment-scope-vs: ValueSet.compose.include[0]: The value set references CodeSystem 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' which has status 'fragment'
-INFORMATION: ValueSet/m11-yes-no-vs: ValueSet.compose.include[0]: The value set references CodeSystem 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' which has status 'fragment'
-INFORMATION: ValueSet/udp-identifier-type-vs: ValueSet.compose.include[0]: The value set references CodeSystem 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' which has status 'fragment'
-INFORMATION: ValueSet/udp-narrative-elements-vs: ValueSet.compose.include[0]: The value set references CodeSystem 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' which has status 'fragment'
-INFORMATION: ValueSet/udp-study-title-type-vs: ValueSet.compose.include[0]: The value set references CodeSystem 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' which has status 'fragment'
-INFORMATION: ValueSet/m11-amendment-details-statement-vs: ValueSet.compose.include[0]: The value set references CodeSystem 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' which has status 'fragment'
-INFORMATION: ValueSet/udp-address-purpose-type-vs: ValueSet.compose.include[1]: The value set references CodeSystem 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' which has status 'fragment'
-INFORMATION: ValueSet/udp-party-role-type-vs: ValueSet.compose.include[0]: The value set references CodeSystem 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' which has status 'fragment'
-INFORMATION: ValueSet/udp-related-artifact-type-vs: ValueSet.compose.include[1]: The value set references CodeSystem 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' which has status 'fragment'
-INFORMATION: ValueSet/udp-study-title-type-vs: ValueSet.compose.include[1]: The value set references CodeSystem 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' which has status 'fragment'
-
-
-
-# 05 The definition is writtten in FSH and using a caret path of ^binding.additonal.key is rejected.  No suggestions forthcoming on a solution as yet. See: https://chat.fhir.org/#narrow/channel/215610-shorthand/topic/FSH.20for.20binding.2Eadditional.2Ekey
-WARNING: StructureDefinition/m11-research-study-narratives: StructureDefinition.snapshot.element[4].binding.additional[0]: Constraint failed: eld-31: 'additionalBindings should have a key (key.exists())' (defined in http://hl7.org/fhir/StructureDefinition/ElementDefinition) (Best Practice Recommendation)
-WARNING: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[4].binding.additional[0]: Constraint failed: eld-31: 'additionalBindings should have a key (key.exists())' (defined in http://hl7.org/fhir/StructureDefinition/ElementDefinition) (Best Practice Recommendation)
-
-# 06 These are the locations for illustration in examples - they don't have to resolve
-WARNING: MedicinalProductDefinition/Exemplar-MedicinalProduct: MedicinalProductDefinition.identifier[0].system: No definition could be found for URL value 'https://exemplarSponsor.com/sponsor-identifier'
-WARNING: MedicinalProductDefinition/IGBJ-MedicinalProduct: MedicinalProductDefinition.identifier[0].system: No definition could be found for URL value 'https://exemplarSponsor.com/sponsor-identifier'
-WARNING: ResearchStudy/Exemplar-ResearchStudy-001: ResearchStudy.extension[2].extension[2].value.ofType(url): No definition could be found for URL value 'https://somelocation'
-WARNING: ResearchStudy/Exemplar-ResearchStudy-001: ResearchStudy.identifier[0].system: No definition could be found for URL value 'https://exemplarSponsor.com/sponsor-identifier'
-WARNING: ResearchStudy/Exemplar-ResearchStudy-001: ResearchStudy.identifier[1].system: No definition could be found for URL value 'https://exemplarEMA.org/registry-identifier'
-WARNING: ResearchStudy/Exemplar-ResearchStudy-001: ResearchStudy.identifier[2].system: No definition could be found for URL value 'https://exemplarRegulator.org/registry-identifier'
-WARNING: ResearchStudy/Exemplar-ResearchStudy-Current-Amendment: ResearchStudy.extension[1].extension[2].value.ofType(url): No definition could be found for URL value 'https://somelocation'
-WARNING: ResearchStudy/Exemplar-ResearchStudy-Current-Amendment: ResearchStudy.identifier[0].system: No definition could be found for URL value 'https://exemplarSponsor.com/sponsor-identifier'
-WARNING: ResearchStudy/IGBJ-ResearchStudy: ResearchStudy.extension[4].extension[8].value.ofType(url): No definition could be found for URL value 'https://somelocation'
-WARNING: ResearchStudy/IGBJ-ResearchStudy: ResearchStudy.identifier[1].system: No definition could be found for URL value 'https://exemplarSponsor.com/sponsor-identifier'
-WARNING: ResearchStudy/JPMA0001-eng: ResearchStudy.identifier[0].system: No definition could be found for URL value 'https://exemplarSponsor.com/sponsor-identifier'
-WARNING: ResearchStudy/JPMA0001-jpn: ResearchStudy.identifier[0].system: No definition could be found for URL value 'https://exemplarSponsor.com/sponsor-identifier'
-WARNING: ResearchStudy/ResearchStudy-Composition-Section-Per-Section-001: ResearchStudy.identifier[0].system: No definition could be found for URL value 'https://exemplarSponsor.com/sponsor-identifier'
-WARNING: ResearchStudy/ResearchStudy-Narrative-Complex-001: ResearchStudy.identifier[0].system: No definition could be found for URL value 'https://exemplarSponsor.com/sponsor-identifier'
-WARNING: ResearchStudy/ResearchStudy-Narrative-Comp-Per-M11-001: ResearchStudy.identifier[0].system: No definition could be found for URL value 'https://exemplarSponsor.com/sponsor-identifier'
-WARNING: ResearchStudy/ResearchStudy-Single-Composition-001: ResearchStudy.identifier[0].system: No definition could be found for URL value 'https://exemplarSponsor.com/sponsor-identifier'
-
-
-# 07 fhirpath-types is flagged as experimental! This is not in our control.
-INFORMATION: StructureDefinition/m11-amendment-detail: StructureDefinition.snapshot.element[1].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-amendment-detail: StructureDefinition.snapshot.element[4].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-amendment-detail: StructureDefinition.snapshot.element[6].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-amendment-detail: StructureDefinition.snapshot.element[9].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-amendment-detail: StructureDefinition.snapshot.element[11].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-amendment-detail: StructureDefinition.snapshot.element[14].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-amendment-detail: StructureDefinition.snapshot.element[16].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-amendment-detail: StructureDefinition.snapshot.element[18].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-amendment-scope-impact: StructureDefinition.snapshot.element[1].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-amendment-scope-impact: StructureDefinition.snapshot.element[4].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-amendment-scope-impact: StructureDefinition.snapshot.element[6].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-amendment-scope-impact: StructureDefinition.snapshot.element[9].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-amendment-scope-impact: StructureDefinition.snapshot.element[11].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-amendment-scope-impact: StructureDefinition.snapshot.element[13].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-confidentiality-statement: StructureDefinition.snapshot.element[1].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-confidentiality-statement: StructureDefinition.snapshot.element[3].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[1].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[4].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[6].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[9].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[11].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[14].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[16].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[19].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[21].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[24].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[26].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[29].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[31].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[34].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[36].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[39].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[41].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[45].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[47].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[50].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[52].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[55].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[57].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[60].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[62].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[65].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[67].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[70].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[72].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[75].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[77].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[81].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[83].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[86].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[88].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[90].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-narratives: StructureDefinition.snapshot.element[24].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-narratives: StructureDefinition.snapshot.element[32].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-narratives: StructureDefinition.snapshot.element[38].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-narratives: StructureDefinition.snapshot.element[44].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[14].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[18].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[21].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[37].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[46].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[67].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[76].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[84].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[92].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[100].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[107].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[119].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/narrative-elements: StructureDefinition.snapshot.element[1].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/narrative-elements: StructureDefinition.snapshot.element[3].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-narratives: StructureDefinition.snapshot.element[1].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[1].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-approval: StructureDefinition.snapshot.element[1].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-approval: StructureDefinition.snapshot.element[11].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-approval: StructureDefinition.snapshot.element[14].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-approval: StructureDefinition.snapshot.element[16].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-approval: StructureDefinition.snapshot.element[19].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-approval: StructureDefinition.snapshot.element[21].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-approval: StructureDefinition.snapshot.element[23].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-approval: StructureDefinition.snapshot.element[4].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-approval: StructureDefinition.snapshot.element[6].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-approval: StructureDefinition.snapshot.element[9].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[100].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[44].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[46].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[49].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[51].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[80].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[82].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[85].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[87].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[91].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[93].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[96].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-protocol-amendment: StructureDefinition.snapshot.element[98].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study: StructureDefinition.snapshot.element[1].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study: StructureDefinition.snapshot.element[11].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study: StructureDefinition.snapshot.element[13].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study: StructureDefinition.snapshot.element[4].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study: StructureDefinition.snapshot.element[6].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study: StructureDefinition.snapshot.element[9].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[102].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[109].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[121].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[16].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[20].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[23].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[39].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[48].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[69].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[78].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[86].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[94].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[77].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[108].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[115].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-INFORMATION: StructureDefinition/m11-research-study-profile: StructureDefinition.snapshot.element[127].type[0].code: Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
-
-# 08 These display names are all valid in NCI Thesaurus and are the preferred ones for this application
-ERROR: MedicinalProductDefinition/Exemplar-MedicinalProduct: MedicinalProductDefinition.name[0].type.coding[0].display: Wrong Display Name 'Nonproprietary Name(s)' for http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C97054. Valid display is 'Generic Name' (for the language(s) 'en')
-ERROR: MedicinalProductDefinition/Exemplar-MedicinalProduct: MedicinalProductDefinition.name[1].type.coding[0].display: Wrong Display Name 'Proprietary Name(s)' for http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C71898. Valid display is 'Proprietary Name' (for the language(s) 'en')
-ERROR: ResearchStudy/Exemplar-ResearchStudy-001: ResearchStudy.associatedParty[6].role.coding[0].display: Wrong Display Name 'Device Manufacturer' for http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C156625. Valid display is 'Device Manufacture' (for the language(s) 'en')
-INFORMATION: ValueSet/udp-party-role-type-vs: ValueSet.compose.include[0].concept[6]: Wrong Display Name 'Device Manufacturer' for http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C156625. Valid display is 'Device Manufacture' (for the language(s) 'en, en-US'). Note that the display in the ValueSet does not have to match; this check exists to help check that it's not accidentally the wrong code
-
-# 09 Binding is extensible and a value set has been created with original value set plus additional codes
-INFORMATION: Organization/Exemplar-Sponsor-Organization: Organization.contact[1].purpose: None of the codings provided are in the value set 'Contact entity type' (http://terminology.hl7.org/ValueSet/contactentity-type|2.0.0), and a coding is recommended to come from this value set (codes = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C70946)
-
-# 10 Why is this draft?
-INFORMATION: ResearchStudy/Exemplar-ResearchStudy-Current-Amendment: ResearchStudy.extension[2].extension[5].value.ofType(CodeableConcept): Reference to draft CodeSystem urn:iso:std:iso:3166:-2|2021 from fhir.tx.support.r4#0.34.0
-INFORMATION: ResearchStudy/IGBJ-ResearchStudy: ResearchStudy.extension[4].extension[4].value.ofType(CodeableConcept): Reference to draft CodeSystem urn:iso:std:iso:3166:-2|2021 from fhir.tx.support.r4#0.34.0
+# 09 Why is this draft?
+%Reference to draft CodeSystem urn:iso:std:iso:3166:-2|2021 from fhir.tx.support.r4#0.34.0%

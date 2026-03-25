@@ -72,6 +72,9 @@ This example shows: 1) more granular decomposition of the narrative 2) more comp
               <p>Hic textus tantummodo locum tenens est. Nullum verum sensum habet praeter spatium in pagina vel velo implere. Utile tamen est ad rem illustrandam. Huiusmodi ineptiae plerumque cum \"lorem ipsum\" incipiunt, sed ita translatae non sunt textus laetus.</p>
         </div>
       """
+* relatesTo[+].type = http://terminology.hl7.org/CodeSystem/artifact-relationship-type#supported-with
+* relatesTo[=].targetReference = Reference(pfizer-logo)
+
 * contained[0] = pfizer-logo
 
 
