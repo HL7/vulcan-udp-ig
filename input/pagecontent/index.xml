@@ -8,6 +8,8 @@
   <p>The content is based on FHIR R6. This is to take advantage of new features in the <a
       href="https://hl7.org/fhir/6.0.0-ballot4/researchstudy.html">ResearchStudy</a> resource. There
     will be backports to earlier FHIR releases in future. </p>
+  <p><strong>This Implementation Guide is concerned with mapping from externally developed content.  
+    The licensing terms for that usage is acknowledged and fully detailed in the <a href="licenses.html">Licenses</a> section.</strong></p>
   <p> </p>
   <p><strong>What is a clinical study protocol?</strong> Conduct of clinical studies is guided by
     the International Council for Harmonization of Technical (ICH) Requirements for Human Use,
@@ -196,5 +198,8 @@
         <p>
       <strong><a href="acknowledgements.html">Acknowledgements</a>:</strong> General acknowledgement of all who have
         contributed</p>  
+        <p>
+      <strong><a href="licenses.html">Licenses</a>:</strong> Identification of the licensing terms applicable to all external
+      content contained within this Implementation Guide</p>    
   </ul>
 </div>

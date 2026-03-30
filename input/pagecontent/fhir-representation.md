@@ -204,7 +204,7 @@ Both M11 and USDM have to converge on the FHIR concepts they map to and so we ha
 
 #### Mapping Representation
 
-The relationships between the elements of M11, USDM and FHIR are shown in the Mapping spreadsheet described in the following section.  The present focus of this mapping is representation of M11 so the mapping does not cover the whole of USDM.  There is a useful infographic from CDISC here: [usdm_m11_classes.pdf](Mappings\usdm_m11_classes.pdf) that shows the overlap between M11 and USDM and in the bottom right USDM classes not covered by M11.
+The relationships between the elements of M11, USDM and FHIR are shown in the Mapping spreadsheet described in the following section.  The present focus of this mapping is representation of M11 so the mapping does not cover the whole of USDM.  There is a useful infographic from CDISC here: ([usdm_m11_classes](https://github.com/data4knowledge/usdm_m11_resources/blob/main/documents/infographics/usdm_m11_classes.pdf)) that shows the overlap between M11 and USDM and in the bottom right USDM classes not covered by M11.
 
 The spreadsheet for mapping to FHIR is in 3 parts as shown  in the illustration. Click on the illustration or click <a href="Mappings/M11 to FHIR Mapping 02.xlsx">here</a> to download the full spreadsheet
 

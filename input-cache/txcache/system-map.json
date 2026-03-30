@@ -6,6 +6,12 @@
     "candidates" : []
   },
   {
+    "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+    "url" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
     "system" : "http://snomed.info/sct",
     "url" : "http://snomed.info/sct",
     "authoritative" : [],
@@ -44,12 +50,6 @@
   {
     "system" : "urn:iso:std:iso:3166:-2",
     "url" : "urn:iso:std:iso:3166:-2",
-    "authoritative" : [],
-    "candidates" : []
-  },
-  {
-    "system" : "urn:iso:std:iso:3166:2",
-    "url" : "urn:iso:std:iso:3166:2",
     "authoritative" : [],
     "candidates" : []
   }]

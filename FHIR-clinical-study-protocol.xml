@@ -101,6 +101,7 @@
 <page key="fhir-representation" name="Fhir Representation"/>
 <page key="index" name="Home"/>
 <page key="info-models" name="Info Models"/>
+<page key="licenses" name="Licenses"/>
 <page key="links" name="Links"/>
 <page key="protocol-preparation" name="Protocol Preparation"/>
 <page key="toc" name="Table of Contents"/>
