@@ -44,7 +44,7 @@ This example shows: 1) more granular decomposition of the narrative 2) more comp
             a graphic This section should contain a graphic This section should contain a graphic This section should contain a graphic. </p>
               
               							<p style="text-align: center">
-								<img src="#pfizer-logo" alt="Pfizer Logo"/>
+								<img src="#exemplar-logo" alt="Exemplar Logo"/>
 							</p>
 							<p style="text-align: center">
 								<b>Aromasin®</b>
@@ -73,12 +73,12 @@ This example shows: 1) more granular decomposition of the narrative 2) more comp
         </div>
       """
 * relatesTo[+].type = http://terminology.hl7.org/CodeSystem/artifact-relationship-type#supported-with
-* relatesTo[=].targetReference = Reference(pfizer-logo)
+* relatesTo[=].targetReference = Reference(exemplar-logo)
 
-* contained[0] = pfizer-logo
+* contained[0] = exemplar-logo
 
 
-Instance: pfizer-logo
+Instance: exemplar-logo
 InstanceOf: Binary
 Usage: #inline
 * contentType = #image/jpeg

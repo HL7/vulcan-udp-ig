@@ -86,7 +86,7 @@ parameters:
 #   excludettl: true
 #   validation: [allow-any-extensions, no-broken-links]
   special-url:
-    - http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
+  - http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
 # │ as a simple structure where the YAML key is the menu item name and the value is the URL.       │
@@ -197,9 +197,9 @@ groups:
   GroupVSM11:
     name: "Terminology: M11 Value Sets"
     description: "These define sets of codes used by systems conforming to this implementation guide. 
-                  This list has value sets defined b y the M11 Techncial Specification
-                  (NOTE ICH and CDISC have signed a Memorandum of Understanding (MOU) collaborating to 
-                  support the maintenance and governance of ICH M11 controlled terminology...focusing on 
+                  This list has value sets defined by the M11 Techncial Specification
+                  (NOTE ICH and CDISC have a Memorandum of Understanding (MOU) to 
+                  support the maintenance and governance of ICH M11 controlled terminology ocusing on 
                   the use of CDISC’s unified governance process and terminology services for long-term support.)"
     resources:
     - ValueSet/m11-amendment-details-statement-vs
@@ -213,7 +213,7 @@ groups:
   GroupVSUDP:
     name: "Terminology: UDP Value Sets"
     description: "These define sets of codes used by systems conforming to this implementation guide. 
-                       This list is value sets that are defined by this IG"
+                       This list is value sets that are defined by this IG."
     resources:
     - ValueSet/udp-address-purpose-type-vs
     - ValueSet/udp-identifier-type-vs
@@ -255,7 +255,7 @@ groups:
   
   GroupComp1:
     name: "Example Instances: Narrative - Single Composition"
-    description: "Illustration of a protocol with narrative as Single Composition. For discussion see section: Fhir-representation.html#structured-representation"
+    description: "Illustration of a protocol with narrative as Single Composition. For discussion see section: [Narrative Examples](Fhir-representation.html#narrative-examples)"
     resources:
     - ResearchStudy/ResearchStudy-Single-Composition-001
     - Composition/Narrative-Single-Composition
@@ -263,7 +263,7 @@ groups:
 
   GroupComp2:
     name: "Example Instances: Narrative - Composition per Section"
-    description: "Illustration of a protocol with Composition Section for Each M11 Section. For discussion see section: fhir-representation.html#structured-representation"
+    description: "Illustration of a protocol with Composition Section for Each M11 Section. For discussion see section: [Narrative Examples](Fhir-representation.html#narrative-examples)"
     resources:
     - ResearchStudy/ResearchStudy-Composition-Section-Per-Section-001
     - Composition/Narrative-Composition-per-M11-Section-1
@@ -273,7 +273,7 @@ groups:
 
   GroupComp3:
     name: "Example Instances: Narrative - Section per Section"
-    description: "Illustration of a protocol with composition for each M11 narrative section. For discussion see section: fhir-representation.html#structured-representation "
+    description: "Illustration of a protocol with composition for each M11 narrative section. For discussion see section: [Narrative Examples](Fhir-representation.html#narrative-examples)"
     resources:  
     - ResearchStudy/ResearchStudy-Narrative-Comp-Per-M11-001
     - Composition/Narrative-Composition-Section-per-Section
@@ -281,7 +281,7 @@ groups:
 
   GroupComp4:
     name: "Example Instances: Narrative - Complex"
-    description: "Illustration of a protocol with 1) more granular decomposition of the narrative 2) more complex formatting 3) content that falls outside the M11 template. For discussion see section: fhir-representation.html#structured-representation"
+    description: "Illustration of a protocol with 1) more granular decomposition of the narrative 2) more complex formatting 3) content that falls outside the M11 template. For discussion see section: [Narrative Examples](Fhir-representation.html#narrative-examples)"
     resources:
     - ResearchStudy/ResearchStudy-Narrative-Complex-001
     - Composition/Narrative-Complex

@@ -23,8 +23,9 @@ During preparation for earlier UDP connectathons it was noted that a significant
 Where the **Data Type** entry is “Valid Value”, the corresponding **Value** entry in the specification table will indicate the list of acceptable values. (See example in Figure 1 below)
 
 <div><img src="protocol-prep-01.png" alt="protocol-prep-01.png" style="max-width: 60%; height: auto;" />
-<p>Figure 1: Identification of valid values within the ICH M11 Technical Specification
+<p>Figure 1: Identification of valid values within the ICH M11 Technical Specification (copied from ICH M11 Technical Specification)
 </p></div>
+
 
 #### Detailed steps – by approach:
 

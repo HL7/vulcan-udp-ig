@@ -50,10 +50,10 @@
     <ul class="dropdown-menu">
       <li>
         <a href="links.html">Links</a>
-      </li>      
+      </li>
       <li>
         <a href="terminology.html">Terminology Support</a>
-      </li>  
+      </li>
       <li>
         <a href="crossreferences.html">Cross References</a>
       </li>
@@ -65,9 +65,10 @@
   <li>
     <a href="downloads.html">Downloads</a>
   </li>
-    <li>
+  <li>
     <a href="acknowledgements.html">Acknowledgements</a>
   </li>
-
+  <li>
+    <a href="licenses.html">Licenses</a>
+  </li>
 </ul>      
-   
