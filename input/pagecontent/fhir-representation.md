@@ -29,14 +29,15 @@ The relationship between these components is simplistically shown in the diagram
 
 #### Protocol Content - Narrative vs Structured   
 
-ICH M11 provides a globally harmonized standard set of protocol content and organization of that content through the headings and common text in [M11 Template](https://hl7.org/fhir/uv/pharmaceutical-research-protocol/2025Sep/Mappings/ICH_M11_Technical%20Specification_Updated%20Step%202_2025_0203.docx) and [M11 Guideline](https://hl7.org/fhir/uv/pharmaceutical-research-protocol/2025Sep/Mappings/ICH_M11_Technical%20Specification_Updated%20Step%202_2025_0203.docx). The [M11 Technical Specification](https://hl7.org/fhir/uv/pharmaceutical-research-protocol/2025Sep/Mappings/ICH_M11_Technical%20Specification_Updated%20Step%202_2025_0203.docx) also provides a bases for digital data exchange by specifying a set of data fields and terminologies to be included in the technical representation of protocols which can be exchanged through various standards. This Implementation Guide specifies how to leverage FHIR for exchange of protocols according to the ICH M11 specifications. 
+ICH M11 provides a globally harmonized standard set of protocol content and organization of that content through the headings and common text in [M11 Template](links.html#fundamental-standards) and [M11 Guideline](links.html#fundamental-standards). The  [M11 Technical Specification](links.html#fundamental-standards) also provides a bases for digital data exchange by specifying a set of data fields and terminologies to be included in the technical representation of protocols which can be exchanged through various standards. This Implementation Guide specifies how to leverage FHIR for exchange of protocols according to the ICH M11 specifications. 
 
 The implementers will vary in their desired use of M11: some will treat as a document, others will leverage structured content, others will utilize for machine processing
 
 The FHIR implementation must therefore cover both narrative and structured content. The challenge is that some data is purely textual while others is quite granular.  We also have to recognize that some implementers will cling to a document paradigm while others will want to use the granular machine readable content as they automate systems.
 
 <div><img src="narrative-and-structured-02.png" alt="narrative-and-structured-02.png" style="max-width: 50%;height: auto;"/>
-<p>Figure 1: FHIR must support both Narrative and Structured representation</p></div>
+<p>Figure 2: FHIR must support both Narrative and Structured representation</p></div>
+
 
 
 #### Narrative Representation
@@ -46,7 +47,8 @@ In FHIR representation of "documents" is done using a *Composition* resource.  T
 
 
 <div><img src="narrative-content-01.png" alt="narrative-content-01.png" style="max-width: 80%;height: auto;"/>
-<p>Figure 2: Narrative Elements</p></div>
+<p>Figure 3: Narrative Elements</p></div>
+
 
 
 To properly reflect the M11 template, the sections and sub-sections in the **Composition** need to match those in the protocol template. 
@@ -54,12 +56,14 @@ To properly reflect the M11 template, the sections and sub-sections in the **Com
 The template sections can be defined in terminology – a part of the terminology is shown in the diagram below.
 
 <div><img src="section-vs-01.png" alt="section-vs-01.png" style="max-width: 50%;height: auto;"/>
-<p>Figure 3: A part of the Section Code List</p></div>
+<p>Figure 4: A part of the Section Code List (<i>source: NCI Codes listed by M11</i></p></div>
+
 
 Specific narrative instances can then use the codes to specify which parts of the M11 Template they represent.
 
 <div><img src="narrative-content-02.png" alt="narrative-content-02.png" style="max-width: 50%;height: auto;"/>
-    <p>Figure 4: Narrative Content Example</p></div>
+    <p>Figure 5: Narrative Content Example</p></div>
+
 In the illustration above **ResearchStudy** has two **NarrativeContent** sections attached. One with code *C218517* which is *1.1.2 Overall Design* and one with code *C218520* which is *2 INTRODUCTION* and this would then have all the sub-sections within the *INTRODUCTION*.
 
 #### Narrative Examples
@@ -85,7 +89,8 @@ The probable best approach is the second or third of these.  The other two examp
 The real power of a digital protocol comes from representing the content as a series of distinct attributes. USDM and M11 provide information models that can be represented by FHIR using the same resources used for the narrative representation.  While many of the necessary attributes are already present there are inevitably some that have no FHIR equivalent.  For this we use the extension mechanism.
 
 <div><img src="structured-content-01.png" alt="structured-content-01.png" style="max-width: 80%;height: auto;"/>
-<p>Figure 4: Structured Content</p></div>
+<p>Figure 6: Structured Content</p></div>
+
 
 
 Some of these extensions are general purpose and will be relevant beyond USDM and M11 and they can be profiled to tie them to exact requirements.
@@ -95,7 +100,8 @@ Some of these extensions are general purpose and will be relevant beyond USDM an
 The drawing below shows the names of the Profiles used and the Extensions made for UDP. For description of the function of profiles and extensions see the [description above](fhir-representation.html#fhir-elements-and-protocol-representation)
 
 <div><img src="Extensions and profiles 02.png" alt="Extensions and profiles 02.png" style="max-width: 80%;height: auto;"/>
-<p>Figure 5: Profiles of ResearchStudy and Composition and associated Extensions</p></div>
+<p>Figure 7: Profiles of ResearchStudy and Composition and associated Extensions</p></div>
+
 
 The list below shows the hierarchy, of profiles, extensions and their attributes (the  [narrative definitions](artifacts.html#profiles-extensions-narrative-structures) and [amendment definitions](artifacts.html#profiles-extensions-protocol-amendment) should be consulted for the full details)
 
@@ -146,37 +152,42 @@ The following series of diagrams explains how the different models all use a com
 In USDM Phase is represented by the studyPhase attribute of the StudyDesign class.  
 
 <div><p><a href="image-20260129155349453.png"> <img src="image-20260129155349453.png" alt="image-20260129155349453" style="max-width: 90%;height: auto;"/> </a> <p>
-    Figure 1 : USDM for Phase"
+    Figure 8 : USDM for "Phase" <i>source: USDM Class Model</i>
     </p></p></div>
+
 
 
 In M11 Phase is represented by TrialPhase attribute in the Template and Technical Specification 
 
 <div><p><a href="image-20260129155431823.png"> <img src="image-20260129155431823.png" alt="image-20260129155431823" style="max-width: 90%;height: auto;"/> </a> <p>
-    Figure 2 : M11 for "Phase"
+    Figure 9 : M11 for "Phase" <i>source: M11 Template and M11 Technical Specification</i>
     </p></p></div>
 
 
 
-These values are all held in the NCI Thesaurus and the concepts are in an NCI code set with code C217045
+
+These values are all held in the NCI Thesaurus and the concepts are in an NCI code set with code C217045.  The images here are taken from the NCI [EVS Explore](https://evsexplore.semantics.cancer.gov/evsexplore/welcome) terminology browser.
 
 <div><p><a href="image-20260129165903655.png"> <img src="image-20260129165903655.png" alt="image-20260129165903655.png" style="max-width: 90%;height: auto;"/> </a> <p>
-    Figure 3 : NCI Code Set for "Phase"
+    Figure 10 : NCI Code Set for "Phase" <i>source: Screen grab from NCI EVS Explore</i>
     </p></p></div>
+
 
 
 In the UDP IG this code set is represented by a value set with the identifier m11-phase-vs and the expansion of the value set is derived from the NCI content (*the NCI content is the master, the FHIR value set is not detached from the NCI source*). 
 
 <div><p><a href="image-20260129165955355.png"> <img src="image-20260129165955355.png" alt="image-20260129165955355.png" style="max-width: 90%;height: auto;"/> </a> <p>
-    Figure 4 : UDP Value Set for "Phase"
+    Figure 11 : UDP Value Set for "Phase"
     </p></p></div>
+
 
 
 The phase attribute in FHIR is then bound to this value set.
 
 <div><p><a href="image-20260129170010341.png"> <img src="image-20260129170010341.png" alt="image-20260129170010341.png" style="max-width: 90%;height: auto;"/> </a> <p>
-    Figure 5 : UDP attribute for "Phase" bound to value set
+    Figure 12: UDP attribute for "Phase" bound to value set
     </p></p></div>
+
 
 
 ### Validation
@@ -209,8 +220,9 @@ The relationships between the elements of M11, USDM and FHIR are shown in the Ma
 The spreadsheet for mapping to FHIR is in 3 parts as shown  in the illustration. Click on the illustration or click <a href="Mappings/M11 to FHIR Mapping 02.xlsx">here</a> to download the full spreadsheet
 
 <div><p><a href="Mappings/M11 to FHIR Mapping 02.xlsx"> <img src="Mapping.png" alt="Mapping.png" style="max-width: 90%;height: auto;"/> </a> <p>
-    Figure 6 : M11 / USDM / FHIR Mapping Spreadsheet
+    Figure 13: M11 / USDM / FHIR Mapping Spreadsheet
     </p></p></div>
+
 
 
 The FHIR columns of the spreadsheet are described in detail below together with examples.

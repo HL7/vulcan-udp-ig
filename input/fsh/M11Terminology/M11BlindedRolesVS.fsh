@@ -5,7 +5,7 @@ Id: m11-blinded-roles-vs
 //Id: nci-study-role-vs
 Title: "ICH M11 Trial Blinding Role Value Set Terminology"
 Description: """Terminology associated with the trial blinding role value set codelist of the ICH M11 protocol template.
-This is ICH M11 Value Set C217281 drawn from the NCI Thesaurus."""
+This is ICH M11 Value Set C217281 drawn from the NCI Thesaurus and represented here in FHIR format."""
 * ^extension[$ext-fmm].valueInteger = 0
 * ^experimental = false
 * ^status = #active

@@ -2,7 +2,8 @@ ValueSet: UDPStudyTitleTypeVS
 Id: udp-study-title-type-vs
 Title: "UDP Study Title Type Value Set"
 Description: """These codes represent the types of title or name a study can have 
-This is a UDP specific value set.
+This is a UDP specific value set using NCIT codes to extend an HL7 value set.
+
 These are codes used in M11 but in the M11 Specification each code is associated with a distinct M11 attribute 
 rather than being a classifier for a more general attribute.  FHIR structures are designed to work with a repeating
 attribute classified by an approriate terminology. This value set enables that.

@@ -12,7 +12,7 @@ ICH M11 aligned protocols can be created in several ways:
 
 #### If You Are Starting With The TransCellerate CPT:
 
-During preparation for earlier UDP connectathons it was noted that a significant number of sponsors had implemented the [TransCelerate Common Protocol Template (CPT)](https://www.transceleratebiopharmainc.com/assets/clinical-content-reuse-solutions/). To support end-users, there is a mapping tool (below) highlighting which CPT sections and content are aligned with the December 2025, ICH M11 Step 3 version of the Template, Guideline and Technical Specification.  [ICH M11 Template with CPT Mappings (Section Headings ONLY)](links.html#fundamental-standards)
+During preparation for earlier UDP connectathons it was noted that a significant number of sponsors had implemented the [TransCelerate Common Protocol Template (CPT)](https://www.transceleratebiopharmainc.com/assets/clinical-content-reuse-solutions/). To support end-users, there is a mapping tool (below) highlighting which CPT sections and content are aligned with the December 2025, ICH M11 Step 3 version of the Template, Guideline and Technical Specification. 
 
 - [ICH M11 Template with CPT Mappings (Section Headings ONLY)](links.html#fundamental-standards)
   - Ideal for transferring content from existing protocols into the M11 formatted template
@@ -23,8 +23,9 @@ During preparation for earlier UDP connectathons it was noted that a significant
 Where the **Data Type** entry is “Valid Value”, the corresponding **Value** entry in the specification table will indicate the list of acceptable values. (See example in Figure 1 below)
 
 <div><img src="protocol-prep-01.png" alt="protocol-prep-01.png" style="max-width: 60%; height: auto;" />
-<p>Figure 1: Identification of valid values within the ICH M11 Technical Specification (copied from ICH M11 Technical Specification)
+    <p>Figure 1: Portion of the ICH M11 Technical Specification highlighting valid values guidance (<i>source: ICH M11 Technical Specification</i>)
 </p></div>
+
 
 
 #### Detailed steps – by approach:
@@ -54,5 +55,5 @@ Where the **Data Type** entry is “Valid Value”, the corresponding **Value** 
 5. You will no doubt be faced with making judgement calls on where certain content elements align with the ICH M11 template. As this is not the primary goal of this IG, we recommend making the judgement call and applying consistently across the protocol. 
 6. Finally per template guidance, remove all instructional text and mapping comments, update formatting inconsistencies and update Table of Contents
 
-NOTE: Although not a long-term solution, document-based ICH M11 protocols may be transformed into FHIR using AI/ML (artificial intelligence/machine learning) and LLM (large language models).  Long-term strategy involves digitally native, ICH M11-aligned protocols primed for exchange in FHIR.
+NOTE: Although not a long-term solution, document-based ICH M11 protocols may be transformed into FHIR using AI/ML (artificial intelligence/machine learning) and LLM (large language models).  The long-term strategy involves digitally native, ICH M11-aligned protocols primed for exchange in FHIR.
 

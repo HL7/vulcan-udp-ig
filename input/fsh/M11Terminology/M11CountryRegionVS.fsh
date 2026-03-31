@@ -4,7 +4,7 @@ Title: "ICH M11 Study Amendment Country Value Set"
 Description: """Codes drawn from 
 ISO 3166 Country Codes, Alpha 3; 
 ISO 3166 Country Codes, Alpha 2; 
-country/region codes.
+country/region codes. This is ICH M11 Value Set represented here in FHIR format.
 """
 * ^extension[$ext-fmm].valueInteger = 1
 * ^experimental = false

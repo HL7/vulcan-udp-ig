@@ -1,8 +1,9 @@
 ValueSet: UDPPartyRoleType
 Id: udp-party-role-type-vs
 Title: "UDP Party Role Type Value Set"
-Description: """These codes represent the types of role ResearchStudy.AssociatedParty can play.
-This is a UDP specific value set.
+Description: """These codes represent the types of role ResearchStudy.AssociatedParty can play. This is required for the
+mechanism used by FHIR for associating one entity with another. This is a UDP specific value set and uses NCIT codes to 
+create an appropriate FHIR value set.
 """
 * ^extension[$ext-fmm].valueInteger = 1
 * ^experimental = false

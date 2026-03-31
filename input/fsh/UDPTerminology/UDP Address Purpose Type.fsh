@@ -3,7 +3,7 @@ Id: udp-address-purpose-type-vs
 Title: "UDP Address Purpose Type Value Set"
 Description: """These codes represent intended use of an address.  There is an HL7 value set 
 for Contact entity type - this has "prefered" binding and must therefore be included in this value set
-This is a UDP specific value set.
+This is a UDP specific value set using NCIT codes to extend a required HL7 value set.
 
 Neither HL7 nor NCIT have the simle concept of a "legal address".  HL7 has the concept of an Administrative address
 which is not precise enough and NCIT has Sponsor Legal Address, Co-SPonsor Legal Address etc

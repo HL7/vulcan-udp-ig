@@ -64,4 +64,4 @@ Those who utilize or may in the future utilize TransCelerate Digital Data Flow /
 
 - Conducting a thorough review of the mappings referenced in this Implementation Guide [mappings referenced in this Implementation Guide](fhir-representation.html#usdm-and-m11-to-fhir-mapping) to understand how elements are represented across M11, USDM and FHIR.
 - Use cases prioritization based on business needs in order to inform implementation strategies.
-- Support is available at the DDF GitHub.
+- Support is available at the [DDF GitHub](https://github.com/cdisc-org/DDF-RA).

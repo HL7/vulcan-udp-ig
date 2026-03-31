@@ -2,13 +2,12 @@ CodeSystem: NCIT
 Id: ncit-cs
 Title: "Fragment of NCIT Code System"
 Description: """This is a fragment from the NCI Thesaurus covering codes used by ICH M11 Value Sets.
-These should all be moved into tx.fhir.org but are included here for testing and validation.
+These should all be moved into tx.fhir.org but are included here in FHIR format for testing and validation.
 """
 * ^status = #active
 * ^version = "26.02D"
 * ^publisher = "NCI"
 * ^url = $NCITURL
-//* ^special-url = $NCITURL
 * ^extension[$ext-fmm].valueInteger = 2
 * ^experimental = false
 * ^caseSensitive = false
