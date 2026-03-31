@@ -20,10 +20,6 @@ This FHIR implementation guide has the following relationships with other FHIR i
 
 {% lang-fragment cross-version-analysis.xhtml %}
 
-### Intellectual Property Statements
-
-{% lang-fragment ip-statements.xhtml %}
-
 ### Global Profiles
 
 {% lang-fragment globals-table.xhtml %}

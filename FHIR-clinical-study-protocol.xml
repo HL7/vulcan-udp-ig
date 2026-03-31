@@ -73,7 +73,7 @@
 <artifact id="Group/DIBASY-Eligibility" key="Group-DIBASY-Eligibility" name="StudyEligibilityCriteria: Eligibility Criteria for DIBASY Trial"/>
 <artifact id="ValueSet/udp-address-purpose-type-vs" key="ValueSet-udp-address-purpose-type-vs" name="UDP Address Purpose Type Value Set"/>
 <artifact id="ValueSet/udp-identifier-type-vs" key="ValueSet-udp-identifier-type-vs" name="UDP Identifier Type Value Set"/>
-<artifact id="ValueSet/udp-narrative-elements-vs" key="ValueSet-udp-narrative-elements-vs" name="UDP Narrative Elements Value Set"/>
+<artifact id="ValueSet/udp-narrative-elements-vs" key="ValueSet-udp-narrative-elements-vs" name="UDP Narrative Elements Value Set using NCIT codes to create a FHIR value set."/>
 <artifact id="ValueSet/udp-party-role-type-vs" key="ValueSet-udp-party-role-type-vs" name="UDP Party Role Type Value Set"/>
 <artifact id="ValueSet/udp-related-artifact-type-vs" key="ValueSet-udp-related-artifact-type-vs" name="UDP Related Artifact Type Value Set"/>
 <artifact id="ValueSet/udp-section-codes-vs" key="ValueSet-udp-section-codes-vs" name="UDP Section Codes Value Set"/>

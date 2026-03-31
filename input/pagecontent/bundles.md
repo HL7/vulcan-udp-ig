@@ -38,4 +38,4 @@ During implementation, it is likely to encounter both Modes A and B. Ideally, an
 
 One of the largest drivers of the adopted approach is how protocol amendments are represented and how subsequent submissions of the amended protocol are versioned, written to the server and read by the reviewer. 
 
-Refer to the following IG’s for support on FHIR exchange and connections between resources: [Exchanging FHIR Content](https://hl7.org/fhir/exchanging.html) and [References between FHIR resources](https://hl7.org/fhir/references.html).
+Refer to the following parts of the FHIR specification for support on FHIR exchange and connections between resources: [Exchanging FHIR Content](https://hl7.org/fhir/exchanging.html) and [References between FHIR resources](https://hl7.org/fhir/references.html).

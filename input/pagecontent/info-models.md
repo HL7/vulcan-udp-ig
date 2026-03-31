@@ -14,7 +14,7 @@ Through CDISC collaboration with ICH M11, it has been established that CDISC wil
 
 Since USDM was first introduced there has been significant progress in adoption of it, primarily for sponsor-oriented use cases. Collaboration with Vulcan UDP and ICH M11 aims to accelerate the implementation and thereby bring additional value to various stakeholders. 
 
-> **NOTE:** The relationship between the M11 protocol template specification and the structured and unstructured capabilities of the USDM is illustrated on the DDF GitHub site. Each logical area of the M11 protocol template is highlighted along with the associated area within the USDM. See infographic  [usdm_m11.pdf](https://github.com/data4knowledge/usdm_m11_resources/blob/main/documents/infographics/usdm_m11.pdf) 
+> **NOTE:** The relationship between the M11 protocol template specification and the structured and unstructured capabilities of the USDM is illustrated on the DDF GitHub site. Each logical area of the M11 protocol template is highlighted along with the associated area within the USDM. See infographic  [usdm_m11.pdf](https://github.com/data4knowledge/usdm_m11_resources/blob/main/documents/infographics/usdm_m11_classes.pdf) 
 
 More detailed background and links to source material for each of these projects can be found in the [Links section](links.html).
 
@@ -45,5 +45,6 @@ Another way to visualise the distinction between an exchange model and a content
 While these models have different purposes and hence different structures they still operate through a common terminology.  The diagram below illustrates the NCI thesaurus as a common source.  For a more detailed treatment of this see the terminology discussion [here](fhir-representation.html#terminology).
 
 <div><p><a href="image-20260129164106045.png"> <img src="image-20260129164106045.png" alt="image-20260129164106045.png" style="max-width: 90%;height: auto;"/> </a> <p>
-    Figure 1 : All three models drawing from the same terminology source (the NCI Thesaurus) for their set of available values for "Phase"
+    Figure 1 : All three models drawing from the same terminology source (the NCI Thesaurus) for their set of available values for "Phase" (<i>images taken from USDM, ICH and NCI</i>)
     </p></p></div>
+

@@ -32,7 +32,7 @@ NOTE: methods for generation, exchange, and validation of receipt will vary.  Th
 
 <div><img src="work-flow-protocol-approval.png" alt="work-flow-protocol-approval.png" style="max-width: 80%;
  height: auto;" />
-<p>Figure 1: Sponsor to Regulator</p></div>
+<p>Figure 1: Sponsor to Regulator Use Case</p></div>
 ##### Considerations to Enable Forward Compatibility
 
 In order to ensure this Implementation Guide is set up to enable compatibility for future use cases and future specificity of requirements, variations on the above simple process were considered, such as:

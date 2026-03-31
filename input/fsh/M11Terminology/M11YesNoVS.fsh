@@ -4,7 +4,7 @@ ValueSet: M11YesNoVS
 Id: m11-yes-no-vs
 Title: "ICH M11 No Yes Value Set Terminology"
 Description: """Terminology associated with the no yes value set codelist of the ICH M11 protocol template.
-This is ICH M11 Value Set C217046 drawn from the NCI Thesaurus."""
+This is ICH M11 Value Set C217046 drawn from the NCI Thesaurus and represented here in FHIR format."""
 * ^extension[$ext-fmm].valueInteger = 0
 * ^experimental = false
 * ^status = #active

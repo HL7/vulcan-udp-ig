@@ -3,7 +3,7 @@ Id: udp-section-codes-vs
 Title: "UDP Section Codes Value Set"
 Description: """Codes representing sections of M11.
 This value set is not identified in the M11 specification but is in the NCI Thesaurus and was 
-originally specified for M11.  It is NCI Value Set C217272.
+originally specified for M11.  It is NCI Value Set C217272 drawn from the NCI Thesaurus and represented here in FHIR format.
 These codes are present in UDP to allow granularity in narrative compositions.
 """
 * ^status = #active

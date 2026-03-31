@@ -169,13 +169,13 @@ parameters:
 groups:
   GroupBASE:
     name: "Profiles & Extensions: Base"
-    description: Base Profiles and Extensions
+    description: Base Profiles and Extensions. M11 as part of the name only signifies alignment to M11 - HL7 is the owner
     resources:
     - StructureDefinition/m11-approval
     - StructureDefinition/m11-confidentiality-statement
   GroupNAR:
     name: "Profiles & Extensions: Narrative Structures"
-    description: Profiles and Extensions to allow representation of narrative structures
+    description: Profiles and Extensions to allow representation of narrative structures. M11 as part of the name only signifies alignment to M11 - HL7 is the owner
     resources:
     - StructureDefinition/m11-research-study-narratives
     - StructureDefinition/m11-research-study-profile
@@ -183,7 +183,7 @@ groups:
     - StructureDefinition/narrative-elements
   GroupAMD:
     name: "Profiles & Extensions: Protocol amendment"
-    description: Profiles and Extensions representing amendments to a protocol
+    description: Profiles and Extensions representing amendments to a protocol.  M11 as part of the name only signifies alignment to M11 - HL7 is the owner
     resources:
     - StructureDefinition/m11-protocol-amendment
     - StructureDefinition/m11-amendment-detail
@@ -191,13 +191,13 @@ groups:
 #Terminology
   GroupCS:
     name: "Terminology: Code Systems"
-    description: The majority of required code systems are maintained by CDISC on the NCI Thesaurus
+    description: The majority of required code systems are maintained by CDISC on the NCI Thesaurus. The code system here is a fragment to enable terminology validation.
     resources:
     - CodeSystem/ncit-cs
   GroupVSM11:
     name: "Terminology: M11 Value Sets"
     description: "These define sets of codes used by systems conforming to this implementation guide. 
-                  This list has value sets defined by the M11 Techncial Specification
+                  This list has value sets defined by the M11 Techncial Specification.  These are FHIR representations of those value sets.
                   (NOTE ICH and CDISC have a Memorandum of Understanding (MOU) to 
                   support the maintenance and governance of ICH M11 controlled terminology ocusing on 
                   the use of CDISC’s unified governance process and terminology services for long-term support.)"

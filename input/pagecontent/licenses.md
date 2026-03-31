@@ -49,3 +49,9 @@ Terminology in the M11 specification was authored by ICH and will be maintained 
 
 
 
+### Intellectual Property Statements
+
+In addition to the above the following standard IP acknowledgements apply
+
+{% lang-fragment ip-statements.xhtml %}
+
