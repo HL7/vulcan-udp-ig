@@ -41,3 +41,7 @@ WARNING: ImplementationGuide/hl7.fhir.uv.clinical-study-protocol: Implementation
 
 # 09 Why is this draft?
 %Reference to draft CodeSystem urn:iso:std:iso:3166:-2|2021 from fhir.tx.support.r4#0.34.0%
+
+# 10 The link does resolve so this error seems wrong
+%The link 'Fhir-representation.html#narrative-examples' for "Narrative Examples" cannot be resolved%
+

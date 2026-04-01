@@ -160,13 +160,14 @@ In USDM Phase is represented by the studyPhase attribute of the StudyDesign clas
 In M11 Phase is represented by TrialPhase attribute in the Template and Technical Specification 
 
 <div><p><a href="image-20260129155431823.png"> <img src="image-20260129155431823.png" alt="image-20260129155431823" style="max-width: 90%;height: auto;"/> </a> <p>
-    Figure 9 : M11 for "Phase" <i>source: M11 Template and M11 Technical Specification</i>
+    Figure 9 : M11 for "Phase" <i>source: M11 Template page 2 and M11 Technical Specification page 13/14</i>
     </p></p></div>
 
 
 
 
-These values are all held in the NCI Thesaurus and the concepts are in an NCI code set with code C217045.  The images here are taken from the NCI [EVS Explore](https://evsexplore.semantics.cancer.gov/evsexplore/welcome) terminology browser.
+
+These values are all held in the NCI Thesaurus and the concepts are in an NCI code set with code C217045.  The images here are taken from the NCI [EVS Explore](https://evsexplore.semantics.cancer.gov/evsexplore/welcome) terminology browser at this [page](https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C217045).
 
 <div><p><a href="image-20260129165903655.png"> <img src="image-20260129165903655.png" alt="image-20260129165903655.png" style="max-width: 90%;height: auto;"/> </a> <p>
     Figure 10 : NCI Code Set for "Phase" <i>source: Screen grab from NCI EVS Explore</i>
