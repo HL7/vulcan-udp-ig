@@ -1,6 +1,6 @@
 {
   "package-id" : "hl7.fhir.uv.clinical-study-protocol",
-  "version" : "1.0.1-ballot2",
+  "version" : "1.0.0-ballot2",
   "path" : "http://hl7.org/fhir/uv/clinical-study-protocol/2026May",
   "mode" : "working",
   "status" : "ballot",
