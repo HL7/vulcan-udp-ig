@@ -30,7 +30,7 @@ The Implementation Guide makes NO changes to this content with the exception of 
 
 ## TransCellerate
 
-tbd
+The exact terms are to be determined.
 
 ## NCI Thesaurus
 

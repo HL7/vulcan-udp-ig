@@ -25,7 +25,7 @@ version: 1.0.0-ballot2
 fhirVersion: 	6.0.0-ballot3 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 #fhirVersion: 4.0.1
 copyrightYear: 2026+
-releaseLabel: STU 1 - Ballot2
+releaseLabel: STU 1 Ballot2
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"	 
 publisher:
