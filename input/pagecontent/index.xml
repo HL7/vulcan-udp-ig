@@ -1,6 +1,22 @@
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
   <!-- The spaces between the open and close "a" tag are mandatory.  (Cuz HTML renderers are dumb...) -->
+ 
+ <div class="bg-danger">
+  <p><span style="background-color: yellow; color: black; padding: 2px 5px; display: inline;"><strong>Note to Reviewers</strong></span></p>
+
+  <ol>
+    <li>
+      <p>The naming of this IG is chosen to reflect custom and practice of the regulatory community and in particular of the ICH whose specification we are following.</p>
+      <p>We are interested to hear from reviewers of any perceived conflict between "Clinical Study Protocol" and any other trials or studies that can be regarded as "clinical" but are not covered by the content in this guide.</p>
+    </li>
+    <li><strong>This Implementation Guide is concerned with mapping from externally developed content. The licensing terms for that usage is acknowledged and fully detailed in the <a href="licenses.html">Licenses</a> section.</strong></li>
+    <li>The content is based on FHIR R6. This is to take advantage of new features in the <a href="https://hl7.org/fhir/6.0.0-ballot4/researchstudy.html">ResearchStudy</a> resource.  There are planned to be backports to earlier FHIR releases in future.  We are interested to know what backport requirements implementers have.</li>
+  </ol>
+
+</div>
+ 
+ 
   <a name="introduction"> </a>
   <h3>Introduction</h3>
   <p>This Implementation Guide has been developed by the <strong>Vulcan UDP Project (Utilizing the Digital
@@ -161,10 +177,10 @@
         </a>: Provides a view to use cases covered
         in this Implementation Guide as well as those others are working on and future potential use
         cases across stakeholders </p>
-      <p><a href="protocol-preparation.html">
+      <!-- <p><a href="protocol-preparation.html">
           <strong>Protocol Preparation</strong>
         </a>: A guide to preparation of a protocol
-        for submission according to the M11 format</p>
+        for submission according to the M11 format</p> -->
       <p><a href="info-models.html">
           <strong>Information Models</strong>
         </a>: Explains how the USDM, M11 and FHIR

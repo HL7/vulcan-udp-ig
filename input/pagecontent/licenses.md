@@ -1,6 +1,6 @@
 
 
-This Implementation Guide is concerned with implementation of the ICH M11 HARMONISED GUIDELINE  CLINICAL ELECTRONIC STRUCTURED HARMONISED  PROTOCOL  (CESHARP).  There is content from CDISC and TransCellerate that is also relevant.  Terminology used by ICH is held by the NCI Thesaurus.
+This Implementation Guide is concerned with implementation of the ICH M11 HARMONISED GUIDELINE  CLINICAL ELECTRONIC STRUCTURED HARMONISED  PROTOCOL  (CESHARP).  There is content from CDISC and TransCelerate that is also relevant.  Terminology used by ICH is held by the NCI Thesaurus.
 
 The license terms under which this content is used is presented here:
 
@@ -12,11 +12,11 @@ Use of ICH M11 Section Headings and Fields within the mapping spreadsheet, the c
 
 > Legal notice: This document is protected by copyright and may, with the exception of the ICH logo,  be used, reproduced, incorporated into other works, adapted, modified, translated or distributed  under a public license provided that ICH's copyright in the document is acknowledged at all times.  In case of any adaption, modification or translation of the document, reasonable steps must be  taken to clearly label, demarcate or otherwise identify that changes were made to or based on the  original document. Any impression that the adaption, modification or translation of the original  document is endorsed or sponsored by the ICH must be avoided.   The document is provided "as is" without warranty of any kind. In no event shall the ICH or the  authors of the original document be liable for any claim, damages or other liability arising from  the use of the document.   The above-mentioned permissions do not apply to content supplied by third parties. Therefore, for  documents where the copyright vests in a third party, permission for reproduction must be obtained  from this copyright holder. 
 
-
+CDISC publishes semantics for the ICH M11 protocol data elements and valid  value sets. This terminology set is published and stored in the NCI Thesaurus  Subset C217023 - ICH M11 Terminology  (https://evsexplore.semantics.cancer.gov/evsexplore/subset/ncit/C217023) 
 
 ## CDISC
 
-HL7 Vulcan acknowledges that ICH is the copyright holder for USDM. 
+HL7 Vulcan acknowledges that CDISC is the copyright holder for USDM. 
 
 USDM is a reference architecture produced by [CDISC](https://www.cdisc.org/) to be used by [TransCelerate](https://www.transceleratebiopharmainc.com/) and "*anyone who wishes to create conformant standards-based technologies, which produce or consume study definitions* - source [DDF-RA/README.md at v4.0.0 · cdisc-org/DDF-RA · GitHub](https://github.com/cdisc-org/DDF-RA/blob/v4.0.0/README.md)".  
 
@@ -28,7 +28,7 @@ The Implementation Guide makes NO changes to this content with the exception of 
 
 
 
-## TransCellerate
+## TransCelerate
 
 The exact terms are to be determined.
 
