@@ -3,9 +3,9 @@ Id: m11-research-study
 Description: "Additions for M11 not otherwise dealt with"
 Title:  "M11 Research Study Extension"
 Context: M11_ResearchStudyProfile
+* insert rs-copyright-structure
 * ^extension[$ext-fmm].valueInteger = 2
 * ^extension[$ext-wg].valueCode = #brr
-
 * ^status = #active
 
 * value[x] 0..0

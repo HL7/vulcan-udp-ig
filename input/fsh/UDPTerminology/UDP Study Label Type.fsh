@@ -9,6 +9,7 @@ rather than being a classifier for a more general attribute.  FHIR structures ar
 attribute classified by an approriate terminology. This value set enables that.
 Note that the NCI Thesaurus holds separate codes for protocol name (C132300) that are separate from study title (C49802)
 """
+* insert rs-copyright-terminology
 * ^extension[$ext-fmm].valueInteger = 2
 * ^experimental = false
 * ^status = #active

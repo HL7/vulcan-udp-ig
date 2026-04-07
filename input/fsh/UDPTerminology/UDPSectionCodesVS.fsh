@@ -6,6 +6,7 @@ This value set is not identified in the M11 specification but is in the NCI Thes
 originally specified for M11.  It is NCI Value Set C217272 drawn from the NCI Thesaurus and represented here in FHIR format.
 These codes are present in UDP to allow granularity in narrative compositions.
 """
+* insert rs-copyright-terminology
 * ^status = #active
 * ^extension[$ext-fmm].valueInteger = 2
 * ^experimental = false
