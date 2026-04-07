@@ -2,7 +2,7 @@
 
 This provides a list of changes to the IG specification
 
-**2025.08.08 v1.0.0 - UPD IG First Ballot** based on FHIR R6
+**2025.08.08 v1.0.0-ballot1 - First Ballot** based on FHIR R6
 
 - Initial version
 
@@ -12,7 +12,7 @@ This provides a list of changes to the IG specification
 
   - Negative comments
 
-  - |                                                         |                                      |                      |                                  |
+  - | Item                                                    | Comment                              | Status               | Disposition                      |
     | ------------------------------------------------------- | ------------------------------------ | -------------------- | -------------------------------- |
     | [BALLOT-84099](http://jira.hl7.org/browse/BALLOT-84099) | One  Composition per section?        | Applied              | Not Persuasive with Modification |
     | [BALLOT-84099](http://jira.hl7.org/browse/BALLOT-84099) | No Must Support or Obligations       | Applied              | Persuasive                       |

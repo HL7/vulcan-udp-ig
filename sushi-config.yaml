@@ -85,6 +85,8 @@ dependencies:
 parameters:
 #   excludettl: true
 #   validation: [allow-any-extensions, no-broken-links]
+  jira-code:
+  - pharmaceutical-research-protocol
   special-url:
   - http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮

@@ -1,7 +1,14 @@
 Extension: M11_Approval
 Id: m11-approval
-Description: "Approval and sign off"
+Description: """Approval and sign off"""
 Context: M11_ResearchStudyProfile
+* ^copyright = """
+Portions of this material derives from the ICH M11 Harmonised Guideline CeSHarP. 
+The ICH M11 Harmonised Guideline CeSHarP is copyright ©2025+ International Committee on Harmonisation and is made available under license. 
+
+For more licensing information see: [licenses.html](licenses.html)
+"""
+
 * ^extension[$ext-fmm].valueInteger = 2
 * ^extension[$ext-wg].valueCode = #brr
 * ^status = #active
