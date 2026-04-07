@@ -10,7 +10,6 @@ The following are the documents for the M11 and CDISC standards that this IG is 
 | [M11 Guideline](https://database.ich.org/sites/default/files/ICH_Step4_M11_Final_Guideline_2025_1119.pdf) | ICH HARMONISED GUIDELINE <br />CLINICAL ELECTRONIC STRUCTURED HARMONISED  PROTOCOL <br />(CeSHarRP) <br />M11<br />Final Version<br />Adopted on 19 November 2025 |
 | [M11 Technical Specification](https://database.ich.org/sites/default/files/ICH_Step4_M11_Final_TechnicalSpecification_2025_1119.pdf) | CLINICAL ELECTRONIC STRUCTURED HARMONISED  PROTOCOL  <br />(CeSHarP) <br />M11 TECHNICAL SPECIFICATION<br /> Final version<br /> Adopted on 19 November 2025 |
 | [CDISC USDM Data Model](https://github.com/cdisc-org/DDF-RA) | Reference implementation for the CDISC/TransCelerate DDF Reference Architecture (home of the USDM model)<br /><br />Phase 4, Version 4.0.0 |
-| [ICH M11 Template with CPT Mappings (Section Headings ONLY)](Mappings/CPT_M11_Template_Mapping(SectionHeadingsOnly)_March-25_Aligned.docx) | Draft mapping against the Final release of M11 Template      |
 
 ### Informational Links
 
