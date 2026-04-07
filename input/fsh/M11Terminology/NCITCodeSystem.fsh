@@ -4,6 +4,7 @@ Title: "Fragment of NCIT Code System"
 Description: """This is a fragment from the NCI Thesaurus covering codes used by ICH M11 Value Sets.
 These should all be moved into tx.fhir.org but are included here in FHIR format for testing and validation.
 """
+* insert rs-copyright-terminology
 * ^status = #active
 * ^version = "26.02D"
 * ^publisher = "NCI"

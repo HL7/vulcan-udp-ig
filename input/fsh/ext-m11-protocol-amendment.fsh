@@ -3,7 +3,7 @@ Extension: M11_AmendmentScopeImpact
 Id: m11-amendment-scope-impact
 Description: "Provides number or percentage of each group affected by a single amendment"
 Context: M11_ProtocolAmendment
-//m11-research-study-profile
+* insert rs-copyright-structure
 * ^extension[$ext-fmm].valueInteger = 2
 * ^status = #active
 * value[x] 0..0
@@ -25,6 +25,7 @@ Extension: M11_AmendmentDetails
 Id: m11-amendment-detail
 Description: "Provides detail of a single amendment - repeats within the overal amendment report"
 Context: M11_ProtocolAmendment
+* insert rs-copyright-structure
 * ^extension[$ext-fmm].valueInteger = 2
 * ^status = #active
 * value[x] 0..0
@@ -52,6 +53,7 @@ Extension: M11_ProtocolAmendment
 Id: m11-protocol-amendment
 Description: "Amendment to a protocol. This is originally from EBM."
 Context: M11_ResearchStudyProfile
+* insert rs-copyright-structure
 * ^extension[$ext-fmm].valueInteger = 2
 * ^status = #active
 //!!!

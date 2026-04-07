@@ -7,6 +7,7 @@ These are codes used in M11 but in the M11 Specification each code is associated
 rather than being a classifier for a more general attribute.  FHIR structures are designed to work with a repeating
 identifier attribute classified by an approriate terminology. This value set enables that by using NCIT codes to create a FHIR value set.
 """
+* insert rs-copyright-terminology
 * ^extension[$ext-fmm].valueInteger = 1
 * ^experimental = false
 * ^status = #active

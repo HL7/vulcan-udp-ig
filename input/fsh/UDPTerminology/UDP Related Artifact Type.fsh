@@ -11,6 +11,7 @@ The amends and amended-with concepts talk of content that must be applied to get
 wants to know what has been done - it is more of an amendment trail than an actual amendment.  M11 uses a concept
 from the NCI Thesaurus which is suitable for use here.
 """
+* insert rs-copyright-terminology
 * ^extension[$ext-fmm].valueInteger = 1
 * ^experimental = false
 * ^status = #active

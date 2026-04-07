@@ -6,6 +6,7 @@ Description:    """Constraint of ResearchStudy to M11 Guidance
 An instance of this profile represents a single version of the protocol definition. Previous amendments are represented
 by further instances of ResearchStudy linked through the relatesTo attribute. 
 """
+* insert rs-copyright-structure
 * ^extension[$ext-fmm].valueInteger = 2
 * ^status = #active
 

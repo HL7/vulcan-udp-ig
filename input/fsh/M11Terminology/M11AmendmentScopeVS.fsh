@@ -8,6 +8,7 @@ This is ICH M11 Value Set C217047 drawn from the NCI Thesaurus and represented h
 
 The M11 guidance to "leave blank" if not applicable has to be replaced by an explicit "Not Applicable"
 """
+* insert rs-copyright-terminology
 * ^extension[$ext-fmm].valueInteger = 0
 * ^experimental = false
 * ^status = #active

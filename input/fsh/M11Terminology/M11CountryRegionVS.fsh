@@ -6,6 +6,7 @@ ISO 3166 Country Codes, Alpha 3;
 ISO 3166 Country Codes, Alpha 2; 
 country/region codes. This is ICH M11 Value Set represented here in FHIR format.
 """
+* insert rs-copyright-terminology
 * ^extension[$ext-fmm].valueInteger = 1
 * ^experimental = false
 * ^status = #active

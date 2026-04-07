@@ -6,6 +6,7 @@ Title: "Narrative Elements"
 Description: "Narrative content for the ResearchStudy."
 //Context: ResearchStudy
 Context: M11_ResearchStudyProfile
+* insert rs-copyright-structure
 * ^extension[$ext-fmm].valueInteger = 2
 * ^status = #active
 * value[x] only Reference
@@ -24,6 +25,7 @@ The ICH M11 CeSHarP template for a study protocol specifies the headings to be u
 For a FHIR representation of the protocol to be compliant with this template each of the narrative sections must 
 be organized using these headings. Only if there is material that does not properly belong under one of the M11 
 headings can additional codes be created."""
+* insert rs-copyright-structure
 * ^extension[$ext-fmm].valueInteger = 2
 * ^status = #active
 * subject. ^short = "Reference to the protocol that the narrative refers to" 

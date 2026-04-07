@@ -5,6 +5,7 @@ Description: """These codes represent the types of role ResearchStudy.Associated
 mechanism used by FHIR for associating one entity with another. This is a UDP specific value set and uses NCIT codes to 
 create an appropriate FHIR value set.
 """
+* insert rs-copyright-terminology
 * ^extension[$ext-fmm].valueInteger = 1
 * ^experimental = false
 * ^status = #active
