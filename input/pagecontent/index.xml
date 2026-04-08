@@ -6,12 +6,17 @@
   <p><span style="background-color: yellow; color: black; padding: 2px 5px; display: inline;"><strong>Note to Reviewers</strong></span></p>
 
   <ol>
-    <li>
-      <p>The naming of this IG is chosen to reflect custom and practice of the regulatory community and in particular of the ICH whose specification we are following.</p>
-      <p>We are interested to hear from reviewers of any perceived conflict between "Clinical Study Protocol" and any other trials or studies that can be regarded as "clinical" but are not covered by the content in this guide.</p>
-    </li>
     <li><strong>This Implementation Guide is concerned with mapping from externally developed content. The licensing terms for that usage is acknowledged and fully detailed in the <a href="licenses.html">Licenses</a> section.</strong></li>
     <li>The content is based on FHIR R6. This is to take advantage of new features in the <a href="https://hl7.org/fhir/6.0.0-ballot4/researchstudy.html">ResearchStudy</a> resource.  There are planned to be backports to earlier FHIR releases in future.  We are interested to know what backport requirements implementers have.</li>
+    <li>
+<!--      <p>The naming of this IG is chosen to reflect custom and practice of the regulatory community and in particular of the ICH whose specification we are following.</p>
+      <p>We are interested to hear from reviewers of any perceived conflict between "Clinical Study Protocol" and any other trials or studies that can be regarded as "clinical" but are not covered by the content in this guide.</p>
+-->
+      <p>The project team requests community feedback on the proposed IG name, “Clinical Study Protocol.” There's an active conversation within the community regarding the use of "clinical study" or "clinical trial" within the name, with multiple implications of each. The project team wants to reach a decision that best serves collective community goals.</p>
+      <p>Background: the IG is designed to support alignment with global initiatives related to regulated research, particularly those led by ICH—a group comprised of regulatory bodies and trade representatives from around the world. ICH has developed a harmonized guideline for the protocol template, and their workgroup has specifically requested that Vulcan create this IG to ensure FHIR can facilitate the exchange of protocols compliant with their guideline. Other organizations, including CDISC and TransCelerate, have established artifacts in use with which this IG enables compatible use of FHIR. This represents a unique opportunity to synchronize FHIR with global constituents of clinical research, in particular regulators who are poised to adopt the ICH guideline.</p>
+      <p>The IG name was selected to maximize alignment with ICH’s standards, referencing ICH M11 and E8, which define the "Clinical Study Protocol." Historically, the project was called “Utilizing a Digital Protocol for Clinical Trials,” and was later updated to “Pharmaceutical Research Protocol” after HL7 review. However, the latter raised concerns with the user community during the ballot process due to its specificity as the IG is meant to cover a wide range of clinical studies—not just pharmaceutical research. On September 22, 2025, the project team voted to adopt “Clinical Study Protocol” to ensure the IG accurately reflects its broad scope. The IG offers a FHIR-based structure applicable across all types of clinical studies, providing a universal and reusable standard rather than one limited to a specific domain.</p>
+      <p>The chosen name aligns with a broader global initiative: ICH M11 (CeSHarP), EMA’s “Clinical Study Protocol Template,” and Vulcan’s “Clinical Study Protocol” all represent coordinated efforts to standardize protocol structures across study types and regions. We are keen to hear your thoughts on whether “Clinical Study Protocol” is the most appropriate name for this IG, or if “Clinical Trial Protocol” would be preferable.</p>
+    </li>
   </ol>
 
 </div>
