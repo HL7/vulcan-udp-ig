@@ -30,7 +30,7 @@ The Implementation Guide makes NO changes to this content with the exception of 
 
 ## TransCelerate
 
-The exact terms are to be determined.
+USDM is joint with CDISC and is covered by the same license.  Other reference to TransCelerate is to the public facing website.
 
 ## NCI Thesaurus
 
