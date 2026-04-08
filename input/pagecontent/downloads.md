@@ -1,6 +1,6 @@
 Link to the relevant [FHIR Spec](https://hl7.org/fhir/6.0.0-ballot4/index.html)
 
-Download the entire implementation guide <a href="full-ig.zip">here</a>
+Download the entire implementation guide <a href="../full-ig.zip">here</a>
 
 Download mapping spreadsheet <a href="Mappings/M11 to FHIR Mapping 02.xlsx">here</a>
 
