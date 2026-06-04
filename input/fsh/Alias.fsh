@@ -24,6 +24,7 @@ Alias: $study-title-type-vs = udp-study-title-type-vs
 Alias: $TitleType = http://hl7.org/fhir/title-type
 Alias: $YesNoUnknownVS = m11-yes-no-vs
 Alias: $ID-EligibilityCriteria = https://example.org/ID-EligibilityCriteria
+Alias: $UDP_Target = "https://HL7Vulcan.org/UDP/target"
 
 
 
