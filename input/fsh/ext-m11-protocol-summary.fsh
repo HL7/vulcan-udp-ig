@@ -23,15 +23,15 @@ populationType 1..1 MS and
 controlType 1..1 MS and
 populationDiagnosisOrCondition 1..* MS and
 
-controlNonproprietaryname 1..* and
+comparator 1..* and
 // notapplicable 1..1 at least one of [Nonproprietary Name] or [INN] or <"Not applicable">  and
 minimumAge 1..1 MS and
 unitsOfMinimumAge 1..1 MS and
 maximumAge 1..1 MS and
 unitsOfMaximumAge 1..1 MS and
 interventionAssignmentMethod 1..1 MS and
-randomisationType 1..(0,1) MS if type is randomisation and
-otherInterventionAssignmentMethod 1..(0,1) MS and // invariant
+randomisationType 1..1 MS and // invarint MS if type is randomisation and //(0..1)
+otherInterventionAssignmentMethod 1..1 MS and // invariant  //(0..1)
 stratificationIndicator 1..1 MS and
 siteDistribution 1..1 MS and
 siteGeographicScope 1..1 MS and
@@ -44,21 +44,21 @@ blindedRoles 1..1 MS and
 targetOrMaximum 1..1 MS and
 numberOfParticipants 1..1 MS and
 //randomlyassignedtotrialintervention-enrolled 1..1 MS and
-totalPlannedDurationOfTrialIntervention 1..(0,1) and // invariant either quantity or alterative text
-totalPlannedDurationOfTrialInterventionUnitOfTime 1..(0,1) and // invariant either quantity or alterative text
-alternateDescriptionOfPlannedDurationOfTrialIntervention 1..(0,1) and // invariant ifdurationwillvary either quantity or alterative text 
-totalPlannedDurationOfTrialParticipation 1..(0,1) either quantity or alterative text and
-totalPlannedDurationOfTrialParticipationUnitOfTime 1..(0,1) and // invariant either quantity or alterative text
-alternateDescriptionOfPlannedDurationOfTrialParticipation 1..(0,1) // invariant ifdurationwillvary either quantity or alterative text and
-additionalDescriptionofDuration 1..(0,1)  and
-independentCommittees 1..(1..*) MS and
-otherCommittees 1..(0..*) and
+totalPlannedDurationOfTrialIntervention 1..1 and // invariant either quantity or alterative text  //(0..1)
+totalPlannedDurationOfTrialInterventionUnitOfTime 1..1 and // invariant either quantity or alterative text  //(0..1)
+alternateDescriptionOfPlannedDurationOfTrialIntervention 1..1 and // invariant ifdurationwillvary either quantity or alterative text  //(0..1)
+totalPlannedDurationOfTrialParticipation 1..1 and // invariant either quantity or alterative text and  //(0..1)
+totalPlannedDurationOfTrialParticipationUnitOfTime 1..1 and // invariant either quantity or alterative text  //(0..1)
+alternateDescriptionOfPlannedDurationOfTrialParticipation 1..1 and // invariant ifdurationwillvary either quantity or alterative text and
+additionalDescriptionofDuration 1..1  and  //(0..1)
+independentCommittees 1..1 MS and //(1..*)
+otherCommittees 1..* and  //(0..*)
 trialSchema 1..1 MS and
-schemaNotes 1..(0,1) and
+schemaNotes 1..1 and  //(0..1)
 scheduleofActivities 1..1 MS
 
 
-* extension[objectiveAndEstimandSummary].value[x] only string or xhtml
+* extension[objectiveAndEstimandSummary].value[x] only string or markdown
   * ^short = "C218839 Primary and Secondary Objectives and Estimands"
   * ^definition = "A descriptive summary of the primary and secondary objectives and their associated estimands related to the trial."
 
@@ -82,16 +82,16 @@ scheduleofActivities 1..1 MS
 //   * ^short = "see binding Population Diagnosis or Condition" 
 //   * ^definition = "A description of the condition, disease or disorder that the clinical trial is intended to investigate or address."
 
-* extension[comparator].value[x] only Reference(MedicinalProduct) 
+* extension[comparator].value[x] only Reference(MedicinalProductDefinition) 
   * ^short = "Comparator" 
   * ^definition = "The comparator against which the study intervention is evaluated."
   * ^comment = "M11 CC97054 requires on a narrative representation of the comparator - the name."
 
-* extension[minimumAge].value[x] only real 
+* extension[minimumAge].value[x] only Quantity
   * ^short = "C49693/C25301 Minimum Age value/units" 
   * ^definition = "The anticipated minimum age of the participants to be entered in a clinical trial."
 
-* extension[maximumAge].value[x] only real 
+* extension[maximumAge].value[x] only Quantity
   * ^short = "C49694/C25301 Minimum Age value/units" 
   * ^definition = "The anticipated maximum age of the participants to be entered in a clinical trial."
 
@@ -212,4 +212,4 @@ scheduleofActivities 1..1 MS
 // nonproprietaryname 1..* 
 // at least one of [Nonproprietary Name] or [INN] or <"Not applicable">  and
 
-// otherInterventionAssignmentMethod 1..(0,1) MS if type is randomisation and
+// otherInterventionAssignmentMethod 1..1 MS if type is randomisation and
