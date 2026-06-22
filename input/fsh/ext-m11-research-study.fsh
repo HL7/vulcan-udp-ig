@@ -1,6 +1,6 @@
 Extension: M11_ResearchStudy
 Id: m11-research-study
-Description: "Additions for M11 not otherwise dealt with"
+Description: "Additions required by M11 not otherwise dealt with"
 Title:  "M11 Research Study Extension"
 Context: M11_ResearchStudyProfile
 * insert rs-copyright-structure
