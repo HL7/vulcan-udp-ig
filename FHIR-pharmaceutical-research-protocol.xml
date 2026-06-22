@@ -15,6 +15,7 @@
 <artifact id="Composition/Narrative-Composition-Section-per-Section" key="Composition-Narrative-Composition-Section-per-Section" name="Example Narrative Single Composition with a Section for Each M11 Section"/>
 <artifact id="Organization/Exemplar-CoSponsor-Organization" key="Organization-Exemplar-CoSponsor-Organization" name="Exemplar CoSponsor Organization"/>
 <artifact id="Practitioner/Exemplar-CoSponsor-Practitioner" key="Practitioner-Exemplar-CoSponsor-Practitioner" name="Exemplar CoSponsor Practitioner"/>
+<artifact id="MedicinalProductDefinition/Exemplar-ComparatorProduct" key="MedicinalProductDefinition-Exemplar-ComparatorProduct" name="Exemplar Comparator Product"/>
 <artifact id="Organization/Exemplar-Devices-Organization" key="Organization-Exemplar-Devices-Organization" name="Exemplar Devices Organization"/>
 <artifact id="Organization/Exemplar-Local-Sponsor-Organization" key="Organization-Exemplar-Local-Sponsor-Organization" name="Exemplar Local Sponsor Organization"/>
 <artifact id="Practitioner/Exemplar-Local-Sponsor-Practitioner" key="Practitioner-Exemplar-Local-Sponsor-Practitioner" name="Exemplar Local Sponsor Practitioner"/>
@@ -26,9 +27,18 @@
 <artifact id="Organization/Exemplar-Sponsor-Organization" key="Organization-Exemplar-Sponsor-Organization" name="Exemplar Sponsor Organization"/>
 <artifact id="Practitioner/Exemplar-Sponsor-Practitioner" key="Practitioner-Exemplar-Sponsor-Practitioner" name="Exemplar Sponsor Practitioner"/>
 <artifact id="CodeSystem/ncit-cs" key="CodeSystem-ncit-cs" name="Fragment of NCIT Code System"/>
+<artifact id="ValueSet/m11-blindedRoles-vs" key="ValueSet-m11-blindedRoles-vs" name="ICH M11 ..."/>
+<artifact id="ValueSet/m11-controlType-vs" key="ValueSet-m11-controlType-vs" name="ICH M11 ..."/>
+<artifact id="ValueSet/m11-independentCommittees-vs" key="ValueSet-m11-independentCommittees-vs" name="ICH M11 ..."/>
+<artifact id="ValueSet/m11-interventionAssignmentMethod-vs" key="ValueSet-m11-interventionAssignmentMethod-vs" name="ICH M11 ..."/>
+<artifact id="ValueSet/m11-populationType-vs" key="ValueSet-m11-populationType-vs" name="ICH M11 ..."/>
+<artifact id="ValueSet/m11-siteDistribution-vs" key="ValueSet-m11-siteDistribution-vs" name="ICH M11 ..."/>
+<artifact id="ValueSet/m11-siteGeographicscope-vs" key="ValueSet-m11-siteGeographicscope-vs" name="ICH M11 ..."/>
+<artifact id="ValueSet/m11-trialBlindSchema-vs" key="ValueSet-m11-trialBlindSchema-vs" name="ICH M11 ..."/>
 <artifact id="ValueSet/m11-amendment-details-statement-vs" key="ValueSet-m11-amendment-details-statement-vs" name="ICH M11 Amendment Details Statement Value Set Terminology"/>
 <artifact id="ValueSet/m11-amendment-scope-enrollment-vs" key="ValueSet-m11-amendment-scope-enrollment-vs" name="ICH M11 Amendment Scope Enrollment Description Value Set Terminology"/>
 <artifact id="ValueSet/m11-study-amendment-scope-vs" key="ValueSet-m11-study-amendment-scope-vs" name="ICH M11 Amendment Scope Value Set Terminology"/>
+<artifact id="ValueSet/m11-interventionModel-vs" key="ValueSet-m11-interventionModel-vs" name="ICH M11 Intervention Model Value Set Terminology"/>
 <artifact id="ValueSet/m11-yes-no-vs" key="ValueSet-cdisc-yes-no-vs" name="ICH M11 No Yes Value Set Terminology"/>
 <artifact id="ValueSet/m11-study-amendment-reason-vs" key="ValueSet-m11-study-amendment-reason-vs" name="ICH M11 Reason for Amendment Value Set Terminology"/>
 <artifact id="ValueSet/m11-country-region-vs" key="ValueSet-m11-country-region-vs" name="ICH M11 Study Amendment Country Value Set"/>
@@ -57,13 +67,16 @@
 <artifact id="StructureDefinition/m11-approval" key="StructureDefinition-m11-approval" name="M11_Approval"/>
 <artifact id="StructureDefinition/m11-confidentiality-statement" key="StructureDefinition-m11-confidentiality-statement" name="M11_ConfidentialityStatement"/>
 <artifact id="StructureDefinition/m11-protocol-amendment" key="StructureDefinition-protocol-amendment" name="M11_ProtocolAmendment"/>
+<artifact id="StructureDefinition/m11-protocol-summary" key="StructureDefinition-m11-protocol-summary" name="M11_ProtocolSummary"/>
 <artifact id="Organization/Narrative-Organization" key="Organization-Narrative-Organization" name="Narrative Author Organization"/>
 <artifact id="StructureDefinition/narrative-elements" key="StructureDefinition-narrative-elements" name="Narrative Elements"/>
 <artifact deprecated="true" id="CodeSystem/narrative-elements-cs" key="CodeSystem-narrative-elements-cs" name="Narrative Elements Code System"/>
+<artifact id="ResearchStudy/Exemplar-Protocol-Summary" key="ResearchStudy-Exemplar-Protocol-Summary" name="Protocol Summary"/>
 <artifact id="StructureDefinition/m11-research-study-narratives" key="StructureDefinition-m11-research-study-narratives" name="Research Study Narratives"/>
 <artifact id="ResearchStudy/Exemplar-ResearchStudy-001" key="ResearchStudy-Exemplar-ResearchStudy-001" name="START HERE: Exemplar Research Study with narrative"/>
 <artifact deprecated="true" id="StructureDefinition/study-design" key="StructureDefinition-study-design" name="StudyDesign"/>
 <artifact id="Group/DIBASY-Eligibility" key="Group-DIBASY-Eligibility" name="StudyEligibilityCriteria: Eligibility Criteria for DIBASY Trial"/>
+<artifact id="ValueSet/m11-target-Maximum-vs" key="ValueSet-m11-target-Maximum-vs" name="UDP ..."/>
 <artifact id="ValueSet/udp-address-purpose-type-vs" key="ValueSet-udp-address-purpose-type-vs" name="UDP Address Purpose Type Value Set"/>
 <artifact id="ValueSet/udp-identifier-type-vs" key="ValueSet-m11-identifier-type-vs" name="UDP Identifier Type Value Set"/>
 <artifact id="ValueSet/udp-narrative-elements-vs" key="ValueSet-narrative-elements-vs" name="UDP Narrative Elements Value Set using NCIT codes to create a FHIR value set."/>

@@ -40,18 +40,18 @@ drug-DeviceCombinationProductIndicator 1..1 MS and
 adaptiveTrialDesignIndicator 1..1 MS and
 numberOfArms 1..1 MS and
 trialBlindSchema 1..1 MS and
-blindedRoles 1..1 MS and
+blindedRoles 1..* MS and
 targetOrMaximum 1..1 MS and
 numberOfParticipants 1..1 MS and
 //randomlyassignedtotrialintervention-enrolled 1..1 MS and
 totalPlannedDurationOfTrialIntervention 1..1 and // invariant either quantity or alterative text  //(0..1)
-totalPlannedDurationOfTrialInterventionUnitOfTime 1..1 and // invariant either quantity or alterative text  //(0..1)
+//totalPlannedDurationOfTrialInterventionUnitOfTime 1..1 and // invariant either quantity or alterative text  //(0..1)
 alternateDescriptionOfPlannedDurationOfTrialIntervention 1..1 and // invariant ifdurationwillvary either quantity or alterative text  //(0..1)
 totalPlannedDurationOfTrialParticipation 1..1 and // invariant either quantity or alterative text and  //(0..1)
-totalPlannedDurationOfTrialParticipationUnitOfTime 1..1 and // invariant either quantity or alterative text  //(0..1)
+//totalPlannedDurationOfTrialParticipationUnitOfTime 1..1 and // invariant either quantity or alterative text  //(0..1)
 alternateDescriptionOfPlannedDurationOfTrialParticipation 1..1 and // invariant ifdurationwillvary either quantity or alterative text and
 additionalDescriptionofDuration 1..1  and  //(0..1)
-independentCommittees 1..1 MS and //(1..*)
+independentCommittees 1..* MS and //(1..*)
 otherCommittees 1..* and  //(0..*)
 trialSchema 1..1 MS and
 schemaNotes 1..1 and  //(0..1)
@@ -85,14 +85,14 @@ scheduleofActivities 1..1 MS
 * extension[comparator].value[x] only Reference(MedicinalProductDefinition) 
   * ^short = "Comparator" 
   * ^definition = "The comparator against which the study intervention is evaluated."
-  * ^comment = "M11 CC97054 requires on a narrative representation of the comparator - the name."
+  * ^comment = "M11 CC97054 requires a narrative representation of the comparator - the name."
 
 * extension[minimumAge].value[x] only Quantity
   * ^short = "C49693/C25301 Minimum Age value/units" 
   * ^definition = "The anticipated minimum age of the participants to be entered in a clinical trial."
 
 * extension[maximumAge].value[x] only Quantity
-  * ^short = "C49694/C25301 Minimum Age value/units" 
+  * ^short = "C49694/C25301 Maximum Age value/units" 
   * ^definition = "The anticipated maximum age of the participants to be entered in a clinical trial."
 
 * extension[interventionAssignmentMethod].value[x] only CodeableConcept 
@@ -106,7 +106,7 @@ scheduleofActivities 1..1 MS
   * ^comment = "this is just a text description - implementers may want to provide a value set that tehe text can be drawn from."
 
 * extension[otherInterventionAssignmentMethod].value[x] only string 
-  * ^short = "C223138 Other Intervention Assignment Method}" 
+  * ^short = "C223138 Other Intervention Assignment Method" 
   * ^definition = "If applicable, describe the other intervention assignment method."
 
 * extension[stratificationIndicator].value[x] only CodeableConcept 
@@ -117,7 +117,7 @@ scheduleofActivities 1..1 MS
 
 * extension[siteDistribution].value[x] only CodeableConcept 
 * extension[siteDistribution].value[x] from M11SiteDistributionVS (required)
-  * ^short = " C217049 Site Distribution" 
+  * ^short = "C217049 Site Distribution" 
   * ^definition = "An indication as to whether the occurrence applies to a single or multiple trial sites."
 
 * extension[siteGeographicScope].value[x] only CodeableConcept 
@@ -164,7 +164,7 @@ scheduleofActivities 1..1 MS
   * ^short = "C49692 Number of Participants" 
   * ^definition = "The planned number of participant be entered in a clinical trial."
 
-* extension[totalPlannedDurationOfTrialIntervention].value[x] only time 
+* extension[totalPlannedDurationOfTrialIntervention].value[x] only Quantity 
   * ^short = "C218712/C218713 total planned duration of trial intervention value/units" 
   * ^definition = "The total planned duration of trial intervention"
 
@@ -172,8 +172,8 @@ scheduleofActivities 1..1 MS
   * ^short = "C218714 alternate description of planned duration of trial intervention if duration will vary" 
   * ^definition = "An alternative textual narrative for the planned duration of trial intervention."
 
-* extension[totalPlannedDurationOfTrialParticipation].value[x] only time 
-  * ^short = " C218715/C218716 total planned duration of trial participation value/units" 
+* extension[totalPlannedDurationOfTrialParticipation].value[x] only Quantity 
+  * ^short = "C218715/C218716 total planned duration of trial participation value/units" 
   * ^definition = "The total planned duration of trial participation"
 
 * extension[alternateDescriptionOfPlannedDurationOfTrialParticipation].value[x] only string 

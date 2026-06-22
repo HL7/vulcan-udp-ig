@@ -17,7 +17,8 @@ by further instances of ResearchStudy linked through the relatesTo attribute.
     M11_ProtocolAmendment named amendment 0..1 MS and
     m11-confidentiality-statement named confidentialityStatement 0..1 and
     m11-approval named approval 0..1 MS and
-    m11-research-study named m11-research-study 1..1 MS
+    m11-research-study named m11-research-study 1..1 MS // and
+    //m11-protocol-summary named m11-protocol-summary 1..1
 
 * title MS
 * identifier 1..* MS
